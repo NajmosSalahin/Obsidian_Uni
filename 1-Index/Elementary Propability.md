@@ -51,7 +51,7 @@ Subjective probability is based on **personal judgment, intuition, or belief**, 
 **Definition:**  
 Classical probability (also called mathematical probability) is defined when all outcomes of an experiment are **equally likely** and **finite**. It is given by:  
 
-$P(E) = \frac{\text{Number of favourable outcomes}}{\text{Total number of possible outcomes}}$
+$P(A) = \frac{\text{Number of favourable outcomes}}{\text{Total number of possible outcomes}}$
 
 **Example:**  
 When tossing a fair die, the probability of getting a **4** is:  
