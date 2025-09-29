@@ -48,6 +48,19 @@ Subjective probability is based on **personal judgment, intuition, or belief**, 
 ---
 
 ## Classical Probability
+**Definition:**  
+Classical probability (also called mathematical probability) is defined when all outcomes of an experiment are **equally likely** and **finite**. It is given by:  
+
+$P(E) = \frac{\text{Number of favourable outcomes}}{\text{Total number of possible outcomes}}$
+
+**Example:**  
+When tossing a fair die, the probability of getting a **4** is:  
+
+$P(\text{4}) = \frac{1}{6}$
+
+since there is 1 favourable outcome (getting a 4) out of 6 possible equally likely outcomes (1, 2, 3, 4, 5, 6).
+
+
 **Experiment:** An act that can be repeated under given conditions.  
 
 Experiments may be:  
@@ -87,5 +100,3 @@ An **event** is a subset of the sample space, consisting of one or more outcomes
 
 ## Exhaustive Outcomes
 **Exhaustive outcomes** are a set of outcomes that cover **all possible results** in the sample space, with no omissions.  
-
-##### add
