@@ -1,0 +1,23 @@
+filters:
+  and:
+    - created >= ""
+formulas:
+  title: ""
+views:
+  - type: table
+    name: Table
+    order:
+      - title
+      - file.name
+      - created
+      - tags
+      - links
+    sort:
+      - property: created
+        direction: DESC
+      - property: tags
+        direction: ASC
+    columnSize:
+      note.title: 353
+      note.created: 131
+      note.tags: 191
