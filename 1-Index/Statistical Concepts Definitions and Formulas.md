@@ -7,8 +7,6 @@ tags:
   - clippings
   - STAT-1101
 status: active
-links:
-  - "[[STAT-1101]]"
 semester: "1.1"
 related:
   - "[[STAT-1101]]"
