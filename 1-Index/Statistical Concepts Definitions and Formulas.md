@@ -394,7 +394,9 @@ content-start: 186
 
 **Details/Equations/Formulas:** Steps: Define S, list outcomes, count favorable. Formula: P = favorable / total.
 
-### Two Special Events: Certain Events
+## Two Special Events: 
+
+### Certain Events
 
 **Definition:** A certain event is an event that is guaranteed to occur, with probability 1, such as the entire sample space.
 
