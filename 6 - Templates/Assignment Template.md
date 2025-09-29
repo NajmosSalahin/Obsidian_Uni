@@ -1,7 +1,8 @@
 ---
 type: assignment
-course: {{COURSE}}
-due: {{DATE}}
+course:
+due:
+  "{ DATE }":
 status: todo
 priority: medium
 ---
