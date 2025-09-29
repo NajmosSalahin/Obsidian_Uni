@@ -1,0 +1,16 @@
+filters:
+  and:
+    - file.folder == "Github/5 - Casual Writing"
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.ctime
+      - related
+      - file.backlinks
+    columnSize:
+      file.ctime: 228
+      note.related: 162
+  - type: cards
+    name: View
