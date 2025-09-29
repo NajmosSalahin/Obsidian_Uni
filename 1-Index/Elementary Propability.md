@@ -2,23 +2,14 @@
 title: Elementary Propability
 course code: STAT-1102
 course teacher: Sohel Rana
-date_created: 25 August-2025
+date_created: 2025-08-25
 tags:
   - course
   - STAT
 status: in-progress
 priority: high
 ---
-## Elementary Propability
-
-### Course Code: STAT-1102
-
-### Course Teacher: Sohel Rana
-
-### Date Created: 25 August-2025
-
----
-# Probability
+# Elementary Probability
 #### Probability: 
 A numerical measure of uncertainty of an event of a random experiment is called probability.
 ##### Probability is divided into 2 parts:
@@ -26,6 +17,10 @@ A numerical measure of uncertainty of an event of a random experiment is called 
 2. Subjective Probability.
 
 Objective Probability: 
+
+ #### Objective Probability is divided into 2 parts:
+       i) Classical or mathematical probability;
+       ii) Empirical or statistical or frequency probability;
    
    
 So, The Probabilities are:
