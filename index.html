@@ -1,65 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My GitHub Pages Index</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 2rem auto;
-      line-height: 1.6;
-      background: #fafafa;
-    }
-    h1 { 
-      text-align: center; 
-      margin-bottom: 2rem;
-    }
-    .section {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      margin: 1rem 0;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h2 {
-      margin: 0 0 0.5rem 0;
-    }
-    a {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-    a:hover { 
-      text-decoration: underline; 
-    }
-    p {
-      margin: 0;
-      color: #444;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najmo's Obsidian Notes Explorer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
 </head>
-<body>
-  <h1>📂 My GitHub Pages</h1>
+<body class="p-4 md:p-8">
 
-  <div class="section">
-    <h2><a href="1 - Index/">1 - Index</a></h2>
-    <p>Organized index of my notes and work.</p>
-  </div>
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-6 md:p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch text-purple-600 mr-3"><line x1="6" x2="6" y1="3" y2="15"/><path d="M18 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M18 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 15v3"/></svg>
+            Obsidian Notes Repository
+        </h1>
+        <p class="text-gray-500 mb-6">Viewing contents of <span class="font-semibold text-purple-600">najmossalahin/Obsidian_Uni</span>. You can change this below.</p>
 
-  <div class="section">
-    <h2><a href="5 - Casual Writing/">5 - Casual Writing</a></h2>
-    <p>Personal and casual writings.</p>
-  </div>
+        <!-- Input Form -->
+        <div class="space-y-4 mb-8 p-4 bg-gray-50 rounded-lg shadow-inner">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <!-- PRE-CONFIGURED FOR YOUR REPO -->
+                <input type="text" id="ownerInput" placeholder="Owner (e.g., google)" class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 transition duration-150" value="najmossalahin">
+                <input type="text" id="repoInput" placeholder="Repository (e.g., docs-samples)" class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 transition duration-150" value="Obsidian_Uni">
+            </div>
+            <button id="loadButton" onclick="loadRepo()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition duration-300 shadow-md">
+                Load Repository
+            </button>
+        </div>
 
-  <div class="section">
-    <h2><a href="99 - Self/">99 - Self</a></h2>
-    <p>Notes and reflections about myself.</p>
-  </div>
+        <!-- Breadcrumbs and Current Path -->
+        <div id="pathContainer" class="mb-4 text-sm text-gray-600 min-h-[24px]">
+            <!-- Breadcrumbs will be injected here -->
+        </div>
 
-  <div class="section">
-    <h2><a href="Resources/">Resources</a></h2>
-    <p>Helpful resources and references.</p>
-  </div>
+        <!-- Loading, Error, and Content Area -->
+        <div id="messageArea" class="hidden p-4 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg mb-4" role="alert">
+            <!-- Messages will be injected here -->
+        </div>
+
+        <div id="contentList" class="border border-gray-200 rounded-lg divide-y divide-gray-100">
+            <!-- File and folder contents will be injected here -->
+        </div>
+    </div>
+
+    <script>
+        // --- Core Application Logic ---
+
+        const OWNER_INPUT = document.getElementById('ownerInput');
+        const REPO_INPUT = document.getElementById('repoInput');
+        const CONTENT_LIST = document.getElementById('contentList');
+        const MESSAGE_AREA = document.getElementById('messageArea');
+        const PATH_CONTAINER = document.getElementById('pathContainer');
+        const LOAD_BUTTON = document.getElementById('loadButton');
+
+        let currentOwner = OWNER_INPUT.value;
+        let currentRepo = REPO_INPUT.value;
+
+        // Custom SVGs for icons
+        const FOLDER_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder text-purple-500"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"/></svg>';
+        const FILE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file text-gray-400"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>';
+
+        /**
+         * Hides the message area and clears its content.
+         */
+        function hideMessage() {
+            MESSAGE_AREA.classList.add('hidden');
+            MESSAGE_AREA.innerHTML = '';
+        }
+
+        /**
+         * Displays a message in the message area.
+         * @param {string} text The message text.
+         * @param {string} type The type of message ('error', 'info', 'warning').
+         */
+        function showMessage(text, type = 'info') {
+            MESSAGE_AREA.classList.remove('hidden');
+            let baseClasses = 'p-4 border rounded-lg mb-4 ';
+            
+            switch (type) {
+                case 'error':
+                    MESSAGE_AREA.className = baseClasses + 'bg-red-100 border-red-300 text-red-800';
+                    break;
+                case 'warning':
+                    MESSAGE_AREA.className = baseClasses + 'bg-yellow-100 border-yellow-300 text-yellow-800';
+                    break;
+                case 'info':
+                default:
+                    MESSAGE_AREA.className = baseClasses + 'bg-blue-100 border-blue-300 text-blue-800';
+                    break;
+            }
+            MESSAGE_AREA.innerHTML = text;
+        }
+
+        /**
+         * Fetches repository contents from the GitHub API.
+         * @param {string} path The folder path to fetch (e.g., 'src/components').
+         */
+        async function fetchContents(path) {
+            hideMessage();
+            CONTENT_LIST.innerHTML = `<div class="p-6 text-center text-gray-500">
+                <svg class="animate-spin h-5 w-5 text-purple-500 inline mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                Loading contents for ${path || 'root'}...
+            </div>`;
+            LOAD_BUTTON.disabled = true;
+            LOAD_BUTTON.classList.add('opacity-50');
+
+            const url = `https://api.github.com/repos/${currentOwner}/${currentRepo}/contents/${path}`;
+
+            try {
+                // Implementing basic exponential backoff for robustness
+                const maxRetries = 3;
+                let response = null;
+                for (let i = 0; i < maxRetries; i++) {
+                    response = await fetch(url);
+                    if (response.ok || response.status === 404) break; // Break on success or definitive not-found
+                    
+                    // Wait if rate limited, then try again (e.g., 2 seconds, 4 seconds)
+                    if (response.status === 403 || response.status === 429) {
+                        const rateLimitRemaining = response.headers.get('X-RateLimit-Remaining');
+                        if (rateLimitRemaining === '0') {
+                            showMessage('API Rate Limit Exceeded. GitHub limits unauthenticated requests. Please try again later or wait an hour.', 'error');
+                            return;
+                        }
+                    }
+                    if (i < maxRetries - 1) {
+                         // Exponential backoff
+                        const delay = Math.pow(2, i) * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                    }
+                }
+
+                if (!response.ok) {
+                    const errorJson = await response.json().catch(() => ({ message: 'Unknown error during API call.' }));
+                    let message = errorJson.message || `Error fetching repository contents. Status: ${response.status}.`;
+                    showMessage(message, 'error');
+                    CONTENT_LIST.innerHTML = '';
+                    return;
+                }
+
+                const contents = await response.json();
+                renderContents(contents, path);
+                updateURL(path);
+                renderBreadcrumbs(path);
+
+            } catch (error) {
+                console.error("Fetch failed:", error);
+                showMessage(`Failed to connect to GitHub API. Check console for details.`, 'error');
+                CONTENT_LIST.innerHTML = '';
+            } finally {
+                LOAD_BUTTON.disabled = false;
+                LOAD_BUTTON.classList.remove('opacity-50');
+            }
+        }
+
+        /**
+         * Renders the list of files and folders.
+         * @param {Array<Object>} contents Array of file/folder objects from GitHub API.
+         * @param {string} currentPath The current folder path.
+         */
+        function renderContents(contents, currentPath) {
+            CONTENT_LIST.innerHTML = '';
+
+            // Sort content: folders first, then files, both alphabetically
+            const sortedContents = contents.sort((a, b) => {
+                if (a.type === 'dir' && b.type !== 'dir') return -1;
+                if (a.type !== 'dir' && b.type === 'dir') return 1;
+                return a.name.localeCompare(b.name);
+            });
+
+            if (currentPath) {
+                 // Add ".." navigation element
+                const parentPath = currentPath.split('/').slice(0, -1).join('/');
+                const backElement = createContentItem('dir', '..', parentPath);
+                CONTENT_LIST.appendChild(backElement);
+            }
+
+            if (sortedContents.length === 0) {
+                CONTENT_LIST.innerHTML += `<p class="p-6 text-gray-500 italic">This directory is empty.</p>`;
+                return;
+            }
+
+            sortedContents.forEach(item => {
+                const element = createContentItem(item.type, item.name, item.path, item.html_url);
+                CONTENT_LIST.appendChild(element);
+            });
+        }
+        
+        /**
+         * Creates an individual file/folder list item element.
+         * @param {string} type 'dir' or 'file'.
+         * @param {string} name Item name.
+         * @param {string} path Item full path.
+         * @param {string} htmlUrl Link to the item on GitHub.
+         */
+        function createContentItem(type, name, path, htmlUrl) {
+            const isFolder = type === 'dir';
+            const element = document.createElement('a');
+            
+            element.classList.add(
+                'block', 'p-4', 'hover:bg-gray-50', 'transition', 'duration-150', 'flex', 'items-center', 'justify-between'
+            );
+
+            const iconHtml = isFolder ? FOLDER_ICON : FILE_ICON;
+            const linkText = `<span class="truncate">${name}</span>`;
+
+            element.innerHTML = `
+                <div class="flex items-center space-x-3 w-full">
+                    ${iconHtml}
+                    <span class="text-gray-800 font-medium ${isFolder ? 'text-purple-600' : ''} transition duration-150">${linkText}</span>
+                </div>
+            `;
+
+            if (isFolder) {
+                element.href = "#"; // Prevent default action
+                element.onclick = (e) => {
+                    e.preventDefault();
+                    navigateToPath(path);
+                };
+            } else {
+                element.href = htmlUrl;
+                element.target = "_blank";
+                // Add external link icon for files
+                element.innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link text-gray-400 hover:text-purple-600 ml-2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+            }
+
+            return element;
+        }
+
+        /**
+         * Navigates to a new folder path.
+         * @param {string} path The target folder path.
+         */
+        function navigateToPath(path) {
+            // Check if owner/repo are set
+            if (!currentOwner || !currentRepo) {
+                showMessage('Please enter both a GitHub owner and repository name first.', 'warning');
+                return;
+            }
+            fetchContents(path);
+        }
+
+        /**
+         * Updates the browser URL to reflect the current path.
+         * @param {string} path The current folder path.
+         */
+        function updateURL(path) {
+            const params = new URLSearchParams();
+            if (path) {
+                params.set('path', path);
+            }
+            params.set('owner', currentOwner);
+            params.set('repo', currentRepo);
+            const newUrl = `${window.location.pathname}?${params.toString()}`;
+            window.history.pushState({ owner: currentOwner, repo: currentRepo, path: path }, '', newUrl);
+        }
+
+        /**
+         * Renders interactive breadcrumbs for navigation.
+         * @param {string} path The current folder path.
+         */
+        function renderBreadcrumbs(path) {
+            PATH_CONTAINER.innerHTML = '';
+            const parts = path.split('/').filter(p => p.length > 0);
+            let currentAccumulatedPath = '';
+
+            // Root link
+            const rootLink = document.createElement('a');
+            rootLink.classList.add('text-purple-600', 'hover:underline', 'cursor-pointer', 'font-semibold');
+            rootLink.textContent = currentOwner + '/' + currentRepo;
+            rootLink.onclick = () => navigateToPath('');
+            PATH_CONTAINER.appendChild(rootLink);
+            
+            // Add separator (/)
+            PATH_CONTAINER.innerHTML += '<span class="mx-2 text-gray-400">/</span>';
+
+            // Path segments
+            parts.forEach((part, index) => {
+                currentAccumulatedPath += (index > 0 ? '/' : '') + part;
+
+                const segmentLink = document.createElement('a');
+                segmentLink.classList.add('hover:underline', 'cursor-pointer');
+                
+                if (index === parts.length - 1) {
+                    segmentLink.classList.add('text-gray-800', 'font-medium'); // Current path is not clickable as it's active
+                    segmentLink.textContent = part;
+                } else {
+                    segmentLink.classList.add('text-purple-600');
+                    segmentLink.textContent = part;
+                    // Use a copy of the path for the click handler
+                    const pathToNavigate = currentAccumulatedPath; 
+                    segmentLink.onclick = () => navigateToPath(pathToNavigate);
+                }
+                
+                PATH_CONTAINER.appendChild(segmentLink);
+
+                if (index < parts.length - 1) {
+                    // Add separator (/)
+                    PATH_CONTAINER.innerHTML += '<span class="mx-2 text-gray-400">/</span>';
+                }
+            });
+        }
+
+        /**
+         * Loads the repository based on user input or URL parameters.
+         */
+        function loadRepo() {
+            const owner = OWNER_INPUT.value.trim();
+            const repo = REPO_INPUT.value.trim();
+
+            if (!owner || !repo) {
+                showMessage('Please enter both a valid GitHub owner and repository name.', 'warning');
+                return;
+            }
+
+            currentOwner = owner;
+            currentRepo = repo;
+            
+            // Start navigation from the root path
+            navigateToPath('');
+        }
+        
+        /**
+         * Initialization function: Checks URL parameters and loads content.
+         */
+        function init() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const owner = urlParams.get('owner');
+            const repo = urlParams.get('repo');
+            const path = urlParams.get('path') || '';
+
+            if (owner && repo) {
+                // If parameters exist, pre-fill inputs and load
+                OWNER_INPUT.value = owner;
+                REPO_INPUT.value = repo;
+                currentOwner = owner;
+                currentRepo = repo;
+                navigateToPath(path);
+            } else {
+                // Load default example repo (now pre-configured to your repo)
+                loadRepo();
+            }
+        }
+
+        // Handle browser back/forward navigation
+        window.onpopstate = (event) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const path = urlParams.get('path') || '';
+            const owner = urlParams.get('owner');
+            const repo = urlParams.get('repo');
+            
+            if (owner && repo) {
+                currentOwner = owner;
+                currentRepo = repo;
+                OWNER_INPUT.value = owner;
+                REPO_INPUT.value = repo;
+                fetchContents(path);
+            } else {
+                // Should reload to default state if params are missing
+                init();
+            }
+        };
+
+        // Initialize the app on page load
+        window.onload = init;
+
+    </script>
 </body>
 </html>
