@@ -6,63 +6,75 @@
     <title>Najmo's Obsidian Notes Explorer</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
         }
+        /* Custom styles for better scrollbar in file list/viewer */
+        #contentList::-webkit-scrollbar, #fileViewer::-webkit-scrollbar {
+            width: 8px;
+        }
+        #contentList::-webkit-scrollbar-thumb, #fileViewer::-webkit-scrollbar-thumb {
+            background-color: #d1d5db; /* gray-300 */
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-6 md:p-8">
+    <div class="max-w-6xl mx-auto bg-white shadow-xl rounded-xl p-6 md:p-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-2 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch text-purple-600 mr-3"><line x1="6" x2="6" y1="3" y2="15"/><path d="M18 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M18 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 15v3"/></svg>
-            Obsidian Notes Repository
+            Najmo's Obsidian Notes Explorer
         </h1>
-        <p class="text-gray-500 mb-6">Viewing contents of <span class="font-semibold text-purple-600">najmossalahin/Obsidian_Uni</span>. You can change this below.</p>
-
-        <!-- Input Form -->
-        <div class="space-y-4 mb-8 p-4 bg-gray-50 rounded-lg shadow-inner">
-            <div class="flex flex-col sm:flex-row gap-4">
-                <!-- PRE-CONFIGURED FOR YOUR REPO -->
-                <input type="text" id="ownerInput" placeholder="Owner (e.g., google)" class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 transition duration-150" value="najmossalahin">
-                <input type="text" id="repoInput" placeholder="Repository (e.g., docs-samples)" class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 transition duration-150" value="Obsidian_Uni">
-            </div>
-            <button id="loadButton" onclick="loadRepo()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition duration-300 shadow-md">
-                Load Repository
-            </button>
-        </div>
+        <p class="text-gray-500 mb-6">File contents for the repository: <span class="font-semibold text-purple-600">najmossalahin/Obsidian_Uni</span></p>
 
         <!-- Breadcrumbs and Current Path -->
         <div id="pathContainer" class="mb-4 text-sm text-gray-600 min-h-[24px]">
             <!-- Breadcrumbs will be injected here -->
         </div>
 
-        <!-- Loading, Error, and Content Area -->
-        <div id="messageArea" class="hidden p-4 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg mb-4" role="alert">
-            <!-- Messages will be injected here -->
-        </div>
+        <div class="md:grid md:grid-cols-3 gap-6">
+            <!-- File List (1/3) -->
+            <div class="md:col-span-1">
+                <h2 class="text-xl font-semibold mb-3 text-gray-700">Files</h2>
+                <div id="messageArea" class="hidden p-4 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg mb-4" role="alert">
+                    <!-- Messages will be injected here -->
+                </div>
+                <!-- Note: max-h-[70vh] keeps the list scrollable without making the whole page scroll -->
+                <div id="contentList" class="border border-gray-200 rounded-lg divide-y divide-gray-100 overflow-y-auto max-h-[70vh]">
+                    <!-- File and folder contents will be injected here -->
+                </div>
+            </div>
 
-        <div id="contentList" class="border border-gray-200 rounded-lg divide-y divide-gray-100">
-            <!-- File and folder contents will be injected here -->
+            <!-- File Viewer (2/3) -->
+            <div class="md:col-span-2">
+                <h2 id="viewerTitle" class="text-xl font-semibold mb-3 text-gray-700">Select a file</h2>
+                <div id="fileViewer" class="p-6 border border-gray-200 rounded-lg bg-gray-50 min-h-[500px] max-h-[70vh] overflow-y-auto shadow-md">
+                    <p class="text-gray-500 italic">Click on a file from the list to view its rendered content here. Markdown files will be displayed like a typical Obsidian note.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         // --- Core Application Logic ---
-
-        const OWNER_INPUT = document.getElementById('ownerInput');
-        const REPO_INPUT = document.getElementById('repoInput');
+        
+        // --- DOM Elements ---
         const CONTENT_LIST = document.getElementById('contentList');
         const MESSAGE_AREA = document.getElementById('messageArea');
         const PATH_CONTAINER = document.getElementById('pathContainer');
-        const LOAD_BUTTON = document.getElementById('loadButton');
-
-        let currentOwner = OWNER_INPUT.value;
-        let currentRepo = REPO_INPUT.value;
-
+        const FILE_VIEWER = document.getElementById('fileViewer');
+        const VIEWER_TITLE = document.getElementById('viewerTitle');
+        
+        // --- Hardcoded Repository Details (as requested) ---
+        let currentOwner = 'najmossalahin';
+        let currentRepo = 'Obsidian_Uni';
+        
         // Custom SVGs for icons
         const FOLDER_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder text-purple-500"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"/></svg>';
         const FILE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file text-gray-400"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>';
@@ -107,10 +119,8 @@
             hideMessage();
             CONTENT_LIST.innerHTML = `<div class="p-6 text-center text-gray-500">
                 <svg class="animate-spin h-5 w-5 text-purple-500 inline mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                Loading contents for ${path || 'root'}...
+                Loading directory contents...
             </div>`;
-            LOAD_BUTTON.disabled = true;
-            LOAD_BUTTON.classList.add('opacity-50');
 
             const url = `https://api.github.com/repos/${currentOwner}/${currentRepo}/contents/${path}`;
 
@@ -120,9 +130,8 @@
                 let response = null;
                 for (let i = 0; i < maxRetries; i++) {
                     response = await fetch(url);
-                    if (response.ok || response.status === 404) break; // Break on success or definitive not-found
+                    if (response.ok || response.status === 404) break; 
                     
-                    // Wait if rate limited, then try again (e.g., 2 seconds, 4 seconds)
                     if (response.status === 403 || response.status === 429) {
                         const rateLimitRemaining = response.headers.get('X-RateLimit-Remaining');
                         if (rateLimitRemaining === '0') {
@@ -154,9 +163,6 @@
                 console.error("Fetch failed:", error);
                 showMessage(`Failed to connect to GitHub API. Check console for details.`, 'error');
                 CONTENT_LIST.innerHTML = '';
-            } finally {
-                LOAD_BUTTON.disabled = false;
-                LOAD_BUTTON.classList.remove('opacity-50');
             }
         }
 
@@ -188,7 +194,8 @@
             }
 
             sortedContents.forEach(item => {
-                const element = createContentItem(item.type, item.name, item.path, item.html_url);
+                // Now passing item.download_url (the raw file URL) to the item creator
+                const element = createContentItem(item.type, item.name, item.path, item.html_url, item.url, item.download_url);
                 CONTENT_LIST.appendChild(element);
             });
         }
@@ -199,13 +206,15 @@
          * @param {string} name Item name.
          * @param {string} path Item full path.
          * @param {string} htmlUrl Link to the item on GitHub.
+         * @param {string} fileApiUrl API URL for raw content.
+         * @param {string} downloadUrl Direct raw URL for file content.
          */
-        function createContentItem(type, name, path, htmlUrl) {
+        function createContentItem(type, name, path, htmlUrl, fileApiUrl, downloadUrl) {
             const isFolder = type === 'dir';
             const element = document.createElement('a');
             
             element.classList.add(
-                'block', 'p-4', 'hover:bg-gray-50', 'transition', 'duration-150', 'flex', 'items-center', 'justify-between'
+                'block', 'p-4', 'hover:bg-gray-50', 'transition', 'duration-150', 'flex', 'items-center', 'justify-between', 'cursor-pointer'
             );
 
             const iconHtml = isFolder ? FOLDER_ICON : FILE_ICON;
@@ -219,36 +228,120 @@
             `;
 
             if (isFolder) {
-                element.href = "#"; // Prevent default action
                 element.onclick = (e) => {
                     e.preventDefault();
                     navigateToPath(path);
                 };
             } else {
-                element.href = htmlUrl;
-                element.target = "_blank";
-                // Add external link icon for files
-                element.innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link text-gray-400 hover:text-purple-600 ml-2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+                // For files, use the click handler to display content
+                element.onclick = (e) => {
+                    e.preventDefault();
+                    // Pass the downloadUrl for efficient image loading
+                    viewFileContent(fileApiUrl, name, downloadUrl); 
+                };
+                
+                // Add external link icon for files to view on GitHub if needed
+                element.innerHTML += `<a href="${htmlUrl}" target="_blank" title="View on GitHub" class="ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link text-gray-400 hover:text-purple-600"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>`;
             }
 
             return element;
         }
+        
+        /**
+         * Fetches and displays the raw content of a file, rendering Markdown or images.
+         * @param {string} fileApiUrl The GitHub API URL for the file content.
+         * @param {string} fileName The name of the file.
+         * @param {string} downloadUrl Direct raw URL for file content (used for images).
+         */
+        async function viewFileContent(fileApiUrl, fileName, downloadUrl) {
+            VIEWER_TITLE.textContent = `Viewing: ${fileName}`;
+            FILE_VIEWER.innerHTML = `<div class="text-center text-gray-500 py-12">
+                <svg class="animate-spin h-6 w-6 text-purple-500 inline mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                Loading file content...
+            </div>`;
+
+            // 1. Image Check (.jpg, .png, .gif, .webp)
+            if (/\.(jpe?g|png|gif|webp)$/i.test(fileName)) {
+                if (downloadUrl) {
+                    FILE_VIEWER.innerHTML = `<img src="${downloadUrl}" alt="${fileName}" class="max-w-full h-auto rounded-lg shadow-xl mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ef4444/ffffff?text=Image+Load+Error';">`;
+                } else {
+                    FILE_VIEWER.innerHTML = `<p class="text-red-600">Could not retrieve direct link for image.</p>`;
+                }
+                return; 
+            }
+
+            // 2. Text/Markdown File Fetching
+            try {
+                // Fetch raw content using the GitHub API URL with specific header
+                const response = await fetch(fileApiUrl, {
+                    headers: { 'Accept': 'application/vnd.github.v3.raw' }
+                });
+
+                if (!response.ok) {
+                    FILE_VIEWER.innerHTML = `<p class="text-red-600">Error loading file content. Status: ${response.status}.</p>`;
+                    return;
+                }
+
+                const rawContent = await response.text();
+                let renderedContent;
+
+                if (fileName.toLowerCase().endsWith('.md')) {
+                    // Render Markdown using marked.js
+                    renderedContent = marked.parse(rawContent);
+                    FILE_VIEWER.innerHTML = renderedContent;
+                    applyMarkdownStyles(); // Apply Obsidian-like styling after rendering
+                } else if (fileName.toLowerCase().endsWith('.html') || fileName.toLowerCase().endsWith('.txt') || fileName.toLowerCase().endsWith('.js') || fileName.toLowerCase().endsWith('.css')) {
+                    // Display raw text content pre-formatted
+                    renderedContent = `<pre class="whitespace-pre-wrap font-mono text-sm">${rawContent}</pre>`;
+                    FILE_VIEWER.innerHTML = renderedContent;
+                } else {
+                    // Handle other file types (e.g., binaries, unsupported text formats)
+                    renderedContent = `<div class="p-6 bg-yellow-100 rounded-lg">
+                        <p class="font-semibold mb-2">Unsupported file type for inline viewing.</p>
+                        <p>To view this file (${fileName}), please <a href="${fileApiUrl.replace('/contents/', '/blob/')}" target="_blank" class="text-purple-600 hover:underline">view it directly on GitHub</a>.</p>
+                    </div>`;
+                    FILE_VIEWER.innerHTML = renderedContent;
+                }
+
+            } catch (error) {
+                console.error("File viewing failed:", error);
+                FILE_VIEWER.innerHTML = `<p class="text-red-600">An unexpected error occurred while viewing the file.</p>`;
+            }
+        }
+        
+        /**
+         * Applies custom styling to rendered Markdown elements for an Obsidian-like look.
+         */
+        function applyMarkdownStyles() {
+            const viewer = document.getElementById('fileViewer');
+
+            // Apply styles to common Markdown elements
+            viewer.querySelectorAll('h1').forEach(el => el.className = 'text-3xl font-bold border-b pb-2 mb-4 mt-8 text-gray-800');
+            viewer.querySelectorAll('h2').forEach(el => el.className = 'text-2xl font-semibold border-b pb-1 mb-3 mt-6 text-gray-800');
+            viewer.querySelectorAll('h3').forEach(el => el.className = 'text-xl font-medium mb-2 mt-4 text-gray-700');
+            viewer.querySelectorAll('p').forEach(el => el.className = 'mb-4 leading-relaxed text-gray-700');
+            viewer.querySelectorAll('ul').forEach(el => el.className = 'list-disc pl-6 mb-4 space-y-1 text-gray-700');
+            viewer.querySelectorAll('ol').forEach(el => el.className = 'list-decimal pl-6 mb-4 space-y-1 text-gray-700');
+            viewer.querySelectorAll('a').forEach(el => el.className = 'text-purple-600 hover:underline');
+            viewer.querySelectorAll('blockquote').forEach(el => el.className = 'border-l-4 border-purple-400 pl-4 py-2 my-4 italic text-gray-600 bg-purple-50');
+            viewer.querySelectorAll('pre').forEach(el => el.className = 'p-3 my-4 bg-gray-800 text-white rounded-lg overflow-x-auto text-sm');
+            viewer.querySelectorAll('code:not(pre code)').forEach(el => el.className = 'bg-gray-200 text-red-600 px-1 py-0.5 rounded text-sm font-mono');
+            viewer.querySelectorAll('hr').forEach(el => el.className = 'my-8 border-t border-gray-300');
+        }
+
 
         /**
          * Navigates to a new folder path.
          * @param {string} path The target folder path.
          */
         function navigateToPath(path) {
-            // Check if owner/repo are set
-            if (!currentOwner || !currentRepo) {
-                showMessage('Please enter both a GitHub owner and repository name first.', 'warning');
-                return;
-            }
             fetchContents(path);
         }
 
         /**
-         * Updates the browser URL to reflect the current path.
+         * Updates the browser URL to reflect the current path (owner/repo are fixed).
          * @param {string} path The current folder path.
          */
         function updateURL(path) {
@@ -256,10 +349,8 @@
             if (path) {
                 params.set('path', path);
             }
-            params.set('owner', currentOwner);
-            params.set('repo', currentRepo);
-            const newUrl = `${window.location.pathname}?${params.toString()}`;
-            window.history.pushState({ owner: currentOwner, repo: currentRepo, path: path }, '', newUrl);
+            const newUrl = `${window.location.pathname}${path ? '?' + params.toString() : ''}`;
+            window.history.pushState({ path: path }, '', newUrl);
         }
 
         /**
@@ -274,25 +365,28 @@
             // Root link
             const rootLink = document.createElement('a');
             rootLink.classList.add('text-purple-600', 'hover:underline', 'cursor-pointer', 'font-semibold');
-            rootLink.textContent = currentOwner + '/' + currentRepo;
+            rootLink.textContent = 'Root';
             rootLink.onclick = () => navigateToPath('');
             PATH_CONTAINER.appendChild(rootLink);
             
-            // Add separator (/)
-            PATH_CONTAINER.innerHTML += '<span class="mx-2 text-gray-400">/</span>';
+            // Add separator (/) only if we are not at the root
+            if (parts.length > 0) {
+                PATH_CONTAINER.innerHTML += '<span class="mx-2 text-gray-400">/</span>';
+            }
 
             // Path segments
             parts.forEach((part, index) => {
                 currentAccumulatedPath += (index > 0 ? '/' : '') + part;
 
                 const segmentLink = document.createElement('a');
-                segmentLink.classList.add('hover:underline', 'cursor-pointer');
                 
                 if (index === parts.length - 1) {
-                    segmentLink.classList.add('text-gray-800', 'font-medium'); // Current path is not clickable as it's active
+                    // Current segment
+                    segmentLink.classList.add('text-gray-800', 'font-medium');
                     segmentLink.textContent = part;
                 } else {
-                    segmentLink.classList.add('text-purple-600');
+                    // Parent segment, clickable
+                    segmentLink.classList.add('text-purple-600', 'hover:underline', 'cursor-pointer');
                     segmentLink.textContent = part;
                     // Use a copy of the path for the click handler
                     const pathToNavigate = currentAccumulatedPath; 
@@ -307,65 +401,24 @@
                 }
             });
         }
-
-        /**
-         * Loads the repository based on user input or URL parameters.
-         */
-        function loadRepo() {
-            const owner = OWNER_INPUT.value.trim();
-            const repo = REPO_INPUT.value.trim();
-
-            if (!owner || !repo) {
-                showMessage('Please enter both a valid GitHub owner and repository name.', 'warning');
-                return;
-            }
-
-            currentOwner = owner;
-            currentRepo = repo;
-            
-            // Start navigation from the root path
-            navigateToPath('');
-        }
         
         /**
          * Initialization function: Checks URL parameters and loads content.
          */
         function init() {
+            // Only check for the path parameter since the repo is fixed
             const urlParams = new URLSearchParams(window.location.search);
-            const owner = urlParams.get('owner');
-            const repo = urlParams.get('repo');
             const path = urlParams.get('path') || '';
 
-            if (owner && repo) {
-                // If parameters exist, pre-fill inputs and load
-                OWNER_INPUT.value = owner;
-                REPO_INPUT.value = repo;
-                currentOwner = owner;
-                currentRepo = repo;
-                navigateToPath(path);
-            } else {
-                // Load default example repo (now pre-configured to your repo)
-                loadRepo();
-            }
+            navigateToPath(path);
         }
 
         // Handle browser back/forward navigation
         window.onpopstate = (event) => {
             const urlParams = new URLSearchParams(window.location.search);
             const path = urlParams.get('path') || '';
-            const owner = urlParams.get('owner');
-            const repo = urlParams.get('repo');
             
-            if (owner && repo) {
-                currentOwner = owner;
-                currentRepo = repo;
-                OWNER_INPUT.value = owner;
-                REPO_INPUT.value = repo;
-                fetchContents(path);
-            } else {
-                // Should reload to default state if params are missing
-                init();
-            }
+            fetchContents(path);
         };
 
         // Initialize the app on page load
