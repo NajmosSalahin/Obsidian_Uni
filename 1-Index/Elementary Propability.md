@@ -23,10 +23,10 @@ priority: high
 A numerical measure of uncertainty of an event of a random experiment is called probability.
 ##### Probability is divided into 2 parts:
 1. Objective Probability
-     ###### Objective Probability is divided into 2 parts:
-       i) Classical or mathematical probability;
-       ii) Empirical or statistical or frequency probability;
 2. Subjective Probability.
+
+Objective Probability: 
+   
    
 So, The Probabilities are:
 i) Classical or mathematical probability;
