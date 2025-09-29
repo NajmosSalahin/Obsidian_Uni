@@ -87,3 +87,5 @@ An **event** is a subset of the sample space, consisting of one or more outcomes
 
 ## Exhaustive Outcomes
 **Exhaustive outcomes** are a set of outcomes that cover **all possible results** in the sample space, with no omissions.  
+
+##### add
