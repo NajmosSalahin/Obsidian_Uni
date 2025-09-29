@@ -12,18 +12,22 @@ priority: high
 # Elementary Probability
 #### Probability: 
 A numerical measure of uncertainty of an event of a random experiment is called probability.
-**Example:** When tossing a fair coin, the probability of getting a head is $\frac{1}{2}$
+ *Example:* When tossing a fair coin, the probability of getting a head is $\frac{1}{2}$
 ##### Probability is divided into 2 parts:
 1. Objective Probability
 2. Subjective Probability.
 
-Objective Probability: Objective probability is based on mathematical reasoning or statistical data.
-The probability of drawing a red card from a well-shuffled deck of 52 cards is $\frac{26}{52}$ = $\frac{1}{2}$
+##### *Objective Probability*: Objective probability is based on mathematical reasoning or statistical data.
+ *Example*: The probability of drawing a red card from a well-shuffled deck of 52 cards is $\frac{26}{52}$ = $\frac{1}{2}$
 
- #### Objective Probability is divided into 2 parts:
+#### Objective Probability is divided into 2 parts:
        i) Classical or mathematical probability;
        ii) Empirical or statistical or frequency probability;
    
+
+Subjective Probability: Subjective probability is based on personal judgment, intuition, or belief rather than statistical evidence.
+ Example: A doctor may assign a 70% chance of recovery to a patient based on experience, even though exact statistical data may not be available.
+
    
 So, The Probabilities are:
 i) Classical or mathematical probability;
@@ -33,7 +37,7 @@ iv) Axiomatic probability.
 
 ## Classical Probability:
   Experiment: Experiment is an act that can be repeated under given conditions.
-    Experiment may be 
+    Experiment may be: 
       i) Deterministic or predictable Experiment and
       ii) Random or Unpredictable Experiment.
 Deterministic Experiment: 
