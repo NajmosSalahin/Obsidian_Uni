@@ -106,8 +106,9 @@ The outcomes in the sample space that satisfy the condition defining a particula
 A set of outcomes that **cover all possible results** in the sample space, with no omissions.  
 
 **Classical or Mathmatical or Priori Probability:**
+ If there are n equally likely,
 
-$P(A) = \frac{\text{Number of favourable outcomes to event {A} }}{\text{Total number of possible outcomes}}$
+$P(A) = \frac{\text{Number of favourable outcomes to event {A} }}{\text{Total number of possible outcomes}} = \frac{m}{n}$
 
 
 
