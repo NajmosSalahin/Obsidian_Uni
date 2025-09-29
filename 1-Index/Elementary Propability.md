@@ -91,7 +91,7 @@ A trial is an experiment or an action that results in one or more outcomes
 **Outcomes** are the possible results or observations that can occur from a trial in an experiment.  
 
 ##### [Event](#event)  
-An **event** is a subset of the sample space, consisting of one or more outcomes that satisfy a specific condition.  
+An **event** is a subset of the sample space, constituting a collection of possible outcomes of a trial.  
 
 ##### [Equally Likely Outcomes](#equally-likely-outcomes)  
 Outcomes in a sample space that have the **same probability** of occurring.  
@@ -104,3 +104,4 @@ The outcomes in the sample space that satisfy the condition defining a particula
 
 ##### [Exhaustive Outcomes](#exhaustive-outcomes)  
 A set of outcomes that **cover all possible results** in the sample space, with no omissions.  
+
