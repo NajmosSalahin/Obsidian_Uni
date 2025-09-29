@@ -75,6 +75,4 @@ Favourable outcomes are the outcomes in the sample space that satisfy the condit
 
 Exhaustive outcomes are a set of outcomes that cover all possible results in the sample space, with no omissions.
 
-(
-[Cuts](Propability%20Web%20Cuts.md)
-)
+
