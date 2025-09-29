@@ -420,8 +420,9 @@ content-start: 186
 
 ### Determination of Probability using Sample Space and Probability Tree
 
-**Definition:** Determination of probability using sample space and probability tree involves listing all outcomes in sample space or using a tree diagram to visualize branches and calculate probabilities by multiplying along paths.
+**Definition:** Determination of [[probability]] using sample space and probability tree involves listing all outcomes in sample space or using a tree diagram to visualize branches and calculate probabilities by multiplying along paths.
 
 **Example:** Two coins: Tree branches for H/T each, P(HH) = (1/2)\*(1/2) = 1/4.
 
 **Details/Equations/Formulas:** For independent events: P(path) = product of branch probs. Total P(E) = sum of path probs for E. For sample space: enumerate and sum.
+
