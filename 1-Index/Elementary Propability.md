@@ -107,7 +107,8 @@ A set of outcomes that **cover all possible results** in the sample space, with 
 
 **Classical or Mathmatical or Priori Probability:**
 
+```python
+print()
 ```
-```$P(A) = \frac{\text{Number of favourable outcomes to event {A} }}{\text{Total number of possible outcomes}}$
 
 
