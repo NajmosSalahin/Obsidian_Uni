@@ -61,22 +61,25 @@ $P(\text{4}) = \frac{1}{6}$
 since there is 1 favourable outcome (getting a 4) out of 6 possible equally likely outcomes (1, 2, 3, 4, 5, 6).
 
 
-**Experiment:** An act that can be repeated under given conditions.  
+**Experiment:** Experiment is an act that can be repeated under given conditions.
+ **Example:**
+  * Coin tossing
+ 
 
 Experiments may be:  
 1. **Deterministic (Predictable) Experiment**  
-   - The outcome is unique or certain.  
-   - Examples:  
-     - For a perfect gas, if $P$ = pressure and $V$ = volume (temperature constant):  
+   - The experiment is called deterministic when the outcome or result is unique or certain.  
+   - **Examples**:  
+     - For a perfect gas, if $P$ = pressure and $V$ = volume and temperature is constant:  
        $PV = \text{constant}$  
-     - If $H$ = hydrogen and $O$ = oxygen:  
+     - If $H$ = hydrogen and $O$ = oxygen then,  
        $H + O_2 \to H_2O$ (water)  
 
 2. **Random (Unpredictable) Experiment**  
-   - Outcomes cannot be predicted with certainty.  
+   - A experiment is called random experiment whose outcomes cannot be predicted with certainty.  
    - Examples:  
-     - Tossing a coin → unsure if head or tail.  
-     - A light-tube after $t$ hours → may fail anytime.  
+     - In tossing a coin one is not sure if a head or a tail will be obtained. 
+     * If a light-tube has lasted for t hours, nothing can be said about its further life. It may fail to function at any moment. 
 
 ---
 
