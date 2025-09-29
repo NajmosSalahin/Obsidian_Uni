@@ -105,3 +105,6 @@ The outcomes in the sample space that satisfy the condition defining a particula
 ##### [Exhaustive Outcomes](#exhaustive-outcomes)  
 A set of outcomes that **cover all possible results** in the sample space, with no omissions.  
 
+$P(A) = \frac{\text{Number of favourable outcomes to event {A} }}{\text{Total number of possible outcomes}}$
+
+
