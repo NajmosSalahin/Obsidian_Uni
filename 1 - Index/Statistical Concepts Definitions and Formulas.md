@@ -10,6 +10,8 @@ status: active
 links:
   - "[[STAT-1101]]"
 semester: "1.1"
+related:
+  - "[[STAT-1101]]"
 ---
 ### Information
 
@@ -29,7 +31,7 @@ semester: "1.1"
 
 ### Mean
 
-**Definition:** The mean (or average) is a measure of central tendency that represents the arithmetic average of a set of numbers, calculated by summing all values and dividing by the number of values.
+##### **Definition:** The mean (or average) is a measure of central tendency that represents the arithmetic average of a set of numbers, calculated by summing all values and dividing by the number of values.
 
 **Example:** For scores: 10, 20, 30, 40, 50. Mean = (10+20+30+40+50)/5 = 30.
 
@@ -37,7 +39,7 @@ semester: "1.1"
 
 ### Median
 
-**Definition:** The median is a measure of central tendency that represents the middle value in an ordered dataset. For even number of observations, it is the average of the two middle values.
+##### **Definition:** The median is a measure of central tendency that represents the middle value in an ordered dataset. For even number of observations, it is the average of the two middle values.
 
 **Example:** For scores: 10, 20, 30, 40, 50 (odd n=5), median = 30. For 10, 20, 30, 40 (even n=4), median = (20+30)/2 = 25.
 
