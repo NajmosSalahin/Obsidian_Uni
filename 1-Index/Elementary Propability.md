@@ -110,5 +110,14 @@ A set of outcomes that **cover all possible results** in the sample space, with 
 
 $P(A) = \frac{\text{Number of favourable outcomes to event {A} }}{\text{Total number of possible outcomes}} = \frac{m}{n}$
 
-$P(\bar{A})$ = 1 - $P({A})$
+$P(\bar{A}) = 1 - P({A})$
+
+So, $P({A}) + P(\bar{A})$ = 1
+ -> P(U) = 1
+
+![[Pasted image 20250929211736.png]]
+
+
+
+![[Probability-01.jpg]]
 
