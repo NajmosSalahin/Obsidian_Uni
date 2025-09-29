@@ -1,3 +1,4 @@
 ---
 title: A little bit every day
 ---
+Large goals can often seem daunting, like attempting to scale a mountain in a single effort. Instead, focus on consistent, small actions—such as writing one paragraph [[Writing Habits]], exercising for 10 minutes [[Exercise Routine]], or learning a new vocabulary word each day. These incremental steps accumulate over time, fostering habits [[Atomic Habits]] without overwhelming pressure or risk of burnout. Consistency outperforms sporadic intensity, leading to meaningful progress. Begin with a modest task tomorrow to experience the benefits. Maintain simplicity and steadiness for sustained results.
