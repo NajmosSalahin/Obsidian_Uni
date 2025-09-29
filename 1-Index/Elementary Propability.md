@@ -84,8 +84,9 @@ Experiments may be:
 ---
 
 ##### [Trial](#trial)  
-A **trial** is a single performance or execution of a random experiment, resulting in one outcome.  
-
+A trial is an experiment or an action that results in one or more outcomes  
+ Example: 
+ * Tossing a coin once is a trial. Throwing a dice once is also a trial.
 ##### [Outcomes](#outcomes)  
 **Outcomes** are the possible results or observations that can occur from a trial in an experiment.  
 
