@@ -83,23 +83,23 @@ Experiments may be:
 
 ---
 
-## Trial
-A **trial** is a single performance of a random experiment, resulting in one outcome.  
+##### [Trial](#trial)  
+A **trial** is a single performance or execution of a random experiment, resulting in one outcome.  
 
-## Outcomes
-**Outcomes** are the possible results or observations from a trial in an experiment.  
+##### [Outcomes](#outcomes)  
+**Outcomes** are the possible results or observations that can occur from a trial in an experiment.  
 
-## Event
+##### [Event](#event)  
 An **event** is a subset of the sample space, consisting of one or more outcomes that satisfy a specific condition.  
 
-## Equally Likely Outcomes
-**Equally likely outcomes** are outcomes in a sample space that have the same probability of occurring.  
+##### [Equally Likely Outcomes](#equally-likely-outcomes)  
+Outcomes in a sample space that have the **same probability** of occurring.  
 
-## Mutually Exclusive Outcomes
-**Mutually exclusive outcomes** (or events) are those that **cannot occur simultaneously** in a single trial.  
+##### [Mutually Exclusive Outcomes](#mutually-exclusive-outcomes)  
+Outcomes (or events) that **cannot occur simultaneously** in a single trial.  
 
-## Favourable Outcomes
-**Favourable outcomes** are the outcomes in the sample space that satisfy the condition defining a particular event.  
+##### [Favourable Outcomes](#favourable-outcomes)  
+The outcomes in the sample space that satisfy the condition defining a particular event.  
 
-## Exhaustive Outcomes
-**Exhaustive outcomes** are a set of outcomes that cover **all possible results** in the sample space, with no omissions.  
+##### [Exhaustive Outcomes](#exhaustive-outcomes)  
+A set of outcomes that **cover all possible results** in the sample space, with no omissions.  
