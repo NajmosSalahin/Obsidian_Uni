@@ -25,9 +25,7 @@ Use inline links to grow your graph.
 
 ## Key Points
 
-- {{Key point 1}}  
-- {{Key point 2}}  
-- {{Key point 3}}  
+
 
 ---
 
@@ -37,5 +35,3 @@ Write a concrete example or case study here.
 ---
 
 ## References
-- {{Author}}, {{Year}}. {{Book/Article Title}},{{Publisher}}
-- {{Author}}, {{Year}}. {{Book/Article Title}},{{Publisher}}
