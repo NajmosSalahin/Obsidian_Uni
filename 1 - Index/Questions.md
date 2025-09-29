@@ -1,0 +1,5 @@
+Definition: Statistics, Propability, Sample space, Population, Quantitative data, Quantitative data, Central Tendency, outliers, Unimodal Dataset, Bimodal Dataset, Multimodal Dataset, statistical measures, uniform distribution, Primary/Direct Data, Secondary/Indirect Data, Unorganized Data, Organized Data, Frequency Histogram, Line Diagram, Random Experiment, Event, Equally Likely Events, Mutually Exclusive Events, Favourable Outcomes, Sample Space, Sample Point, Logic Based Propabilities, Determination of Logic Based Propabilities, Two Special Events: Certain Events, Impossible Events, Data Based Propability, Determination of Propability using Sample Space and Propability Tree.
+
+---
+
+Part_2: Primary Data, Secondary Data, Croos-Section Data, Panel Data, Time-Section Data, Repeated Measure Data, Longitudal Data, Pool Data,  

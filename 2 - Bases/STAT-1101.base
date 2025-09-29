@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasTag("STAT-1101")
+    order:
+      - title
+      - created
+      - semester
+      - related
+    columnSize:
+      note.title: 374
+      note.created: 126
+      note.semester: 99
