@@ -1,18 +1,18 @@
 ---
 title: <% tp.file.title %>
-course: STAT-1101
+course:
 type: evergreen
 status: in-progress
 topics:
   - 
-semester: Fall 2025
+semester:
 priority: medium
 tags:
   - 
+related:
+  - 
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
-related:
-  -
 ---
 
 # 🌱 <% tp.file.title %>
@@ -20,18 +20,3 @@ related:
 ## Main Note
 Write the main narrative explanation here.  
 Use inline links to grow your graph.
-
----
-
-## Key Points
-
-
-
----
-
-## Example
-Write a concrete example or case study here.  
-
----
-
-## References

@@ -6,13 +6,12 @@ type:
 tags:
   - places
   - cities
-loc: 
-rating: 
-created: {{date}}
-last: 
+loc:
+rating:
+created:
+  "{ date }":
+last:
 location:
-  - "35.021041"
-  - "135.7556075"
 ---
 ## Trips
 
