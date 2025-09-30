@@ -12,7 +12,7 @@ According to Prof. K. E. Boulding. “Microeconomics deals with the study of ind
 
 What is Macroeconomics?
 
-The term macroeconomics is derived from the Greek word *‘makros’*meaning‘large.’ The macroeconomics concerns itself with the analysis of the economy as a whole and its large aggregates such as total output and income, total employment, total consumption, aggregate investment.
+The term macroeconomics is derived from the Greek word *‘makros’meaning‘large.’ The macroeconomics concerns itself with the analysis of the economy as a whole and its large aggregates such as total output and income, total employment, total consumption, aggregate investment.
 
 According to K.E.Boulding “Macroeconomics deals not with individual quantities as such put with the aggregates of these quantities not with individual incomes but with the national income; not with individual output but with the national output.”
 
