@@ -1,0 +1,6 @@
+filters:
+  and:
+    - file.folder == "Github/5 - Casual Writing"
+views:
+  - type: table
+    name: Table

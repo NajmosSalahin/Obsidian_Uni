@@ -1,14 +1,15 @@
 ---
 title: My habits I'm going to work on
 tags:
+  - breathe
 created: 2025-09-30
-status:
+status: in_progress
 updated: 2025-09-30
 topics:
   - habit gaining
 type: casual
 ---
-[[show.habit.base]]
+![[habit.base#View]]
 
 The habit I'm going to work on first is [[Breathing]]
 * Breathing : I will use 4-7-8 breathing technique.
@@ -16,4 +17,5 @@ The habit I'm going to work on first is [[Breathing]]
   * It will increase my $\ce{O2}$ level in my blood and make my $\ce{CO2}$ flow smoother.
   * It will increase my lung capacity.
   * It will help lower my blood pressure and reduce my anxiety.
-The next habit I will work on is       
+The next habit I will work on is writing journal everyday.
+* Journaling : 
