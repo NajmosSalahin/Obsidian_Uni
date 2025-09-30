@@ -66,9 +66,9 @@ Positive economics is about describing how things actually are without making an
 - The government has introduced a road tax of $10 for all motorists passing a certain road.
 - This road tax has reduced the number of motorists on that road by 20%.
 - Traffic congestion is reduced on that particular road.
-- ` `The travel time for motorists is reduced.
+- The travel time for motorists is reduced.
 
-` `All these points show a descriptive and objective approach to discussing what is actually happening as a result of introducing the new road tax. There are no opinions or value judgements made. This is the approach to describing economic phenomena used by positive economists.
+All these points show a descriptive and objective approach to discussing what is actually happening as a result of introducing the new road tax. There are no opinions or value judgements made. This is the approach to describing economic phenomena used by positive economists.
 
 
 
