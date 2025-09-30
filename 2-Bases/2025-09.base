@@ -1,0 +1,11 @@
+filters:
+  and:
+    - created >= "2025-09-01"
+    - created <= "2025-09-30"
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - created
+      - file.folder
