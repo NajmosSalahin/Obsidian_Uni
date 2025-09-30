@@ -152,9 +152,7 @@ Although useful, statistics has certain limitations:
 
 ## Key Points
 
-- {{Key point 1}}  
-- {{Key point 2}}  
-- {{Key point 3}}  
+
 
 ---
 
@@ -164,5 +162,3 @@ Write a concrete example or case study here.
 ---
 
 ## References
-- {{Author}}, {{Year}}. {{Book/Article Title}},{{Publisher}}
-- {{Author}}, {{Year}}. {{Book/Article Title}},{{Publisher}}
