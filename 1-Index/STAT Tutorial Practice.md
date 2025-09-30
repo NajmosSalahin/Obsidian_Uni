@@ -1,7 +1,6 @@
 ---
-title: "[[STAT-1101 Tutorial Practice]]"
-course:
-  - "[[Introduction to Statistics and Data Science]]"
+title: "[[STAT Tutorial Practice]]"
+course code:
   - "[[STAT-1101]]"
 type: evergreen
 status: in_progress

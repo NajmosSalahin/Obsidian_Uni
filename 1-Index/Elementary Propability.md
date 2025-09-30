@@ -6,8 +6,11 @@ date_created: 2025-08-25
 tags:
   - course
   - STAT
+  - STAT-1102
 status: in-progress
 priority: high
+related:
+  - "[[STAT-1102]]"
 ---
 # Elementary Probability
 
