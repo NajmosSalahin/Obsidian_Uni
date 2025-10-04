@@ -1,3 +1,7 @@
+---
+tags:
+type: self
+---
 ### Daily Routine for a 20-Year-Old College Student
 
 #### Morning Routine (Applies to Both Schedule Versions)
