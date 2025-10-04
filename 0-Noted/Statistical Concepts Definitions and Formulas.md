@@ -15,7 +15,7 @@ type: academic
 ---
 ### Information
 
-##### **Definition:** <mark style="background: #ADCCFFA6;">Information refers to processed, organized, and interpreted data that provides meaning, context, and usefulness for decision-making.</mark> *<mark style="background: #BBFABBA6;">It is derived from raw data through analysis, summarization, or transformation, making it actionable and relevant</mark>.*
+##### **Definition:** <mark style="background: #ADCCFFA6;">Information refers to processed, organized, and interpreted data that provides meaning, context, and usefulness for decision-making.</mark> *It is derived from raw data through analysis, summarization, or transformation, making it actionable and relevant.*
 
 **Example:** Raw data like "daily temperatures: 25, 28, 30" becomes information when processed as "average weekly temperature is 27.67°C, indicating a warm week."
 
