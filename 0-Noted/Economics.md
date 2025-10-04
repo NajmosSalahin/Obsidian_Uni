@@ -1,8 +1,8 @@
 What Is Economics?
 
-Economics is a social science that focuses on the production, distribution, and consumption of goods and services. The study of economics is primarily concerned with analyzing the choices that individuals, businesses, governments, and nations make to allocate limited resources.
+<mark style="background: #ADCCFFA6;">Economics is a social science that focuses on the production, distribution, and consumption of goods and services.</mark> The study of economics is primarily concerned with analyzing the choices that individuals, businesses, governments, and nations make to allocate limited resources.
 
-Lionel Robbins said the following about the subject: “Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.”
+<mark style="background: #FF5582A6;">Lionel Robbins said the following about the subject: “Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.”</mark>
 
 What is Microeconomics?
 
