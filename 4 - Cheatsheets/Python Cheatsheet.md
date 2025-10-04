@@ -1,6 +1,6 @@
 ---
 title: Python cheatsheet
-course: STAT-1101
+course:
 type: evergreen
 status: in-progress
 topics:
