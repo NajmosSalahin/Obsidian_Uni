@@ -1,6 +1,7 @@
 ---
 tags:
 type: self
+created: 2025-10-04
 ---
 ### Daily Routine for a 20-Year-Old College Student
 
