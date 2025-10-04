@@ -15,7 +15,7 @@ type: academic
 ---
 ### Information
 
-##### **Definition:** Information refers to processed, organized, and interpreted data that provides meaning, context, and usefulness for decision-making. *It is derived from raw data through analysis, summarization, or transformation, making it actionable and relevant.
+##### **Definition:** Information refers to processed, organized, and interpreted data that provides meaning, context, and usefulness for decision-making. *It is derived from raw data through analysis, summarization, or transformation, making it actionable and relevant.*
 
 **Example:** Raw data like "daily temperatures: 25, 28, 30" becomes information when processed as "average weekly temperature is 27.67°C, indicating a warm week."
 
@@ -23,7 +23,7 @@ type: academic
 
 ### Data
 
-##### **Definition:** Data consists of raw, unprocessed facts, figures, observations, or measurements collected from various sources, without inherent meaning until analyzed. *It can be qualitative (descriptive) or quantitative (numerical).
+##### **Definition:** Data consists of raw, unprocessed facts, figures, observations, or measurements collected from various sources, without inherent meaning until analyzed. *It can be qualitative (descriptive) or quantitative (numerical).*
 
 **Example:** A list of students' exam scores: 85, 92, 78, 95, 88 (quantitative data). Or colors preferred by students: red, blue, green (qualitative data).
 
