@@ -1,0 +1,8 @@
+filters:
+  and:
+    - file.folder == "Github/Resources/Banners/Wallpaper"
+views:
+  - type: cards
+    name: Table
+    image: file.file
+    imageAspectRatio: 0.55
