@@ -11,7 +11,7 @@ semester: "1.1"
 related:
   - "[[STAT-1101]]"
 banner: Github/Resources/Banners/Wallpaper/books.jpg
-content-start: 186
+type: academic
 ---
 ### Information
 
