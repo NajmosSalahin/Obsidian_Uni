@@ -99,12 +99,6 @@ Example:
 # 'Hello'
 ```
 
-The *Walrus Operator*, or **Assignment Expression Operator** was firstly introduced in 2018 via [PEP 572](https://peps.python.org/pep-0572/), and then officially released with **Python 3.8** in October 2019.
-
-Syntax Semantics & Examples
-
-The [PEP 572](https://peps.python.org/pep-0572/) provides the syntax, semantics and examples for the Walrus Operator.
-
 ## Data Types
 
 Python has nine core built-in data types that cover almost everything you’ll need:
