@@ -400,7 +400,7 @@ type: academic
 
 **Definition:** A certain event is an event that is guaranteed to occur, with probability 1, such as the entire sample space.
 
-**Example:** Rolling a number between 1 and 6 on a die.
+**Example:** Rolling a number between 1 and 6 on a dice.
 
 **Details/Equations/Formulas:** P(certain) = 1. Union with any event doesn't change it.
 
@@ -408,7 +408,7 @@ type: academic
 
 **Definition:** An impossible event is one that cannot occur, with probability 0, such as the empty set.
 
-**Example:** Rolling a 7 on a standard die.
+**Example:** Rolling a 7 on a standard dice.
 
 **Details/Equations/Formulas:** P(impossible) = 0. Intersection with any event is impossible.
 
