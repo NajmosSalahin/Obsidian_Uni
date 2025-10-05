@@ -17,7 +17,7 @@ type: academic
 
 ##### **Definition:** <mark style="background: #ADCCFFA6;">Information refers to processed, organized, and interpreted data that provides meaning, context, and usefulness for decision-making.</mark> *It is derived from raw data through analysis, summarization, or transformation, making it actionable and relevant.*
 
-<mark style="background: #BBFABBA6;">**Example:**  a warm week.</mark>
+**Example:**  <mark style="background: #BBFABBA6;">a warm week</mark>.
 
 **Details/Equations/Formulas:** No specific mathematical formulas, but information is often obtained by applying statistical methods to data (e.g., calculating averages or trends). In information theory (Shannon's), it can be quantified as $I = -\log_2(p)$  , where $p$  is the probability of an event, measuring uncertainty reduction.
 
