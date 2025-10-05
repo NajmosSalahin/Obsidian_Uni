@@ -23,7 +23,7 @@ type: academic
 
 ### Data
 
-##### **Definition:** Data consists of raw, unprocessed facts, figures, observations, or measurements collected from various sources, without inherent meaning until analyzed. *It can be qualitative (descriptive) or quantitative (numerical).*
+##### **Definition:** <mark style="background: #ADCCFFA6;">Data consists of raw, unprocessed facts, figures, observations, or measurements collected from various sources, without inherent meaning until analyzed</mark>. *It can be qualitative (descriptive) or quantitative (numerical).*
 
 **Example:** A list of students' exam scores: 85, 92, 78, 95, 88 (quantitative data). Or colors preferred by students: red, blue, green (qualitative data).
 
