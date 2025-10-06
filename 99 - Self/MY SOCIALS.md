@@ -10,3 +10,6 @@ discord: https://discord.com/users/sukkimura.
 telegram: https://t.me/najmossalahin
 github: https://github.com/NajmosSalahin/
 linkedin: https://www.linkedin.com/in/md-najmos-salahin-185106371/
+spotify: https://open.spotify.com/user/vd04twrk09mp6hmvb9ree5dt2
+pinterest: https://jp.pinterest.com/najmussalahinadib/
+reddit: https://www.reddit.com/user/PirateSanji_1353/
