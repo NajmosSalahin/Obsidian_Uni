@@ -1,3 +1,7 @@
+---
+course:
+  - "[[ECO-1104]]"
+---
 What Is Economics?
 
 <mark style="background: #ADCCFFA6;">Economics is a social science that focuses on the production, distribution, and consumption of goods and services.</mark> The study of economics is primarily concerned with analyzing the choices that individuals, businesses, governments, and nations make to allocate limited resources.
