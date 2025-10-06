@@ -39,7 +39,7 @@ What Are The Differences Between Microeconomics and Macroeconomics?
 
 In the previous sections, we have understood micro and macroeconomics in detail. 
 
-Scarcity:Scarcity is the conditionthat exists when there is an insufficient quantity of resources to produce all the goods derived by people. We can say another way; scarcity derives from the combination of limited resources and unlimited wants.
+<mark style="background: #ADCCFFA6;">Scarcity: Scarcity is the condition that exists when there is an insufficient quantity of resources to produce all the goods derived by people.</mark> We can say another way; scarcity derives from the combination of limited resources and unlimited wants.
 
 Opportunity cost:The opportunity cost of a particular action is the loss of next best alternative that is a sacrificed opportunity is called an opportunity cost.
 
@@ -49,7 +49,7 @@ Production Possibility Curve (PPC) on a National Scale:
 
 Imagine a national economy that can produce only two things: wine and cotton. If points A, B, and C are plotted on a curve, it represents the economy’s most efficient use of resources. 
 
-![Image](Aspose.Words.199a4c97-ee6b-4bb4-a97a-8967653eadf6.001.jpeg)
+![[Pasted image 20251006155702.png]]
 
 For instance, producing five units of wine and five units of cotton (point B) is just as attainable as producing three units of wine and seven units of cotton. Point X represents an inefficient use of resources, while point Y represents a goal that the economy simply cannot attain with its present levels of resources. 
 
