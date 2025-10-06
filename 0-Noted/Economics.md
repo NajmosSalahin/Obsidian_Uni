@@ -6,7 +6,7 @@ What Is Economics?
 
 What is Microeconomics?
 
-The term microeconomics is derived from the Greek word *‘mikros’* meaning ‘small.’ The microeconomics deals with the analysis of small individual units of individual firms and small aggregate or groups of individual units such as various industries and markets.
+<mark style="background: #ADCCFFA6;">The term microeconomics is derived from the Greek word *‘mikros’* meaning ‘small.’ The microeconomics deals with the analysis of small individual units of individual firms and small aggregate or groups of individual units such as various industries and markets.</mark>
 
 According to Prof. K. E. Boulding. “Microeconomics deals with the study of individual enterprises, particular homes, individual price, stipend, income, individual diligence, and particular goods.”
 
