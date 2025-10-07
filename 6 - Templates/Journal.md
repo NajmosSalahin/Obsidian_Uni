@@ -1,10 +1,11 @@
 ---
-created: 2025-10-07
+created:
 type: journal
-updated: 2025-10-07
 ---
+<% tp.date.now("YYYY-MM-DD") %>
+
 What's on my mind right now?
- -> 
+ ->
 What went well today? What was a small win?
  ->
 What was challenging today and how did I handle it?
