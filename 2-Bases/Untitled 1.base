@@ -3,6 +3,7 @@ filters:
     - file.hasProperty("created")
     - type == "journal"
     - file.hasProperty("type")
+    - file.inFolder("Github/Journal")
 views:
   - type: table
     name: Table
