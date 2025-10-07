@@ -1,0 +1,15 @@
+filters:
+  and:
+    - file.hasProperty("created")
+    - type == "journal"
+    - file.hasProperty("type")
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - type == "journal"
+        - file.hasProperty("created")
+    order:
+      - file.name
+      - created
