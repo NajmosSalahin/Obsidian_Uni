@@ -1,4 +1,4 @@
 ---
-title: "[[MATH-1103]]"
+title: "[[STAT-1103]]"
 ---
 definitions: matrices, 
