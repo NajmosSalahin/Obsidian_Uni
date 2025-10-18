@@ -1,0 +1,6 @@
+filters:
+  and:
+    - file.inFolder("Github/99 - Self")
+views:
+  - type: table
+    name: Table
