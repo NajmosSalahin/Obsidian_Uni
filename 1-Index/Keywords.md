@@ -42,7 +42,10 @@
 5. Frequency: 
 	1. Central Tendency
 	2. Dispersion
-
+	3. Shape
+		1. Skewness
+		2. Kurtosis
+6. 
 
 
 
