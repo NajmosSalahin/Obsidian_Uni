@@ -30,16 +30,18 @@
 			1. geographical
 			2. chronological
 			3. Qualitative
-			4. Quantatitive
+			4. Quantitative
 4. Frequency Distribution
 	1. Discrete/ ungrouped
 	2. Continuous/ grouped
 		1. Number of classes: 
-			1. Starge's Rule: $K=1+3.322\log_{10}{N}$
+			1. Sturge's Rule: $K=1+3.322\log_{10}{N}$
 			2. Size of class interval
 				1. Inclusive
 				2. Exclusive
-5.  
+5. Frequency: 
+	1. Central Tendency
+	2. Dispersion
 
 
 
