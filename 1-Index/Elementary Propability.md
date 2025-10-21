@@ -58,7 +58,7 @@ $P(A) = \frac{\text{Number of favourable outcomes}}{\text{Total number of possib
 
 **Example:**  
 When tossing a fair die, the probability of getting a **4** is:  
-
+ 
 $P(\text{4}) = \frac{1}{6}$
 
 since there is 1 favourable outcome (getting a 4) out of 6 possible equally likely outcomes (1, 2, 3, 4, 5, 6).
