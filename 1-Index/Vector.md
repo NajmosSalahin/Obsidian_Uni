@@ -6,7 +6,7 @@ Here is the text formatted with proper Markdown and LaTeX.
 
 Definition 1.1. Let $X_1 = (x_{11}, x_{12}, \dots, x_{1n})$ and $X_2 = (x_{21}, x_{22}, \dots, x_{2n})$ be any two $n$-dimensional (finite) vectors. Then the inner product of $X_1$ and $X_2$ is the real-valued scalar
 
-$$X_1 \cdot X_2 = \sum_{i=1}^n x_{1i}x_{2i} = x_{11}x_{21} + x_{12}x_{22} + \dots + x_{1n}x_{2n}$$
+$$X_1 \cdot X_2 = \sum_{i=1}^n x_{1i}x_{2i} = x_{11}x_{21} + x_{12}x_{22} + \dots + x_{1n}x_{2n}=\sum_{i=1}^n (x_{1i} . x_{2i})$$
 
 Definition 1.2. Let $X_1 = (x_{11}, x_{12}, \dots, x_{1n})$ and $X_2 = (x_{21}, x_{22}, \dots, x_{2n})$ be any two $n$-dimensional (finite) vectors. Then the distance between $X_1$ and $X_2$ is given by the (nonnegative) function
 
