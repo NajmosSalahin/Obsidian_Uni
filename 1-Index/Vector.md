@@ -70,20 +70,13 @@ $$- A + A^* = A + A^+ = 0$$
 
 Adding $A$ to both sides of the equation yields
 
-$$A + (- A) + A^* = A + A^+ + A^*$$
-
+$$A + (- A) + A^* = A + A^+ + A$$
 or
-
 $$0 + A^* = A + 0 \text{ (rule 4)}$$
-
 Thus
-
 $$A^* = A \text{ (rule 3). }\square$$
-
 Theorem 1.2. The inner product is distributive over addition (subtraction), so that
-
 $$X_1 \cdot (X_2 + X_3) = X_1 \cdot X_2 + X_1 \cdot X_3$$
-
 where $X_1, X_2$, and $X_3$ are any $n$-dimensional vectors.
 
 Theorem 1.3. The inner product is commutative, that is,
