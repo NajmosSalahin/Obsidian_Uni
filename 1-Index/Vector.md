@@ -64,7 +64,7 @@ where $X_1^* = X_1 - \bar{x}_1 \mathbf{1}$ and $X_2^* = X_2 - \bar{x}_2 \mathbf{
 
 Theorem 1.1. The negative vector of $- A$ is the vector $A$.
 
-PROOF: Let $A^+$ be the negative vector of $A$, and $A^$ the negative vector of $- A$. We will now prove that $A^* = A$. By rule 4 we have*
+PROOF: Let $A^+$ be the negative vector of $A$, and $A^*$ the negative vector of $- A$. We will now prove that $A^* = A$. By rule 4 we have, 
 
 $$- A + A^* = A + A^+ = 0$$
 
