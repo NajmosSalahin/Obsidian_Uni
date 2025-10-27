@@ -106,7 +106,7 @@ PROOF: Let $Y = (y_1, y_2, \dots, y_n)$ be any $n$-dimensional vector with lengt
 
 $$Y^* = \frac{1}{|| Y ||} Y$$
 
-Then $Y^$ is a unit vector, since*
+Then $Y^*$ is a unit vector, since
 
 $$|| Y^* || = \left( \sum_{i=1}^n \frac{y_i^2}{|| Y ||^2} \right)^{1/2} = \frac{1}{|| Y ||} \left( \sum_{i=1}^n y_i^2 \right)^{1/2} = \frac{|| Y ||}{|| Y ||} = 1. \square$$
 
