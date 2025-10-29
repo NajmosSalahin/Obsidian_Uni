@@ -1,9 +1,8 @@
-My apologies. The markdown and LaTeX formatting can be fragile.
-
-Here is the cleaned-up and deduplicated content again, with all LaTeX expressions properly formatted.
-
 ---
-
+banner: Github/Resources/Banners/Wallpaper/anime_girl_plus_rockets.png
+content-start: 291
+---
+---
 ## Probabilistic Concepts: Definitions
 
 ### (i) Trial
