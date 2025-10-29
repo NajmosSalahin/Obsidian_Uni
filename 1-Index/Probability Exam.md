@@ -392,3 +392,163 @@ For any events $E_{1}, E_{2}, ...$, prove $P(\bigcup_{i=1}^{\infty}E_{i})\le\sum
 - Probability: The probability is the ratio of the areas:
     
     $p = \frac{\text{Favourable Area}}{\text{Total Area}} = \frac{\pi(R/2)^{2}}{\pi R^{2}} = \frac{1}{4}$
+
+---
+## 1. Set Operations (New Definitions)
+
+* **Membership:** $x\in A$ (x is an element of A).
+* **Union:** $A \cup B = \{x: x \in A \text{ or } x\in B\}$.
+* **Intersection:** $A \cap B = \{x: x \in A \text{ and } x \in B\}$.
+* **Complement (relative to U):** $A^{c}=U\backslash A$.
+* **Cardinality:** $|A|=$ number of elements.
+
+### Step-by-Step Example
+
+Let $U=\{1,2,3,4,5\}$, $A=\{1,3,5\}$, $B=\{2,3\}$.
+
+1.  **Compute $A \cup B$:** List elements that are in A or in B.
+    * Combine $\{1,3,5\}$ and $\{2,3\}$ without repetition to get $\{1, 3, 5, 2\}$.
+    * Sorted: $A\cup B=\{1,2,3,5\}$.
+2.  **Compute $A \cap B$:** Find elements common to both.
+    * Both contain 3 only.
+    * $A\cap B=\{3\}$.
+3.  **Compute $A^{c}$ (relative to U):** Remove A's elements from U.
+    * $U\backslash A=\{2,4\}$.
+    * $A^{c}=\{2,4\}$.
+4.  **Compute $|A|$:** Count elements of $A=\{1,3,5\}$.
+    * There are 3 elements.
+    * $|A|=3$.
+
+---
+
+## 2. Functions
+
+### Definition
+A function $f$ from set X (domain) to set Y (codomain) is a rule assigning each $x\in X$ exactly one $f(x)\in Y$.
+* **Properties:** one-to-one (injective), onto (surjective), inverse (if exists), composition.
+
+### Example (Point Function)
+Let $X=\{1,2,3,4\}$. Define $f:X\rightarrow R$ by $f(x)=2x$.
+* $f(1)=2$
+* $f(2)=4$
+* $f(3)=6$
+* $f(4)=8$
+
+---
+
+## 3. Point Function vs. Set Function
+
+* **Point function:** A function whose input is a single point $x$ (element of domain).
+    * **Example:** $f(x)=2x$.
+* **Set function:** A function whose inputs are sets (subsets of some universe).
+    * **Examples:** Cardinality $|A|$, measure $\mu(A)$, probability $P(A)$, or a sum over the set $S(A)=\sum_{x\in A}g(x)$.
+
+### Example Linking Both
+Let $U=\{1,2,3,4\}$.
+Define point function $g(x)=x^{2}$ for $x\in U$.
+Define set function $G(A)=\sum_{x\in A}g(x)$ (sum of squares on A).
+
+**Compute $G(\{1,3\})$:**
+1.  Compute $g(1)=1^{2}=1$.
+2.  Compute $g(3)=3^{2}=9$.
+3.  Sum: $G(\{1,3\})=1+9=10$.
+
+* **Indicator function:** The indicator $I_{A}(x)$ is a point function defined by $I_{A}(x)=1$ if $x\in A$ and 0 otherwise. It ties sets and point functions together.
+
+---
+
+## 4. Counting Principles
+
+### (A) Rule of Sum (Addition Rule)
+If there are $m$ ways to do task A or $n$ ways to do task B, and the tasks are mutually exclusive (no overlap), the total ways $=m+n$.
+* **Example:** Choose a vowel (5 ways) or a digit (10 ways) $\rightarrow 5+10=15$ ways.
+
+### (B) Rule of Product (Multiplication Rule)
+If a procedure has $k$ ordered stages (or successive, independent stages) with $n_{1}, n_{2}, ..., n_{k}$ choices respectively, the total ways $=n_{1}\cdot n_{2}\cdot\cdot\cdot n_{k}$.
+* **Example:** Create a 3-character string where each position can be A/B/C/D (4 choices). Total ways $=4\cdot4\cdot4 = 64$ strings.
+
+### (C) Factorials
+$n!=n(n-1)(n-2)\cdot\cdot\cdot2\cdot1$.
+* **Example:** $5!=5\cdot4\cdot3\cdot2\cdot1=120$.
+
+### (D) Permutations (Ordered Arrangements)
+The number of ordered selections of size $r$ from $n$ items.
+* **Formula:** ${}_{n}P_{r}=\frac{n!}{(n-r)!}=n(n-1)\cdot\cdot\cdot(n-r+1)$.
+* **Example:** Arrange 3 of 5 books in order.
+    * ${}_{5}P_{3}=5\cdot4\cdot3 = 60$ arrangements.
+
+### (E) Combinations (Unordered Selections)
+The number of unordered selections of size $r$ from $n$ items.
+* **Formula:** $\binom{n}{r}=\frac{n!}{r!(n-r)!}$.
+* **Example:** Choose 3 students out of 8.
+    * $\binom{8}{3}=\frac{8\cdot7\cdot6}{3\cdot2\cdot1} = \frac{336}{6} = 56$.
+
+### (F) Pigeonhole Principle
+If $N$ objects are placed into $k$ boxes and $N>k$, then some box contains at least two objects.
+
+---
+
+## 5. Binomial Theorem
+
+### Statement
+For any real/complex $x, y$ and integer $n\ge0$:
+$(x+y)^{n}=\sum_{k=0}^{n}\binom{n}{k}x^{n-k}y^{k}$.
+
+### Proof (by Induction)
+* **Base Case ($n=0$):** $(x+y)^{0}=1$. The right-hand side (RHS) is $\binom{0}{0}x^{0}y^{0}=1$. It holds.
+* **Inductive Step:** Assume true for $n$. We must show it holds for $n+1$.
+    $(x+y)^{n+1}=(x+y)(x+y)^{n}=(x+y)\sum_{k=0}^{n}\binom{n}{k}x^{n-k}y^{k}$.
+* **Distribute:**
+    $(x+y)^{n+1}=\sum_{k=0}^{n}\binom{n}{k}x^{n+1-k}y^{k}+\sum_{k=0}^{n}\binom{n}{k}x^{n-k}y^{k+1}$.
+* **Re-index:** Re-index the second sum with $j=k+1$. Using Pascal's identity $\binom{n}{k}+\binom{n}{k-1}=\binom{n+1}{k}$, the expression simplifies to:
+    $(x+y)^{n+1}=\sum_{k=0}^{n+1}\binom{n+1}{k}x^{n+1-k}y^{k}$.
+
+*(A combinatorial proof is also noted: the coefficient $\binom{n}{k}$ counts the ways to choose which $k$ factors contribute $y$ when expanding $(x+y)^n$).*
+
+---
+
+## 6. Principle of Mathematical Induction (PMI)
+
+### PMI (Simple Form)
+Let $P(n)$ be a statement about integers $n\ge n_{0}$. If:
+1.  $P(n_{0})$ is true (base case), and
+2.  $P(k)\Rightarrow P(k+1)$ for all $k\ge n_{0}$ (inductive step),
+then $P(n)$ holds for all $n\ge n_{0}$.
+
+### Application
+Prove $n!\ge2^{n}$ for $n\ge4$.
+* **Base $n=4$:** $4!=24$ and $2^{4}=16$. Since $24\ge16$, the base case is true.
+* **Inductive Step:** Assume $k!\ge2^{k}$ for some $k\ge4$. We must show $(k+1)!\ge2^{k+1}$.
+    * $(k+1)!=(k+1) \cdot (k!)$.
+    * By assumption, $(k+1) \cdot (k!) \ge (k+1) \cdot 2^{k}$.
+    * Since $k\ge4$, we know $k+1 \ge 5$, which is greater than 2.
+    * Therefore, $(k+1) \cdot 2^{k} \ge 2 \cdot 2^{k} = 2^{k+1}$.
+    * This shows $(k+1)!\ge2^{k+1}$. By induction, the statement is true.
+
+---
+
+## 7. Inequalities for $n$ Events
+
+### Lower bound for intersection (Bonferroni)
+$P(\bigcap_{i=1}^{n}A_{i})\ge\sum_{i=1}^{n}P(A_{i})-(n-1)$.
+* **Proof:** Note $P(A_{i}^{c})=1-P(A_{i})$. Using Boole's inequality (which was covered as Subadditivity in the previous file) on the union of the complements:
+    $P(\bigcap_{i=1}^{n}A_{i})=1-P(\bigcup_{i=1}^{n}A_{i}^{c})$
+    $\ge 1-\sum_{i=1}^{n}P(A_{i}^{c})$
+    $= 1-\sum_{i=1}^{n}(1-P(A_{i})) = \sum_{i=1}^{n}P(A_{i})-(n-1)$.
+
+*(Note: The Union bound (Boole's inequality / Subadditivity) is skipped as it was in the previous file.)*
+
+---
+
+## 8. Short Solved Mixed Example
+
+* **Problem:** Universe $U=\{1,2,3,4\}$. Point function $f(x)=x+1$. Let $A=\{1,3\}$.
+    * (a) Compute $f(2)$.
+    * (b) Compute set function $F(A)=\sum_{x\in A}f(x)$.
+    * (c) How many ordered pairs (a, b) with $a\in A, b\in U$?
+* **Solutions:**
+    * (a) $f(2)=2+1=3$.
+    * (b) Compute $f(1)=1+1=2$ and $f(3)=3+1=4$. Sum $F(A)=2+4=6$.
+    * (c) Number of ordered pairs $=|A|\cdot|U|$ by the product rule.
+        * $|A|=2$, $|U|=4$.
+        * Total $=2\cdot4=8$.
