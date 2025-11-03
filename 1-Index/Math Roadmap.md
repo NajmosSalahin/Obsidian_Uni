@@ -69,10 +69,7 @@ This is where you'll spend most of your university time. These three pillars are
 
 Shutterstock
 
-```
-* **Integrals:** Finding the "area under the curve," which is used to calculate total probabilities for continuous data.
-```
-
+* ***Integrals:** Finding the "area under the curve," which is used to calculate total probabilities for continuous data.
 - **Advanced Topics (Calculus III - Multivariable):**
     
     - **Partial Derivatives:** Finding the derivative of a function with _many inputs_. This is the single most important concept for machine learning.
