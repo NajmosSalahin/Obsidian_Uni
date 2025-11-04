@@ -64,11 +64,12 @@ Answers:
 	- **Sir Ronald A. Fisher** revolutionized the field with Analysis of Variance (ANOVA), the principles of experimental design, and maximum likelihood estimation.
 	    
 	- **Jerzy Neyman and Egon Pearson** created the modern framework for hypothesis testing, including confidence intervals and Type I/II errors.
-3. 
-
-
-
+3. ![[Pasted image 20251104190630.png]]
+	![[Pasted image 20251104190745.png]]
 4. 
+
+
+
 5. 
 6. 
 7. 
@@ -80,3 +81,4 @@ Answers:
 13. 
 14. 
 15. 
+16. 
