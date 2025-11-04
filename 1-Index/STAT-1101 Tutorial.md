@@ -45,4 +45,38 @@ QS: Here are the questions from the exam paper:
     
 Answers:
 1. The science of statistics originated in ancient civilizations as a form of "state-craft," primarily involving descriptive enumerations like censuses for taxation and military purposes. A significant transformation began in the 17th century with the development of probability theory and the pioneering use of statistical inference by figures like John Graunt. The 18th and 19th centuries saw its formalization as a mathematical discipline, with key contributions such as the normal curve, correlation, and regression from figures like de Moivre, Galton, and Karl Pearson.1 The 20th century was revolutionized by pioneers like William Sealy Gosset (Student's t-test) and Sir Ronald A. Fisher, who introduced ANOVA and the principles of experimental design.2 This framework was further solidified by Neyman and Egon Pearson, who established the formal structure of hypothesis testing.3 The advent of the computational revolution in the mid-20th century then liberated the field, enabling the analysis of massive datasets and fueling the rise of machine learning. Thus, statistics evolved from a simple administrative tool into the indispensable, inferential bedrock of all modern empirical science.
-2. 
+2. Here are the key figures and their contributions:
+
+	- **John Graunt** pioneered statistical inference by analyzing London's death records to find population patterns.
+	    
+	- **Blaise Pascal and Pierre de Fermat** laid the mathematical foundation for statistics by developing probability theory.
+	    
+	- **Jacob Bernoulli** established the Law of Large Numbers, which links theoretical probability to real-world observations.
+	    
+	- **Abraham de Moivre** discovered the formula for the normal distribution curve (the "bell curve"), a central concept in statistics.
+	    
+	- **Francis Galton** introduced the concepts of correlation and regression to quantify the relationship between two variables.
+	    
+	- **Karl Pearson** founded mathematical statistics by formalizing correlation (Pearson's r) and creating the chi-squared (χ²) test.
+	    
+	- **William Sealy Gosset ("Student")** developed the Student's t-distribution, which is essential for hypothesis testing with small samples.
+	    
+	- **Sir Ronald A. Fisher** revolutionized the field with Analysis of Variance (ANOVA), the principles of experimental design, and maximum likelihood estimation.
+	    
+	- **Jerzy Neyman and Egon Pearson** created the modern framework for hypothesis testing, including confidence intervals and Type I/II errors.
+3. 
+
+
+
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
