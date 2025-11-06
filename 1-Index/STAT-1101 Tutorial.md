@@ -22,7 +22,7 @@ QS: Here are the questions from the exam paper:
     
 11. Constructs a bi-variate frequency distribution.
     
-	11. a Write down the differences between diagrams and graphs.
+	11. (a) Write down the differences between diagrams and graphs.
     
 12. State the different methods used for the diagrammatic representation of statistical data and indicate briefly the advantages and disadvantages of each one of them.
     
