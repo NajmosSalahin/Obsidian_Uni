@@ -34,7 +34,7 @@ QS: Here are the questions from the exam paper:
     
     (i) fairly symmetrical, (ii) positively skewed, (iii) negatively skewed, (iv) J-shaped, (v) U-shaped.
     
-1. (a) Discuss the utility and limitations of graphic method of presenting statistical data.
+	(a) Discuss the utility and limitations of graphic method of presenting statistical data.
     
     (b) Discuss the advantages and limitations of representing statistical data by diagrams (including graphs).
     
@@ -189,7 +189,7 @@ Answers:
 	12. **Plan for Analysis:** Design the questionnaire with your final data tabulation and analysis methods (e.g., computer or hand-sorting) in mind.
 	    
 	13. **Use an Attractive Layout:** The questionnaire should have a proper layout and an appealing, professional appearance.
-8.  *Definition of Classification :* 
+8.  *Definition of Classification:* 
 
 	According to Secrist, **“Classification is the process of arranging data into sequences and groups according to their common characteristics, or separating them into different but related parts.”**
 	
