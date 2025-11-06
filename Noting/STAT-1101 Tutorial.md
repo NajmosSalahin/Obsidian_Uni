@@ -260,7 +260,57 @@ The text provides the following details for determining the size (or width) of t
     - **Unequal intervals** may be necessary for data with "very wide gaps," such as in the distribution of incomes or wages, to prevent sacrificing all the details about smaller values or, conversely, making the distribution too unwieldy. 
 	
 
-	10. fas
-	11. 
+	10. **10. Write down the parts of the table. Explain them.**
+
+A formal statistical table has several key parts, each with a specific function:
+
+- **1. Table Number:** An identification number (e.g., "Table 1.1") used for easy reference.
+    
+- **2. Title:** A complete but concise description of the table's contents, answering: What (is the data), Where (is it from), and When (was it collected).
+    
+- **3. Headnote (or Prefatory Note):** A small note just below the title, often in parentheses, used to state the units of measurement (e.g., "in thousands" or "in $").
+    
+- **4. Caption (or Box Head):** The heading(s) for the vertical **columns**.
+    
+- **5. Stub:** The heading(s) for the horizontal **rows**, located on the left side. The individual row entries are called "stub entries."
+    
+- **6. Body:** The main part of the table containing all the numerical data, organized into cells at the intersection of rows and columns.
+    
+- **7. Footnote:** A note at the bottom of the table used to explain or clarify a specific item in the table (e.g., "Data is estimated").
+    
+- **8. Source Note:** A note below the table that identifies the source of the data, similar to a citation.
+    
+
+**11. Constructs a bi-variate frequency distribution.**
+
+Since I don't have an "outside" dataset, I will explain the **process** of constructing a bi-variate frequency distribution.
+
+1. **Gather Paired Data:** You must have a dataset where two variables (X and Y) are measured for each subject (e.g., Height (X) and Weight (Y) for 50 people).
+    
+2. **Determine Classes:** Decide on the class intervals for both Variable X and Variable Y, just as you would for a regular frequency distribution. (e.g., X-Classes: 150-160cm, 160-170cm...; Y-Classes: 50-60kg, 60-70kg...).
+    
+3. **Create a Grid:** Draw a table. Use the classes for Variable X as the column headings (Captions) and the classes for Variable Y as the row headings (Stubs).
+    
+4. **Tally the Data:** Go through your raw data, one pair at a time. For each (X, Y) pair, find the cell where the X-class and Y-class intersect and place a tally mark.
+    
+5. **Count Frequencies:** After tallying all pairs, count the tally marks in each cell. This count is the "joint frequency" for that cell.
+    
+6. **Sum for Marginal Frequencies:** Add up the frequencies across each row to get a "Total" column on the right. This is the **marginal distribution of Y**. Add up the frequencies down each column to get a "Total" row at the bottom. This is the **marginal distribution of X**.
+    
+7. **Check Total:** The sum of the row totals and the sum of the column totals should both equal your total number of observations (N).
+    
+
+**11.a Write down the differences between diagrams and graphs.**
+
+Diagrams and graphs are both visual tools, but they differ in their construction and purpose.
+
+| Feature          | **Diagrams**                                                                                                            | **Graphs**                                                                                                                                    |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Purpose**      | Used for **comparison** of data. Best for showing magnitude and proportions between categories.                         | Used to show **relationships** between variables, trends over time, and frequency distributions.                                              |
+| **Data Type**    | Typically used for **qualitative (categorical) data** or **discrete quantitative data**.                                | Typically used for **quantitative (continuous) data**.                                                                                        |
+| **Construction** | Built on plain paper. **Does not require a mathematical scale** (e.g., the width of a bar in a bar chart is arbitrary). | Built on **graph paper**. Requires a strict **mathematical scale** (x-axis and y-axis) to plot points accurately.                             |
+| **Analysis**     | Provides an "at-a-glance" understanding. You cannot easily (or accurately) read intermediate values.                    | Can be used for further statistical analysis like **interpolation** (estimating values between points) or finding the median (from an ogive). |
+| **Examples**     | * Bar Charts<br><br>  <br><br>* Pie Charts<Tbr>* Pictograms                                                             | * Histograms<br><br>  <br><br>* Frequency Polygons<br><br>  <br><br>* Line Graphs<br><br>  <br><br>* Ogives (Cumulative Frequency Curves)     |
+	10. 
 
 
