@@ -142,12 +142,30 @@ Answers:
 	    - **Marital Status:** (Single, Married, Divorced, Widowed)
 	        
 	    - **Yes/No:** (A binary form of nominal data)
-6. 
-7. k
+5.  METHODS OF COLLECTING PRIMARY DATA
+The methods commonly used for the collection of primary data are enumerated below :
+(i) Direct personal investigation.
+(ii) Indirect oral interviews.
+(iii) Information received through local agencies.
+(iv) Mailed questionnaire method.
+(v) Schedules sent through enumerators.
+
+### 🏛️ Explanations of Your Listed Methods
+
+1. **(i) Direct Personal Investigation:** This is a **face-to-face interview** where the researcher (investigator) personally meets with the respondent to ask questions and record their answers. It's used for in-depth, intensive studies but can be expensive and time-consuming.
+    
+2. **(ii) Indirect Oral Interviews:** This method involves interviewing **other people (witnesses)** who are close to the subject, rather than interviewing the subject directly. It's useful when the subject is reluctant to provide information (e.g., for sensitive topics) or is unavailable.
+    
+3. **(iii) Information Received Through Local Agencies:** This involves appointing local agents or "correspondents" in different areas to collect and send information to the researcher. This is often used by newspapers and government agencies to get regular, "on-the-ground" data (like crop estimates or local news) from a wide area.
+    
+4. **(iv) Mailed Questionnaire Method:** A list of questions (a questionnaire) is sent by post to the respondents, who are expected to fill it out themselves and mail it back. This is cheap for covering a large area but often suffers from a **low response rate** and is only suitable for a literate population.
+    
+5. **(v) Schedules Sent Through Enumerators:** This method also uses a list of questions (called a "schedule"), but it is **not** filled out by the respondent. Instead, a trained field agent (an "enumerator") visits the respondent, asks the questions, and records the answers. This method has a much higher response rate and ensures questions are understood, but it is more expensive and time-consuming.
+6. k
+7. 
 8. 
 9. 
 10. 
 11. 
 12. 
 13. 
-14. 
