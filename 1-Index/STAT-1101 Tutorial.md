@@ -80,11 +80,70 @@ Answers:
 
 (vi) **Type of enquiry:** Decide if the investigation will be a comprehensive census covering the entire population or a sample survey focusing on a representative subset.
 
-
-
 5. 
+	1. **By Nature (Qualitative vs. Quantitative)**
+	    
+	    - **Qualitative Data (Categorical):** Non-numerical data.
+	        
+	        - **Nominal:** Categories with no order (e.g., colors, gender).
+	            
+	        - **Ordinal:** Categories _with_ a logical order (e.g., 'low', 'medium', 'high').
+	            
+	    - **Quantitative Data (Numerical):** Data that represents amounts.
+	        
+	        - **Discrete:** Countable, whole numbers (e.g., 3 cars).
+	            
+	        - **Continuous:** Measurable, can be any value in a range (e.g., 1.75 meters).
+	            
+	- **By Measurement Scale (Nominal, Ordinal, Interval, Ratio)**
+	    
+	    - This is a more detailed system.
+	        
+	    - **Nominal:** Categories with no order (e.g., colors, gender).
+	        
+	    - **Ordinal:** Categories _with_ a logical order (e.g., 'low', 'medium', 'high').
+	        
+	    - **Interval:** Ordered, with equal spacing, but no "true zero" (e.g., Temperature in Celsius/Fahrenheit).
+	        
+	    - **Ratio:** Ordered, equal spacing, and a "true zero" (e.g., Height, Weight, Age).
+	        
+	- **By Data Structure (How it's collected over time)**
+	    
+	    - **Cross-Sectional Data:** Data on many subjects (e.g., people, firms) at _one single point in time_.
+	        
+	    - **Time Series Data:** Data on _one subject_ over _many points in time_.
+	        
+	    - **Panel / Longitudinal Data:** Data on _many subjects_ over _many points in time_.
+	        
+	    - **Pooled Data:** (Or Pooled Cross-Section): Combines multiple cross-sectional datasets from different time periods.
+		A explanation of a data: 
+		- **Nominal data** is the simplest form of data. You can think of it as "naming" or "labeling" data.
+	
+	It consists of categories that have **no natural order or ranking**. You can't perform math operations like addition or averaging on nominal data.
+	
+	- **Key Characteristics:**
+	    
+	    - Used for classification and grouping.
+	        
+	    - Categories are mutually exclusive (an item can only be in one category).
+	        
+	    - There is no "high" or "low," "better" or "worse."
+	        
+	    - The only measure of central tendency you can use is the **mode** (the most frequent category).
+	        
+	- **Common Examples:**
+	    
+	    - **Eye Color:** (Blue, Brown, Green, Hazel)
+	        
+	    - **Types of Pets:** (Dog, Cat, Fish, Bird)
+	        
+	    - **Nationality:** (American, Canadian, Indian, British)
+	        
+	    - **Marital Status:** (Single, Married, Divorced, Widowed)
+	        
+	    - **Yes/No:** (A binary form of nominal data)
 6. 
-7. 
+7. k
 8. 
 9. 
 10. 
@@ -92,5 +151,3 @@ Answers:
 12. 
 13. 
 14. 
-15. 
-16. 
