@@ -142,28 +142,55 @@ Answers:
 	    - **Marital Status:** (Single, Married, Divorced, Widowed)
 	        
 	    - **Yes/No:** (A binary form of nominal data)
-5.  METHODS OF COLLECTING PRIMARY DATA
-The methods commonly used for the collection of primary data are enumerated below :
-(i) Direct personal investigation.
-(ii) Indirect oral interviews.
-(iii) Information received through local agencies.
-(iv) Mailed questionnaire method.
-(v) Schedules sent through enumerators.
+6.  
+	1. METHODS OF COLLECTING PRIMARY DATA
+	The methods commonly used for the collection of primary data are enumerated below :
+	(i) Direct personal investigation.
+	(ii) Indirect oral interviews.
+	(iii) Information received through local agencies.
+	(iv) Mailed questionnaire method.
+	(v) Schedules sent through enumerators.
+	
+	### 🏛️ Explanations of Your Listed Methods
+	
+	2. **(i) Direct Personal Investigation:** This is a **face-to-face interview** where the researcher (investigator) personally meets with the respondent to ask questions and record their answers. It's used for in-depth, intensive studies but can be expensive and time-consuming.
+	    
+	3. **(ii) Indirect Oral Interviews:** This method involves interviewing **other people (witnesses)** who are close to the subject, rather than interviewing the subject directly. It's useful when the subject is reluctant to provide information (e.g., for sensitive topics) or is unavailable.
+	    
+	4. **(iii) Information Received Through Local Agencies:** This involves appointing local agents or "correspondents" in different areas to collect and send information to the researcher. This is often used by newspapers and government agencies to get regular, "on-the-ground" data (like crop estimates or local news) from a wide area.
+	    
+	5. **(iv) Mailed Questionnaire Method:** A list of questions (a questionnaire) is sent by post to the respondents, who are expected to fill it out themselves and mail it back. This is cheap for covering a large area but often suffers from a **low response rate** and is only suitable for a literate population.
+	    
+	6. **(v) Schedules Sent Through Enumerators:** This method also uses a list of questions (called a "schedule"), but it is **not** filled out by the respondent. Instead, a trained field agent (an "enumerator") visits the respondent, asks the questions, and records the answers. This method has a much higher response rate and ensures questions are understood, but it is more expensive and time-consuming.
+7. Here are the 13 main points for drafting a questionnaire, summarized from your text:
 
-### 🏛️ Explanations of Your Listed Methods
-
-1. **(i) Direct Personal Investigation:** This is a **face-to-face interview** where the researcher (investigator) personally meets with the respondent to ask questions and record their answers. It's used for in-depth, intensive studies but can be expensive and time-consuming.
-    
-2. **(ii) Indirect Oral Interviews:** This method involves interviewing **other people (witnesses)** who are close to the subject, rather than interviewing the subject directly. It's useful when the subject is reluctant to provide information (e.g., for sensitive topics) or is unavailable.
-    
-3. **(iii) Information Received Through Local Agencies:** This involves appointing local agents or "correspondents" in different areas to collect and send information to the researcher. This is often used by newspapers and government agencies to get regular, "on-the-ground" data (like crop estimates or local news) from a wide area.
-    
-4. **(iv) Mailed Questionnaire Method:** A list of questions (a questionnaire) is sent by post to the respondents, who are expected to fill it out themselves and mail it back. This is cheap for covering a large area but often suffers from a **low response rate** and is only suitable for a literate population.
-    
-5. **(v) Schedules Sent Through Enumerators:** This method also uses a list of questions (called a "schedule"), but it is **not** filled out by the respondent. Instead, a trained field agent (an "enumerator") visits the respondent, asks the questions, and records the answers. This method has a much higher response rate and ensures questions are understood, but it is more expensive and time-consuming.
-6. k
-7. 
+	1. **Keep it Short:** The questionnaire should be as small as possible, ideally 15-25 questions, including only relevant items.
+	    
+	2. **Be Clear and Brief:** Questions must be clear, brief, unambiguous, and courteous, leaving no room for guessing.
+	    
+	3. **Use Logical Sequence:** Arrange questions in a natural and logical order to make them easy to follow.
+	    
+	4. **Avoid Vague Words:** Do not use subjective words (like 'good', 'bad', 'often') or words with multiple meanings.
+	    
+	5. **Make Questions Easy:** Questions should be simple to understand and answer, avoiding complex calculations or memory recall.
+	    
+	6. **Avoid Sensitive Questions:** Be tactful and avoid personal or sensitive questions (e.g., on income, debt, or age) unless absolutely necessary.
+	    
+	7. **Choose Question Types:** Use the appropriate format, such as "shut" questions (like multiple-choice or yes/no) or "open" questions (allowing a free-form answer).
+	    
+	8. **Avoid Leading Questions:** Do not frame questions in a way that suggests or leads the respondent to a particular answer.
+	    
+	9. **Include Cross-Checks:** Use connected questions (e.g., asking for both "Age" and "Date of Birth") to verify the accuracy of the information.
+	    
+	10. **Pre-test the Questionnaire:** Always test the draft on a small sample group first to find and correct any flaws or confusing questions.
+	    
+	11. **Provide a Covering Letter:** Include a letter explaining the survey's purpose, defining terms, and ensuring confidentiality.
+	    
+	12. **Plan for Analysis:** Design the questionnaire with your final data tabulation and analysis methods (e.g., computer or hand-sorting) in mind.
+	    
+	13. **Use an Attractive Layout:** The questionnaire should have a proper layout and an appealing, professional appearance.
 8. 
+   
 9. 
 10. 
 11. 
