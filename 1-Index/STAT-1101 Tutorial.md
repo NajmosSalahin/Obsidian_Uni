@@ -209,8 +209,57 @@ Answers:
 	    
 	4. **(iv) Quantitative:** This classification is based on a phenomenon that is **capable of quantitative measurement**, such as age, height, weight, income, or profits. This type is also known as classification by variables.
    
-9. 
-10. 
-11. 
-12. 
-13. 
+9.   1. Basic Principles for a Good Frequency Distribution
+
+		According to the text, the following general guidelines should be borne in mind:
+		
+		- **Types of Classes:** Classes must be **unambiguous**, **exhaustive** (so that every value fits into a class), and **mutually exclusive** (non-overlapping, so a value can only belong to one class).
+		    
+		- **Number of Classes:** The number of classes should be balanced; **neither too small nor too large.**
+		    
+		    - **Too few classes** can obscure important features and lead to a "loss of information."
+		        
+		    - **Too many classes** can create an "irregular pattern" with too few frequencies, making the data "unwieldy" and computations "tedious."
+		        
+		    - Ordinarily, the number of classes should be between **5 and 20**.
+		        
+		    - **Sturges' rule** (k=1+3.322log10​N) can be used as an approximate formula to find the number of classes (k) based on the total number of observations (N).
+		        
+		- **Size of Class Intervals:** As a practical convenience, it is desirable to have **class intervals of equal (uniform) magnitude** to facilitate computations and comparisons.
+		    
+		- **Mid-Points:** Class intervals should be fixed so that the observations in a class "cluster or concentrate" around a **convenient mid-point**.
+		    
+		
+		---
+		
+		### 2. Details for Constructing the 'Size of Class Intervals'
+		
+		The text provides the following details for determining the size (or width) of the class interval, denoted as 'i':
+		
+		1. **Relationship to Range:** The size of the class interval is inversely proportional to the number of classes. An approximate value for 'i' can be found by dividing the **Range** of the data by the chosen number of classes (k).
+		    
+		    - **Range** = Largest value (L) – Smallest value (S)
+		        
+		    - **Formula:**
+		        
+		        i=kRange​
+		        
+		2. **Using Sturges' Rule:** This relationship can be combined with Sturges' rule to create a single formula for finding the approximate interval size:
+		    
+		    - **Formula:**
+		        
+		        i=1+3.322log10​NL−S​
+		        
+		1. **Standard Deviation Rule:** Another "rule of the thumb" suggests that the length of the class interval "should not be greater than 1/4th of the estimated population standard deviation" (i≤σ^/4).
+		    
+		2. **Convenience:** For easier computation, the size of the class interval should preferably be **5 or a multiple of 5** (e.g., 10, 15, 20).
+		    
+		3. **Equal vs. Unequal Intervals:**
+		    
+		    - **Equal intervals** are desirable as they "facilitate the computations" and allow for "meaningful comparisons."
+		        
+		    - **Unequal intervals** may be necessary for data with "very wide gaps," such as in the distribution of incomes or wages, to prevent sacrificing all the details about smaller values or, conversely, making the distribution too unwieldy. 
+1. 
+2. 
+3. 
+4. 
