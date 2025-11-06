@@ -66,7 +66,14 @@ Answers:
 	- **Jerzy Neyman and Egon Pearson** created the modern framework for hypothesis testing, including confidence intervals and Type I/II errors.
 3. ![[Pasted image 20251104190630.png]]
 	![[Pasted image 20251104190745.png]]
-4. 
+4. reliminaries to
+data collection :
+(i) Objectives and scope of the enquiry.
+(ii) Statistical units to be used.
+(iii) Sources of information (data).
+(iv) Method of data collection.
+(v) Degree of accuracy aimed at in the final results.
+(vi) Type of enquiry.
 
 
 
