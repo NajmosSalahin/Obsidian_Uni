@@ -189,7 +189,25 @@ Answers:
 	12. **Plan for Analysis:** Design the questionnaire with your final data tabulation and analysis methods (e.g., computer or hand-sorting) in mind.
 	    
 	13. **Use an Attractive Layout:** The questionnaire should have a proper layout and an appealing, professional appearance.
-8. 
+8.  *Definition of Classification :* 
+
+	According to Secrist, **“Classification is the process of arranging data into sequences and groups according to their common characteristics, or separating them into different but related parts.”**
+	
+	The text further clarifies that classification is the "arrangement of the data into different classes, which are to be determined depending upon the nature, objectives and scope of the enquiry."
+	
+	---
+	
+	### 2. The Bases of Classification
+	
+	The data can be classified on the following four bases:
+	
+	1. **(i) Geographical:** This is an area-wise or regional classification. The basis is the **geographical or locational differences** between the items, such as states, cities, regions, or zones.
+	    
+	2. **(ii) Chronological:** In this classification, the data is arranged based on **differences in time** or the time of occurrence, such as by year, decade, or period.
+	    
+	3. **(iii) Qualitative:** This classification is based on some **character, attribute, or qualitative phenomenon** that cannot be measured quantitatively, such as sex, literacy, occupation, or honesty. Data is grouped by the presence or absence of the attribute.
+	    
+	4. **(iv) Quantitative:** This classification is based on a phenomenon that is **capable of quantitative measurement**, such as age, height, weight, income, or profits. This type is also known as classification by variables.
    
 9. 
 10. 
