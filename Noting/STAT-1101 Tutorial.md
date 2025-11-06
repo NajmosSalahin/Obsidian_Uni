@@ -260,7 +260,7 @@ The text provides the following details for determining the size (or width) of t
     - **Unequal intervals** may be necessary for data with "very wide gaps," such as in the distribution of incomes or wages, to prevent sacrificing all the details about smaller values or, conversely, making the distribution too unwieldy. 
 	
 
-	10. **10. Write down the parts of the table. Explain them.**
+	10.
 
 A formal statistical table has several key parts, each with a specific function:
 
@@ -298,9 +298,6 @@ Since I don't have an "outside" dataset, I will explain the **process** of const
 6. **Sum for Marginal Frequencies:** Add up the frequencies across each row to get a "Total" column on the right. This is the **marginal distribution of Y**. Add up the frequencies down each column to get a "Total" row at the bottom. This is the **marginal distribution of X**.
     
 7. **Check Total:** The sum of the row totals and the sum of the column totals should both equal your total number of observations (N).
-    
-
-**11.a Write down the differences between diagrams and graphs.**
 
 Diagrams and graphs are both visual tools, but they differ in their construction and purpose.
 
@@ -310,7 +307,8 @@ Diagrams and graphs are both visual tools, but they differ in their construction
 | **Data Type**    | Typically used for **qualitative (categorical) data** or **discrete quantitative data**.                                | Typically used for **quantitative (continuous) data**.                                                                                        |
 | **Construction** | Built on plain paper. **Does not require a mathematical scale** (e.g., the width of a bar in a bar chart is arbitrary). | Built on **graph paper**. Requires a strict **mathematical scale** (x-axis and y-axis) to plot points accurately.                             |
 | **Analysis**     | Provides an "at-a-glance" understanding. You cannot easily (or accurately) read intermediate values.                    | Can be used for further statistical analysis like **interpolation** (estimating values between points) or finding the median (from an ogive). |
-| **Examples**     | * Bar Charts<br><br>  <br><br>* Pie Charts<Tbr>* Pictograms                                                             | * Histograms<br><br>  <br><br>* Frequency Polygons<br><br>  <br><br>* Line Graphs<br><br>  <br><br>* Ogives (Cumulative Frequency Curves)     |
-	10. 
+| **Examples**     | * Bar Charts<br><br>  <br><br>* *Pie Charts* Pictograms                                                                 | * Histograms<br><br>  <br><br>* Frequency Polygons<br><br>  <br><br>* Line Graphs<br><br>  <br><br>* Ogives (Cumulative Frequency Curves)     |
+|                  |                                                                                                                         |                                                                                                                                               |
+
 
 
