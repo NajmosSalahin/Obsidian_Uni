@@ -313,3 +313,5 @@ Diagrams and graphs are both visual tools, but they differ in their construction
 
 
 
+* Uses and Misuses of Statistics:
+	 
