@@ -354,6 +354,20 @@ According to Professor Yule, the following are the characteristics to be satisfi
 (iii) It should be based on all the observations.
 (iv) It should be suitable for further mathematical treatment.
 (v) It should be affected as little as possible by fluctuations of sampling.
-In addition to the above criteria. we may add the following (which is not due
-to Prof.Yule) :
-(vi) It should not be affected much by extreme values.
+#### Merits and demerits of Arithmetic Mean: 
+Merits : (i) It is rigidly defined.
+(ii) It is readily comprehensible and easy to calculate.
+(iii) It is based on all the observations.
+(iv) It is suitable for further mathematical treatment.
+(v) It is affected as little as possible by fluctuations of sampling.
+
+Demerits : (i) It cannot be determined by inspection nor it can be located
+graphically.
+(ii) Arithmetic mean cannot be used if we are dealing with qualitative characteristics which cannot be measured quantitively; such as, intelligence, honesty,
+beauty, etc. In such cases median (discussed later) is the only average to be used.
+(iii) Arithmetic mean cannot be obtained if a single observation is missing or lost or is illegible unless we drop it out and compute the arithmetic mean of the
+remaining values. 
+(iv) Arithmetic mean is affected very much by extreme values. In case of extreme items, arithmetic mean gives a distorted picture of the distribution and no longer remains representative of the distribution.
+(v) Arithmetic mean may lead to wrong conclusions if the details of the data from which it is computed are not given.
+(vi) Arithmetic mean cannot be calculated if the extreme class is open. Moreover, even if a single observation is missing mean cannot be calculated.
+(vii) In extremely asymmetrical (skewed) distribution, usually arithmetic mean is not a suitable measure of location.
