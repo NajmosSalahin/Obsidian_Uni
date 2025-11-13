@@ -314,4 +314,36 @@ Diagrams and graphs are both visual tools, but they differ in their construction
 
 
 * Uses and Misuses of Statistics:
-	 
+	 Uses of Statistics
+
+Statistical techniques are used to:
+
+- Describe data
+    
+- Compare two or more data sets
+    
+- Determine if relationships exist between variables
+    
+- Test hypotheses
+    
+- Make estimates about population characteristics
+
+	 Misuses of Statistics
+
+	Statistics can be misused to sell faulty products, prove something that is not true, or evoke fear and shock. Common methods of misuse include:
+
+- **Suspect Samples:** Using samples that are too small or not representative of the population (e.g., using volunteers or convenience samples).
+    
+- **Ambiguous Averages:** Intentionally selecting one measure of average (mean, median, or mode) over others to support a specific position.
+    
+- **Changing the Subject:** Presenting the same data in different formats (like a "mere 3%" increase vs. a "whopping $6,000,000" increase) to create a different impression.
+    
+- **Detached Statistics:** Making a comparison without providing a reference (e.g., "works four times faster" - faster than what?).
+    
+- **Implied Connections:** Using words like "may help," "studies suggest," or "in some people" to imply a relationship that is not guaranteed.
+    
+- **Misleading Graphs:** Drawing graphs in a way that inaccurately represents the data and leads to false conclusions.
+    
+- **Faulty Survey Questions:** Phrasing questions in a way that influences how people will answer.
+
+
