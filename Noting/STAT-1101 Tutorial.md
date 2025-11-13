@@ -44,7 +44,7 @@ QS: Here are the questions from the exam paper:
     
     
 Answers:
-1. The science of statistics originated in ancient civilizations as a form of "state-craft," primarily involving descriptive enumerations like censuses for taxation and military purposes. A significant transformation began in the 17th century with the development of probability theory and the pioneering use of statistical inference by figures like John Graunt. The 18th and 19th centuries saw its formalization as a mathematical discipline, with key contributions such as the normal curve, correlation, and regression from figures like de Moivre, Galton, and Karl Pearson.1 The 20th century was revolutionized by pioneers like William Sealy Gosset (Student's t-test) and Sir Ronald A. Fisher, who introduced ANOVA and the principles of experimental design.2 This framework was further solidified by Neyman and Egon Pearson, who established the formal structure of hypothesis testing.3 The advent of the computational revolution in the mid-20th century then liberated the field, enabling the analysis of massive datasets and fueling the rise of machine learning. Thus, statistics evolved from a simple administrative tool into the indispensable, inferential bedrock of all modern empirical science.
+1. Statistics originated as the "science of state-craft," derived from words like the Latin 'status', meaning 'political state'. Ancient governments collected data on population and wealth to assess manpower and levy taxes, with systems existing in India by 300 B.C. and later during Akbar's reign. A key development was 'Vital Statistics' in the 17th century, pioneered by John Grant, who studied births and deaths. This work led to mortality tables and the foundation of life insurance. The theoretical basis for modern statistics began in the mid-17th century with the 'Theory of Probability,' developed by mathematicians like Pascal and Fermat. This foundation was built upon by figures such as Gauss, Francis Galton (regression), Karl Pearson (correlation, chi-square test), W.S. Gosset (t-distribution), and Sir R.A. Fisher, the 'Father of Statistics', who applied statistics to diverse fields and developed concepts like 'Analysis of Variance'.
 2. Here are the key figures and their contributions:
 
 	- **John Graunt** pioneered statistical inference by analyzing London's death records to find population patterns.
@@ -80,7 +80,7 @@ Answers:
 
 (vi) **Type of enquiry:** Decide if the investigation will be a comprehensive census covering the entire population or a sample survey focusing on a representative subset.
 
-5. 
+5. What are the data types that you know? Explain any one of them.
 	1. **By Nature (Qualitative vs. Quantitative)**
 	    
 	    - **Qualitative Data (Categorical):** Non-numerical data.
@@ -117,7 +117,8 @@ Answers:
 	        
 	    - **Pooled Data:** (Or Pooled Cross-Section): Combines multiple cross-sectional datasets from different time periods.
 		A explanation of a data: 
-		- **Nominal data** is the simplest form of data. You can think of it as "naming" or "labeling" data.
+		
+	- **Nominal data** is the simplest form of data. You can think of it as "naming" or "labeling" data.
 	
 	It consists of categories that have **no natural order or ranking**. You can't perform math operations like addition or averaging on nominal data.
 	
