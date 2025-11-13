@@ -311,10 +311,10 @@ Diagrams and graphs are both visual tools, but they differ in their construction
 | **Examples**     | * Bar Charts<br><br>  <br><br>* *Pie Charts* Pictograms                                                                 | * Histograms<br><br>  <br><br>* Frequency Polygons<br><br>  <br><br>* Line Graphs<br><br>  <br><br>* Ogives (Cumulative Frequency Curves)     |
 |                  |                                                                                                                         |                                                                                                                                               |
 
+# Extra
 
-
-* Uses and Misuses of Statistics:
-	 Uses of Statistics
+#### Uses and Misuses of Statistics:
+Uses of Statistics
 
 Statistical techniques are used to:
 
@@ -347,3 +347,13 @@ Statistical techniques are used to:
 - **Faulty Survey Questions:** Phrasing questions in a way that influences how people will answer.
 
 
+#### Requisites for an Ideal Measure of Central Tendency. 
+According to Professor Yule, the following are the characteristics to be satisfied by-an idealmeasure of central tendency :
+(i) It should be rigidly defined.
+(ii) It should be readily comprehensible and easy to calculate.
+(iii) It should be based on all the observations.
+(iv) It should be suitable for further mathematical treatment.
+(v) It should be affected as little as possible by fluctuations of sampling.
+In addition to the above criteria. we may add the following (which is not due
+to Prof.Yule) :
+(vi) It should not be affected much by extreme values.
