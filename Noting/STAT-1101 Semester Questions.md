@@ -76,7 +76,7 @@ $$\frac{2}{n} \left[ \bar{x} \sum_{x_i \le \bar{x}} f_i - \sum_{x_i \le \bar{x}}
 
 ## 6.
 
-**a)** What is the moments of a distribution? Define the type of Moments of a distribution with an example. How do you distinguish raw moments from central moments? What are its importance? Prove that the zeroth moment of a probability function is 1.
+**a)** What is the moments of a distribution? Define the type of Moments of a distribution with an example. How do you distinguish raw moments from central moments? What are its importance? Prove that the zero'th moment of a probability function is 1.
 
 **b)** Derive the first four central moments by using the raw moments.
 
