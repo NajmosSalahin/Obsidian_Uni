@@ -1,1 +1,1 @@
-Random Experiment, Trial, Experiment, Deterministic Experiment, Outcomes, Event, Equally Likely Outcomes, Mutually Exclusive Outcomes, Favourable Outcomes, Exhaustive Outcomes, Classical/ Mathematical/ Priori Probability, Uncertain Event, 
+Random Experiment, Trial, Experiment, Deterministic Experiment, Outcomes, Event, Equally Likely Outcomes, Mutually Exclusive Outcomes, Favourable Outcomes, Exhaustive Outcomes, Classical/ Mathematical/ Priori Probability, Uncertain Event, Subjective Probability, 
