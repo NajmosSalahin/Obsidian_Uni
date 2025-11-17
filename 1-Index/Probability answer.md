@@ -5,3 +5,5 @@
 ![[Pasted image 20251117204621.png]]
 ![[Pasted image 20251117205158.png]]
 ![[Pasted image 20251117205354.png]]
+![[Pasted image 20251117214010.png]]
+![[Pasted image 20251117214107.png]]
