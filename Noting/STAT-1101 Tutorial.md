@@ -91,8 +91,8 @@ QS: Here are the questions from the exam paper:
     
     
 Answers:
-18. Statistics originated as the "science of state-craft," derived from words like the Latin 'status', meaning 'political state'. Ancient governments collected data on population and wealth to assess manpower and levy taxes, with systems existing in India by 300 B.C. and later during Akbar's reign. A key development was 'Vital Statistics' in the 17th century, pioneered by John Grant, who studied births and deaths. This work led to mortality tables and the foundation of life insurance. The theoretical basis for modern statistics began in the mid-17th century with the 'Theory of Probability,' developed by mathematicians like Pascal and Fermat. This foundation was built upon by figures such as Gauss, Francis Galton (regression), Karl Pearson (correlation, chi-square test), W.S. Gosset (t-distribution), and Sir R.A. Fisher, the 'Father of Statistics', who applied statistics to diverse fields and developed concepts like 'Analysis of Variance'.
-19. Here are the key figures and their contributions:
+1. Statistics originated as the "science of state-craft," derived from words like the Latin 'status', meaning 'political state'. Ancient governments collected data on population and wealth to assess manpower and levy taxes, with systems existing in India by 300 B.C. and later during Akbar's reign. A key development was 'Vital Statistics' in the 17th century, pioneered by John Grant, who studied births and deaths. This work led to mortality tables and the foundation of life insurance. The theoretical basis for modern statistics began in the mid-17th century with the 'Theory of Probability,' developed by mathematicians like Pascal and Fermat. This foundation was built upon by figures such as Gauss, Francis Galton (regression), Karl Pearson (correlation, chi-square test), W.S. Gosset (t-distribution), and Sir R.A. Fisher, the 'Father of Statistics', who applied statistics to diverse fields and developed concepts like 'Analysis of Variance'.
+2. Here are the key figures and their contributions:
 
 	- **John Graunt** pioneered statistical inference by analyzing London's death records to find population patterns.
 	    
@@ -111,9 +111,9 @@ Answers:
 	- **Sir Ronald A. Fisher** revolutionized the field with Analysis of Variance (ANOVA), the principles of experimental design, and maximum likelihood estimation.
 	    
 	- **Jerzy Neyman and Egon Pearson** created the modern framework for hypothesis testing, including confidence intervals and Type I/II errors.
-20. ![[Pasted image 20251104190630.png]]
+3. ![[Pasted image 20251104190630.png]]
 	![[Pasted image 20251104190745.png]]
-21. Here are each preliminary step in data collection:
+4. Here are each preliminary step in data collection:
 
 (i) **Objectives and scope of the enquiry:** Clearly define the specific question the investigation seeks to answer and the precise boundaries (like population, location, or time frame) it will cover.
 
