@@ -19,3 +19,31 @@
     - **Sir Ronald A. Fisher** revolutionized the field with Analysis of Variance (ANOVA), the principles of experimental design, and maximum likelihood estimation.  
         
     - **Jerzy Neyman and Egon Pearson** created the modern framework for hypothesis testing, including confidence intervals and Type I/II errors.
+### Use of statistics in different fields:
+
+1. **Business and Economics:** Helps in market analysis, sales forecasting, quality control, and risk assessment.
+    
+2. **Healthcare and Medicine:** Used in medical research, clinical trials, and disease outbreak analysis.
+    
+3. **Education:** Assists in student performance evaluation, curriculum effectiveness, and educational research.
+    
+4. **Social Sciences:** Helps in demographic studies, surveys, and behavioral analysis.
+    
+5. **Engineering and Manufacturing:** Used in quality control, reliability testing, and product design.
+    
+6. **Government and Policy Making:** Helps in census data analysis, crime rate studies, and resource allocation.
+    
+7. **Environmental Science:** Used for climate modeling, pollution control, and conservation efforts.
+    
+
+### Limitations of Statistics
+
+1. **Data Inaccuracy:** Results are only as good as the data collected; errors or inaccurate data can lead to misleading conclusions.
+    
+2. **Misinterpretation:** Incorrect use of statistical methods can result in false conclusions.
+    
+3. **Does not Mean Causation:** Correlation does not imply causation; external factors may influence results.
+    
+4. **Complexity:** Advanced statistical techniques require expertise, making them difficult for non-experts to use correctly.
+    
+5. **Manipulation Risk:** Statistics can be misused to distort facts for personal or political gain.
