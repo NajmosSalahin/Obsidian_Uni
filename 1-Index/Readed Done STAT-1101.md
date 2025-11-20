@@ -47,3 +47,17 @@
 4. **Complexity:** Advanced statistical techniques require expertise, making them difficult for non-experts to use correctly.
     
 5. **Manipulation Risk:** Statistics can be misused to distort facts for personal or political gain.
+
+% 4. Here are each preliminary step in data collection:
+
+(i) **Objectives and scope of the enquiry:** Clearly define the specific question the investigation seeks to answer and the precise boundaries (like population, location, or time frame) it will cover.
+
+(ii) **Statistical units to be used:** Decide on the fundamental unit being counted or measured, such as an individual person, a household, a farm, or a business transaction.
+
+(iii) **Sources of information (data):** Determine whether the data will be collected firsthand (primary source) or gathered from existing records, publications, or databases (secondary source).
+
+(iv) **Method of data collection:** Select the specific tool or technique, like a questionnaire, personal interview, direct observation, or automated experiment, that will be used to gather the information.
+
+(v) **Degree of accuracy aimed at in the final results:** Establish the acceptable margin of error and level of precision required, which will directly influence the sample size and data validation methods.
+
+(vi) **Type of enquiry:** Decide if the investigation will be a comprehensive census covering the entire population or a sample survey focusing on a representative subset.
