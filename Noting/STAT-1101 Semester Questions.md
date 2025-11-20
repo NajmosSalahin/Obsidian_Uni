@@ -1,7 +1,3 @@
-Here are the questions formatted in Markdown and LaTeX.
-
----
-
 ## 1.
 
 **a)** Define Statistics with suitable example. What are the types of statistics? Explain descriptive and inferential statistics with examples.
