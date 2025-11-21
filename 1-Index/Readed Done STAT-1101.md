@@ -108,4 +108,5 @@
 	12. **Plan for Analysis:** Design the questionnaire with your final data tabulation and analysis methods (e.g., computer or hand-sorting) in mind.
 	    
 	13. **Use an Attractive Layout:** The questionnaire should have a proper layout and an appealing, professional appearance.
-8. 
+8. According to Secrist, **“Classification is the process of arranging data into sequences and groups according to their common characteristics, or separating them into different but related parts.”**
+   
