@@ -78,8 +78,8 @@
 	(i) Direct personal investigation. (Face to face interview)
 	(ii) Indirect oral interviews. (Interviewing other people close to the subject)
 	(iii) Information received through local agencies. (Appointing local agents to collect information)
-	(iv) Mailed questionnaire method. (A list of questions is sent by post or mail - covering a large area but low responce rate )
-	(v) Schedules sent through enumerators.
+	(iv) Mailed questionnaire method. (A list of questions is sent by post or mail - covering a large area but low responce rate)
+	(v) Schedules sent through enumerators. (This method also uses a list of questions (called a "schedule"), but it is **not** filled out by the respondent. Instead, a trained field agent (an "enumerator") visits the respondent, asks the questions, and records the answers.)
 
 7. Here are the 13 main points for drafting a questionnaire, summarized from your text:
 
