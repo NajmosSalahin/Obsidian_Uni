@@ -109,4 +109,5 @@
 	    
 	13. **Use an Attractive Layout:** The questionnaire should have a proper layout and an appealing, professional appearance.
 8. According to Secrist, **“Classification is the process of arranging data into sequences and groups according to their common characteristics, or separating them into different but related parts.”**
-   
+   The bases of classifications:
+   -1. geographical, 2. 
