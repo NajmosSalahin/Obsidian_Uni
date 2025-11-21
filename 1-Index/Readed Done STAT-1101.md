@@ -19,36 +19,39 @@
     - **Sir Ronald A. Fisher** revolutionized the field with Analysis of Variance (ANOVA), the principles of experimental design, and maximum likelihood estimation.  
         
     - **Jerzy Neyman and Egon Pearson** created the modern framework for hypothesis testing, including confidence intervals and Type I/II errors.
+
+ 3. 
 ### Use of statistics in different fields:
 
-1. **Business and Economics:** Helps in market analysis, sales forecasting, quality control, and risk assessment.
+ - **Business and Economics:** Helps in market analysis, sales forecasting, quality control, and risk assessment.
     
-2. **Healthcare and Medicine:** Used in medical research, clinical trials, and disease outbreak analysis.
+ - **Healthcare and Medicine:** Used in medical research, clinical trials, and disease outbreak analysis.
     
-3. **Education:** Assists in student performance evaluation, curriculum effectiveness, and educational research.
+ - **Education:** Assists in student performance evaluation, curriculum effectiveness, and educational research.
     
-4. **Social Sciences:** Helps in demographic studies, surveys, and behavioral analysis.
+ - **Social Sciences:** Helps in demographic studies, surveys, and behavioral analysis.
     
-5. **Engineering and Manufacturing:** Used in quality control, reliability testing, and product design.
+ - **Engineering and Manufacturing:** Used in quality control, reliability testing, and product design.
     
-6. **Government and Policy Making:** Helps in census data analysis, crime rate studies, and resource allocation.
+ - **Government and Policy Making:** Helps in census data analysis, crime rate studies, and resource allocation.
     
-7. **Environmental Science:** Used for climate modeling, pollution control, and conservation efforts.
+ - **Environmental Science:** Used for climate modeling, pollution control, and conservation efforts.
     
 
 ### Limitations of Statistics
 
-1. **Data Inaccuracy:** Results are only as good as the data collected; errors or inaccurate data can lead to misleading conclusions.
+- **Data Inaccuracy:** Results are only as good as the data collected; errors or inaccurate data can lead to misleading conclusions.
     
-2. **Misinterpretation:** Incorrect use of statistical methods can result in false conclusions.
+- **Misinterpretation:** Incorrect use of statistical methods can result in false conclusions.
     
-3. **Does not Mean Causation:** Correlation does not imply causation; external factors may influence results.
+- **Does not Mean Causation:** Correlation does not imply causation; external factors may influence results.
     
-4. **Complexity:** Advanced statistical techniques require expertise, making them difficult for non-experts to use correctly.
+- **Complexity:** Advanced statistical techniques require expertise, making them difficult for non-experts to use correctly.
     
-5. **Manipulation Risk:** Statistics can be misused to distort facts for personal or political gain.
+- **Manipulation Risk:** Statistics can be misused to distort facts for personal or political gain.
 
-% 4. Here are each preliminary step in data collection:
+
+4. Here are each preliminary step in data collection:
 
 (i) **Objectives and scope of the enquiry:** Clearly define the specific question the investigation seeks to answer and the precise boundaries (like population, location, or time frame) it will cover.
 
@@ -61,3 +64,48 @@
 (v) **Degree of accuracy aimed at in the final results:** Establish the acceptable margin of error and level of precision required, which will directly influence the sample size and data validation methods.
 
 (vi) **Type of enquiry:** Decide if the investigation will be a comprehensive census covering the entire population or a sample survey focusing on a representative subset.
+
+5. Data Types:
+   By nature:
+	 Qualitative: 1. nominal, 2. ordinal
+	 Quantitative: 1. Discrete, 2. continuous
+	By measurement scale: 
+	 -1. nominal, 2. ordinal, 3. interval, 4. ratio   
+   By structure: 
+   -1. cross-sectional, 2. panel/longitudal, 3. time series, 4. pooled
+6. methods of collecting primary data: 
+	The methods commonly used for the collection of primary data are given below :
+	(i) Direct personal investigation. (Face to face interview)
+	(ii) Indirect oral interviews. (Interviewing other people close to the subject)
+	(iii) Information received through local agencies. (Appointing local agents to collect information)
+	(iv) Mailed questionnaire method. (A list of questions is sent by post or mail - covering a large area but low responce rate )
+	(v) Schedules sent through enumerators.
+
+7. Here are the 13 main points for drafting a questionnaire, summarized from your text:
+
+	1. **Keep it Short:** The questionnaire should be as small as possible, ideally 15-25 questions, including only relevant items.
+	    
+	2. **Be Clear and Brief:** Questions must be clear, brief, unambiguous, and courteous, leaving no room for guessing.
+	    
+	3. **Use Logical Sequence:** Arrange questions in a natural and logical order to make them easy to follow.
+	    
+	4. **Avoid Vague Words:** Do not use subjective words (like 'good', 'bad', 'often') or words with multiple meanings.
+	    
+	5. **Make Questions Easy:** Questions should be simple to understand and answer, avoiding complex calculations or memory recall.
+	    
+	6. **Avoid Sensitive Questions:** Be tactful and avoid personal or sensitive questions (e.g., on income, debt, or age) unless absolutely necessary.
+	    
+	7. **Choose Question Types:** Use the appropriate format, such as "shut" questions (like multiple-choice or yes/no) or "open" questions (allowing a free-form answer).
+	    
+	8. **Avoid Leading Questions:** Do not frame questions in a way that suggests or leads the respondent to a particular answer.
+	    
+	9. **Include Cross-Checks:** Use connected questions (e.g., asking for both "Age" and "Date of Birth") to verify the accuracy of the information.
+	    
+	10. **Pre-test the Questionnaire:** Always test the draft on a small sample group first to find and correct any flaws or confusing questions.
+	    
+	11. **Provide a Covering Letter:** Include a letter explaining the survey's purpose, defining terms, and ensuring confidentiality.
+	    
+	12. **Plan for Analysis:** Design the questionnaire with your final data tabulation and analysis methods (e.g., computer or hand-sorting) in mind.
+	    
+	13. **Use an Attractive Layout:** The questionnaire should have a proper layout and an appealing, professional appearance.
+8. 
