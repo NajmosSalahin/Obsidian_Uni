@@ -126,4 +126,15 @@ of rows and columns.
 explain or clarify a specific item in the table
 	8. Source Note: A note below the table that identifies
 the source of the data, similar to a citation.
+
 11. 
+
+| **Feature**      | **Diagrams**                                                                                                                  | **Graphs**                                                                                                                                    |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Purpose**      | Used for **comparison** of data. Best for showing magnitude and proportions between distinct categories.                      | Used to show **relationships** between variables, trends over time, and frequency distributions.                                              |
+| **Data Type**    | Typically used for **Qualitative** (categorical) or **Discrete** quantitative data.                                           | Typically used for **Quantitative** (continuous) data.                                                                                        |
+| **Construction** | Built on **plain paper**. Does not require a mathematical scale (e.g., the width of a bar in a bar chart is often arbitrary). | Built on **graph paper**. Requires a strict **mathematical scale** ($x$-axis and $y$-axis) to plot points accurately.                         |
+| **Analysis**     | Provides an **"at-a-glance"** understanding. You cannot easily or accurately read intermediate values.                        | Can be used for **further statistical analysis** like interpolation (estimating values between points) or finding the median (from an ogive). |
+| **Examples**     | • Bar Charts<br><br>  <br><br>• Pie Charts<br><br>  <br><br>• Pictograms                                                      | • Histograms<br><br>  <br><br>• Frequency Polygons<br><br>  <br><br>• Line Graphs<br><br>  <br><br>• Ogives (Cumulative Frequency Curves)     |
+
+12. 
