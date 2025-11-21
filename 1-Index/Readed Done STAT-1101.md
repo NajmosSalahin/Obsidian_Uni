@@ -113,4 +113,16 @@
    -1. geographical, 2. chronological, 3. qualitative, 4. quantitative.
 9. Basic Principles for a Good Frequency Distribution:
    -1. type of classes, 2. number of classes, 3. size of class intervals, 4. mid points
-10.  
+10.  1. Table Number: An identification number.
+	 2. Title: A complete but concise description of the
+table's contents
+	3. Headnote (or Prefatory Note): A small note just below the title, used to state the units of measurement 
+	4. Caption (or Box Head): The heading(s) for the vertical
+	5. Stub: The heading(s) for the horizontal rows, locatedon the left side
+	6. Body: The main part of the table containing all the
+numerical data, organized into cells at the intersection
+of rows and columns.
+	7. Footnote: A note at the bottom of the table used to
+explain or clarify a specific item in the table
+	8. Source Note: A note below the table that identifies
+the source of the data, similar to a citation.
