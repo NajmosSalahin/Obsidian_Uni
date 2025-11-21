@@ -112,4 +112,5 @@
    The bases of classifications:
    -1. geographical, 2. chronological, 3. qualitative, 4. quantitative.
 9. Basic Principles for a Good Frequency Distribution:
-   
+   -1. type of classes, 2. number of classes, 3. size of class intervals, 4. mid points
+10.  
