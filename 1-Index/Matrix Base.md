@@ -181,3 +181,4 @@ $$A(B+C)=AB+AC$$
 **3.** The anticommutative law:
 $$AB\neq BA$$
 **4.** The distributive law for scalar multiplication:
+$$(K \under2 + K \under 1$$
