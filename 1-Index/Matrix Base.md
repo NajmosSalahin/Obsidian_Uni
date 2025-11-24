@@ -164,13 +164,20 @@ $$A^T = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix}$$
 Matrix Addition: ![[Pasted image 20251124194433.png]]
 Matrix addition obeys the following laws.
 
-1. The commutative law:
+**1.** The commutative law:
 $$A + B = B + A.$$
 
-2. The associative law:
+**2.** The associative law:
 $$A + (B + C) = (A + B) + C.$$
 
-3. The distributive law for scalar multiplication:
-$$k(A + B) = kA + kB,$$
+**3.** The distributive law for scalar multiplication:
+$$k(A + B) = kA + kB$$
 Matrix Multiplication: 
 ![[Pasted image 20251124195012.png]]
+**1.** The associative law:
+$$A(BC)=(AB)C$$
+**2.** The distributive law: 
+$$A(B+C)=AB+AC$$
+**3.** The anticommutative law:
+$$AB\neq BA$$
+**4.** The distributive law for scalar multiplication:
