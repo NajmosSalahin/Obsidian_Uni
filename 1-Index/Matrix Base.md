@@ -170,8 +170,9 @@ $$A(BC)=(AB)C$$
 **2.** The distributive law: 
 $$A(B+C)=AB+AC$$
 **3.** The anticommutative law:
-$$AB\neq BA$$
+$$AB\neq BA$$$$(AB)^r \neq A^rB^r$$
+
 **4.** The distributive law for scalar multiplication:
 $$(K_1+K_2)A=K_1A+K_2A=A(K1+K2)$$
 
-
+ 
