@@ -181,4 +181,6 @@ $$A(B+C)=AB+AC$$
 **3.** The anticommutative law:
 $$AB\neq BA$$
 **4.** The distributive law for scalar multiplication:
-$$(K_1+K_2)$$
+$$(K_1+K_2)A=K_1A+K_2A=A(K1+K2)$$
+
+
