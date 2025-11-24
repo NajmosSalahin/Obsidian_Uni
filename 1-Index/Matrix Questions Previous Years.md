@@ -46,3 +46,59 @@ $$\begin{vmatrix} a+b+c & a+b & a & a \\ a+b & a+b+c & a & a \\ a & a & a+b+c & 
 
 **8.** Let $B$ be an $n \times n$ matrix. Prove that, the solutions to $Bx = 0$ can always be found that are orthogonal to one another.
 
+#### Semester
+
+**1.**
+
+- **(a)** Define matrix. Explain with an example. Show that the product of a matrix and its transpose is symmetric. 
+  
+- **(b)** Explain with examples: Square matrix, null matrix, identity/unit matrix, diagonal matrix, scalar matrix, skew-symmetric matrix, Hadamard product, Kronecker sum and products.
+  
+- **(c)** Define norm of a real vector. Find the norm of the vector $x' = [4 \quad 3 \quad 1 \quad -2]$. Is it a unit vector? If not find the normalized form of $x$. Also, define orthogonal and orthonormal vectors.
+   
+
+**2.**
+
+- **(a)** Define the (i) Vectors Inner Product, (ii) Length of a vector, (iii) Distance of two vectors, and (iv) Mutually Orthogonal vectors. 
+   
+- **(b)** Prove that (i) The inner product is distributive over addition and subtraction, and (ii) The inner product is commutative. 
+  
+- **(c)** Let $X_1 = (1, 3, -4)$ and $X_2 = (2, 4, 0)$. Verify directly that $X_1 \cdot X_2 = X_2 \cdot X_1$ and find the magnitudes of $X_1$ and $X_2$. What is the distance between the two vectors?
+   
+
+**3.**
+
+- **(a)** What do you mean by minors and cofactors of a matrix determinant? Notationally show the difference between the two. Explain n-order determinants using minors. 
+  
+- **(b)** Prove that $|A'| = |A|$ for $A = \begin{bmatrix} 1 & -1 & 0 \\ 2 & 1 & 2 \\ 4 & 4 & 9 \end{bmatrix}$. What happens to the determinant when (i) two rows of a matrix are the same and (ii) every element of a particular row is zero?
+  
+- **(c)** Define triangular form of a matrix. Find the determinant of the matrix $C = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 4 \\ 3 & 2 & 1 \end{bmatrix}$ reducing it to a triangular form. 
+
+
+Here is the transcription of the final image, formatted with LaTeX for the mathematical content.
+
+**4.**
+
+- **(a)** Define the inverse of a matrix. Find the inverse of the matrix $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 10 \end{bmatrix}$ by deriving the cofactors of it. What is the adjoint matrix of $A$?
+    
+- **(b)** What are the conditions for the existence of the inverse of a matrix? If such conditions are satisfied, prove that, (i) $|A^{-1}| = \frac{1}{|A|}$, (ii) $(A')^{-1} = (A^{-1})'$, and (iii) $(AB)^{-1} = B^{-1}A^{-1}$.
+    
+- **(c)** What are the inverses of the matrices which have the form: (i) A matrix of order 2, (ii) Diagonal matrices, (iii) $I, J,$ and $(aI_n + bJ_n)$ where $I$ is an identity matrix and $J$ is a matrix of 1's, and (iv) Orthogonal matrices.
+    
+
+**5.**
+
+- **(a)** Explain the difference between linear combination and linear transformation of vectors along with example.
+    
+- **(b)** For $\mathbf{x}_1 = \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}, \mathbf{x}_2 = \begin{bmatrix} -1 \\ 3 \\ 2 \end{bmatrix}, \mathbf{x}_3 = \begin{bmatrix} -13 \\ -1 \\ 2 \end{bmatrix}$ and $\mathbf{x}_4 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}$, show the following.
+    
+    - (i) $\mathbf{x}_1, \mathbf{x}_2$ and $\mathbf{x}_3$ are linearly dependent, and find a linear relationship among them.
+        
+    - (ii) $\mathbf{x}_1, \mathbf{x}_2$ and $\mathbf{x}_4$ are LIN, and find the linear combination of them that equals $[a \quad b \quad c]'$.
+        
+- **(c)** Show that, the number of LIN rows in a matrix is the same as the number of LIN columns.
+    
+
+---
+
+**Would you like me to solve Question 4(c) regarding the inverse of $(aI_n + bJ_n)$? It is a classic and interesting linear algebra problem.**
