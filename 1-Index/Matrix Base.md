@@ -161,4 +161,4 @@ $$A^T = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix}$$
 
 ---
 
-**Would you like me to generate a few practice problems involving finding the transpose or identifying these matrix types to help you prepare for the exam?**
+Matrix Addition
