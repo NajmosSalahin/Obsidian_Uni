@@ -74,9 +74,6 @@ $$\begin{vmatrix} a+b+c & a+b & a & a \\ a+b & a+b+c & a & a \\ a & a & a+b+c & 
   
 - **(c)** Define triangular form of a matrix. Find the determinant of the matrix $C = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 4 \\ 3 & 2 & 1 \end{bmatrix}$ reducing it to a triangular form. 
 
-
-Here is the transcription of the final image, formatted with LaTeX for the mathematical content.
-
 **4.**
 
 - **(a)** Define the inverse of a matrix. Find the inverse of the matrix $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 10 \end{bmatrix}$ by deriving the cofactors of it. What is the adjoint matrix of $A$?
@@ -91,14 +88,11 @@ Here is the transcription of the final image, formatted with LaTeX for the mathe
 - **(a)** Explain the difference between linear combination and linear transformation of vectors along with example.
     
 - **(b)** For $\mathbf{x}_1 = \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}, \mathbf{x}_2 = \begin{bmatrix} -1 \\ 3 \\ 2 \end{bmatrix}, \mathbf{x}_3 = \begin{bmatrix} -13 \\ -1 \\ 2 \end{bmatrix}$ and $\mathbf{x}_4 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}$, show the following.
-    
+ 
     - (i) $\mathbf{x}_1, \mathbf{x}_2$ and $\mathbf{x}_3$ are linearly dependent, and find a linear relationship among them.
-        
+   
     - (ii) $\mathbf{x}_1, \mathbf{x}_2$ and $\mathbf{x}_4$ are LIN, and find the linear combination of them that equals $[a \quad b \quad c]'$.
-        
-- **(c)** Show that, the number of LIN rows in a matrix is the same as the number of LIN columns.
-    
+ 
+- **(c)** Show that, the number of LIN rows in a matrix is the same as the number of LIN columns. 
 
----
 
-**Would you like me to solve Question 4(c) regarding the inverse of $(aI_n + bJ_n)$? It is a classic and interesting linear algebra problem.**
