@@ -125,15 +125,6 @@ $$A = \begin{bmatrix} 1 & \mathbf{7} & \mathbf{4} \\ \mathbf{7} & 2 & \mathbf{0}
 
 ### 7. Transposed Matrix (Transpose of a Matrix)
 
-Definition:
-
-The transpose of a matrix is formed by interchanging its rows and columns.15 If matrix 16$A$ has dimensions 17$m \times n$, its transpose 18$A^T$ (or 19$A'$) has dimensions 20$n \times m$.21
-
-Mathematical Operation:
-
-The first row of 22$A$ becomes the first column of 23$A^T$.24
-
-The second row of 25$A$ becomes the second column of 26$A^T$.27
 
 Example:
 
