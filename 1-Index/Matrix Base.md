@@ -162,3 +162,5 @@ $$A^T = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix}$$
 ---
 
 Matrix Addition: ![[Pasted image 20251124194433.png]]
+Matrix Multiplication: 
+![[Pasted image 20251124195012.png]]
