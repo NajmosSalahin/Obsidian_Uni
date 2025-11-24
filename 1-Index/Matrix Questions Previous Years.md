@@ -96,3 +96,37 @@ $$\begin{vmatrix} a+b+c & a+b & a & a \\ a+b & a+b+c & a & a \\ a & a & a+b+c & 
 - **(c)** Show that, the number of LIN rows in a matrix is the same as the number of LIN columns. 
 
 
+**6.**
+
+- **(a)** Define generalized inverse. What are the benefits of generalized inverse matrix? Also, describe the general procedure to find generalized inverse.
+    
+- **(b)** When **G** is a generalized inverse of $\mathbf{X}'\mathbf{X}$. Then prove that,
+    
+    - (i) $\mathbf{G}'$ is also a generalized inverse of $\mathbf{X}'\mathbf{X}$.
+        
+    - (ii) $\mathbf{XGX}'\mathbf{X} = \mathbf{X}$; i.e., $\mathbf{GX}'$ is a generalized inverse of $\mathbf{X}$.
+        
+    - (iii) $\mathbf{XGX}'$ is invariant to $\mathbf{G}$.
+        
+    - (iv) $\mathbf{XGX}'$ is symmetric, whether $\mathbf{G}$ is or not.
+        
+- **(c)** Obtain the generalized inverse of the matrix $A = \begin{bmatrix} 1 & 2 & 4 & 3 \\ 3 & -1 & 2 & -2 \\ 5 & -4 & 0 & -7 \end{bmatrix}$
+    
+
+**7.**
+
+- **(a)** Define characteristic roots and characteristic vectors. Show that, the sum of the eigenvalues of a matrix equals its trace, and their product equals its determinant.
+    
+- **(b)** Let $B$ be an $n \times n$ matrix. Prove that, the solutions to $Bx = 0$ can always be found that are orthogonal to one another.
+    
+- **(c)** Find the characteristic roots and the corresponding characteristics vectors of the matrix $A = \begin{bmatrix} 1 & 4 \\ 9 & 1 \end{bmatrix}$.
+    
+
+**8.**
+
+- **(a)** Explain the systems of linear equations along with example. What are the classifications of systems of linear equations?
+    
+- **(b)** Let $Ax = y$ is a system of linear equations. Show that the equations $Ax = y$ are consistent if and only if, the augmented matrix $[A \quad y]$ equals the rank of $A$.
+    
+- **(c)** Prove that, a set of linear equations can be solved if and only if they are consistent.
+    
