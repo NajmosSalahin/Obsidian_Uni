@@ -1,3 +1,7 @@
+---
+banner: Github/Resources/Banners/Wallpaper/anna-scarfiello-Pxf5syDVuxQ.jpg
+content-start: 326
+---
 ### 1. Diagonal Matrix
 
 Definition:
@@ -287,9 +291,24 @@ $$|\mathbf{A}| = \sum_{i=1}^{n} a_{ij}(-1)^{i+j}|\mathbf{M}_{ij}| \quad \text{fo
 ---
 Determinant of a Transpose:
 ![[Pasted image 20251125165702.png]]
+Proof: 
+Let $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$.
+
+- The determinant is: **$|A| = ad - bc$**.
+    
+
+Now, take the transpose $A^T$ (rows become columns):
+
+$A^T = \begin{bmatrix} a & c \\ b & d \end{bmatrix}$.
+
+- The determinant is: **$|A^T| = ad - cb$**.
+    
+
+Since $bc = cb$, $|A| = |A^T|$.
 
  ---
  ![[Pasted image 20251125171355.png]]
+
 
 ---
 Two Rows The Same:![[Pasted image 20251125171902.png]]
