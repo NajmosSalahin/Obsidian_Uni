@@ -176,4 +176,6 @@ $$AB\neq BA$$$$(AB)^r \neq A^rB^r$$
 **4.** The distributive law for scalar multiplication:
 $$(K_1+K_2)A=K_1A+K_2A=A(K1+K2)$$
 
+ ![[Pasted image 20251125160945.png]]![[Pasted image 20251125161000.png]]![[Pasted image 20251125161025.png]]
+ 
  
