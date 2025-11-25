@@ -276,3 +276,11 @@ Also, it can be shown that
 $$(AB)^{(r)} = A^{(r)} B^{(r)}.$$
 
 ---
+determinant $|\mathbf{A}|$, when expanding by elements of a row
+
+$$|\mathbf{A}| = \sum_{j=1}^{n} a_{ij}(-1)^{i+j}|\mathbf{M}_{ij}| \quad \text{for any } i,$$
+
+and when expanding by elements of a column
+
+$$|\mathbf{A}| = \sum_{i=1}^{n} a_{ij}(-1)^{i+j}|\mathbf{M}_{ij}| \quad \text{for any } j.$$
+
