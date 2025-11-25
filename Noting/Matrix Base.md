@@ -290,4 +290,6 @@ Determinant of a Transpose:
 
  ---
  ![[Pasted image 20251125171355.png]]
- 
+
+---
+Two Rows The Same:![[Pasted image 20251125171902.png]]
