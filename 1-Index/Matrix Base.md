@@ -125,6 +125,7 @@ $$A = \begin{bmatrix} 1 & \mathbf{7} & \mathbf{4} \\ \mathbf{7} & 2 & \mathbf{0}
 
 ### 7. Transposed Matrix (Transpose of a Matrix)
 
+![[Pasted image 20251125160049.png]]
 
 Example:
 
