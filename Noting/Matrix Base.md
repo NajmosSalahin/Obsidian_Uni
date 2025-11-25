@@ -178,8 +178,13 @@ $$(K_1+K_2)A=K_1A+K_2A=A(K1+K2)$$
 
  ![[Pasted image 20251125160945.png]]
  Proof:![[Pasted image 20251125161506.png]]![[Pasted image 20251125161000.png]]Proof:![[Pasted image 20251125161524.png]]![[Pasted image 20251125161025.png]]
-  Proof:![[Pasted image 20251125161608.png]]
- ![[Pasted image 20251125161644.png]]
- ![[Pasted image 20251125161700.png]]
- 
- 
+  Proof: Let $C = AB$. The $(i, j) _{th}$ element of $C$ is
+
+$$c_{ij} = \sum_{r=1}^{n} a_{ir} b_{rj}$$
+
+from Equation (3.15). Also, the element in the $j_{th}$ row and $i_{th}$ column of $B^T A^T$ is observed to be
+
+$$c_{ji} = \sum_{r=1}^{n} a_{jr} b_{ri}$$
+
+which is also the $j, i$th element of $C^T$, so that $(AB)^T = C^T = B^T A^T$.
+
