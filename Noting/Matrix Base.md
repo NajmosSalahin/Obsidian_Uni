@@ -188,3 +188,54 @@ $$c_{ji} = \sum_{r=1}^{n} a_{jr} b_{ri}$$
 
 which is also the $j, i$th element of $C^T$, so that $(AB)^T = C^T = B^T A^T$.
 
+### Basic Idea of Kronecker and Hadamard Product:
+
+#### 1. Hadamard Product (Element-wise)
+
+Symbol: 1$A \circ B$ (or 2$A \odot B$)3
+
+Condition: 4$A$ and 5$B$ must have the same dimensions.6
+
+Definition:
+
+Simply multiply corresponding entries.7
+
+$$(A \circ B)_{ij} = A_{ij} \cdot B_{ij}$$
+
+Example:
+
+Let $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$.
+
+$$A \circ B = \begin{bmatrix} 1\cdot5 & 2\cdot6 \\ 3\cdot7 & 4\cdot8 \end{bmatrix} = \begin{bmatrix} 5 & 12 \\ 21 & 32 \end{bmatrix}$$
+
+---
+
+#### 2. Kronecker Product
+
+Symbol: $A \otimes B$
+
+Condition: Can be done with matrices of any size.
+
+Result Size: If 8$A$ is 9$m \times n$ and 10$B$ is 11$p \times q$, the result is 12$mp \times nq$.13
+
+Definition:
+
+Multiply every single element of $A$ by the entire matrix $B$.
+
+$$A \otimes B = \begin{bmatrix} a_{11}B & \dots & a_{1n}B \\ \vdots & \ddots & \vdots \\ a_{m1}B & \dots & a_{mn}B \end{bmatrix}$$
+
+Example:
+
+Let $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $B = \begin{bmatrix} 0 & 5 \\ 1 & 1 \end{bmatrix}$.
+
+$$A \otimes B = \begin{bmatrix} 1 \cdot \begin{bmatrix} 0 & 5 \\ 1 & 1 \end{bmatrix} & 2 \cdot \begin{bmatrix} 0 & 5 \\ 1 & 1 \end{bmatrix} \\ 3 \cdot \begin{bmatrix} 0 & 5 \\ 1 & 1 \end{bmatrix} & 4 \cdot \begin{bmatrix} 0 & 5 \\ 1 & 1 \end{bmatrix} \end{bmatrix}$$
+
+$$= \begin{bmatrix} 0 & 5 & 0 & 10 \\ 1 & 1 & 2 & 2 \\ 0 & 15 & 0 & 20 \\ 3 & 3 & 4 & 4 \end{bmatrix}$$
+
+### Summary of Differences
+
+|**Feature**|**Hadamard (A∘B)**|**Kronecker (A⊗B)**|
+|---|---|---|
+|**Dimensions**|Must match ($m \times n$ and $m \times n$)|Arbitrary ($m \times n$ and $p \times q$)|
+|**Result Size**|Same as inputs ($m \times n$)|Huge ($mp \times nq$)|
+|**Commutative?**|**Yes** ($A \circ B = B \circ A$)|**No** ($A \otimes B \neq B \otimes A$)|
