@@ -287,3 +287,7 @@ $$|\mathbf{A}| = \sum_{i=1}^{n} a_{ij}(-1)^{i+j}|\mathbf{M}_{ij}| \quad \text{fo
 ---
 Determinant of a Transpose:
 ![[Pasted image 20251125165702.png]]
+
+ ---
+ ![[Pasted image 20251125171355.png]]
+ 
