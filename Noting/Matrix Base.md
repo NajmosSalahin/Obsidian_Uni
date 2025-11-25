@@ -1,5 +1,5 @@
 ---
-banner: Github/Resources/Banners/Wallpaper/anna-scarfiello-Pxf5syDVuxQ.jpg
+banner: Github/Resources/Banners/Wallpaper/clouds.png
 content-start: 326
 ---
 ### 1. Diagonal Matrix
@@ -321,3 +321,34 @@ Using the definition of a determinant:
 
 $$|M| = (a \cdot b) - (a \cdot b) = 0$$
 
+---
+![[Pasted image 20251125185452.png]]
+For a $2 \times 2$ matrix, we explicitly check the determinant formula.
+
+$$A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} \implies |A| = a_{11}a_{22} - a_{12}a_{21}$$
+
+Swapping rows gives $B$:
+
+$$B = \begin{bmatrix} a_{21} & a_{22} \\ a_{11} & a_{12} \end{bmatrix} \implies |B| = a_{21}a_{12} - a_{22}a_{11} = -(a_{11}a_{22} - a_{12}a_{21})$$
+
+Thus, $|B| = -|A|$.
+
+---
+
+![[Pasted image 20251125200357.png]]
+Proof: ![[Untitled.jpg]]
+![[Pasted image 20251125205442.png]]
+![[Pasted image 20251125205825.png]]
+![[Pasted image 20251125205840.png]]
+Matrix Inversion:
+![[Pasted image 20251125211608.png]]
+![[Pasted image 20251125211651.png]]![[Pasted image 20251125211659.png]]
+Proof 1:
+![[Pasted image 20251125211719.png]]![[Pasted image 20251125211751.png]]Proof: ![[Pasted image 20251125212305.png]]![[Pasted image 20251125212316.png]]Proof: ![[Pasted image 20251125212338.png]]![[Pasted image 20251125212404.png]]Proof: ![[Pasted image 20251125214325.png]]
+![[Pasted image 20251125214407.png]]
+Proof: ![[Pasted image 20251125214306.png]]
+![[Pasted image 20251125214427.png]]
+Proof: 
+
+![[image.png|613x449]]
+![[Pasted image 20251125215751.png|612x627]]
