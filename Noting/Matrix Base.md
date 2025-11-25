@@ -188,6 +188,7 @@ $$c_{ji} = \sum_{r=1}^{n} a_{jr} b_{ri}$$
 
 which is also the $j, i$th element of $C^T$, so that $(AB)^T = C^T = B^T A^T$.
 
+---
 ### Basic Idea of Kronecker and Hadamard Product:
 
 #### 1. Hadamard Product (Element-wise)
@@ -239,3 +240,39 @@ $$= \begin{bmatrix} 0 & 5 & 0 & 10 \\ 1 & 1 & 2 & 2 \\ 0 & 15 & 0 & 20 \\ 3 & 3 
 |**Dimensions**|Must match ($m \times n$ and $m \times n$)|Arbitrary ($m \times n$ and $p \times q$)|
 |**Result Size**|Same as inputs ($m \times n$)|Huge ($mp \times nq$)|
 |**Commutative?**|**Yes** ($A \circ B = B \circ A$)|**No** ($A \otimes B \neq B \otimes A$)|
+
+---
+
+## Key properties of the Kronecker Product:
+
+1. The anticommutative law:
+
+$$A \otimes B \neq B \otimes A$$
+
+2. Let $A, B, C,$ and $D$ be matrices such that the products  $AC$ and $BD$ exist. Then
+
+$$(A \otimes B)(C \otimes D) = AC \otimes BD$$
+
+3. The associative law:
+
+$$A \otimes (B \otimes C) = (A \otimes B) \otimes C$$
+
+4. Transpose Property
+
+$$(A \otimes B)^T = A^T \otimes B^T$$
+
+5. Let $A, B, C,$ and $D$ be conformable for addition. Then
+
+$$(A + B) \otimes (C + D) = (A \otimes C) + (A \otimes D) + (B \otimes C) + (B \otimes D)$$
+
+6. Let $A$ be an $n \times k$ matrix. Then the Kronecker power is defined as
+
+$$A^{(2)} = A \otimes A,$$
+
+$$A^{(r+1)} = A \otimes A^{(r)}, \quad r = 2, 3, \dots$$
+
+Also, it can be shown that
+
+$$(AB)^{(r)} = A^{(r)} B^{(r)}.$$
+
+---
