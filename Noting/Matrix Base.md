@@ -284,3 +284,6 @@ and when expanding by elements of a column
 
 $$|\mathbf{A}| = \sum_{i=1}^{n} a_{ij}(-1)^{i+j}|\mathbf{M}_{ij}| \quad \text{for any } j.$$
 
+---
+Determinant of a Transpose:
+![[Pasted image 20251125165702.png]]
