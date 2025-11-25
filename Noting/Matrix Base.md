@@ -293,3 +293,12 @@ Determinant of a Transpose:
 
 ---
 Two Rows The Same:![[Pasted image 20251125171902.png]]
+Proof:
+Let $M$ be a $2 \times 2$ matrix with identical rows:
+
+$$M = \begin{bmatrix} a & b \\ a & b \end{bmatrix}$$
+
+Using the definition of a determinant:
+
+$$|M| = (a \cdot b) - (a \cdot b) = 0$$
+
