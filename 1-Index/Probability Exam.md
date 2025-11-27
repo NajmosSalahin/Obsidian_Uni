@@ -2,5 +2,6 @@ Definitions: Experiment, Deterministic  Experiment, Random Experiment, Trial, Ou
 
 ![[Pasted image 20251127160826.png]]![[Pasted image 20251127161025.png]]
 ![[Pasted image 20251127161707.png]]
+![[Pasted image 20251127162204.png]]
 
 
