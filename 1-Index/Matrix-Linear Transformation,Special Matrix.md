@@ -16,6 +16,7 @@ ii. $\dim(V) = \dim[R(A)] + \dim[N(A)]$, where $V$ is the domain of $T$.
 System of Linear Equations:
 A **system of linear equations** is a collection of two or more linear equations that involve the same set of variables.
 
+---
 #### Basic(Homogenous vs Non-homogenous)
 
 **Homogeneous Equations:** All constant terms are **zero**.
@@ -25,4 +26,8 @@ _Key Feature:_ They always pass through the origin (point 0,0).
 **Non-Homogeneous Equations:** At least one constant term is **non-zero**.
 _Form:_ $a_1​x+a_2​y+⋯=b \ (where \ b^T=0)$
 _Key Feature:_ They are "shifted" away from the origin.
+
+---
+
+**Theorem 3.21.** The solution vectors of a system of homogeneous linear equations constitute a vector space of dimensionality $k - p(A)$, where $k$ is the number of unknowns.
 
