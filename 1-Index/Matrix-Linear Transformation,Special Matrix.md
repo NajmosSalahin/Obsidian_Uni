@@ -11,5 +11,5 @@ i. If $U \leq V$, then $T(U) \leq W$, and when vectors $X_1, X_2, \dots, X_n$ sp
 ii. $\dim(V) = \dim[R(A)] + \dim[N(A)]$, where $V$ is the domain of $T$.
 ![[Pasted image 20251130210758.png]]![[Pasted image 20251130210802.png]]
 
+**Theorem 3.20.** Let $A^T$ be the transpose of matrix $A$. Then $N(A)$ and $R(A^T)$ are orthogonal complements.![[Pasted image 20251130210906.png]]
 
-![[Pasted image 20251130210906.png]]
