@@ -13,3 +13,5 @@ ii. $\dim(V) = \dim[R(A)] + \dim[N(A)]$, where $V$ is the domain of $T$.
 
 **Theorem 3.20.** Let $A^T$ be the transpose of matrix $A$. Then $N(A)$ and $R(A^T)$ are orthogonal complements.![[Pasted image 20251130210906.png]]
 
+System of Linear Equations:
+A **system of linear equations** is a collection of two or more linear equations that involve the same set of variables.
