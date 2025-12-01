@@ -54,3 +54,23 @@ $$A^{-1}AX= IX= 0,$$
 since in this case we only have the solution $X = 0$. Since $A^{-1}$ cannot exist for a nonzero solution, $A$ must be singular. For the case when $A$ is $n \times k$ and $\rho(A) = k$, the homogeneous system also possesses the unique solution $X = 0$, since $A_L^{-1}$ exists, and we have $A_i^{-1}AX = IX = 0$.
 
 The solution space of any homogeneous system of linear equations is the null space $N(A)$ whose dimension is $k -r$, where $r = \rho(A)$ and $k$ is the number of columns of $A$. Thus when $k = r = n$, we have the nonsingular $n \times n$ matrix $A$ for which $\text{dim}[N(A)] = 0$ and the only solution possible is $X = 0$.
+
+
+**Theorem 3.24.** _Let $X_1$, be a fixed solution vector of the nonhomogeneous system $AX = C$ and let $X_2$ be any solution vector of the homogeneous equation $AX = 0$. Then $Y = X_1 + X_2$ is a solution vector of $AX = C$ and vector $Y$ is the general form of this solution._
+
+PROOF: Substituting $Y = X_1+ X_2$ into Equation (3.103) yields
+
+$$A(X_1 + X_2) = AX_1 + AX_2$$
+
+$$= AX_1,$$
+
+since $AX_2 = 0$, and $X_1 + X_2$ is a solution of Equation (3.103).
+
+To show that this is the general form of the solution, let $X^*$ be any other solution of Equation (3.103). Then
+
+$$AX^* - AX_1 = 0 \quad \quad \text{or}$$
+
+$$A(X^* - X_1) = 0.$$
+
+Since $X_2$ is any solution of Equation (3.104), let $X^* - X_1 = X_2$ or $X^* = X_1 + X_2$, which is then the general form of solution for system (3.103).
+
