@@ -45,3 +45,12 @@ Also, $AX = 0$ if and only if $A^T AX = A^T Y = 0$, where $Y = AX$, so that $Y =
 
 ---
 
+**Theorem 3.22.** _A system of n homogeneous linear equations possesses a nontrivial (nonzero) solution if and only if the matrix of coefficients is singular._
+
+PROOF: When $A$ is $n \times n$, the system $AX = 0$ possesses a nonzero solution only when $A^{-1}$ does not exist, that is,
+
+$$A^{-1}AX= IX= 0,$$
+
+since in this case we only have the solution $X = 0$. Since $A^{-1}$ cannot exist for a nonzero solution, $A$ must be singular. For the case when $A$ is $n \times k$ and $\rho(A) = k$, the homogeneous system also possesses the unique solution $X = 0$, since $A_L^{-1}$ exists, and we have $A_i^{-1}AX = IX = 0$.
+
+The solution space of any homogeneous system of linear equations is the null space $N(A)$ whose dimension is $k -r$, where $r = \rho(A)$ and $k$ is the number of columns of $A$. Thus when $k = r = n$, we have the nonsingular $n \times n$ matrix $A$ for which $\text{dim}[N(A)] = 0$ and the only solution possible is $X = 0$.
