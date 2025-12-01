@@ -72,4 +72,12 @@ Since $X_2$ is any solution of Equation (3.104), let $X^* - X_1 = X_2$ or $X^* =
 
 ### Special Matrices:
 
+## 5.1 Symmetric Matrices
+
+**Definition 5.1** A square matrix is defined as symmetric when it equals its transpose; that is,
+
+$$A \text{ is symmetric when } A = A', \text{ with } a_{ij} = a_{ji} $$
+
+for $i, j = 1, \dots, r$ for $\mathbf{A}_{r \times r}$.
+
 
