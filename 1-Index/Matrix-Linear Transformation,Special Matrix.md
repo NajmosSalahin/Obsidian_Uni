@@ -5,6 +5,7 @@ Linear Transformations:
 **Theorem 3.19.** Let $T$ denote a linear transformation associated with an $n \times n$ matrix $A$ from vector space $V$ into vector space $W$ [which contains the range space T(V)]. Then the following propositions hold:
 
 i. If $U \leq V$, then $T(U) \leq W$, and when vectors $X_1, X_2, \dots, X_n$ span $U$, the set $T(X_1), T(X_2), \dots, T(X_n)$ spans $T(U)$.
+Proof:
 ![[Pasted image 20251130210717.png]]
 
 
