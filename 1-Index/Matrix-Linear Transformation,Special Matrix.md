@@ -83,4 +83,9 @@ $$A \text{ is symmetric when } A = A', \text{ with } a_{ij} = a_{ji} $$
 
 for $i, j = 1, \dots, r$ for $\mathbf{A}_{r \times r}$.
 
+Products of Symmetric Matrices:
+	1. If $A=A^`$ and $B=B^`$ then, $A, B$ are symmetric.
+		But, $(AB)^` = B^`A^` = BA \neq AB$ ;So, AB is not symmetric
 
+Properties of $AA^`$ and $A^`A$ :
+	1. 
