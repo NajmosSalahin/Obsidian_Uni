@@ -88,4 +88,6 @@ Products of Symmetric Matrices:
 		But, $(AB)^` = B^`A^` = BA \neq AB$ ;So, AB is not symmetric
 
 Properties of $AA^`$ and $A^`A$ :
-	1. 
+
+
+
