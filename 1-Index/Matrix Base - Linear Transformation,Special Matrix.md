@@ -139,5 +139,8 @@ Since $\mathbf{K}$ is idempotent ($\mathbf{K}^2 = \mathbf{K}$), we have from (5.
 $$\mathbf{LMLM} = \mathbf{LM}. \tag{5.21}$$
 
 ---
+
+
+
 ---
 Not Solved: Givens Matrix, Helmert Matrix, Elementary Vectors.
