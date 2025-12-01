@@ -10,6 +10,7 @@ Proof:
 
 
 ii. $\dim(V) = \dim[R(A)] + \dim[N(A)]$, where $V$ is the domain of $T$.
+Proof:
 ![[Pasted image 20251130210758.png]]![[Pasted image 20251130210802.png]]
 
 **Theorem 3.20.** Let $A^T$ be the transpose of matrix $A$. Then $N(A)$ and $R(A^T)$ are orthogonal complements.![[Pasted image 20251130210906.png]]
