@@ -43,14 +43,14 @@ Thus, the solutions form a vector space. Also, $AX = 0$ if and only if $A^T AX =
 
 **Theorem 3.22.** _A system of n homogeneous linear equations possesses a nontrivial (nonzero) solution if and only if the matrix of coefficients is singular._
 
-PROOF: When $A$ is $n \times n$, the system $AX = 0$ possesses a nonzero solution only when $A^{-1}$ does not exist, that is,
+PROOF: For an $n \times n$ matrix $A$, the system $AX = 0$ has a nonzero solution only if $A$ is singular. If $A^{-1}$ exists, we find the unique solution $X=0$ by multiplying:
 
-$$A^{-1}AX= IX= 0,$$
+$$A^{-1}AX = IX = 0$$
 
-since in this case we only have the solution $X = 0$. Since $A^{-1}$ cannot exist for a nonzero solution, $A$ must be singular. For the case when $A$ is $n \times k$ and $\rho(A) = k$, the homogeneous system also possesses the unique solution $X = 0$, since $A_L^{-1}$ exists, and we have $A_i^{-1}AX = IX = 0$.
+Similarly, if $A$ is $n \times k$ with $\rho(A) = k$, the left inverse $A_i^{-1}$ exists. This also yields the unique solution $X=0$ via $A_i^{-1}AX = 0$.
+The solution space is the null space $N(A)$ with dimension $k - \rho(A)$. Thus, for a nonsingular $n \times n$ matrix (where $k = \rho(A) = n$), $\text{dim}[N(A)] = 0$, leaving $X = 0$ as the only solution.
 
-The solution space of any homogeneous system of linear equations is the null space $N(A)$ whose dimension is $k -r$, where $r = \rho(A)$ and $k$ is the number of columns of $A$. Thus when $k = r = n$, we have the nonsingular $n \times n$ matrix $A$ for which $\text{dim}[N(A)] = 0$ and the only solution possible is $X = 0$.
-
+---
 
 **Theorem 3.24.** _Let $X_1$, be a fixed solution vector of the nonhomogeneous system $AX = C$ and let $X_2$ be any solution vector of the homogeneous equation $AX = 0$. Then $Y = X_1 + X_2$ is a solution vector of $AX = C$ and vector $Y$ is the general form of this solution._
 
@@ -69,4 +69,5 @@ $$AX^* - AX_1 = 0 \quad \quad \text{or}$$
 $$A(X^* - X_1) = 0.$$
 
 Since $X_2$ is any solution of Equation (3.104), let $X^* - X_1 = X_2$ or $X^* = X_1 + X_2$, which is then the general form of solution for system (3.103).
+
 
