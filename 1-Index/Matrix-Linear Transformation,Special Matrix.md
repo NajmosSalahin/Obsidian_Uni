@@ -123,3 +123,19 @@ $$\mathbf{K}^2 = \mathbf{K} \text{ implies } (\mathbf{I} - \mathbf{K})^2 = \math
 but $\mathbf{K} - \mathbf{I}$ is not idempotent. A product of two idempotent matrices is idempotent if the matrices commute in multiplication.
 
 A matrix $\mathbf{A}$ satisfying $\mathbf{A}^2 = \mathbf{0}$ is called _nilpotent_, and that for which $\mathbf{A}^2 = \mathbf{I}$ could be called _unipotent_.
+
+---
+
+**Theorem 5.1** _If $\mathbf{K}$ is an $n \times n$ idempotent matrix, then its rank $r$ is equal to its trace, that is, $r = r(\mathbf{K}) = tr(\mathbf{K})$._
+
+Proof: Let $\mathbf{L}$ be an $n \times r$ matrix of rank $r$ whose columns form a basis for the column space of $\mathbf{K}$. Thus, there exists a matrix $\mathbf{M}$ of order $r \times n$ such that
+
+$$\mathbf{K} = \mathbf{LM}. \tag{5.20}$$
+
+It follows that $r(\mathbf{M}) = r$ because $r(\mathbf{K}) = r$ and $\mathbf{M}$ has only $r$ rows.
+
+Since $\mathbf{K}$ is idempotent ($\mathbf{K}^2 = \mathbf{K}$), we have from (5.20),
+
+$$\mathbf{LMLM} = \mathbf{LM}. \tag{5.21}$$
+
+---
