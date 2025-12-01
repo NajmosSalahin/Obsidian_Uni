@@ -139,8 +139,28 @@ Since $\mathbf{K}$ is idempotent ($\mathbf{K}^2 = \mathbf{K}$), we have from (5.
 $$\mathbf{LMLM} = \mathbf{LM}. \tag{5.21}$$
 
 ---
+### **Householder Matrices**
 
+Orthogonal matrices useful for triangularizing square matrices are the Householder matrices, the general form of which is
 
+$$\mathbf{H} = \mathbf{I} - 2\mathbf{h}\mathbf{h}' \quad \text{for} \quad \mathbf{h}'\mathbf{h} = 1,$$
+
+with $\mathbf{h}$, obviously, being a non-null column vector. Then $\mathbf{H}$ is not only orthogonal but also symmetric; and for any non-null vector
+
+$$\mathbf{x}' = \begin{bmatrix} x_1 & x_2 & \cdots & x_n \end{bmatrix} \quad \text{there exists} \quad \mathbf{h}' = \begin{bmatrix} h_1 & h_2 & \cdots & h_n \end{bmatrix}$$
+
+such that
+
+$$\mathbf{Hx} = \begin{bmatrix} \lambda \\ 0 \\ \vdots \\ 0 \end{bmatrix} \quad \text{for} \quad \begin{cases} \lambda = -(\text{sign of } x_1) \sqrt{\mathbf{x}'\mathbf{x}} \\ h_1 = \sqrt{\frac{1}{2}(1 - x_1 / \lambda)} \\ h_i = -x_i / 2h_1\lambda \quad \text{for} \quad i = 2, 3, \ldots, n. \end{cases}$$
 
 ---
-Not Solved: Givens Matrix, Helmert Matrix, Elementary Vectors.
+
+### **Quadratic Forms**
+$$\sum_{i=1}^n (x_i - \bar{x}.)^2 = \mathbf{x}'\mathbf{C}\mathbf{x},$$
+is the product of a row vector $\mathbf{x}'$, a matrix $\mathbf{C}$, and the column vector $\mathbf{x}$. It is called a _quadratic form_; its general form for any matrix $\mathbf{A}$ is $\mathbf{x}'\mathbf{A}\mathbf{x}$.
+
+If $\mathbf{x}$ is a vector of order $n \times 1$ with elements $x_i$ for $i = 1, 2, \dots, n$, and if $\mathbf{A}$ is a square matrix of order $n \times n$ with elements $a_{ij}$ for $i, j = 1, 2, \dots, n$, then
+$$\mathbf{x}'\mathbf{A}\mathbf{x} = \sum_{i} x_i^2 a_{ii} + \sum \sum_{j>i} x_i x_j (a_{ij} + a_{ji}).$$
+
+---
+# Not Solved: Givens Matrix, Helmert Matrix, Elementary Vectors, Essential Maths from these chapters.
