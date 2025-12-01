@@ -113,3 +113,13 @@ $$\mathbf{B} = \begin{bmatrix} 0 & 1 & -3 \\ -1 & 0 & 2 \\ 3 & -2 & 0 \end{bmatr
 
 Such matrices, having $\mathbf{B}' = -\mathbf{B}$, are called _skew-symmetric_.
 
+Idempotent Matrices:
+when $\mathbf{K}$ is such that $\mathbf{K}^2 = \mathbf{K}$, we say $\mathbf{K}$ is **idempotent**.
+
+All idempotent matrices are square (otherwise $\mathbf{K}^2$ does not exist)identity matrices and square null matrices are idempotent.
+
+When $\mathbf{K}$ is idempotent, all powers of $\mathbf{K}$ equal $\mathbf{K}$; that is, $\mathbf{K}^r = \mathbf{K}$ for $r$ being a positive integer, and $(\mathbf{I} - \mathbf{K})$ is idempotent. Thus
+$$\mathbf{K}^2 = \mathbf{K} \text{ implies } (\mathbf{I} - \mathbf{K})^2 = \mathbf{I} - \mathbf{K},$$
+but $\mathbf{K} - \mathbf{I}$ is not idempotent. A product of two idempotent matrices is idempotent if the matrices commute in multiplication.
+
+A matrix $\mathbf{A}$ satisfying $\mathbf{A}^2 = \mathbf{0}$ is called _nilpotent_, and that for which $\mathbf{A}^2 = \mathbf{I}$ could be called _unipotent_.
