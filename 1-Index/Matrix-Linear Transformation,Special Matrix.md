@@ -75,7 +75,7 @@ Since $X_2$ is any solution of Equation (3.104), let $X^* - X_1 = X_2$ or $X^* =
 
 ### Special Matrices:
 
-## 5.1 Symmetric Matrices
+Symmetric Matrices:
 
 **Definition 5.1** A square matrix is defined as symmetric when it equals its transpose; that is,
 
@@ -88,6 +88,28 @@ Products of Symmetric Matrices:
 		But, $(AB)^` = B^`A^` = BA \neq AB$ ;So, AB is not symmetric
 
 Properties of $AA^`$ and $A^`A$ :
+	1.$(\mathbf{AA}')' = (\mathbf{A}')'\mathbf{A}' = \mathbf{AA}' \quad \text{and} \quad (\mathbf{A}'\mathbf{A})' = \mathbf{A}'(\mathbf{A}')' = \mathbf{A}'\mathbf{A}.$ 
+		$AA^`$ and $A^`A$ are symmetric but, has different order and not equal. Only when squared, they might be same.
 
+Inner and outer Products:
 
+The inner product of two vectors is a scalar and is therefore symmetric: $\mathbf{x}'\mathbf{y} = (\mathbf{x}'\mathbf{y})' = \mathbf{y}'\mathbf{x}$
+
+the outer product of two vectors is not necessarily symmetric: $\mathbf{xy}' = (\mathbf{yx}')' \neq (\mathbf{xy}')'$
+
+Sums of Outer Products:
+
+Let $\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_c$ be the columns of $\mathbf{A}$, and $\mathbf{\beta}'_1, \mathbf{\beta}'_2, \dots, \mathbf{\beta}'_c$ be the rows of $\mathbf{B}$, then the product $\mathbf{AB}$ expressed as,
+
+$$\mathbf{AB} = [\mathbf{a}_1 \quad \mathbf{a}_2 \dots \mathbf{a}_c] \begin{bmatrix} \mathbf{\beta}'_1 \\ \mathbf{\beta}'_2 \\ \vdots \\ \mathbf{\beta}'_c \end{bmatrix} = \sum_{j=1}^{c} \mathbf{a}_j \mathbf{\beta}'_j,$$
+
+is the sum of outer products of the columns of $\mathbf{A}$ with the corresponding rows in $\mathbf{B}$.
+
+Skew-Symmetric Matrices:
+
+A symmetric matrix $\mathbf{A}$ has the property $\mathbf{A} = \mathbf{A}'$; in contrast there are also matrices $\mathbf{B}$ having the property $\mathbf{B}' = -\mathbf{B}$. Their diagonal elements are zero and each off-diagonal element is minus its symmetric partner; that is, $b_{ii} = 0$ and $b_{ij} = -b_{ji}$. An example is
+
+$$\mathbf{B} = \begin{bmatrix} 0 & 1 & -3 \\ -1 & 0 & 2 \\ 3 & -2 & 0 \end{bmatrix}.$$
+
+Such matrices, having $\mathbf{B}' = -\mathbf{B}$, are called _skew-symmetric_.
 

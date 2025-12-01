@@ -1,6 +1,18 @@
-Here is the text from the uploaded images, organized by mathematical topic for clarity.
+Here is the text content sorted alphanumerically by the image filenames provided.
 
-### **1. Sums of Outer Products**
+### **Image: image_4e6712.png**
+
+$$(\mathbf{AA}')' = (\mathbf{A}')'\mathbf{A}' = \mathbf{AA}' \quad \text{and} \quad (\mathbf{A}'\mathbf{A})' = \mathbf{A}'(\mathbf{A}')' = \mathbf{A}'\mathbf{A}.$$
+
+---
+
+### **Image: image_4e6716.png**
+
+The inner product of two vectors is a scalar and is therefore symmetric: $\mathbf{x}'\mathbf{y} = (\mathbf{x}'\mathbf{y})' = \mathbf{y}'\mathbf{x}$. In contrast, the outer product of two vectors (see Section 4.7.5) is not necessarily symmetric: $\mathbf{xy}' = (\mathbf{yx}')' \neq (\mathbf{xy}')'$. Indeed, such a product is not necessarily even square.
+
+---
+
+### **Image: image_4e6733.png**
 
 **5.1.4 Sums of Outer Products**
 
@@ -12,17 +24,7 @@ is the sum of outer products of the columns of $\mathbf{A}$ with the correspondi
 
 ---
 
-### **2. Properties of Inner and Outer Products**
-
-The inner product of two vectors is a scalar and is therefore symmetric: $\mathbf{x}'\mathbf{y} = (\mathbf{x}'\mathbf{y})' = \mathbf{y}'\mathbf{x}$. In contrast, the outer product of two vectors (see Section 4.7.5) is not necessarily symmetric: $\mathbf{xy}' = (\mathbf{yx}')' \neq (\mathbf{xy}')'$. Indeed, such a product is not necessarily even square.
-
-Also, regarding the symmetry of products involving transposes:
-
-$$(\mathbf{AA}')' = (\mathbf{A}')'\mathbf{A}' = \mathbf{AA}' \quad \text{and} \quad (\mathbf{A}'\mathbf{A})' = \mathbf{A}'(\mathbf{A}')' = \mathbf{A}'\mathbf{A}.$$
-
----
-
-### **3. Skew-Symmetric Matrices**
+### **Image: image_4e69da.png**
 
 **5.1.6 Skew-Symmetric Matrices**
 
@@ -34,11 +36,9 @@ Such matrices, having $\mathbf{B}' = -\mathbf{B}$, are called _skew-symmetric_.
 
 ---
 
-### **4. Idempotent Matrices**
+### **Image: image_4e69df.png**
 
-_Note: The following text describes the properties of idempotent matrices._
-
-...matrices are of this nature; they are called idempotent matrices. Thus when $\mathbf{K}$ is such that $\mathbf{K}^2 = \mathbf{K}$, we say $\mathbf{K}$ is _idempotent_ (from Latin, _idem_ meaning “same,” and _potent_ “power”). All idempotent matrices are square (otherwise $\mathbf{K}^2$ does not exist); identity matrices and square null matrices are idempotent. When $\mathbf{K}$ is idempotent, all powers of $\mathbf{K}$ equal $\mathbf{K}$; that is, $\mathbf{K}^r = \mathbf{K}$ for $r$ being a positive integer, and $(\mathbf{I} - \mathbf{K})$ is idempotent. Thus
+matrices are of this nature; they are called idempotent matrices. Thus when $\mathbf{K}$ is such that $\mathbf{K}^2 = \mathbf{K}$, we say $\mathbf{K}$ is _idempotent_ (from Latin, _idem_ meaning “same,” and _potent_ “power”). All idempotent matrices are square (otherwise $\mathbf{K}^2$ does not exist); identity matrices and square null matrices are idempotent. When $\mathbf{K}$ is idempotent, all powers of $\mathbf{K}$ equal $\mathbf{K}$; that is, $\mathbf{K}^r = \mathbf{K}$ for $r$ being a positive integer, and $(\mathbf{I} - \mathbf{K})$ is idempotent. Thus
 
 $$\mathbf{K}^2 = \mathbf{K} \text{ implies } (\mathbf{I} - \mathbf{K})^2 = \mathbf{I} - \mathbf{K},$$
 
@@ -46,9 +46,13 @@ but $\mathbf{K} - \mathbf{I}$ is not idempotent. A product of two idempotent mat
 
 ---
 
-### **5. Nilpotent and Unipotent Matrices**
+### **Image: image_4e69f7.png**
 
 A matrix $\mathbf{A}$ satisfying $\mathbf{A}^2 = \mathbf{0}$ is called _nilpotent_, and that for which $\mathbf{A}^2 = \mathbf{I}$ could be called _unipotent_.
+
+---
+
+### **Image: image_4e69f9.png**
 
 **Example 5.9**
 
@@ -60,9 +64,11 @@ $$\mathbf{B} = \begin{bmatrix} 0 & 0 & 6 \\ \frac{1}{2} & 0 & 0 \\ 0 & \frac{1}{
 
 for which $\mathbf{B}^3 = \mathbf{I}$, but $\mathbf{B}^2 \neq \mathbf{I}$.
 
+The following theorem is very useful in determining the rank of an idempotent matrix:
+
 ---
 
-### **6. Theorem 5.1: Rank of an Idempotent Matrix**
+### **Image: image_4e69fb.png**
 
 **Theorem 5.1** _If $\mathbf{K}$ is an $n \times n$ idempotent matrix, then its rank $r$ is equal to its trace, that is, $r = r(\mathbf{K}) = tr(\mathbf{K})$._
 
@@ -75,6 +81,10 @@ It follows that $r(\mathbf{K}) \leq r(\mathbf{M}) \leq r$, since the rank of $\m
 Since $\mathbf{K}$ is idempotent, $\mathbf{K}^2 = \mathbf{K}$. We then have from (5.20),
 
 $$\mathbf{LMLM} = \mathbf{LM}. \tag{5.21}$$
+
+---
+
+### **Image: image_4e69fe.png**
 
 Furthermore, because $\mathbf{L}$ is of full-column rank, multiplying both sides of (5.21) on the left by $\mathbf{L}'$ and noting that $\mathbf{L}'\mathbf{L}$ is nonsingular by the fact that it is of order $r \times r$ of rank $r$, we get, after multiplying both of the resulting sides of (5.21) on the left by the inverse of $\mathbf{L}'\mathbf{L}$,
 
@@ -90,7 +100,7 @@ Since the trace of $\mathbf{K}$, being the sum of its diagonal elements, is easy
 
 ---
 
-### **7. Orthogonal Matrices and Vector Norms**
+### **Image: image_4e69ff.png**
 
 **Definition 5.2** Another useful class of matrices is that for which $\mathbf{A}$ has the property $\mathbf{AA}' = \mathbf{I} = \mathbf{A}'\mathbf{A}$. Such matrices are called _orthogonal_. We lead up to them with the following definitions:
 
@@ -103,3 +113,19 @@ For example, the norm of $\mathbf{x}' = [1 \quad 2 \quad 2 \quad 4]$ is $(1 + 4 
 $$\mathbf{u} = \left( \frac{1}{\sqrt{\mathbf{x}'\mathbf{x}}} \right) \mathbf{x}$$
 
 is the _normalized_ form of $\mathbf{x}$ (because $\mathbf{u}'\mathbf{u} = 1$).
+
+---
+
+### **Image: image_6aa136.png**
+
+## 5.1 Symmetric Matrices
+
+**Definition 5.1** A square matrix is defined as symmetric when it equals its transpose; that is,
+
+$$A \text{ is symmetric when } A = A', \text{ with } a_{ij} = a_{ji} \tag{5.1}$$
+
+for $i, j = 1, \dots, r$ for $\mathbf{A}_{r \times r}$.
+
+---
+
+**Would you like me to explain the specific relationship between idempotent matrices and their rank derived in Theorem 5.1?**
