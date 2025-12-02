@@ -1,4 +1,4 @@
-### **Part B: MACROECONOMICS (Conceptual Questions)**
+### **Part A: MACROECONOMICS (Conceptual Questions)**
 
 1. What is national income?
 
