@@ -1,3 +1,4 @@
+
 QS: Here are the questions from the exam paper:
 
 1. Write a short essay on the origin and development of the science of Statistics.
