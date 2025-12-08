@@ -12,3 +12,6 @@ Q4:
 ![[Pasted image 20251208115438.png]]
 Q5:
 ![[Pasted image 20251208115542.png]]
+![[Pasted image 20251208115646.png]]
+![[Pasted image 20251208115719.png]]
+![[Pasted image 20251208115738.png]]
