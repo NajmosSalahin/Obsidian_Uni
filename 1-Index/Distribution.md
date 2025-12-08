@@ -5,3 +5,10 @@ Q1:
 ![[Pasted image 20251208114615.png]]
 Q2:
 ![[Pasted image 20251208114806.png]]
+Q3:
+![[Pasted image 20251208115235.png]]
+Q4:
+![[Pasted image 20251208115355.png]]
+![[Pasted image 20251208115438.png]]
+Q5:
+![[Pasted image 20251208115542.png]]
