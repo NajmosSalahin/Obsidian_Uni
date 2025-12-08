@@ -25,4 +25,5 @@ Q6:
 ![[Pasted image 20251208120132.png]]
 Q7:
 ![[Pasted image 20251208120217.png]]
+![[Pasted image 20251208120245.png]]
 
