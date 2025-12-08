@@ -33,3 +33,4 @@ Q10:
 ![[Pasted image 20251208121021.png]]
 ![[Pasted image 20251208121041.png]]
 
+
