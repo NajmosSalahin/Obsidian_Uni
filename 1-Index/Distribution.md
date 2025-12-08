@@ -4,3 +4,4 @@ Q1:
 ![[Pasted image 20251208114554.png]]
 ![[Pasted image 20251208114615.png]]
 Q2:
+![[Pasted image 20251208114806.png]]
