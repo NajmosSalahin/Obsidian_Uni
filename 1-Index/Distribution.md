@@ -34,5 +34,9 @@ Q10:
 ![[Pasted image 20251208121041.png]]
 Q11:
 ![[Pasted image 20251208195603.png]]
+![[Pasted image 20251208195727.png]]
+![[Pasted image 20251208195820.png]]
+![[Pasted image 20251208195848.png]]
+![[Pasted image 20251208195905.png]]
 
 
