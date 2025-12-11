@@ -34,16 +34,14 @@
 
 **Venn Diagram:** A pictorial representation of sets and their relationships using closed curves inside a rectangle.
 
-**Finite Set:** A set with a limited number of elements.
-
-**Infinite Set:** A set with an unlimited number of elements.
-
-**Equal Sets:** Sets that contain the exact same elements.
-
-**Equivalent Sets:** Sets that have different elements but the same number of elements.
-
-**Overlapping Sets:** Sets that have at least one common element.
-
+Classes of Sets:
+	**Finite Set:** A set with a limited number of elements.
+	**Infinite Set:** A set with an unlimited number of elements.
+	**Equal Sets:** Sets that contain the exact same elements.
+	**Equivalent Sets:** Sets that have different elements but the same number of elements.
+	**Overlapping Sets:** Sets that have at least one common element.
+	**Disjoint Sets:** No common element.
+	
 **The Axioms of Probability:** Non-Negativity: $P(A)\ge0$ for any event A
 						   Normalization: $P(S)=1$, where S is the sample space
                            Countable-Additivity: For two disjoint events, $P(A\cup B)=P(A)+P(B)$ 
