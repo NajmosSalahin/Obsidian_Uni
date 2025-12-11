@@ -326,7 +326,7 @@ For any events $E_{1}, E_{2}, ...$, prove $P(\bigcup_{i=1}^{\infty}E_{i})\le\sum
     
     $P(\bigcup E_{i})=P(\bigcup F_{i})=\sum_{i}P(F_{i})\le\sum_{i}P(E_{i})$.
     
-$$\mathcal{A}$$
+$$\mathscr{A}$$
 ---
 
 ### 2(c). Drawing Balls
