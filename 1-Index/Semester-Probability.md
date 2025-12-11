@@ -42,4 +42,9 @@
 
 **Equivalent Sets:** Sets that have different elements but the same number of elements.
 
-**Overlapping Sets**: Sets that have at least one common element.
+**Overlapping Sets:** Sets that have at least one common element.
+
+**The Axioms of Probability:** Non-Negativity: $P(A)\ge0$ for any event A
+						   Normalization: $P(S)=1$, where S is the sample space
+                           Countable-Additivity: For two disjoint events, $P(A\cup B)=P(A)+P(B)$ 
+

@@ -232,7 +232,7 @@ content-start: 291
     
 3. **Countable Additivity:** If $A_1, A_2, ...$ are pairwise disjoint events, then $P(\bigcup_{i}A_{i})=\sum_{i}P(A_{i})$.
     
-    - (For two disjoint events, this simplifies to $P(A\cup B)=P(A)+P(B)$).
+    - (For two disjoint events, this simplifies to $P(A\cup B)=P(A)+P(B)$.
         
 
 ---
