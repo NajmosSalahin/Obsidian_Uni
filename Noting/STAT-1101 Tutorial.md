@@ -171,8 +171,61 @@ Draw the **frequency polygon** of the **histogram** of the above frequency distr
 22. Under usual notation, prove that $0 \leq P(A) \leq 1$.
     
 23. Find the **mean, variance** and **coefficient of variation** of the first **n natural numbers**.
-    
+### Correlation
 
+18. Explain **correlation** with suitable examples.
+    
+19. What of **correlation** known to you? Explain **Karl Pearson correlation coefficient**.
+    
+20. State the **properties** of **Karl Pearson correlation coefficient**.
+    
+21. Proof any two properties of **Pearson correlation coefficient**.
+    
+22. Derive the **correlation ratio** and **rank correction formulae**.
+    
+23. Prove that **two independent variables are uncorrelated**. By giving an example, show that the **converse is not true**. Explain the reason?
+    
+24. Comment on the following statement:
+    
+    If the coefficient of correlation between two variables is zero, it does not mean that the variables are unrelated.
+    
+25. Define a **scatter diagram**. Draw the scatter diagram when (i) $r = +1$, (ii) $r = -1$ and (iii) $r = 0$, where $r$ is the **correlation coefficient**. 26. What are the **special characteristics** of **Karl Pearson's coefficient of correlation**? What are the **underlying assumptions** on which this formula is based?
+### Data Science
+
+1. What is **data science**? Explain it briefly.
+    
+2. Write down the brief **History of Data Science**.
+    
+3. Describe some fields where **Data Science** is commonly used.
+    
+4. What are the main categories/facets of data? Explain them briefly.
+    
+    4.a. What are the tools and technologies is being used in data science? Explain some of them.
+    
+5. Describe about the **data science Process**.
+    
+6. Describe **data storage** briefly.
+    
+7. Describe **data cleaning** and **Pre-Processing** briefly.
+    
+8. Write down the **similarities and differences of Statistics and Data Sciences**.
+    
+9. What is **data database**? How do you construct **database** - explain? Explain **schema**.
+    
+10. What are the **database software** known to you? Explain some of them.
+    
+11. Write down the **pros and cons of data science**.
+    
+12. What are the **dataset format and structures** known to you? Explain some of them.
+    
+13. Write down the **importance's of Python programming** in **data science**.
+    
+14. Explain **Web Scraping** and **social media data collection**.
+    
+15. Explain **'big data'**. What are the **'V'** known to you for **big data**.
+    
+16. What are the **tools** known you for **handling large data (big data sets**)? Explain the briefly.
+ 
 Answers:
 1. Statistics originated as the "science of state-craft," derived from words like the Latin 'status', meaning 'political state'. Ancient governments collected data on population and wealth to assess manpower and levy taxes, with systems existing in India by 300 B.C. and later during Akbar's reign. A key development was 'Vital Statistics' in the 17th century, pioneered by John Grant, who studied births and deaths. This work led to mortality tables and the foundation of life insurance. The theoretical basis for modern statistics began in the mid-17th century with the 'Theory of Probability,' developed by mathematicians like Pascal and Fermat. This foundation was built upon by figures such as Gauss, Francis Galton (regression), Karl Pearson (correlation, chi-square test), W.S. Gosset (t-distribution), and Sir R.A. Fisher, the 'Father of Statistics', who applied statistics to diverse fields and developed concepts like 'Analysis of Variance'.
 2. Here are the key figures and their contributions:
