@@ -37,7 +37,7 @@ Indexing organizes data to speed up retrieval, avoiding slow sequential searches
     
 
 ### 4. Data Chunking
-
+ 
 Also known as segmentation, this divides large datasets into smaller, manageable "chunks" (with metadata) to handle capacity limits.
 
 - **Benefits:** It increases processing speed, improves resource utilization across machines, and offers better fault tolerance (only the affected chunk needs recovering).
