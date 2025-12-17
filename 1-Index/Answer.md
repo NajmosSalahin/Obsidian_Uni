@@ -85,4 +85,37 @@ Unstructured Data: Includes social media content like chats, videos, and Twitter
 This deals with the authenticity of the captured data, specifically whether it is trustworthy and bias-free.
 Ensuring authenticity is a huge challenge due to the high speed (velocity), volume, and variety of the data being generated.
 
+# 3.
 
+### **1. Web Scraping**
+
+**Definition:** The process of automatically extracting data from websites using tools (scrapers).
+
+- **Example:** A travel company collecting hotel prices from various booking sites to create a strategy without manual work.
+    
+- **Common Techniques:**
+    
+    - **Web Crawling:** Navigating through links to collect data from multiple pages.
+        
+    - **HTML Parsing & XPath:** Analyzing page structure and navigating HTML tags to find specific data.
+        
+    - **Regular Expressions:** Searching for specific patterns (e.g., emails, phone numbers).
+        
+    - **APIs & JSON/XML:** Directly accessing structured data systems without scraping the interface.
+        
+
+![Image of web scraping process diagram](https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRjT_Vk8UdU3-QlsqnR7wGWRIAhAVSF7PZ4ABsOVF420vEPWOc1kLjHUyUyPoPFwLLIz9CWRadDP9tJNYa8WVyes_qrWi4E3OvANyGYbopY8SHttdw)
+### **2. Social Media Data Collection**
+
+**Definition:** Gathering information from platforms like Twitter or Instagram using APIs or monitoring tools.
+
+- **Example:** Analyzing tweets with specific hashtags to measure customer satisfaction and preferences.
+    
+- **Common Techniques:**
+    
+    - **API Integration:** Retrieving structured data based on user interactions.
+        
+    - **Social Listening:** Monitoring online conversations to detect trends and behavior.
+        
+    - **Network Analysis:** Mapping relationships to identify influencers.
+        
