@@ -242,3 +242,24 @@ o Attributes/Features: Columns representing data characteristics (e.g., Semester
 o Entities/Items: Rows representing individual data entries (e.g., specific classes).
 o Relationships: How different data points are connected.
 o Data Types: Specifies the type of data each attribute holds (e.g., integers, text).
+
+# 9.
+
+Similarity: 
+
+| **Aspect**          | **Description**                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------- |
+| **Data Analysis**   | Both involve analyzing data to extract insights.                                   |
+| **Methods**         | Both use quantitative methods, including statistical and computational techniques. |
+| **Decision-Making** | Both aim to inform decisions based on data.                                        |
+
+Difference: 
+
+| **Aspect**  | **Statistics**                                                       | **Data Science**                                                                                         |
+| ----------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Focus**   | Focuses on analyzing **structured data** to make inferences.         statistics, machine learning, and computer science, handling both **structured and unstructured data**. *. |
+| **Methods** | Uses traditional statistical techniques like **hypothesis testing**. | Uses **advanced algorithms**, machine learning, and big data too                                         |
+| **Goal**    | Aims to understand **data relationships** and test hypotheses.       | Focuses on building **predictive models** and finding patterns in complex d                              |
+
+# 10.
+
