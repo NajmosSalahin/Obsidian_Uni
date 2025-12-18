@@ -119,3 +119,33 @@ Ensuring authenticity is a huge challenge due to the high speed (velocity), volu
         
     - **Network Analysis:** Mapping relationships to identify influencers.
         
+# 4.
+ 
+Importance's of python programming in
+data science:
+1. Scripting Language with Structured Programming
+Style: Python's scripting capabilities with a
+structured programming style make it efficient for
+writing and executing data science algorithms.
+2. Dynamic Built-in Data Structures: Python has
+dynamic data structures that are highly useful for
+data manipulation and analysis, which is essential in
+data science.
+3. Database Connectivity: Python provides interfaces
+to connect to databases like MySQL, Oracle, and
+PostgreSQL, enabling data scientists to access,
+manipulate, and analyze large datasets stored in
+relational databases.
+4. Extensible Language: Python can be integrated with
+other programming languages such as C and C++,
+allowing data scientists to leverage existing tools and
+optimize performance when necessary.
+5. Libraries for Internet Protocols: Python has built-in
+libraries for handling Internet protocols such as
+HTML, XML, JSON, and more, which are critical for
+web scraping and web-based data collection for data
+science projects.
+These features make Python a powerful and versatile tool
+for various data science tasks.
+
+[^1]: 
