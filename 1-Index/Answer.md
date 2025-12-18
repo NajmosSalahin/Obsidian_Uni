@@ -234,3 +234,11 @@ Cons:
         
     - **Google BigQuery:** Serverless data warehouse for analytics.
         
+# 8.
+
+Schema:
+• A schema is the structure that defines how data is organized in a dataset or database, including:
+o Attributes/Features: Columns representing data characteristics (e.g., Semester, Instructor).
+o Entities/Items: Rows representing individual data entries (e.g., specific classes).
+o Relationships: How different data points are connected.
+o Data Types: Specifies the type of data each attribute holds (e.g., integers, text).
