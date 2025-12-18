@@ -263,3 +263,23 @@ Difference:
 
 # 10.
 
+## **Data Cleaning and Preprocessing**
+
+Data cleaning and preprocessing is an important stage in any data science task. It refers to the technique of organizing and converting raw data into usable structures for further analysis. It involves extracting irrelevant or duplicate values, handling missing values and correcting errors. This ensures that the data is accurate, comprehensive and ready for analysis. Data cleaning and preprocessing typically involve the following steps:
+
+- **(I) Data integration:** It refers to merging data from multiple sources into a data set.
+    
+- **(II) Data cleaning:** In this step, data is assessed for any errors or inconsistencies and appropriate actions are taken to correct them. This may include removing duplicate values, handling missing values/data and correcting formatting misconceptions.
+    
+- **(III) Data transformation:** The step prepares the data for the next step by transforming into a format that is suitable for further analysis. This may involve converting data type, scaling or normalizing numerical data or encoding categorical values.
+    
+- **(IV) Data reduction:** If the data set contains a large number of columns or features, data reduction method may be used to select only the most appropriate ones for analysis.
+    
+- **(V) Data discretization:** It involves grouping continuous data into categories or ranges which can help facilitate analysis.
+    
+- **(VI) Data Sampling:** In some cases, the data may be too large to analyze in its entirety. In such cases, a representative subset of the data is selected for analysis while still maintaining the overall characteristics of the original.
+    
+
+---
+
+**Next Step:** Would you like me to create a comparison table of these six steps to help you visualize their unique functions and goals?
