@@ -367,4 +367,24 @@ Big data requires storage solutions that can handle large volumes, offer high pe
 4. **Cloud Storage:** Storing data on remote servers accessed over the internet, offering scalability and cost-effectiveness.
     
 5. **Object Storage:** Data is stored as objects consisting of both data and metadata; often used for images and videos.
-    
+
+
+Q: 5: Describe about the data Science process. Time : / Date : /
+
+
+(I) The first step is to identify the problem and define the problem statement
+
+(II) The second step is to collect the data from the different sources. The data should be collected to adress the problem in the organization.
+
+(III) The third step is exploratory data analysis. It involves the steps in data preprocessing
+
+(IV) The fourth step is to visualize the data
+
+(V) The fifth step is to prepare the data for Model building. It involves creating new variable or doing factor analysis to reduce the number of variable.
+
+
+machine learnings algorithms and advanced ensemble, deep learning and AI techniques.
+
+data science process model :
+
+object > Data collection > Exploratory Data analysis > Data visualization > Dimensionality reduction > Model building.
