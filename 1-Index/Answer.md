@@ -201,3 +201,36 @@ Cons:
 4. ==Ethical and Privacy Concerns:== With the ability to collect vast amounts of personal data (e.g., contact information, health records, location, photos, and search history), there are growing concerns about who can access and use this data. People are worried about their privacy being compromised.
 5. ==Bias in Data:== Machine learning algorithms and AI systems are trained on historical data. If that data has biases, the algorithms will also inherit those biases and may make biased decisions.
 6. ==Lack of Consent:== Many individuals do not know when their data is being collected, or who has access to it, raising issues about consent and privacy.
+
+# 7.
+
+==Popular Database Software==
+
+- **Relational Databases (SQL):** These organize data into structured tables (rows and columns).
+    
+    - **PostgreSQL:** The most advanced open-source option.
+        
+    - **MySQL:** The most popular for web applications.
+        
+    - **SQLite:** Lightweight and embedded (used in phones/browsers).
+        
+    - **Microsoft SQL Server:** Enterprise-grade with tight Windows integration.
+        
+    - **Oracle Database:** Powerful, complex, used by large enterprises.
+        
+- **NoSQL Databases:** These are non-tabular and handle unstructured or semi-structured data.4
+    
+    - **MongoDB:** Document-based (stores data like JSON files).
+        
+    - **Redis:** Key-Value store (stores data in memory for extreme speed).
+        
+    - **Cassandra:** Wide-column store (good for massive data across many servers).
+        
+    - **Neo4j:** Graph database (good for connecting relationships, like social networks).
+        
+- **Cloud Data Warehouses:**
+    
+    - **Snowflake:** Built specifically for the cloud to handle massive analytics workloads.
+        
+    - **Google BigQuery:** Serverless data warehouse for analytics.
+        
