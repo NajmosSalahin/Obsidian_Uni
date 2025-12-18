@@ -304,7 +304,7 @@ Several prominent figures played crucial roles in establishing data science as a
 The 20th century witnessed drastic advancements in generating, capturing, and processing data, moving the field far beyond its 19th-century roots.
 
 ---
-
+# 12.
 ## **Foundational Fields of Study**
 
 Data science is drawn from three traditional fields that act as its foundation:
@@ -321,7 +321,7 @@ Data science is drawn from three traditional fields that act as its foundation:
         
 
 ---
-
+# 13.
 ## **Data Science and Decision-Making**
 
 Data science is the science of understanding data using processes, tools, and techniques to aid in decision-making. It involves moving from intuition-based to data-based decisions through three main steps:
@@ -334,7 +334,7 @@ Data science is the science of understanding data using processes, tools, and te
     
 
 ---
-
+# 14. 
 ## **Types of Data**
 
 1. **Structured Data:** Resides in fixed fields within a record and relies on a defined data model (e.g., an Excel table). SQL is the preferred method for querying this data.
@@ -353,7 +353,7 @@ Data science is the science of understanding data using processes, tools, and te
     
 
 ---
-
+# 15.
 ## **Data Storage for Big Data**
 
 Big data requires storage solutions that can handle large volumes, offer high performance for access, and guarantee scalability and reliability. Common types include:
@@ -368,8 +368,9 @@ Big data requires storage solutions that can handle large volumes, offer high pe
     
 5. **Object Storage:** Data is stored as objects consisting of both data and metadata; often used for images and videos.
 
+# 16.
 
-Q: 5: Describe about the data Science process. Time : / Date : /
+5: Describe about the data Science process. Time : / Date : /
 
 
 (I) The first step is to identify the problem and define the problem statement
@@ -388,3 +389,24 @@ machine learnings algorithms and advanced ensemble, deep learning and AI techniq
 data science process model :
 
 object > Data collection > Exploratory Data analysis > Data visualization > Dimensionality reduction > Model building.
+
+
+# 17.
+
+![[Pasted image 20251218211848.png]]
+Types of Correlation
+(a) POSITIVE: If the values of the two variables deviate in the same direction(both increase/ decrease same time)
+
+Some examples of series of positive correlation are :
+(i) Heights and weights.
+(ii) The family income and expenditure on luxury items.
+(iii) Amount of rainfall and yield of crop (up to a point).
+(iv) Price and supply of a commodity and so on.
+
+AND NEGATIVE:  if the variables deviate in the opposite direction
+
+Some examples of negative correlation are the series relating to :
+(i) Price and demand of a commodity.
+(ii) Volume and pressure of a perfect gas.
+(iii) Sale of woollen garments and the day temperature, and so on.
+
