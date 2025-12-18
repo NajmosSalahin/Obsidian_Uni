@@ -150,4 +150,45 @@ for various data science tasks.
 
 # 5.
 
+### **1. Data Structures**
+
+Data is classified based on its organization and how easily it can be managed by traditional systems.
+
+- **Structured Data:**
+    
+    - **Definition:** This data is highly organized and follows a rigid format, typically utilizing rows and columns.
+        
+    - **Examples:** Excel sheets, spreadsheets, and data stored in **Relational Databases** (like MySQL or PostgreSQL) which use tables to store information.
+        
+- **Semi-Structured Data:**
+    
+    - **Definition:** This data does not reside in a fixed database format (like a strict table) but contains some organizational properties like tags or markers to separate data elements.
+        
+    - **Examples:** Emails, chats, phone conversations, image files, graphics, and sensor data from sources like GPS, RFID, and smart meters.
+        
+    - **Formats:** While not explicitly listed in the images, this category often includes formats like JSON or XML used in API data exchange (as mentioned in your previous text regarding web scraping).
+        
+- **Unstructured Data:**
+    
+    - **Definition:** This data lacks a pre-defined data model and is the most complex to process. It is growing rapidly due to social media usage.
+        
+    - **Examples:** Social media content (Twitter feeds, chats), videos, voice recordings, and complex medical imagery like X-rays or CT scans.
+        
+    - **Storage:** **NoSQL Databases** (like MongoDB) and **Object Storage** (like Amazon S3) are specifically designed to handle this type of data.
+        
+
+### **2. Dataset File Formats (Compression)**
+
+The documents also highlight specific file formats used to compress datasets for efficient handling.
+
+- **Lossy Formats:** These reduce file size by removing some data, commonly used for multimedia.
+    
+    - **Examples:** **MP3** (audio) and **JPEG** (images).
+        
+- **Lossless Formats:** These reduce file size without losing any information, allowing for exact reconstruction.
+    
+    - **Examples:** **ZIP** (archives) and **PNG** (images).
+        
+
+# 6.
 
