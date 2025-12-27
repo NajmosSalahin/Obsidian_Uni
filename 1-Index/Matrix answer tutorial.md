@@ -10,3 +10,4 @@ Page-2
 ![[Pasted image 20251227095055.png]]
 ![[Pasted image 20251227095115.png]]
 ![[Pasted image 20251227095159.png]]
+![[Pasted image 20251227212408.png]]
