@@ -1,5 +1,5 @@
 ---
-course name: STAT-1103
+course name: "[[STAT-1103]]"
 ---
 ![[Pasted image 20251227093524.png]]
 ![[Pasted image 20251227093615.png]]
