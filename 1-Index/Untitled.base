@@ -1,9 +1,8 @@
 filters:
   and:
-    - file.links == ["STAT-1103"]
+    - file.links.containsAll("STAT-1103")
 views:
   - type: table
     name: Table
-    filters:
-      and:
-        - file.links.contains("STAT-1103")
+  - type: cards
+    name: View
