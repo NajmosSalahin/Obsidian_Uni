@@ -5,7 +5,7 @@ $RepoPath = "C:\Users\Aurnob\Desktop\Barnackle"
 $DiaryFile = "C:\Users\Aurnob\Desktop\Barnackle\NinjaDiary.txt"
 
 # 10 second timer
-$CheckInterval = 10 
+$CheckInterval = 300 
 
 Set-Location $RepoPath
 $StartTime = Get-Date
