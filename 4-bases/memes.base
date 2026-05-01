@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.folder == "9-Resources/Memes"
+views:
+  - type: table
+    name: Table
+  - type: cards
+    name: View
+    order:
+      - file.ctime
+    imageFit: contain
+    imageAspectRatio: 0.5
+    image: file.file

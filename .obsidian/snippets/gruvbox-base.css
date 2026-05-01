@@ -1,0 +1,103 @@
+/* FORCE GRUVBOX COLORS - Targets body for higher priority */
+body.theme-dark {
+  /* Main Text (fg: #ebdbb2) */
+
+  --canvas-color: #ebdbb2 !important;
+  
+  /* Sidebar & Muted Text (fg4: #a89984) */
+  --text-muted: #a89984 !important;
+  --nav-item-color: #a89984 !important;
+  
+  /* Faint Text (gray: #928374) */
+  --text-faint: #928374 !important;
+  
+  /* Links & Accents (aqua: #8ec07c) */
+  --text-accent: #8ec07c !important;
+  --link-color: #8ec07c !important;
+  --link-external-color: #8ec07c !important;
+
+  /* Cursor & Selection (orange: #fe8019) */
+  --caret-color: #fe8019 !important;
+  --text-selection: rgba(254, 128, 25, 0.3) !important;
+}
+
+/* Fix for the actual Writing Area */
+
+
+
+/* FORCE GRUVBOX ON SIDEBAR (Transparent Theme Fix) */
+
+
+/* Folder and File names */
+.nav-folder-title, 
+.nav-file-title,
+.nav-folder-title-content,
+.nav-file-title-content {
+    color: #a89984 !important; /* Gruvbox fg4 (Muted) */
+}
+
+/* Color when you hover over a file/folder */
+.nav-folder-title:hover, 
+.nav-file-title:hover {
+    color: #ebdbb2 !important; /* Gruvbox fg (Bright) */
+    background-color: rgba(235, 219, 178, 0.1) !important;
+}
+
+/* Fix for File Names in the Sidebar */
+.nav-file-title-content, 
+.nav-folder-title-content {
+  color: #a89984 !important;
+}
+
+
+
+/* Color of the file you are currently in */
+.nav-file-title.is-active,
+.nav-file-title.is-active .nav-file-title-content {
+    color: #fabd2f !important; /* Gruvbox Red */
+    font-weight: bold;
+}
+
+/* Sidebar Icons (Search, Star, Folders) */
+.nav-action-button, 
+.nav-folder-collapse-indicator,
+.side-dock-ribbon-action {
+    color: #a89984 !important;
+}
+
+/* Sidebar Icons on Hover */
+.nav-action-button:hover,
+.side-dock-ribbon-action:hover {
+    color: #fabd2f !important; /* Gruvbox Yellow */
+}
+
+/* Search Bar text in sidebar */
+.search-input-container input {
+    color: #ebdbb2 !important;
+    background: rgba(40, 40, 40, 0.3) !important;
+}
+/* GRUVBOX CALLOUTS (The colored boxes) */
+.callout {
+    border-radius: 8px;
+    background-color: rgba(40, 40, 40, 0.4) !important; /* Warm transparent bg */
+}
+
+/* Info Callout - Aqua (#8ec07c) */
+.callout[data-callout="info"] {
+    --callout-color: 142, 192, 124;
+}
+
+/* Todo/Question Callout - Yellow (#fabd2f) */
+.callout[data-callout="todo"], .callout[data-callout="question"] {
+    --callout-color: 250, 189, 47;
+}
+
+/* Warning/Important Callout - Red (#fb4934) */
+.callout[data-callout="warning"], .callout[data-callout="important"] {
+    --callout-color: 251, 73, 52;
+}
+
+/* Success/Check Callout - Green (#b8bb26) */
+.callout[data-callout="success"] {
+    --callout-color: 184, 187, 38;
+}

@@ -1,0 +1,27 @@
+/* ==========================================================
+   KILL SMALL CAPS & UPPERCASE ON H5 & H6
+   ========================================================== */
+
+body {
+    /* 1. Override Minimal's hidden custom variables */
+    --h5-variant: normal !important;
+    --h6-variant: normal !important;
+    --h5-transform: none !important;
+    --h6-transform: none !important;
+}
+
+/* 2. Target ALL possible editor and reading classes */
+h5, h6,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header-5,
+.cm-s-obsidian .cm-header-6,
+.cm-s-obsidian .HyperMD-header-5,
+.cm-s-obsidian .HyperMD-header-6 {
+    font-variant: normal !important;
+    font-variant-caps: normal !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}

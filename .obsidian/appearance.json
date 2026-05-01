@@ -1,0 +1,16 @@
+{
+  "cssTheme": "Minimal",
+  "accentColor": "#7abd9c",
+  "textFontFamily": "OpenDyslexic",
+  "interfaceFontFamily": "Fira Mono",
+  "monospaceFontFamily": "JetBrains Mono",
+  "baseFontSize": 18,
+  "nativeMenus": false,
+  "showRibbon": true,
+  "enabledCssSnippets": [
+    "gruvbox-headers",
+    "gruvbox-base",
+    "minimal-outline"
+  ],
+  "showViewHeader": false
+}

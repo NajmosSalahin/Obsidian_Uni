@@ -1,0 +1,36 @@
+/* Gruvbox Header Colors - 2025 Modern Selectors */
+
+/* H1 - Red */
+.cm-header-1, .markdown-rendered h1, .inline-title {
+  color: #fb4934 !important;
+}
+
+/* H2 - Green */
+.cm-header-2, .markdown-rendered h2 {
+  color: #b8bb26 !important;
+}
+
+/* H3 - Yellow */
+.cm-header-3, .markdown-rendered h3 {
+  color: #fabd2f !important;
+}
+
+/* H4 - Blue */
+.cm-header-4, .markdown-rendered h4 {
+  color: #83a598 !important;
+}
+
+/* H5 - Purple */
+.cm-header-5, .markdown-rendered h5 {
+  color: #d3869b !important;
+}
+
+/* H6 - Aqua */
+.cm-header-6, .markdown-rendered h6 {
+  color: #8ec07c !important;
+}
+
+/* OPTIONAL: Make bold text Orange for that full Gruvbox feel */
+strong {
+  color: #fe8019 !important;
+}

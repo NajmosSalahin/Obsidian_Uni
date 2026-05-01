@@ -1,0 +1,6 @@
+filters:
+  and:
+    - type == "atomic"
+views:
+  - type: table
+    name: Table

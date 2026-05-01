@@ -1,0 +1,14 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "due": "date",
+    "course": "multitext",
+    "date_created": "date",
+    "created": "text",
+    "last": "multitext",
+    "updated": "text",
+    "title": "text"
+  }
+}
