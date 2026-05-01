@@ -1,8 +1,0 @@
-filters:
-  and:
-    - file.links.containsAll("STAT-1103")
-views:
-  - type: table
-    name: Table
-  - type: cards
-    name: View
