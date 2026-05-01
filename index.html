@@ -558,7 +558,6 @@ if(localStorage.getItem('oe-sidebar')==='0') { sidebar.style.transition='none'; 
   });
 })();
 
-
 /* ── PRE-PROCESS OBSIDIAN SYNTAX ─────────────── */
 function preprocessObsidian(rawText) {
   let text = rawText;
@@ -580,7 +579,9 @@ function preprocessObsidian(rawText) {
   text = text.replace(/\[\[(.*?)\]\]/g, (match, inner) => {
     let [link, display] = inner.split('|');
     display = display || link;
-    return `<span class="wikilink" title="${link}" onclick="alert('Wikilink target: ${link}')">${display}</span>`;
+    // Escape quotes so it doesn't break the HTML onclick attribute
+    const safeLink = link.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    return `<span class="wikilink" title="${link}" onclick="openWikilink('${safeLink}')">${display}</span>`;
   });
 
   // Convert Callouts (> [!info] Title)
@@ -594,6 +595,59 @@ function preprocessObsidian(rawText) {
 
   return text;
 }
+
+/* ── VAULT INDEX & WIKILINKS ─────────────────── */
+let vaultIndex = null;
+async function getVaultIndex() {
+  if (vaultIndex) return vaultIndex;
+  try {
+    // Attempt to fetch the entire repository tree to allow global file searching
+    let res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/main?recursive=1`);
+    if (!res.ok) {
+      // Fallback to 'master' branch if 'main' doesn't exist
+      res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/master?recursive=1`);
+    }
+    if (!res.ok) throw new Error('Could not fetch vault index');
+    
+    const data = await res.json();
+    vaultIndex = data.tree.filter(t => t.type === 'blob'); // Keep only files
+    return vaultIndex;
+  } catch (e) {
+    console.error('Vault index error:', e);
+    return [];
+  }
+}
+
+window.openWikilink = async function(target) {
+  showToast(`Searching for ${target}...`);
+  const index = await getVaultIndex();
+  
+  let searchName = target.trim().toLowerCase();
+  // Assume we are looking for a markdown file if there's no extension
+  if (!searchName.endsWith('.md')) searchName += '.md';
+
+  // Find the exact file anywhere in the repository structure
+  const found = index.find(f => f.path.split('/').pop().toLowerCase() === searchName);
+  
+  if (found) {
+    const parts = found.path.split('/');
+    const folderPath = parts.slice(0, -1).join('/'); // Get the folder path
+    
+    // Auto-navigate the sidebar to the exact folder
+    await navigate(folderPath);
+    
+    // Look up the exact file item in the newly loaded directory array
+    const fileData = allItems.find(i => i.path === found.path);
+    if (fileData) {
+      activeFile = fileData.path;
+      renderItems(allItems, folderPath, searchInput.value); // Highlight in sidebar
+      viewFile(fileData); // Open and read the file
+    }
+  } else {
+    showToast(`File not found: ${target}`);
+  }
+};
+
 
 /* ── API FETCH & RENDER ──────────────────────── */
 async function navigate(path = '') {
