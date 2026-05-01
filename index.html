@@ -1,429 +1,647 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="catppuccin">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najmo's Obsidian Notes Explorer</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Marked.js for Markdown rendering -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-        }
-        /* Custom styles for better scrollbar in file list/viewer */
-        #contentList::-webkit-scrollbar, #fileViewer::-webkit-scrollbar {
-            width: 8px;
-        }
-        #contentList::-webkit-scrollbar-thumb, #fileViewer::-webkit-scrollbar-thumb {
-            background-color: #d1d5db; /* gray-300 */
-            border-radius: 4px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obsidian Explorer — najmossalahin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&family=Fira+Code:wght@400;500&family=Source+Code+Pro:wght@400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+:root {
+  --sidebar-w: 280px;
+  --top-h: 52px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --trans: 180ms ease;
+  --font-ui: 'Syne', sans-serif;
+  --font-body: 'Literata', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ══ POPULAR THEMES ══════════════════════════════ */
+
+[data-theme="catppuccin"] {
+  --bg:#1e1e2e; --bg2:#181825; --bg3:#313244; --bg4:#45475a;
+  --border:rgba(205,214,244,0.08); --border2:rgba(205,214,244,0.16);
+  --text:#cdd6f4; --text2:#a6adc8; --text3:#6c7086;
+  --accent:#cba6f7; --accent2:#d0bfff; --accent-bg:rgba(203,166,247,0.12);
+  --danger:#f38ba8; --warn:#fab387; --success:#a6e3a1; --scrollbar:#45475a;
+}
+[data-theme="dracula"] {
+  --bg:#282a36; --bg2:#21222c; --bg3:#343746; --bg4:#44475a;
+  --border:rgba(248,248,242,0.08); --border2:rgba(248,248,242,0.15);
+  --text:#f8f8f2; --text2:#bfbfcf; --text3:#6272a4;
+  --accent:#bd93f9; --accent2:#d4aaff; --accent-bg:rgba(189,147,249,0.12);
+  --danger:#ff5555; --warn:#ffb86c; --success:#50fa7b; --scrollbar:#44475a;
+}
+[data-theme="nord"] {
+  --bg:#2e3440; --bg2:#272c36; --bg3:#3b4252; --bg4:#434c5e;
+  --border:rgba(236,239,244,0.08); --border2:rgba(236,239,244,0.15);
+  --text:#eceff4; --text2:#d8dee9; --text3:#616e88;
+  --accent:#88c0d0; --accent2:#a3d0de; --accent-bg:rgba(136,192,208,0.12);
+  --danger:#bf616a; --warn:#ebcb8b; --success:#a3be8c; --scrollbar:#434c5e;
+}
+[data-theme="rosepine"] {
+  --bg:#191724; --bg2:#1f1d2e; --bg3:#26233a; --bg4:#403d52;
+  --border:rgba(224,222,244,0.08); --border2:rgba(224,222,244,0.14);
+  --text:#e0def4; --text2:#908caa; --text3:#6e6a86;
+  --accent:#eb6f92; --accent2:#f19fc0; --accent-bg:rgba(235,111,146,0.12);
+  --danger:#eb6f92; --warn:#f6c177; --success:#31748f; --scrollbar:#403d52;
+}
+[data-theme="github"] {
+  --bg:#ffffff; --bg2:#f6f8fa; --bg3:#eaeef2; --bg4:#d0d7de;
+  --border:rgba(31,35,40,0.10); --border2:rgba(31,35,40,0.18);
+  --text:#1f2328; --text2:#57606a; --text3:#8c959f;
+  --accent:#0969da; --accent2:#1a7fd4; --accent-bg:rgba(9,105,218,0.08);
+  --danger:#d1242f; --warn:#9a6700; --success:#1a7f37; --scrollbar:#d0d7de;
+}
+[data-theme="solarized"] {
+  --bg:#002b36; --bg2:#073642; --bg3:#083f4d; --bg4:#0a4c5c;
+  --border:rgba(131,148,150,0.12); --border2:rgba(131,148,150,0.22);
+  --text:#93a1a1; --text2:#839496; --text3:#586e75;
+  --accent:#2aa198; --accent2:#38bdb4; --accent-bg:rgba(42,161,152,0.13);
+  --danger:#dc322f; --warn:#b58900; --success:#859900; --scrollbar:#0a4c5c;
+}
+
+/* ── BASE ────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:flex;flex-direction:column}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--scrollbar);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:var(--text3)}
+
+/* ── TOPBAR ──────────────────────────────────── */
+.topbar{height:var(--top-h);background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;padding:0 16px;flex-shrink:0;z-index:100}
+.topbar-logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;letter-spacing:-0.02em;color:var(--text);white-space:nowrap}
+.logo-gem{width:26px;height:26px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-gem svg{width:14px;height:14px;color:white}
+.topbar-sep{width:1px;height:22px;background:var(--border2);flex-shrink:0}
+.breadcrumb{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--text3);flex:1;min-width:0;overflow:hidden}
+.breadcrumb a{color:var(--text2);text-decoration:none;cursor:pointer;transition:color var(--trans);white-space:nowrap}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb .sep{color:var(--text3);font-size:11px}
+.breadcrumb .cur{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+
+/* ── ICON BUTTON ─────────────────────────────── */
+.icon-btn{height:32px;padding:0 10px;min-width:32px;border:1px solid var(--border2);border-radius:var(--radius);background:var(--bg3);color:var(--text2);display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-family:var(--font-ui);font-size:12px;transition:background var(--trans),color var(--trans),border-color var(--trans);flex-shrink:0;white-space:nowrap}
+.icon-btn:hover{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+.icon-btn.active{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+.icon-btn svg{width:14px;height:14px;flex-shrink:0}
+
+/* ── SETTINGS POPOVER ────────────────────────── */
+.settings-wrap{position:relative}
+.settings-panel{
+  position:absolute;top:calc(100% + 8px);right:0;width:296px;
+  background:var(--bg2);border:1px solid var(--border2);
+  border-radius:var(--radius-lg);
+  box-shadow:0 20px 60px rgba(0,0,0,0.4),0 4px 16px rgba(0,0,0,0.2);
+  z-index:999;overflow:hidden;
+  opacity:0;transform:translateY(-8px) scale(0.97);pointer-events:none;
+  transition:opacity 200ms ease,transform 200ms ease;
+}
+.settings-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.panel-section{padding:14px 14px 12px}
+.panel-section+.panel-section{border-top:1px solid var(--border)}
+.panel-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+
+/* Theme grid — 3 columns */
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.theme-card{
+  border:1.5px solid var(--border);border-radius:9px;
+  padding:9px 8px 8px;cursor:pointer;
+  transition:border-color var(--trans),background var(--trans);
+  background:var(--bg3);display:flex;flex-direction:column;gap:7px;
+  position:relative;
+}
+.theme-card:hover{border-color:var(--border2);background:var(--bg4)}
+.theme-card.active{border-color:var(--accent);background:var(--accent-bg)}
+.theme-card.active::after{content:'✓';position:absolute;top:5px;right:7px;font-size:9px;color:var(--accent);font-weight:700}
+.theme-swatches{display:flex;gap:4px;align-items:center}
+.swatch{width:13px;height:13px;border-radius:50%;border:1px solid rgba(128,128,128,0.2);flex-shrink:0}
+.theme-name{font-size:10.5px;font-weight:600;color:var(--text2);letter-spacing:-0.01em;line-height:1}
+.theme-card.active .theme-name{color:var(--accent)}
+
+/* Font options — vertical list */
+.font-options{display:flex;flex-direction:column;gap:2px}
+.font-opt{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:7px 9px;border-radius:7px;cursor:pointer;
+  border:1.5px solid transparent;
+  transition:background var(--trans),border-color var(--trans);
+}
+.font-opt:hover{background:var(--bg3)}
+.font-opt.active{background:var(--accent-bg);border-color:var(--accent)}
+.font-opt-name{font-size:13px;color:var(--text)}
+.font-opt-preview{font-size:11px;color:var(--text3)}
+.font-opt.active .font-opt-name{color:var(--accent)}
+.font-opt.active .font-opt-preview{color:var(--accent2)}
+
+/* ── LAYOUT ──────────────────────────────────── */
+.workspace{flex:1;display:flex;overflow:hidden;position:relative}
+
+/* ── SIDEBAR ─────────────────────────────────── */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;display:flex;flex-direction:column;background:var(--bg2);border-right:1px solid var(--border);transition:width 260ms cubic-bezier(0.4,0,0.2,1),opacity 260ms ease;overflow:hidden}
+.sidebar.collapsed{width:0;opacity:0;border-right-color:transparent}
+.sidebar-header{height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid var(--border);flex-shrink:0}
+.sidebar-header-title{font-size:10.5px;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--text3);flex:1;white-space:nowrap}
+.search-wrap{padding:8px 10px;border-bottom:1px solid var(--border);flex-shrink:0;position:relative}
+.search-input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 10px 6px 30px;font-family:var(--font-ui);font-size:12.5px;color:var(--text);outline:none;transition:border-color var(--trans),background var(--trans)}
+.search-input:focus{border-color:var(--accent);background:var(--bg4)}
+.search-input::placeholder{color:var(--text3)}
+.search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:13px;height:13px;color:var(--text3);pointer-events:none}
+.file-list{flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 0}
+
+/* ── FILE ITEMS ──────────────────────────────── */
+.file-item{display:flex;align-items:center;gap:8px;padding:7px 12px;cursor:pointer;transition:background var(--trans);font-size:13px;color:var(--text2);text-decoration:none;border:none;background:none;width:100%;text-align:left;min-width:0;position:relative}
+.file-item:hover{background:var(--bg3);color:var(--text)}
+.file-item.active{background:var(--accent-bg);color:var(--accent2)}
+.file-item.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent);border-radius:0 2px 2px 0}
+.file-item-icon{flex-shrink:0;width:15px;height:15px}
+.file-item-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-item-ext{font-family:var(--font-mono);font-size:10px;color:var(--text3);background:var(--bg4);padding:1px 5px;border-radius:3px;flex-shrink:0;letter-spacing:0.03em}
+.file-item.back-item{color:var(--text3)}
+.file-item.back-item:hover{color:var(--text)}
+.ext-md{color:var(--accent2)!important;background:var(--accent-bg)!important}
+.ext-js{color:#f0c040!important;background:rgba(240,192,64,0.1)!important}
+.ext-json{color:var(--success)!important;background:rgba(80,200,90,0.1)!important}
+.ext-css{color:var(--warn)!important;background:rgba(250,180,100,0.1)!important}
+.ext-img{color:#6bceff!important;background:rgba(107,206,255,0.1)!important}
+
+/* ── SIDEBAR TOGGLE ──────────────────────────── */
+.sidebar-toggle{position:absolute;left:var(--sidebar-w);top:50%;transform:translateY(-50%);z-index:200;width:18px;height:48px;background:var(--bg2);border:1px solid var(--border2);border-left:none;border-radius:0 6px 6px 0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:left 260ms cubic-bezier(0.4,0,0.2,1),background var(--trans),color var(--trans);color:var(--text3)}
+.sidebar-toggle:hover{background:var(--bg3);color:var(--accent)}
+.sidebar-toggle svg{width:10px;height:10px;transition:transform 260ms ease}
+.workspace.sidebar-collapsed .sidebar-toggle{left:0}
+
+/* ── CONTENT ─────────────────────────────────── */
+.content-panel{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.viewer-header{height:44px;display:flex;align-items:center;gap:10px;padding:0 16px;border-bottom:1px solid var(--border);background:var(--bg2);flex-shrink:0}
+.viewer-filename{font-size:13.5px;font-weight:500;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.viewer-filename.placeholder{color:var(--text3);font-weight:400;font-style:italic}
+.viewer-badge{font-family:var(--font-mono);font-size:10px;padding:2px 7px;border-radius:4px;background:var(--bg3);color:var(--text3);border:1px solid var(--border);flex-shrink:0}
+.file-viewer{flex:1;overflow-y:auto;background:var(--bg)}
+
+/* ── SKELETON ────────────────────────────────── */
+.skeleton{background:linear-gradient(90deg,var(--bg3) 25%,var(--bg4) 50%,var(--bg3) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:4px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.skeleton-item{height:32px;margin:4px 10px;border-radius:var(--radius)}
+
+/* ── MARKDOWN ────────────────────────────────── */
+.md-content{font-family:var(--font-body);font-size:15.5px;line-height:1.78;color:var(--text);max-width:720px;margin:0 auto;padding:36px 40px 72px}
+.md-content h1{font-family:var(--font-ui);font-size:28px;font-weight:700;letter-spacing:-0.03em;border-bottom:1px solid var(--border);padding-bottom:12px;margin:0 0 24px}
+.md-content h2{font-family:var(--font-ui);font-size:21px;font-weight:600;letter-spacing:-0.02em;margin:40px 0 14px}
+.md-content h3{font-family:var(--font-ui);font-size:17px;font-weight:600;margin:28px 0 10px}
+.md-content h4,.md-content h5,.md-content h6{font-family:var(--font-ui);font-size:14px;font-weight:600;color:var(--text2);margin:20px 0 8px}
+.md-content p{margin:0 0 16px}
+.md-content a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-bg);transition:border-color var(--trans)}
+.md-content a:hover{border-bottom-color:var(--accent)}
+.md-content ul,.md-content ol{margin:0 0 16px 24px}
+.md-content li{margin-bottom:6px}
+.md-content blockquote{border-left:3px solid var(--accent);background:var(--accent-bg);margin:0 0 16px;padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;font-style:italic;color:var(--text2)}
+.md-content pre{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.md-content pre code{font-family:var(--font-mono);font-size:13px;color:var(--text);background:none;padding:0;border:none;border-radius:0}
+.md-content code{font-family:var(--font-mono);font-size:13px;background:var(--bg3);border:1px solid var(--border);color:var(--accent2);padding:2px 6px;border-radius:4px}
+.md-content hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+.md-content table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:14px}
+.md-content th{background:var(--bg2);text-align:left;padding:8px 12px;border:1px solid var(--border);font-weight:600;font-family:var(--font-ui);font-size:13px}
+.md-content td{padding:8px 12px;border:1px solid var(--border)}
+.md-content tr:nth-child(even) td{background:var(--bg2)}
+.md-content img{max-width:100%;border-radius:var(--radius-lg);margin:8px 0}
+.md-content strong{font-weight:600}
+
+/* ── RAW VIEW ────────────────────────────────── */
+.raw-content{font-family:var(--font-mono);font-size:13px;line-height:1.65;color:var(--text);white-space:pre-wrap;word-break:break-word;padding:28px 32px 72px}
+
+/* ── STATES ──────────────────────────────────── */
+.state-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 32px;text-align:center;gap:12px;min-height:300px}
+.state-icon{font-size:36px;line-height:1}
+.state-title{font-size:16px;font-weight:600;color:var(--text)}
+.state-sub{font-size:13px;color:var(--text3);max-width:320px;line-height:1.6}
+.state-card.error .state-title{color:var(--danger)}
+.state-card.warn .state-title{color:var(--warn)}
+.empty-list{padding:32px 16px;text-align:center;font-size:12px;color:var(--text3)}
+.count-badge{font-family:var(--font-mono);font-size:10px;background:var(--bg3);color:var(--text3);padding:1px 6px;border-radius:99px;border:1px solid var(--border)}
+
+/* ── RESIZE ──────────────────────────────────── */
+.resize-handle{width:4px;background:transparent;cursor:col-resize;flex-shrink:0;z-index:10;transition:background var(--trans)}
+.resize-handle:hover,.resize-handle.dragging{background:var(--accent)}
+
+/* ── TOAST ───────────────────────────────────── */
+#toast{position:fixed;bottom:20px;right:20px;background:var(--bg4);border:1px solid var(--border2);color:var(--text);font-size:12.5px;padding:9px 14px;border-radius:var(--radius-lg);z-index:9999;transform:translateY(60px);opacity:0;transition:transform 220ms ease,opacity 220ms ease;pointer-events:none;font-family:var(--font-ui);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+#toast.show{transform:translateY(0);opacity:1}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.file-item{animation:fadeUp 130ms ease both}
+</style>
 </head>
-<body class="p-4 md:p-8">
+<body>
 
-    <div class="max-w-6xl mx-auto bg-white shadow-xl rounded-xl p-6 md:p-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2 flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch text-purple-600 mr-3"><line x1="6" x2="6" y1="3" y2="15"/><path d="M18 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M18 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6 15v3"/></svg>
-            Najmo's Obsidian Notes Explorer
-        </h1>
-        <p class="text-gray-500 mb-6">File contents for the repository: <span class="font-semibold text-purple-600">najmossalahin/Obsidian_Uni</span></p>
-
-        <!-- Breadcrumbs and Current Path -->
-        <div id="pathContainer" class="mb-4 text-sm text-gray-600 min-h-[24px]">
-            <!-- Breadcrumbs will be injected here -->
-        </div>
-
-        <div class="md:grid md:grid-cols-3 gap-6">
-            <!-- File List (1/3) -->
-            <div class="md:col-span-1">
-                <h2 class="text-xl font-semibold mb-3 text-gray-700">Files</h2>
-                <div id="messageArea" class="hidden p-4 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg mb-4" role="alert">
-                    <!-- Messages will be injected here -->
-                </div>
-                <!-- Note: max-h-[70vh] keeps the list scrollable without making the whole page scroll -->
-                <div id="contentList" class="border border-gray-200 rounded-lg divide-y divide-gray-100 overflow-y-auto max-h-[70vh]">
-                    <!-- File and folder contents will be injected here -->
-                </div>
-            </div>
-
-            <!-- File Viewer (2/3) -->
-            <div class="md:col-span-2">
-                <h2 id="viewerTitle" class="text-xl font-semibold mb-3 text-gray-700">Select a file</h2>
-                <div id="fileViewer" class="p-6 border border-gray-200 rounded-lg bg-gray-50 min-h-[500px] max-h-[70vh] overflow-y-auto shadow-md">
-                    <p class="text-gray-500 italic">Click on a file from the list to view its rendered content here. Markdown files will be displayed like a typical Obsidian note.</p>
-                </div>
-            </div>
-        </div>
+<header class="topbar">
+  <div class="topbar-logo">
+    <div class="logo-gem">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/></svg>
     </div>
+    <span>Obsidian Explorer</span>
+  </div>
+  <div class="topbar-sep"></div>
+  <div class="breadcrumb" id="breadcrumb"><span class="cur">Loading…</span></div>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="refreshBtn" title="Refresh (R)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+    </button>
 
-    <script>
-        // --- Core Application Logic ---
-        
-        // --- DOM Elements ---
-        const CONTENT_LIST = document.getElementById('contentList');
-        const MESSAGE_AREA = document.getElementById('messageArea');
-        const PATH_CONTAINER = document.getElementById('pathContainer');
-        const FILE_VIEWER = document.getElementById('fileViewer');
-        const VIEWER_TITLE = document.getElementById('viewerTitle');
-        
-        // --- Hardcoded Repository Details (as requested) ---
-        let currentOwner = 'najmossalahin';
-        let currentRepo = 'Obsidian_Uni';
-        
-        // Custom SVGs for icons
-        const FOLDER_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder text-purple-500"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"/></svg>';
-        const FILE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file text-gray-400"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>';
+    <div class="settings-wrap">
+      <button class="icon-btn" id="settingsBtn" title="Theme &amp; Font">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span id="settingsBtnLabel">Catppuccin</span>
+      </button>
 
-        /**
-         * Hides the message area and clears its content.
-         */
-        function hideMessage() {
-            MESSAGE_AREA.classList.add('hidden');
-            MESSAGE_AREA.innerHTML = '';
-        }
+      <div class="settings-panel" id="settingsPanel">
+        <div class="panel-section">
+          <div class="panel-label">Theme</div>
+          <div class="theme-grid" id="themeGrid"></div>
+        </div>
+        <div class="panel-section">
+          <div class="panel-label">Reading Font</div>
+          <div class="font-options" id="bodyFontOpts"></div>
+        </div>
+        <div class="panel-section">
+          <div class="panel-label">Code Font</div>
+          <div class="font-options" id="monoFontOpts"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-        /**
-         * Displays a message in the message area.
-         * @param {string} text The message text.
-         * @param {string} type The type of message ('error', 'info', 'warning').
-         */
-        function showMessage(text, type = 'info') {
-            MESSAGE_AREA.classList.remove('hidden');
-            let baseClasses = 'p-4 border rounded-lg mb-4 ';
-            
-            switch (type) {
-                case 'error':
-                    MESSAGE_AREA.className = baseClasses + 'bg-red-100 border-red-300 text-red-800';
-                    break;
-                case 'warning':
-                    MESSAGE_AREA.className = baseClasses + 'bg-yellow-100 border-yellow-300 text-yellow-800';
-                    break;
-                case 'info':
-                default:
-                    MESSAGE_AREA.className = baseClasses + 'bg-blue-100 border-blue-300 text-blue-800';
-                    break;
-            }
-            MESSAGE_AREA.innerHTML = text;
-        }
+<div class="workspace" id="workspace">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <svg style="width:13px;height:13px;color:var(--text3);flex-shrink:0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+      <span class="sidebar-header-title">Files</span>
+      <span class="count-badge" id="fileCount">—</span>
+    </div>
+    <div class="search-wrap">
+      <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
+      <input class="search-input" type="text" id="searchInput" placeholder="Filter files… (F)" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="file-list" id="fileList"></div>
+  </aside>
 
-        /**
-         * Fetches repository contents from the GitHub API.
-         * @param {string} path The folder path to fetch (e.g., 'src/components').
-         */
-        async function fetchContents(path) {
-            hideMessage();
-            CONTENT_LIST.innerHTML = `<div class="p-6 text-center text-gray-500">
-                <svg class="animate-spin h-5 w-5 text-purple-500 inline mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                Loading directory contents...
-            </div>`;
+  <button class="sidebar-toggle" id="sidebarToggle" title="Toggle sidebar (B)">
+    <svg id="toggleIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+  </button>
 
-            const url = `https://api.github.com/repos/${currentOwner}/${currentRepo}/contents/${path}`;
+  <div class="content-panel">
+    <div class="viewer-header">
+      <span class="viewer-filename placeholder" id="viewerTitle">Select a file to view</span>
+      <span class="viewer-badge" id="viewerBadge" style="display:none"></span>
+    </div>
+    <div class="file-viewer" id="fileViewer">
+      <div class="state-card">
+        <div class="state-icon">📄</div>
+        <div class="state-title">Nothing open</div>
+        <div class="state-sub">Choose a file from the sidebar. Markdown renders beautifully with your chosen theme and font.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
 
-            try {
-                // Implementing basic exponential backoff for robustness
-                const maxRetries = 3;
-                let response = null;
-                for (let i = 0; i < maxRetries; i++) {
-                    response = await fetch(url);
-                    if (response.ok || response.status === 404) break; 
-                    
-                    if (response.status === 403 || response.status === 429) {
-                        const rateLimitRemaining = response.headers.get('X-RateLimit-Remaining');
-                        if (rateLimitRemaining === '0') {
-                            showMessage('API Rate Limit Exceeded. GitHub limits unauthenticated requests. Please try again later or wait an hour.', 'error');
-                            return;
-                        }
-                    }
-                    if (i < maxRetries - 1) {
-                         // Exponential backoff
-                        const delay = Math.pow(2, i) * 1000;
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                    }
-                }
+<script>
+const OWNER='najmossalahin', REPO='Obsidian_Uni';
+const API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
 
-                if (!response.ok) {
-                    const errorJson = await response.json().catch(() => ({ message: 'Unknown error during API call.' }));
-                    let message = errorJson.message || `Error fetching repository contents. Status: ${response.status}.`;
-                    showMessage(message, 'error');
-                    CONTENT_LIST.innerHTML = '';
-                    return;
-                }
+let currentPath='', activeFile=null, sidebarOpen=true;
+let dirCache=new Map(), abortCtrl=null, allItems=[];
 
-                const contents = await response.json();
-                renderContents(contents, path);
-                updateURL(path);
-                renderBreadcrumbs(path);
+const sidebar=document.getElementById('sidebar');
+const sidebarToggle=document.getElementById('sidebarToggle');
+const toggleIcon=document.getElementById('toggleIcon');
+const fileList=document.getElementById('fileList');
+const fileCount=document.getElementById('fileCount');
+const searchInput=document.getElementById('searchInput');
+const fileViewer=document.getElementById('fileViewer');
+const viewerTitle=document.getElementById('viewerTitle');
+const viewerBadge=document.getElementById('viewerBadge');
+const breadcrumb=document.getElementById('breadcrumb');
+const refreshBtn=document.getElementById('refreshBtn');
+const workspace=document.getElementById('workspace');
+const settingsBtn=document.getElementById('settingsBtn');
+const settingsPanel=document.getElementById('settingsPanel');
+const settingsBtnLabel=document.getElementById('settingsBtnLabel');
+const toast=document.getElementById('toast');
 
-            } catch (error) {
-                console.error("Fetch failed:", error);
-                showMessage(`Failed to connect to GitHub API. Check console for details.`, 'error');
-                CONTENT_LIST.innerHTML = '';
-            }
-        }
+/* ── THEMES ─────────────────────────────────── */
+const THEMES=[
+  {id:'catppuccin', name:'Catppuccin', bg:'#1e1e2e', mid:'#313244', acc:'#cba6f7'},
+  {id:'dracula',    name:'Dracula',    bg:'#282a36', mid:'#343746', acc:'#bd93f9'},
+  {id:'nord',       name:'Nord',       bg:'#2e3440', mid:'#3b4252', acc:'#88c0d0'},
+  {id:'rosepine',   name:'Rosé Pine',  bg:'#191724', mid:'#26233a', acc:'#eb6f92'},
+  {id:'github',     name:'GitHub',     bg:'#ffffff', mid:'#eaeef2', acc:'#0969da'},
+  {id:'solarized',  name:'Solarized',  bg:'#002b36', mid:'#083f4d', acc:'#2aa198'},
+];
 
-        /**
-         * Renders the list of files and folders.
-         * @param {Array<Object>} contents Array of file/folder objects from GitHub API.
-         * @param {string} currentPath The current folder path.
-         */
-        function renderContents(contents, currentPath) {
-            CONTENT_LIST.innerHTML = '';
+const BODY_FONTS=[
+  {id:'Literata',     name:'Literata',     preview:'Beautiful serif',   stack:'Georgia,serif'},
+  {id:'Merriweather', name:'Merriweather', preview:'Highly readable',   stack:'Georgia,serif'},
+  {id:'Lora',         name:'Lora',         preview:'Classic elegance',  stack:'Georgia,serif'},
+  {id:'Crimson Pro',  name:'Crimson Pro',  preview:'Oldstyle warmth',   stack:'Georgia,serif'},
+];
+const MONO_FONTS=[
+  {id:'JetBrains Mono', name:'JetBrains Mono', preview:'fn main() {}'},
+  {id:'Fira Code',      name:'Fira Code',       preview:'() => true'},
+  {id:'Source Code Pro',name:'Source Code Pro', preview:'#include <io>'},
+  {id:'IBM Plex Mono',  name:'IBM Plex Mono',   preview:'git commit -m'},
+];
 
-            // Sort content: folders first, then files, both alphabetically
-            const sortedContents = contents.sort((a, b) => {
-                if (a.type === 'dir' && b.type !== 'dir') return -1;
-                if (a.type !== 'dir' && b.type === 'dir') return 1;
-                return a.name.localeCompare(b.name);
-            });
+let curTheme    = localStorage.getItem('oe-theme')      || 'catppuccin';
+let curBodyFont = localStorage.getItem('oe-body-font')  || 'Literata';
+let curMonoFont = localStorage.getItem('oe-mono-font')  || 'JetBrains Mono';
 
-            if (currentPath) {
-                 // Add ".." navigation element
-                const parentPath = currentPath.split('/').slice(0, -1).join('/');
-                const backElement = createContentItem('dir', '..', parentPath);
-                CONTENT_LIST.appendChild(backElement);
-            }
+function applyTheme(id){
+  curTheme=id;
+  document.documentElement.dataset.theme=id;
+  localStorage.setItem('oe-theme',id);
+  const t=THEMES.find(x=>x.id===id);
+  settingsBtnLabel.textContent=t?.name||id;
+  document.querySelectorAll('.theme-card').forEach(c=>c.classList.toggle('active',c.dataset.id===id));
+}
+function applyBodyFont(id){
+  curBodyFont=id;
+  document.documentElement.style.setProperty('--font-body',`'${id}',Georgia,serif`);
+  localStorage.setItem('oe-body-font',id);
+  document.querySelectorAll('#bodyFontOpts .font-opt').forEach(o=>o.classList.toggle('active',o.dataset.id===id));
+}
+function applyMonoFont(id){
+  curMonoFont=id;
+  document.documentElement.style.setProperty('--font-mono',`'${id}',monospace`);
+  localStorage.setItem('oe-mono-font',id);
+  document.querySelectorAll('#monoFontOpts .font-opt').forEach(o=>o.classList.toggle('active',o.dataset.id===id));
+}
 
-            if (sortedContents.length === 0) {
-                CONTENT_LIST.innerHTML += `<p class="p-6 text-gray-500 italic">This directory is empty.</p>`;
-                return;
-            }
+/* Build settings panel */
+(function(){
+  const grid=document.getElementById('themeGrid');
+  THEMES.forEach(t=>{
+    const el=document.createElement('div');
+    el.className='theme-card'+(t.id===curTheme?' active':'');
+    el.dataset.id=t.id;
+    el.innerHTML=`<div class="theme-swatches">
+      <div class="swatch" style="background:${t.bg}"></div>
+      <div class="swatch" style="background:${t.mid}"></div>
+      <div class="swatch" style="background:${t.acc}"></div>
+    </div><div class="theme-name">${t.name}</div>`;
+    el.addEventListener('click',()=>{applyTheme(t.id);showToast(t.name);});
+    grid.appendChild(el);
+  });
 
-            sortedContents.forEach(item => {
-                // Now passing item.download_url (the raw file URL) to the item creator
-                const element = createContentItem(item.type, item.name, item.path, item.html_url, item.url, item.download_url);
-                CONTENT_LIST.appendChild(element);
-            });
-        }
-        
-        /**
-         * Creates an individual file/folder list item element.
-         * @param {string} type 'dir' or 'file'.
-         * @param {string} name Item name.
-         * @param {string} path Item full path.
-         * @param {string} htmlUrl Link to the item on GitHub.
-         * @param {string} fileApiUrl API URL for raw content.
-         * @param {string} downloadUrl Direct raw URL for file content.
-         */
-        function createContentItem(type, name, path, htmlUrl, fileApiUrl, downloadUrl) {
-            const isFolder = type === 'dir';
-            const element = document.createElement('a');
-            
-            element.classList.add(
-                'block', 'p-4', 'hover:bg-gray-50', 'transition', 'duration-150', 'flex', 'items-center', 'justify-between', 'cursor-pointer'
-            );
+  function buildFontList(containerId,fonts,cur,applyFn,isMono){
+    const wrap=document.getElementById(containerId);
+    fonts.forEach(f=>{
+      const el=document.createElement('div');
+      el.className='font-opt'+(f.id===cur?' active':'');
+      el.dataset.id=f.id;
+      const ff=`'${f.id}',${isMono?'monospace':'Georgia,serif'}`;
+      el.innerHTML=`<span class="font-opt-name" style="font-family:${ff}">${f.name}</span>
+        <span class="font-opt-preview" style="font-family:${ff};font-style:${isMono?'normal':'italic'}">${f.preview}</span>`;
+      el.addEventListener('click',()=>{applyFn(f.id);showToast(f.name);});
+      wrap.appendChild(el);
+    });
+  }
+  buildFontList('bodyFontOpts',BODY_FONTS,curBodyFont,applyBodyFont,false);
+  buildFontList('monoFontOpts',MONO_FONTS,curMonoFont,applyMonoFont,true);
+})();
 
-            const iconHtml = isFolder ? FOLDER_ICON : FILE_ICON;
-            const linkText = `<span class="truncate">${name}</span>`;
+applyTheme(curTheme);
+applyBodyFont(curBodyFont);
+applyMonoFont(curMonoFont);
 
-            element.innerHTML = `
-                <div class="flex items-center space-x-3 w-full">
-                    ${iconHtml}
-                    <span class="text-gray-800 font-medium ${isFolder ? 'text-purple-600' : ''} transition duration-150">${linkText}</span>
-                </div>
-            `;
+/* Settings panel toggle */
+settingsBtn.addEventListener('click',e=>{
+  e.stopPropagation();
+  const open=settingsPanel.classList.toggle('open');
+  settingsBtn.classList.toggle('active',open);
+});
+document.addEventListener('click',e=>{
+  if(!settingsPanel.contains(e.target)&&e.target!==settingsBtn){
+    settingsPanel.classList.remove('open');
+    settingsBtn.classList.remove('active');
+  }
+});
+settingsPanel.addEventListener('click',e=>e.stopPropagation());
 
-            if (isFolder) {
-                element.onclick = (e) => {
-                    e.preventDefault();
-                    navigateToPath(path);
-                };
-            } else {
-                // For files, use the click handler to display content
-                element.onclick = (e) => {
-                    e.preventDefault();
-                    // Pass the downloadUrl for efficient image loading
-                    viewFileContent(fileApiUrl, name, downloadUrl); 
-                };
-                
-                // Add external link icon for files to view on GitHub if needed
-                element.innerHTML += `<a href="${htmlUrl}" target="_blank" title="View on GitHub" class="ml-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link text-gray-400 hover:text-purple-600"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                </a>`;
-            }
+/* ── TOAST ───────────────────────────────────── */
+let toastTimer;
+function showToast(msg){
+  toast.textContent=msg;toast.classList.add('show');
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2000);
+}
 
-            return element;
-        }
-        
-        /**
-         * Fetches and displays the raw content of a file, rendering Markdown or images.
-         * @param {string} fileApiUrl The GitHub API URL for the file content.
-         * @param {string} fileName The name of the file.
-         * @param {string} downloadUrl Direct raw URL for file content (used for images).
-         */
-        async function viewFileContent(fileApiUrl, fileName, downloadUrl) {
-            VIEWER_TITLE.textContent = `Viewing: ${fileName}`;
-            FILE_VIEWER.innerHTML = `<div class="text-center text-gray-500 py-12">
-                <svg class="animate-spin h-6 w-6 text-purple-500 inline mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                Loading file content...
-            </div>`;
+/* ── SIDEBAR ─────────────────────────────────── */
+function setSidebar(open){
+  sidebarOpen=open;
+  sidebar.classList.toggle('collapsed',!open);
+  workspace.classList.toggle('sidebar-collapsed',!open);
+  toggleIcon.style.transform=open?'':'rotate(180deg)';
+}
+function toggleSidebar(){setSidebar(!sidebarOpen);localStorage.setItem('oe-sidebar',sidebarOpen?'1':'0');}
+sidebarToggle.addEventListener('click',toggleSidebar);
 
-            // 1. Image Check (.jpg, .png, .gif, .webp)
-            if (/\.(jpe?g|png|gif|webp)$/i.test(fileName)) {
-                if (downloadUrl) {
-                    FILE_VIEWER.innerHTML = `<img src="${downloadUrl}" alt="${fileName}" class="max-w-full h-auto rounded-lg shadow-xl mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ef4444/ffffff?text=Image+Load+Error';">`;
-                } else {
-                    FILE_VIEWER.innerHTML = `<p class="text-red-600">Could not retrieve direct link for image.</p>`;
-                }
-                return; 
-            }
+const savedSidebar=localStorage.getItem('oe-sidebar');
+if(savedSidebar==='0'){
+  sidebar.style.transition='none';
+  setSidebar(false);
+  requestAnimationFrame(()=>{sidebar.style.transition='';});
+}
 
-            // 2. Text/Markdown File Fetching
-            try {
-                // Fetch raw content using the GitHub API URL with specific header
-                const response = await fetch(fileApiUrl, {
-                    headers: { 'Accept': 'application/vnd.github.v3.raw' }
-                });
+/* ── RESIZE ──────────────────────────────────── */
+(function(){
+  let drag=false,sx=0,sw=0;
+  const h=document.createElement('div');
+  h.className='resize-handle';sidebar.after(h);
+  h.addEventListener('mousedown',e=>{
+    if(!sidebarOpen)return;drag=true;sx=e.clientX;sw=sidebar.offsetWidth;
+    h.classList.add('dragging');document.body.style.cssText+='cursor:col-resize;user-select:none';
+  });
+  document.addEventListener('mousemove',e=>{
+    if(!drag)return;
+    const w=Math.max(160,Math.min(500,sw+e.clientX-sx));
+    sidebar.style.width=w+'px';workspace.style.setProperty('--sidebar-w',w+'px');
+  });
+  document.addEventListener('mouseup',()=>{
+    if(!drag)return;drag=false;h.classList.remove('dragging');
+    document.body.style.cursor='';document.body.style.userSelect='';
+  });
+})();
 
-                if (!response.ok) {
-                    FILE_VIEWER.innerHTML = `<p class="text-red-600">Error loading file content. Status: ${response.status}.</p>`;
-                    return;
-                }
+/* ── BREADCRUMBS ─────────────────────────────── */
+function renderBreadcrumbs(path){
+  const parts=path?path.split('/').filter(Boolean):[];
+  breadcrumb.innerHTML='';
+  const root=document.createElement('a');
+  root.textContent=REPO;root.addEventListener('click',()=>navigate(''));
+  breadcrumb.appendChild(root);
+  let acc='';
+  parts.forEach((part,i)=>{
+    acc+=(acc?'/':'')+part;
+    const sep=document.createElement('span');sep.className='sep';sep.textContent=' / ';
+    breadcrumb.appendChild(sep);
+    if(i===parts.length-1){
+      const s=document.createElement('span');s.className='cur';s.textContent=part;breadcrumb.appendChild(s);
+    } else {
+      const a=document.createElement('a');a.textContent=part;const p=acc;
+      a.addEventListener('click',()=>navigate(p));breadcrumb.appendChild(a);
+    }
+  });
+}
 
-                const rawContent = await response.text();
-                let renderedContent;
+/* ── ICONS ───────────────────────────────────── */
+function fileIcon(name,type){
+  if(type==='dir') return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--accent)"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`;
+  if(/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:#6bceff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path stroke-linecap="round" d="M21 15l-5-5L5 21"/></svg>`;
+  if(/\.md$/i.test(name)) return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--accent2)"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`;
+  return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--text3)"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`;
+}
+function extBadge(name){
+  const m=name.match(/\.([a-z0-9]+)$/i);if(!m)return'';
+  const ext=m[1].toLowerCase();
+  let cls='';
+  if(ext==='md')cls='ext-md';
+  else if(['js','ts','jsx','tsx'].includes(ext))cls='ext-js';
+  else if(ext==='json')cls='ext-json';
+  else if(['css','html','htm'].includes(ext))cls='ext-css';
+  else if(['jpg','jpeg','png','gif','webp','svg'].includes(ext))cls='ext-img';
+  return`<span class="file-item-ext ${cls}">${ext}</span>`;
+}
 
-                if (fileName.toLowerCase().endsWith('.md')) {
-                    // Render Markdown using marked.js
-                    renderedContent = marked.parse(rawContent);
-                    FILE_VIEWER.innerHTML = renderedContent;
-                    applyMarkdownStyles(); // Apply Obsidian-like styling after rendering
-                } else if (fileName.toLowerCase().endsWith('.html') || fileName.toLowerCase().endsWith('.txt') || fileName.toLowerCase().endsWith('.js') || fileName.toLowerCase().endsWith('.css')) {
-                    // Display raw text content pre-formatted
-                    renderedContent = `<pre class="whitespace-pre-wrap font-mono text-sm">${rawContent}</pre>`;
-                    FILE_VIEWER.innerHTML = renderedContent;
-                } else {
-                    // Handle other file types (e.g., binaries, unsupported text formats)
-                    renderedContent = `<div class="p-6 bg-yellow-100 rounded-lg">
-                        <p class="font-semibold mb-2">Unsupported file type for inline viewing.</p>
-                        <p>To view this file (${fileName}), please <a href="${fileApiUrl.replace('/contents/', '/blob/')}" target="_blank" class="text-purple-600 hover:underline">view it directly on GitHub</a>.</p>
-                    </div>`;
-                    FILE_VIEWER.innerHTML = renderedContent;
-                }
+/* ── SKELETON ────────────────────────────────── */
+function showSkeletons(n=8){
+  fileList.innerHTML=Array.from({length:n},(_,i)=>`<div class="skeleton skeleton-item" style="animation-delay:${i*35}ms"></div>`).join('');
+}
 
-            } catch (error) {
-                console.error("File viewing failed:", error);
-                FILE_VIEWER.innerHTML = `<p class="text-red-600">An unexpected error occurred while viewing the file.</p>`;
-            }
-        }
-        
-        /**
-         * Applies custom styling to rendered Markdown elements for an Obsidian-like look.
-         */
-        function applyMarkdownStyles() {
-            const viewer = document.getElementById('fileViewer');
+/* ── RENDER ──────────────────────────────────── */
+function renderDir(contents,path){allItems=contents;renderItems(contents,path,'');}
 
-            // Apply styles to common Markdown elements
-            viewer.querySelectorAll('h1').forEach(el => el.className = 'text-3xl font-bold border-b pb-2 mb-4 mt-8 text-gray-800');
-            viewer.querySelectorAll('h2').forEach(el => el.className = 'text-2xl font-semibold border-b pb-1 mb-3 mt-6 text-gray-800');
-            viewer.querySelectorAll('h3').forEach(el => el.className = 'text-xl font-medium mb-2 mt-4 text-gray-700');
-            viewer.querySelectorAll('p').forEach(el => el.className = 'mb-4 leading-relaxed text-gray-700');
-            viewer.querySelectorAll('ul').forEach(el => el.className = 'list-disc pl-6 mb-4 space-y-1 text-gray-700');
-            viewer.querySelectorAll('ol').forEach(el => el.className = 'list-decimal pl-6 mb-4 space-y-1 text-gray-700');
-            viewer.querySelectorAll('a').forEach(el => el.className = 'text-purple-600 hover:underline');
-            viewer.querySelectorAll('blockquote').forEach(el => el.className = 'border-l-4 border-purple-400 pl-4 py-2 my-4 italic text-gray-600 bg-purple-50');
-            viewer.querySelectorAll('pre').forEach(el => el.className = 'p-3 my-4 bg-gray-800 text-white rounded-lg overflow-x-auto text-sm');
-            viewer.querySelectorAll('code:not(pre code)').forEach(el => el.className = 'bg-gray-200 text-red-600 px-1 py-0.5 rounded text-sm font-mono');
-            viewer.querySelectorAll('hr').forEach(el => el.className = 'my-8 border-t border-gray-300');
-        }
+function renderItems(contents,path,filter){
+  fileList.innerHTML='';
+  const q=filter.trim().toLowerCase();
+  const sorted=[...contents].sort((a,b)=>{
+    if(a.type==='dir'&&b.type!=='dir')return-1;
+    if(a.type!=='dir'&&b.type==='dir')return 1;
+    return a.name.localeCompare(b.name);
+  });
+  const filtered=q?sorted.filter(i=>i.name.toLowerCase().includes(q)):sorted;
 
+  if(path&&!q){
+    const parent=path.split('/').slice(0,-1).join('/');
+    const back=document.createElement('button');
+    back.className='file-item back-item';
+    back.innerHTML=`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color:var(--text3)"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg><span class="file-item-name">.. parent folder</span>`;
+    back.addEventListener('click',()=>navigate(parent));
+    fileList.appendChild(back);
+  }
 
-        /**
-         * Navigates to a new folder path.
-         * @param {string} path The target folder path.
-         */
-        function navigateToPath(path) {
-            fetchContents(path);
-        }
+  if(!filtered.length){
+    fileList.innerHTML+=`<div class="empty-list">${q?`No matches for "${q}"`:'Empty directory'}</div>`;
+    fileCount.textContent='0';return;
+  }
 
-        /**
-         * Updates the browser URL to reflect the current path (owner/repo are fixed).
-         * @param {string} path The current folder path.
-         */
-        function updateURL(path) {
-            const params = new URLSearchParams();
-            if (path) {
-                params.set('path', path);
-            }
-            const newUrl = `${window.location.pathname}${path ? '?' + params.toString() : ''}`;
-            window.history.pushState({ path: path }, '', newUrl);
-        }
+  filtered.forEach((item,idx)=>{
+    const el=document.createElement('button');
+    el.className='file-item';el.style.animationDelay=`${idx*20}ms`;
+    el.innerHTML=`${fileIcon(item.name,item.type)}<span class="file-item-name">${item.name}</span>${item.type==='file'?extBadge(item.name):''}`;
+    if(item.type==='dir'){
+      el.addEventListener('click',()=>navigate(item.path));
+    } else {
+      if(activeFile===item.path)el.classList.add('active');
+      el.addEventListener('click',()=>{
+        document.querySelectorAll('.file-item').forEach(e=>e.classList.remove('active'));
+        el.classList.add('active');activeFile=item.path;viewFile(item);
+      });
+    }
+    fileList.appendChild(el);
+  });
+  fileCount.textContent=q&&filtered.length!==contents.length?`${filtered.length}/${contents.length}`:`${filtered.length}`;
+}
 
-        /**
-         * Renders interactive breadcrumbs for navigation.
-         * @param {string} path The current folder path.
-         */
-        function renderBreadcrumbs(path) {
-            PATH_CONTAINER.innerHTML = '';
-            const parts = path.split('/').filter(p => p.length > 0);
-            let currentAccumulatedPath = '';
+searchInput.addEventListener('input',()=>renderItems(allItems,currentPath,searchInput.value));
 
-            // Root link
-            const rootLink = document.createElement('a');
-            rootLink.classList.add('text-purple-600', 'hover:underline', 'cursor-pointer', 'font-semibold');
-            rootLink.textContent = 'Root';
-            rootLink.onclick = () => navigateToPath('');
-            PATH_CONTAINER.appendChild(rootLink);
-            
-            // Add separator (/) only if we are not at the root
-            if (parts.length > 0) {
-                PATH_CONTAINER.innerHTML += '<span class="mx-2 text-gray-400">/</span>';
-            }
+/* ── NAVIGATE ────────────────────────────────── */
+async function navigate(path){
+  if(abortCtrl)abortCtrl.abort();abortCtrl=new AbortController();
+  currentPath=path;activeFile=null;searchInput.value='';
+  renderBreadcrumbs(path);updateURL(path);
+  if(dirCache.has(path)){renderDir(dirCache.get(path),path);return;}
+  showSkeletons();
+  try{
+    const res=await fetch(`${API}${path}`,{signal:abortCtrl.signal});
+    if(res.status===403&&res.headers.get('X-RateLimit-Remaining')==='0')
+      return showDirError('GitHub rate limit hit. Wait a few minutes.');
+    if(!res.ok){const j=await res.json().catch(()=>({}));return showDirError(j.message||`HTTP ${res.status}`);}
+    const data=await res.json();dirCache.set(path,data);renderDir(data,path);
+  }catch(e){if(e.name!=='AbortError')showDirError('Network error. Check your connection.');}
+}
+function showDirError(msg){
+  fileList.innerHTML=`<div class="empty-list" style="color:var(--danger)">${msg}</div>`;
+  fileCount.textContent='!';
+}
 
-            // Path segments
-            parts.forEach((part, index) => {
-                currentAccumulatedPath += (index > 0 ? '/' : '') + part;
+/* ── VIEW FILE ───────────────────────────────── */
+async function viewFile(item){
+  const name=item.name;
+  viewerTitle.textContent=name;viewerTitle.classList.remove('placeholder');
+  const ext=(name.match(/\.([a-z0-9]+)$/i)||['',''])[1].toLowerCase();
+  viewerBadge.textContent=ext||'file';viewerBadge.style.display='inline';
 
-                const segmentLink = document.createElement('a');
-                
-                if (index === parts.length - 1) {
-                    // Current segment
-                    segmentLink.classList.add('text-gray-800', 'font-medium');
-                    segmentLink.textContent = part;
-                } else {
-                    // Parent segment, clickable
-                    segmentLink.classList.add('text-purple-600', 'hover:underline', 'cursor-pointer');
-                    segmentLink.textContent = part;
-                    // Use a copy of the path for the click handler
-                    const pathToNavigate = currentAccumulatedPath; 
-                    segmentLink.onclick = () => navigateToPath(pathToNavigate);
-                }
-                
-                PATH_CONTAINER.appendChild(segmentLink);
+  if(/\.(jpe?g|png|gif|webp)$/i.test(name)){
+    fileViewer.innerHTML=`<div style="padding:32px;text-align:center"><img src="${item.download_url}" alt="${name}" style="max-width:100%;border-radius:var(--radius-lg)" onerror="this.parentNode.innerHTML='<div class=state-card><div class=state-title style=color:var(--danger)>Image failed to load</div></div>'"></div>`;
+    return;
+  }
+  fileViewer.innerHTML=`<div class="state-card"><div style="width:18px;height:18px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto"></div><div class="state-sub">Loading ${name}…</div></div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>`;
 
-                if (index < parts.length - 1) {
-                    // Add separator (/)
-                    PATH_CONTAINER.innerHTML += '<span class="mx-2 text-gray-400">/</span>';
-                }
-            });
-        }
-        
-        /**
-         * Initialization function: Checks URL parameters and loads content.
-         */
-        function init() {
-            // Only check for the path parameter since the repo is fixed
-            const urlParams = new URLSearchParams(window.location.search);
-            const path = urlParams.get('path') || '';
+  const ck='file:'+item.path;let raw;
+  if(dirCache.has(ck)){raw=dirCache.get(ck);}
+  else{
+    try{
+      const res=await fetch(item.url,{headers:{'Accept':'application/vnd.github.v3.raw'}});
+      if(!res.ok){fileViewer.innerHTML=`<div class="state-card error"><div class="state-title">Failed to load</div><div class="state-sub">HTTP ${res.status}</div></div>`;return;}
+      raw=await res.text();dirCache.set(ck,raw);
+    }catch{fileViewer.innerHTML=`<div class="state-card error"><div class="state-title">Network error</div></div>`;return;}
+  }
 
-            navigateToPath(path);
-        }
+  if(ext==='md'){
+    const div=document.createElement('div');div.className='md-content';
+    div.innerHTML=marked.parse(raw);fileViewer.innerHTML='';fileViewer.appendChild(div);
+  } else if(['txt','html','htm','js','ts','jsx','tsx','css','json','py','java','c','cpp','sh','yaml','yml','toml','xml','csv','rb','go','rs','swift','kt'].includes(ext)){
+    const div=document.createElement('div');div.className='raw-content';div.textContent=raw;
+    fileViewer.innerHTML='';fileViewer.appendChild(div);
+  } else {
+    fileViewer.innerHTML=`<div class="state-card warn"><div class="state-title">Preview unavailable</div><div class="state-sub">.${ext} files can't be previewed. <a href="${item.html_url}" target="_blank" style="color:var(--accent)">Open on GitHub ↗</a></div></div>`;
+  }
+}
 
-        // Handle browser back/forward navigation
-        window.onpopstate = (event) => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const path = urlParams.get('path') || '';
-            
-            fetchContents(path);
-        };
+/* ── URL ─────────────────────────────────────── */
+function updateURL(path){
+  history.pushState({path},'',path?`?path=${encodeURIComponent(path)}`:window.location.pathname);
+}
+window.addEventListener('popstate',()=>navigate(new URLSearchParams(window.location.search).get('path')||''));
 
-        // Initialize the app on page load
-        window.onload = init;
+/* ── KEYBOARD ────────────────────────────────── */
+document.addEventListener('keydown',e=>{
+  if(e.target===searchInput){if(e.key==='Escape'){searchInput.value='';renderItems(allItems,currentPath,'');searchInput.blur();}return;}
+  if(e.key==='b'||e.key==='B')toggleSidebar();
+  if(e.key==='f'||e.key==='F'){searchInput.focus();e.preventDefault();}
+  if(e.key==='r'||e.key==='R'){dirCache.delete(currentPath);navigate(currentPath);showToast('Refreshed');}
+  if(e.key==='Escape'&&currentPath)navigate(currentPath.split('/').slice(0,-1).join('/'));
+});
+refreshBtn.addEventListener('click',()=>{dirCache.delete(currentPath);navigate(currentPath);showToast('Refreshed');});
 
-    </script>
+navigate(new URLSearchParams(window.location.search).get('path')||'');
+</script>
 </body>
 </html>
