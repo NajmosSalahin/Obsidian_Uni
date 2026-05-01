@@ -23,14 +23,14 @@
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+<!-- Pro Libraries (Search & Graph) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
 <style>
 :root {
   --sidebar-w: 280px;
-  --top-h: 52px;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --trans: 180ms ease;
-  --font-ui: 'Syne', sans-serif;
+  --right-w: 240px;
   --font-body: 'Literata', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
@@ -312,6 +312,27 @@ details[open] > summary > .folder-chevron { transform: rotate(90deg); }
   transform: rotate(45deg);
 }
 
+/* ── PRO UI (TOC, Backlinks, Graph) ──────────────── */
+.primary-btn { background: var(--accent); color: var(--bg); border:none; font-weight: 600; }
+.primary-btn:hover { background: var(--accent2); color: var(--bg); }
+.search-opts{display:flex; gap:10px; font-size:11px; color:var(--text3); align-items:center; margin-top:6px;}
+.search-opts label{display:flex; align-items:center; gap:4px; cursor:pointer;}
+.right-sidebar{width:var(--right-w);flex-shrink:0;display:flex;flex-direction:column;background:var(--bg2);border-left:1px solid var(--border);overflow-y:auto; padding:16px;}
+.panel-section-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px; margin-top:24px;}
+.panel-section-title:first-child{margin-top:0;}
+.toc-link{display:block; font-size:12.5px; color:var(--text2); text-decoration:none; margin-bottom:6px; cursor:pointer; transition:color 0.2s; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.toc-link:hover{color:var(--accent);}
+.toc-h1{padding-left:0; font-weight:600;}
+.toc-h2{padding-left:12px;}
+.toc-h3{padding-left:24px; font-size:11.5px;}
+.backlink-item{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--text2); padding:6px; border-radius:4px; cursor:pointer; transition:background 0.2s;}
+.backlink-item:hover{background:var(--bg3); color:var(--text);}
+.bl-icon{color:var(--accent); width:12px; height:12px;}
+.graph-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2000; display: none; flex-direction:column; }
+.graph-header { height: 50px; background: var(--bg2); border-bottom: 1px solid var(--border); display:flex; align-items:center; padding:0 20px; justify-content:space-between; }
+.graph-container { flex: 1; background: var(--bg); }
+.close-graph { background:var(--danger); color:white; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-weight:bold; }
+
 /* ── STATES & TOAST ──────────────────────────── */
 .raw-content{font-family:var(--font-mono);font-size:13px;line-height:1.65;color:var(--text);padding:28px 32px 72px;white-space:pre-wrap;word-break:break-word;}
 .state-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 32px;text-align:center;gap:12px;min-height:300px}
@@ -346,6 +367,15 @@ details[open] > summary > .folder-chevron { transform: rotate(90deg); }
   <div class="topbar-sep"></div>
   <div class="breadcrumb" id="breadcrumb"><span class="cur">Loading…</span></div>
   <div class="topbar-actions">
+    <button class="icon-btn primary-btn" id="buildIndexBtn" title="Build Index for Search & Graph" style="display:none;">
+      ⚡ Index Vault
+    </button>
+    <div id="indexingStatus" style="font-size:11px; color:var(--accent); display:none; align-items:center; gap:4px;">
+      <svg class="skeleton" style="width:12px; height:12px; border-radius:50%;" viewBox="0 0 24 24"></svg> Indexing...
+    </div>
+    <button class="icon-btn" id="graphBtn" title="Open Graph View" style="display:none;">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+    </button>
     <button class="icon-btn" id="refreshBtn" title="Refresh (R)">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
     </button>
@@ -387,6 +417,10 @@ details[open] > summary > .folder-chevron { transform: rotate(90deg); }
     <div class="search-wrap">
       <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
       <input class="search-input" type="text" id="searchInput" placeholder="Filter files… (F)" autocomplete="off" spellcheck="false">
+      <div class="search-opts" id="searchOpts" style="display:none;">
+        <label><input type="radio" name="smode" value="name" checked> Name</label>
+        <label><input type="radio" name="smode" value="content"> Full Text</label>
+      </div>
     </div>
     <div class="file-list" id="fileList"></div>
   </aside>
@@ -408,7 +442,28 @@ details[open] > summary > .folder-chevron { transform: rotate(90deg); }
       </div>
     </div>
   </div>
+
+  <aside class="right-sidebar" id="rightSidebar">
+    <div class="panel-section-title">Outline</div>
+    <div id="tocContainer" style="margin-bottom: 32px;">
+      <div style="font-size:12px;color:var(--text3)">Open a file to view outline</div>
+    </div>
+    
+    <div class="panel-section-title">Backlinks</div>
+    <div id="backlinksContainer">
+      <div style="font-size:12px;color:var(--text3)">Requires Vault Index</div>
+    </div>
+  </aside>
 </div>
+
+<div class="graph-modal" id="graphModal">
+  <div class="graph-header">
+    <h3 style="color:var(--text); font-family:var(--font-ui);">Vault Graph View</h3>
+    <button class="close-graph" onclick="document.getElementById('graphModal').style.display='none'">Close</button>
+  </div>
+  <div class="graph-container" id="graphNetwork"></div>
+</div>
+
 <div id="toast"></div>
 
 <script>
@@ -420,6 +475,13 @@ let vaultIndex = [];
 let treeRoot = {};
 let activeFile = null;
 let sidebarOpen = true;
+
+// Search & Graph Engine State
+let isIndexBuilt = false;
+let fileContents = new Map();
+let linksMap = new Map();
+let backlinkMap = new Map();
+let lunrIdx = null;
 
 const sidebar = document.getElementById('sidebar');
 const workspace = document.getElementById('workspace');
@@ -434,6 +496,9 @@ const toggleIcon = document.getElementById('toggleIcon');
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsPanel = document.getElementById('settingsPanel');
 const settingsBtnLabel = document.getElementById('settingsBtnLabel');
+
+const tocContainer = document.getElementById('tocContainer');
+const backlinksContainer = document.getElementById('backlinksContainer');
 
 /* ── SETTINGS & PAT TOKEN ────────────────────── */
 const patInput = document.getElementById('patInput');
@@ -619,6 +684,7 @@ async function initVault() {
     });
 
     renderSidebar();
+    document.getElementById('buildIndexBtn').style.display = 'flex'; // Show index button
     
     // Load URL state
     const urlPath = new URLSearchParams(window.location.search).get('path');
@@ -631,9 +697,79 @@ async function initVault() {
   }
 }
 
+/* ── BACKGROUND INDEXER (Search & Graph) ─────── */
+document.getElementById('buildIndexBtn').onclick = async () => {
+  document.getElementById('buildIndexBtn').style.display = 'none';
+  const status = document.getElementById('indexingStatus');
+  status.style.display = 'flex';
+  
+  const mdFiles = vaultIndex.filter(f => f.path.endsWith('.md'));
+  let docs = [];
+  
+  for (let i = 0; i < mdFiles.length; i++) {
+    const f = mdFiles[i];
+    status.innerHTML = `<svg class="skeleton" style="width:12px;height:12px;border-radius:50%;" viewBox="0 0 24 24"></svg> Indexing ${i+1}/${mdFiles.length}`;
+    
+    const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${f.path.split('/').map(encodeURIComponent).join('/')}`;
+    try {
+      const res = await fetch(url);
+      const text = await res.text();
+      fileContents.set(f.path, text);
+      docs.push({ id: f.path, title: f.name, body: text });
+
+      const linkRegex = /\[\[(.*?)\]\]/g;
+      let match;
+      let outLinks = [];
+      while ((match = linkRegex.exec(text)) !== null) {
+        let target = match[1].split('|')[0].split('#')[0].trim();
+        if (!target.endsWith('.md')) target += '.md';
+        let targetFile = vaultIndex.find(vf => vf.path.toLowerCase().endsWith(target.toLowerCase()));
+        if (targetFile) {
+          outLinks.push(targetFile.path);
+          if(!backlinkMap.has(targetFile.path)) backlinkMap.set(targetFile.path, []);
+          if(!backlinkMap.get(targetFile.path).includes(f.path)) backlinkMap.get(targetFile.path).push(f.path);
+        }
+      }
+      linksMap.set(f.path, outLinks);
+    } catch(e) {}
+  }
+
+  lunrIdx = lunr(function () {
+    this.ref('id'); this.field('title', { boost: 10 }); this.field('body');
+    docs.forEach(doc => this.add(doc));
+  });
+
+  isIndexBuilt = true;
+  status.style.display = 'none';
+  document.getElementById('searchOpts').style.display = 'flex';
+  document.getElementById('graphBtn').style.display = 'flex';
+  showToast("Index complete! Search and Graph are ready.");
+  
+  if (activeFile) updateBacklinks(activeFile);
+};
+
 /* ── NESTED SIDEBAR RENDERER ─────────────────── */
 function renderSidebar(filterText = '') {
   const q = filterText.trim().toLowerCase();
+  const searchMode = document.querySelector('input[name="smode"]:checked')?.value || 'name';
+
+  if (q && searchMode === 'content' && isIndexBuilt) {
+    const results = lunrIdx.search(q);
+    let html = '';
+    if(results.length === 0) html = `<div style="padding:10px;color:var(--text3);font-size:12px;">No content matches.</div>`;
+    results.forEach(res => {
+      const f = vaultIndex.find(vf => vf.path === res.ref);
+      if(!f) return;
+      const isActive = activeFile === f.path ? 'active' : '';
+      html += `<button class="file-item ${isActive}" onclick="openFileFromTree('${f.path.replace(/'/g,"\\'")}')">
+                ${fileIcon(f.name, 'blob')}
+                <span class="file-item-name">${f.name}</span>
+                ${extBadge(f.name)}
+               </button>`;
+    });
+    fileList.innerHTML = html;
+    return;
+  }
   
   function buildHTML(node) {
     let html = '';
@@ -683,6 +819,7 @@ function renderSidebar(filterText = '') {
 }
 
 searchInput.addEventListener('input', e => renderSidebar(e.target.value));
+document.getElementById('searchOpts')?.addEventListener('change', () => renderSidebar(searchInput.value));
 
 /* ── FILE READING (Bypasses API limits) ──────── */
 async function openFileFromTree(path) {
@@ -707,13 +844,18 @@ async function openFileFromTree(path) {
 
   if(/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) {
     fileViewer.innerHTML=`<div class="image-preview"><img src="${rawUrl}" alt="${name}"></div>`;
+    tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
+    updateBacklinks(path);
     return;
   }
 
   try {
-    const res = await fetch(rawUrl);
-    if (!res.ok) throw new Error();
-    const raw = await res.text();
+    let raw = fileContents.get(path);
+    if (!raw) {
+      const res = await fetch(rawUrl);
+      if (!res.ok) throw new Error();
+      raw = await res.text();
+    }
 
     if (ext === 'md') {
       const div = document.createElement('div');
@@ -743,13 +885,102 @@ async function openFileFromTree(path) {
       div.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
       if (window.MathJax) MathJax.typesetPromise([div]).catch(e => console.log('MathJax Error:', e));
 
+      buildTOC(div);
+      updateBacklinks(path);
+
     } else {
       fileViewer.innerHTML = `<div class="raw-content">${raw.replace(/</g, '&lt;')}</div>`;
+      tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
+      updateBacklinks(path);
     }
   } catch (e) {
     fileViewer.innerHTML = `<div class="state-card error"><div class="state-icon">❌</div><div class="state-title">Error loading file</div></div>`;
   }
 }
+
+/* ── ADVANCED FEATURES (TOC, Backlinks, Graph) ─ */
+
+function buildTOC(container) {
+  tocContainer.innerHTML = '';
+  const headers = container.querySelectorAll('h1, h2, h3');
+  if (headers.length === 0) {
+    tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No headings</div>';
+    return;
+  }
+  
+  headers.forEach((h, i) => {
+    if (!h.id) h.id = 'heading-' + i;
+    const link = document.createElement('a');
+    link.className = `toc-link toc-${h.tagName.toLowerCase()}`;
+    link.textContent = h.textContent;
+    link.onclick = () => h.scrollIntoView({behavior: 'smooth', block: 'start'});
+    tocContainer.appendChild(link);
+  });
+}
+
+function updateBacklinks(path) {
+  if (!isIndexBuilt) {
+    backlinksContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Build Vault Index to see backlinks.</div>';
+    return;
+  }
+  
+  backlinksContainer.innerHTML = '';
+  const links = backlinkMap.get(path) || [];
+  if (links.length === 0) {
+    backlinksContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No unlinked mentions found.</div>';
+    return;
+  }
+
+  links.forEach(sourcePath => {
+    const name = sourcePath.split('/').pop().replace('.md', '');
+    const btn = document.createElement('div');
+    btn.className = 'backlink-item';
+    btn.innerHTML = `<svg class="bl-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg> ${name}`;
+    btn.onclick = () => openFileFromTree(sourcePath);
+    backlinksContainer.appendChild(btn);
+  });
+}
+
+document.getElementById('graphBtn').onclick = () => {
+  document.getElementById('graphModal').style.display = 'flex';
+  
+  const nodes = new vis.DataSet();
+  const edges = new vis.DataSet();
+
+  const mdFiles = vaultIndex.filter(f => f.path.endsWith('.md'));
+  mdFiles.forEach(f => {
+    nodes.add({ 
+      id: f.path, 
+      label: f.name.replace('.md',''), 
+      shape: 'dot', 
+      size: 8, 
+      color: '#cba6f7',
+      font: { color: '#cdd6f4', size: 12 }
+    });
+  });
+
+  for (let [source, targets] of linksMap.entries()) {
+    targets.forEach(t => {
+      edges.add({ from: source, to: t, color: { color: 'rgba(205,214,244,0.15)' }, arrows: 'to' });
+    });
+  }
+
+  const container = document.getElementById('graphNetwork');
+  const data = { nodes: nodes, edges: edges };
+  const options = {
+    physics: { barnesHut: { springLength: 120, springConstant: 0.04, gravitationalConstant: -3000 } },
+    interaction: { hover: true }
+  };
+  
+  const network = new vis.Network(container, data, options);
+  
+  network.on("doubleClick", function (params) {
+    if (params.nodes.length > 0) {
+      document.getElementById('graphModal').style.display = 'none';
+      openFileFromTree(params.nodes[0]);
+    }
+  });
+};
 
 /* ── PRE-PROCESS OBSIDIAN SYNTAX ─────────────── */
 function preprocessObsidian(rawText) {
