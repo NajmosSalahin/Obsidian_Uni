@@ -57,27 +57,6 @@
   --accent:#88c0d0; --accent2:#a3d0de; --accent-bg:rgba(136,192,208,0.12);
   --danger:#bf616a; --warn:#ebcb8b; --success:#a3be8c; --scrollbar:#434c5e;
 }
-[data-theme="rosepine"] {
-  --bg:#191724; --bg2:#1f1d2e; --bg3:#26233a; --bg4:#403d52;
-  --border:rgba(224,222,244,0.08); --border2:rgba(224,222,244,0.14);
-  --text:#e0def4; --text2:#908caa; --text3:#6e6a86;
-  --accent:#eb6f92; --accent2:#f19fc0; --accent-bg:rgba(235,111,146,0.12);
-  --danger:#eb6f92; --warn:#f6c177; --success:#31748f; --scrollbar:#403d52;
-}
-[data-theme="github"] {
-  --bg:#ffffff; --bg2:#f6f8fa; --bg3:#eaeef2; --bg4:#d0d7de;
-  --border:rgba(31,35,40,0.10); --border2:rgba(31,35,40,0.18);
-  --text:#1f2328; --text2:#57606a; --text3:#8c959f;
-  --accent:#0969da; --accent2:#1a7fd4; --accent-bg:rgba(9,105,218,0.08);
-  --danger:#d1242f; --warn:#9a6700; --success:#1a7f37; --scrollbar:#d0d7de;
-}
-[data-theme="solarized"] {
-  --bg:#002b36; --bg2:#073642; --bg3:#083f4d; --bg4:#0a4c5c;
-  --border:rgba(131,148,150,0.12); --border2:rgba(131,148,150,0.22);
-  --text:#93a1a1; --text2:#839496; --text3:#586e75;
-  --accent:#2aa198; --accent2:#38bdb4; --accent-bg:rgba(42,161,152,0.13);
-  --danger:#dc322f; --warn:#b58900; --success:#859900; --scrollbar:#0a4c5c;
-}
 
 /* ── BASE ────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -95,10 +74,8 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .logo-gem svg{width:14px;height:14px;color:white}
 .topbar-sep{width:1px;height:22px;background:var(--border2);flex-shrink:0}
 .breadcrumb{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--text3);flex:1;min-width:0;overflow:hidden}
-.breadcrumb a{color:var(--text2);text-decoration:none;cursor:pointer;transition:color var(--trans);white-space:nowrap}
-.breadcrumb a:hover{color:var(--accent)}
 .breadcrumb .sep{color:var(--text3);font-size:11px}
-.breadcrumb .cur{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.breadcrumb .cur{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
 
 /* ── BUTTONS & PANELS ───────────────────────── */
@@ -107,7 +84,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .icon-btn svg{width:14px;height:14px;flex-shrink:0}
 
 .settings-wrap{position:relative}
-.settings-panel{position:absolute;top:calc(100% + 8px);right:0;width:296px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.4),0 4px 16px rgba(0,0,0,0.2);z-index:999;overflow:hidden;opacity:0;transform:translateY(-8px) scale(0.97);pointer-events:none;transition:opacity 200ms ease,transform 200ms ease;}
+.settings-panel{position:absolute;top:calc(100% + 8px);right:0;width:310px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.4),0 4px 16px rgba(0,0,0,0.2);z-index:999;overflow:hidden;opacity:0;transform:translateY(-8px) scale(0.97);pointer-events:none;transition:opacity 200ms ease,transform 200ms ease;}
 .settings-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
 .panel-section{padding:14px 14px 12px}
 .panel-section+.panel-section{border-top:1px solid var(--border)}
@@ -141,29 +118,30 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .search-input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 10px 6px 30px;font-family:var(--font-ui);font-size:12.5px;color:var(--text);outline:none;transition:border-color var(--trans),background var(--trans)}
 .search-input:focus{border-color:var(--accent);background:var(--bg4)}
 .search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:13px;height:13px;color:var(--text3);pointer-events:none}
-.file-list{flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 0}
+.file-list{flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 6px}
 
-.file-item{display:flex;align-items:center;gap:8px;padding:7px 12px;cursor:pointer;transition:background var(--trans);font-size:13px;color:var(--text2);text-decoration:none;border:none;background:none;width:100%;text-align:left;min-width:0;position:relative}
+/* ── NESTED TREE UI ──────────────────────────── */
+.sidebar-folder { margin: 1px 0; }
+.folder-summary { display: flex; align-items: center; gap: 6px; padding: 6px 8px; cursor: pointer; font-size: 13.5px; color: var(--text2); user-select: none; border-radius: 6px; transition: background var(--trans); }
+.folder-summary:hover { background: var(--bg3); color: var(--text); }
+details.sidebar-folder > summary::marker, details.sidebar-folder > summary::-webkit-details-marker { display: none; }
+.folder-chevron { width: 14px; height: 14px; color: var(--text3); transition: transform 0.2s; flex-shrink:0;}
+details[open] > summary > .folder-chevron { transform: rotate(90deg); }
+.folder-icon { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; }
+.folder-contents { margin-left: 14px; padding-left: 6px; border-left: 1px solid var(--border); display: flex; flex-direction: column; }
+
+.file-item{display:flex;align-items:center;gap:8px;padding:6px 8px;cursor:pointer;transition:background var(--trans);font-size:13.5px;color:var(--text2);text-decoration:none;border:none;background:none;width:100%;text-align:left;min-width:0;position:relative; border-radius: 6px; margin: 1px 0;}
 .file-item:hover{background:var(--bg3);color:var(--text)}
-.file-item.active{background:var(--accent-bg);color:var(--accent2)}
-.file-item.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent);border-radius:0 2px 2px 0}
+.file-item.active{background:var(--accent-bg);color:var(--accent2); font-weight: 500;}
 .file-item-icon{flex-shrink:0;width:15px;height:15px}
 .file-item-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .file-item-ext{font-family:var(--font-mono);font-size:10px;color:var(--text3);background:var(--bg4);padding:1px 5px;border-radius:3px;flex-shrink:0;letter-spacing:0.03em}
-.file-item.back-item{color:var(--text3)}
-.file-item.back-item:hover{color:var(--text)}
 .ext-md{color:var(--accent2)!important;background:var(--accent-bg)!important}
-.ext-js{color:#f0c040!important;background:rgba(240,192,64,0.1)!important}
-.ext-json{color:var(--success)!important;background:rgba(80,200,90,0.1)!important}
-.ext-css{color:var(--warn)!important;background:rgba(250,180,100,0.1)!important}
-.ext-img{color:#6bceff!important;background:rgba(107,206,255,0.1)!important}
 
 .sidebar-toggle{position:absolute;left:var(--sidebar-w);top:50%;transform:translateY(-50%);z-index:200;width:18px;height:48px;background:var(--bg2);border:1px solid var(--border2);border-left:none;border-radius:0 6px 6px 0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:left 260ms cubic-bezier(0.4,0,0.2,1),background var(--trans),color var(--trans);color:var(--text3)}
 .sidebar-toggle:hover{background:var(--bg3);color:var(--accent)}
 .sidebar-toggle svg{width:10px;height:10px;transition:transform 260ms ease}
 .workspace.sidebar-collapsed .sidebar-toggle{left:0}
-
-/* ── RESIZE ──────────────────────────────────── */
 .resize-handle{width:4px;background:transparent;cursor:col-resize;flex-shrink:0;z-index:10;transition:background var(--trans)}
 .resize-handle:hover,.resize-handle.dragging{background:var(--accent)}
 
@@ -180,7 +158,14 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 /* ── MARKDOWN & OBSIDIAN FLAVOR ──────────────── */
 .md-content{font-family:var(--font-body);font-size:15.5px;line-height:1.78;color:var(--text);max-width:720px;margin:0 auto;padding:36px 40px 72px}
 
-/* Distinctive Headers mapped to Theme Colors */
+/* Properties / Frontmatter Box */
+.obsidian-properties { margin-bottom: 32px; padding: 16px 20px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); font-family: var(--font-ui); font-size: 13px; }
+.property-row { display: flex; margin-bottom: 10px; align-items: baseline;}
+.property-row:last-child { margin-bottom: 0; }
+.property-key { width: 140px; color: var(--text3); font-weight: 600; flex-shrink:0; text-transform: capitalize; }
+.property-value { color: var(--accent2); display: flex; flex-wrap: wrap; gap: 6px; }
+.property-pill { background: var(--bg3); padding: 2px 10px; border-radius: 99px; border: 1px solid var(--border2); }
+
 .md-content h1{font-family:var(--font-ui);font-size:28px;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:12px;margin:0 0 24px}
 .md-content h2{font-family:var(--font-ui);font-size:21px;font-weight:600;color:var(--text);margin:40px 0 14px}
 .md-content h3{font-family:var(--font-ui);font-size:17px;font-weight:600;color:var(--accent2);margin:28px 0 10px}
@@ -192,7 +177,6 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .md-content a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-bg);transition:border-color var(--trans)}
 .md-content a:hover{border-bottom-color:var(--accent)}
 
-/* Custom Bullet Points */
 .md-content ul,.md-content ol{margin:0 0 16px 24px}
 .md-content li{margin-bottom:6px}
 .md-content li::marker{color:var(--text3);font-weight:bold}
@@ -209,62 +193,21 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .md-content tr:nth-child(even) td{background:var(--bg2)}
 
 /* Obsidian Wikilinks */
-.wikilink {
-  color: var(--accent);
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 500;
-  background: var(--accent-bg);
-  padding: 0 4px;
-  border-radius: 4px;
-  transition: background var(--trans);
-}
+.wikilink { color: var(--accent); text-decoration: none; cursor: pointer; font-weight: 500; background: var(--accent-bg); padding: 0 4px; border-radius: 4px; transition: background var(--trans); }
 .wikilink:hover { background: rgba(203,166,247,0.25); text-decoration: underline; }
 
 /* Obsidian Tags (#tag) */
-.obsidian-tag {
-  background: var(--bg3);
-  color: var(--accent);
-  padding: 2px 8px;
-  border-radius: 99px;
-  font-size: 12.5px;
-  font-weight: 600;
-  font-family: var(--font-ui);
-  transition: background var(--trans), color var(--trans);
-  cursor: pointer;
-}
+.obsidian-tag { background: var(--bg3); color: var(--accent); padding: 2px 8px; border-radius: 99px; font-size: 12.5px; font-weight: 600; font-family: var(--font-ui); transition: background var(--trans), color var(--trans); cursor: pointer; }
 .obsidian-tag:hover { background: var(--accent-bg); }
 
-/* True Obsidian Highlights (color-mix overlay) */
-.obsidian-highlight {
-  background-color: color-mix(in srgb, var(--warn) 35%, transparent);
-  color: var(--text);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 500;
-}
+/* Obsidian Highlights */
+.obsidian-highlight { background-color: color-mix(in srgb, var(--warn) 35%, transparent); color: var(--text); padding: 2px 6px; border-radius: 4px; font-weight: 500; }
 
-/* Obsidian Callouts (Contextually Colored) */
-.callout {
-  border-left: 4px solid var(--accent);
-  background: var(--bg2);
-  border-radius: 4px;
-  padding: 12px 16px;
-  margin: 16px 0;
-  font-family: var(--font-ui);
-}
-.callout-title {
-  font-weight: 700;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--accent);
-}
+/* Obsidian Callouts */
+.callout { border-left: 4px solid var(--accent); background: var(--bg2); border-radius: 4px; padding: 12px 16px; margin: 16px 0; font-family: var(--font-ui); }
+.callout-title { font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; color: var(--accent); }
 .callout-content { font-family: var(--font-body); }
 .callout-content p:last-child { margin-bottom: 0; }
-
-/* Contextual Callout Colors mapped to theme variables */
 .callout-warning, .callout-caution { border-left-color: var(--warn); }
 .callout-warning .callout-title, .callout-caution .callout-title { color: var(--warn); }
 .callout-danger, .callout-error, .callout-bug { border-left-color: var(--danger); }
@@ -272,33 +215,10 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .callout-success, .callout-check, .callout-done { border-left-color: var(--success); }
 .callout-success .callout-title, .callout-check .callout-title, .callout-done .callout-title { color: var(--success); }
 
-/* Custom Interactive Obsidian Checkboxes */
-.md-content input[type="checkbox"] {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 2px solid var(--text3);
-  border-radius: 4px;
-  margin-right: 8px;
-  vertical-align: middle;
-  margin-top: -2px;
-  position: relative;
-  background: var(--bg2);
-  cursor: not-allowed;
-}
-.md-content input[type="checkbox"]:checked {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.md-content input[type="checkbox"]:checked::after {
-  content: '';
-  position: absolute;
-  left: 4px; top: 1px;
-  width: 4px; height: 8px;
-  border: solid var(--bg);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
+/* Obsidian Checkboxes */
+.md-content input[type="checkbox"] { appearance: none; width: 16px; height: 16px; border: 2px solid var(--text3); border-radius: 4px; margin-right: 8px; vertical-align: middle; margin-top: -2px; position: relative; background: var(--bg2); cursor: not-allowed; }
+.md-content input[type="checkbox"]:checked { background: var(--accent); border-color: var(--accent); }
+.md-content input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: solid var(--bg); border-width: 0 2px 2px 0; transform: rotate(45deg); }
 
 /* ── STATES & TOAST ──────────────────────────── */
 .raw-content{font-family:var(--font-mono);font-size:13px;line-height:1.65;color:var(--text);padding:28px 32px 72px;white-space:pre-wrap;word-break:break-word;}
@@ -307,7 +227,6 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 .state-title{font-size:16px;font-weight:600;color:var(--text)}
 .state-sub{font-size:13px;color:var(--text3);max-width:320px;line-height:1.6}
 .state-card.error .state-title{color:var(--danger)}
-.state-card.warn .state-title{color:var(--warn)}
 .empty-list{padding:32px 16px;text-align:center;font-size:12px;color:var(--text3)}
 .count-badge{font-family:var(--font-mono);font-size:10px;background:var(--bg3);color:var(--text3);padding:1px 6px;border-radius:99px;border:1px solid var(--border)}
 
@@ -317,9 +236,6 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 
 #toast{position:fixed;bottom:20px;right:20px;background:var(--bg4);border:1px solid var(--border2);color:var(--text);font-size:12.5px;padding:9px 14px;border-radius:var(--radius-lg);z-index:9999;transform:translateY(60px);opacity:0;transition:transform 220ms ease,opacity 220ms ease;box-shadow:0 8px 24px rgba(0,0,0,0.3)}
 #toast.show{transform:translateY(0);opacity:1}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-.file-item{animation:fadeUp 130ms ease both}
 </style>
 </head>
 <body>
@@ -332,17 +248,22 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
     <span>Obsidian Explorer</span>
   </div>
   <div class="topbar-sep"></div>
-  <div class="breadcrumb" id="breadcrumb"><span class="cur">Loading…</span></div>
+  <div class="breadcrumb" id="breadcrumb"><span class="cur">Loading Vault...</span></div>
   <div class="topbar-actions">
-    <button class="icon-btn" id="refreshBtn" title="Refresh (R)">
+    <button class="icon-btn" id="refreshBtn" title="Refresh Vault (R)">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
     </button>
     <div class="settings-wrap">
-      <button class="icon-btn" id="settingsBtn" title="Theme & Font">
+      <button class="icon-btn" id="settingsBtn" title="Settings">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
         <span id="settingsBtnLabel">Catppuccin</span>
       </button>
       <div class="settings-panel" id="settingsPanel">
+        <div class="panel-section">
+          <div class="panel-label">GitHub Access Token (PAT)</div>
+          <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width:100%; padding:8px 10px; border-radius:6px; border:1px solid var(--border); background:var(--bg3); color:var(--text); font-family:var(--font-mono); font-size:11px; outline:none;">
+          <div style="font-size:10.5px; color:var(--text3); margin-top:6px; line-height:1.4;">Paste token to bypass 60/hr API limit. Saves locally.</div>
+        </div>
         <div class="panel-section">
           <div class="panel-label">Theme</div>
           <div class="theme-grid" id="themeGrid"></div>
@@ -350,10 +271,6 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
         <div class="panel-section">
           <div class="panel-label">Reading Font</div>
           <div class="font-options" id="bodyFontOpts"></div>
-        </div>
-        <div class="panel-section">
-          <div class="panel-label">Code Font</div>
-          <div class="font-options" id="monoFontOpts"></div>
         </div>
       </div>
     </div>
@@ -369,7 +286,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
     </div>
     <div class="search-wrap">
       <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
-      <input class="search-input" type="text" id="searchInput" placeholder="Filter files… (F)" autocomplete="off" spellcheck="false">
+      <input class="search-input" type="text" id="searchInput" placeholder="Search entire vault… (F)" autocomplete="off" spellcheck="false">
     </div>
     <div class="file-list" id="fileList"></div>
   </aside>
@@ -395,12 +312,14 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:f
 <div id="toast"></div>
 
 <script>
-// --- YOUR GITHUB REPO CONFIG ---
+// --- GITHUB REPO CONFIG ---
 const OWNER = 'najmossalahin', REPO = 'Obsidian_Uni';
-const API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
 
-let currentPath = '', activeFile = null, sidebarOpen = true;
-let dirCache = new Map(), abortCtrl = null, allItems = [];
+// Global State
+let vaultIndex = [];
+let treeRoot = {};
+let activeFile = null;
+let sidebarOpen = true;
 
 const sidebar = document.getElementById('sidebar');
 const workspace = document.getElementById('workspace');
@@ -411,10 +330,20 @@ const viewerTitle = document.getElementById('viewerTitle');
 const viewerBadge = document.getElementById('viewerBadge');
 const breadcrumb = document.getElementById('breadcrumb');
 const fileCount = document.getElementById('fileCount');
-const toggleIcon = document.getElementById('toggleIcon');
-const settingsBtn = document.getElementById('settingsBtn');
-const settingsPanel = document.getElementById('settingsPanel');
-const settingsBtnLabel = document.getElementById('settingsBtnLabel');
+
+/* ── SETTINGS & PAT TOKEN ────────────────────── */
+const patInput = document.getElementById('patInput');
+patInput.value = localStorage.getItem('oe-pat') || '';
+patInput.addEventListener('change', e => { 
+  localStorage.setItem('oe-pat', e.target.value.trim()); 
+  showToast('Token saved!'); 
+  initVault(); // reload with new limits
+});
+
+function getHeaders() {
+  const pat = localStorage.getItem('oe-pat');
+  return pat ? { 'Authorization': `token ${pat}` } : {};
+}
 
 /* ── THEMES & FONTS ─────────────────────────── */
 const THEMES = [
@@ -423,89 +352,49 @@ const THEMES = [
   {id:'nord',       name:'Nord',       bg:'#2e3440', mid:'#3b4252', acc:'#88c0d0'},
   {id:'rosepine',   name:'Rosé Pine',  bg:'#191724', mid:'#26233a', acc:'#eb6f92'},
   {id:'github',     name:'GitHub',     bg:'#ffffff', mid:'#eaeef2', acc:'#0969da'},
-  {id:'solarized',  name:'Solarized',  bg:'#002b36', mid:'#083f4d', acc:'#2aa198'},
 ];
 const BODY_FONTS = [
-  {id:'Literata',     name:'Literata',     preview:'Beautiful serif',   stack:'Georgia,serif'},
-  {id:'Merriweather', name:'Merriweather', preview:'Highly readable',   stack:'Georgia,serif'},
-  {id:'Lora',         name:'Lora',         preview:'Classic elegance',  stack:'Georgia,serif'},
-  {id:'Crimson Pro',  name:'Crimson Pro',  preview:'Oldstyle warmth',   stack:'Georgia,serif'},
-];
-const MONO_FONTS = [
-  {id:'JetBrains Mono', name:'JetBrains Mono', preview:'fn main() {}'},
-  {id:'Fira Code',      name:'Fira Code',       preview:'() => true'},
-  {id:'Source Code Pro',name:'Source Code Pro', preview:'#include <io>'},
-  {id:'IBM Plex Mono',  name:'IBM Plex Mono',   preview:'git commit -m'},
+  {id:'Literata',     name:'Literata',     preview:'Beautiful serif'},
+  {id:'Merriweather', name:'Merriweather', preview:'Highly readable'},
+  {id:'JetBrains Mono', name:'JetBrains',  preview:'Monospace'},
 ];
 
 let curTheme = localStorage.getItem('oe-theme') || 'catppuccin';
 let curBodyFont = localStorage.getItem('oe-body-font') || 'Literata';
-let curMonoFont = localStorage.getItem('oe-mono-font') || 'JetBrains Mono';
 
 function applyTheme(id){ 
-  curTheme = id;
-  document.documentElement.dataset.theme = id; 
-  localStorage.setItem('oe-theme',id); 
-  const t=THEMES.find(x=>x.id===id);
-  settingsBtnLabel.textContent=t?.name||id;
+  curTheme = id; document.documentElement.dataset.theme = id; localStorage.setItem('oe-theme',id); 
+  document.getElementById('settingsBtnLabel').textContent = THEMES.find(x=>x.id===id)?.name || id;
   document.querySelectorAll('.theme-card').forEach(c=>c.classList.toggle('active',c.dataset.id===id));
 }
 function applyBodyFont(id){
-  curBodyFont = id;
-  document.documentElement.style.setProperty('--font-body',`'${id}',Georgia,serif`);
-  localStorage.setItem('oe-body-font',id);
+  curBodyFont = id; document.documentElement.style.setProperty('--font-body',`'${id}',Georgia,serif`); localStorage.setItem('oe-body-font',id);
   document.querySelectorAll('#bodyFontOpts .font-opt').forEach(o=>o.classList.toggle('active',o.dataset.id===id));
 }
-function applyMonoFont(id){
-  curMonoFont = id;
-  document.documentElement.style.setProperty('--font-mono',`'${id}',monospace`);
-  localStorage.setItem('oe-mono-font',id);
-  document.querySelectorAll('#monoFontOpts .font-opt').forEach(o=>o.classList.toggle('active',o.dataset.id===id));
-}
 
-/* Build settings panel */
 (function(){
   const grid=document.getElementById('themeGrid');
   THEMES.forEach(t=>{
     const el=document.createElement('div');
-    el.className='theme-card'+(t.id===curTheme?' active':'');
-    el.dataset.id=t.id;
+    el.className='theme-card'+(t.id===curTheme?' active':''); el.dataset.id=t.id;
     el.innerHTML=`<div class="theme-swatches"><div class="swatch" style="background:${t.bg}"></div><div class="swatch" style="background:${t.mid}"></div><div class="swatch" style="background:${t.acc}"></div></div><div class="theme-name">${t.name}</div>`;
-    el.addEventListener('click',()=>{applyTheme(t.id);showToast(t.name);});
+    el.onclick = () => { applyTheme(t.id); showToast(t.name); };
     grid.appendChild(el);
   });
-
-  function buildFontList(containerId,fonts,cur,applyFn,isMono){
-    const wrap=document.getElementById(containerId);
-    fonts.forEach(f=>{
-      const el=document.createElement('div');
-      el.className='font-opt'+(f.id===cur?' active':'');
-      el.dataset.id=f.id;
-      const ff=`'${f.id}',${isMono?'monospace':'Georgia,serif'}`;
-      el.innerHTML=`<span class="font-opt-name" style="font-family:${ff}">${f.name}</span><span class="font-opt-preview" style="font-family:${ff};font-style:${isMono?'normal':'italic'}">${f.preview}</span>`;
-      el.addEventListener('click',()=>{applyFn(f.id);showToast(f.name);});
-      wrap.appendChild(el);
-    });
-  }
-  buildFontList('bodyFontOpts',BODY_FONTS,curBodyFont,applyBodyFont,false);
-  buildFontList('monoFontOpts',MONO_FONTS,curMonoFont,applyMonoFont,true);
+  const wrap = document.getElementById('bodyFontOpts');
+  BODY_FONTS.forEach(f=>{
+    const el=document.createElement('div'); el.className='font-opt'+(f.id===curBodyFont?' active':''); el.dataset.id=f.id;
+    el.innerHTML=`<span class="font-opt-name" style="font-family:'${f.id}',serif">${f.name}</span><span class="font-opt-preview" style="font-family:'${f.id}',serif;font-style:italic">${f.preview}</span>`;
+    el.onclick = () => { applyBodyFont(f.id); showToast(f.name); };
+    wrap.appendChild(el);
+  });
 })();
-
-applyTheme(curTheme); applyBodyFont(curBodyFont); applyMonoFont(curMonoFont);
+applyTheme(curTheme); applyBodyFont(curBodyFont);
 
 /* Settings toggle */
-settingsBtn.addEventListener('click',e=>{
-  e.stopPropagation();
-  const open = settingsPanel.classList.toggle('open');
-  settingsBtn.classList.toggle('active',open);
-});
-document.addEventListener('click',e=>{
-  if(!settingsPanel.contains(e.target)&&e.target!==settingsBtn){
-    settingsPanel.classList.remove('open'); settingsBtn.classList.remove('active');
-  }
-});
+document.getElementById('settingsBtn').onclick = e => { e.stopPropagation(); document.getElementById('settingsPanel').classList.toggle('open'); };
+document.addEventListener('click', e => { if(!e.target.closest('.settings-wrap')) document.getElementById('settingsPanel').classList.remove('open'); });
 
-/* ── TOAST & ICONS ───────────────────────────── */
 function showToast(msg) {
   const toast = document.getElementById('toast');
   toast.textContent = msg; toast.classList.add('show');
@@ -513,7 +402,7 @@ function showToast(msg) {
 }
 
 function fileIcon(name,type){
-  if(type==='dir') return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--accent)"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`;
+  if(type==='tree') return`<svg class="folder-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`;
   if(/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:#6bceff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path stroke-linecap="round" d="M21 15l-5-5L5 21"/></svg>`;
   if(/\.md$/i.test(name)) return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--accent2)"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`;
   return`<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--text3)"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`;
@@ -521,238 +410,167 @@ function fileIcon(name,type){
 function extBadge(name){
   const m=name.match(/\.([a-z0-9]+)$/i);if(!m)return'';
   const ext=m[1].toLowerCase();
-  let cls='';
-  if(ext==='md')cls='ext-md';
-  else if(['js','ts','jsx','tsx'].includes(ext))cls='ext-js';
-  else if(ext==='json')cls='ext-json';
-  else if(['css','html','htm'].includes(ext))cls='ext-css';
-  else if(['jpg','jpeg','png','gif','webp','svg'].includes(ext))cls='ext-img';
-  return`<span class="file-item-ext ${cls}">${ext}</span>`;
+  return`<span class="file-item-ext ${ext==='md'?'ext-md':''}">${ext}</span>`;
 }
 
-/* ── SIDEBAR RESIZE & TOGGLE ─────────────────── */
-function setSidebar(open){
-  sidebarOpen=open;
-  sidebar.classList.toggle('collapsed',!open);
-  workspace.classList.toggle('sidebar-collapsed',!open);
-  toggleIcon.style.transform=open?'':'rotate(180deg)';
-}
-function toggleSidebar(){setSidebar(!sidebarOpen);localStorage.setItem('oe-sidebar',sidebarOpen?'1':'0');}
-document.getElementById('sidebarToggle').addEventListener('click',toggleSidebar);
-if(localStorage.getItem('oe-sidebar')==='0') { sidebar.style.transition='none'; setSidebar(false); requestAnimationFrame(()=>sidebar.style.transition=''); }
-
-(function(){
-  let drag=false,sx=0,sw=0;
-  const h=document.createElement('div'); h.className='resize-handle'; sidebar.after(h);
-  h.addEventListener('mousedown',e=>{
-    if(!sidebarOpen)return;drag=true;sx=e.clientX;sw=sidebar.offsetWidth;
-    h.classList.add('dragging');document.body.style.cssText+='cursor:col-resize;user-select:none';
-  });
-  document.addEventListener('mousemove',e=>{
-    if(!drag)return; const w=Math.max(160,Math.min(500,sw+e.clientX-sx));
-    sidebar.style.width=w+'px';workspace.style.setProperty('--sidebar-w',w+'px');
-  });
-  document.addEventListener('mouseup',()=>{
-    if(!drag)return;drag=false;h.classList.remove('dragging');
-    document.body.style.cursor='';document.body.style.userSelect='';
-  });
-})();
-
-/* ── PRE-PROCESS OBSIDIAN SYNTAX ─────────────── */
-function preprocessObsidian(rawText) {
-  let text = rawText;
-
-  // Strip Frontmatter (YAML)
-  text = text.replace(/^---\n[\s\S]*?\n---\n/, '');
-
-  // Convert Checkboxes (Handling Indented Checkboxes correctly)
-  text = text.replace(/^(\s*)- \[ \]/gm, '$1- <input type="checkbox" disabled>');
-  text = text.replace(/^(\s*)- \[(x|X)\]/gm, '$1- <input type="checkbox" checked disabled>');
-
-  // Convert Highlights ==highlight==
-  text = text.replace(/==(.*?)==/g, '<mark class="obsidian-highlight">$1</mark>');
-
-  // Convert Tags (#tagname)
-  text = text.replace(/(^|\s)#([a-zA-Z0-9_/-]+)/g, '$1<span class="obsidian-tag">#$2</span>');
-
-  // Convert Wikilinks [[Link]] or [[Link|Text]]
-  text = text.replace(/\[\[(.*?)\]\]/g, (match, inner) => {
-    let [link, display] = inner.split('|');
-    display = display || link;
-    // Escape quotes so it doesn't break the HTML onclick attribute
-    const safeLink = link.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-    return `<span class="wikilink" title="${link}" onclick="openWikilink('${safeLink}')">${display}</span>`;
-  });
-
-  // Convert Callouts (> [!info] Title)
-  text = text.replace(/^> \[!([a-zA-Z]+)\](.*?)\n([\s\S]*?)(?=\n\n|\n> \[!|$)/gm, (match, type, title, content) => {
-    const cleanContent = content.replace(/^>\s?/gm, '');
-    return `<div class="callout callout-${type.toLowerCase()}">
-              <div class="callout-title">${title.trim() || type.toUpperCase()}</div>
-              <div class="callout-content">\n\n${cleanContent}\n\n</div>
-            </div>`;
-  });
-
-  return text;
-}
-
-/* ── VAULT INDEX & WIKILINKS ─────────────────── */
-let vaultIndex = null;
-async function getVaultIndex() {
-  if (vaultIndex) return vaultIndex;
-  try {
-    // Attempt to fetch the entire repository tree to allow global file searching
-    let res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/main?recursive=1`);
-    if (!res.ok) {
-      // Fallback to 'master' branch if 'main' doesn't exist
-      res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/master?recursive=1`);
-    }
-    if (!res.ok) throw new Error('Could not fetch vault index');
-    
-    const data = await res.json();
-    vaultIndex = data.tree.filter(t => t.type === 'blob'); // Keep only files
-    return vaultIndex;
-  } catch (e) {
-    console.error('Vault index error:', e);
-    return [];
-  }
-}
-
-window.openWikilink = async function(target) {
-  showToast(`Searching for ${target}...`);
-  const index = await getVaultIndex();
-  
-  let searchName = target.trim().toLowerCase();
-  // Assume we are looking for a markdown file if there's no extension
-  if (!searchName.endsWith('.md')) searchName += '.md';
-
-  // Find the exact file anywhere in the repository structure
-  const found = index.find(f => f.path.split('/').pop().toLowerCase() === searchName);
-  
-  if (found) {
-    const parts = found.path.split('/');
-    const folderPath = parts.slice(0, -1).join('/'); // Get the folder path
-    
-    // Auto-navigate the sidebar to the exact folder
-    await navigate(folderPath);
-    
-    // Look up the exact file item in the newly loaded directory array
-    const fileData = allItems.find(i => i.path === found.path);
-    if (fileData) {
-      activeFile = fileData.path;
-      renderItems(allItems, folderPath, searchInput.value); // Highlight in sidebar
-      viewFile(fileData); // Open and read the file
-    }
-  } else {
-    showToast(`File not found: ${target}`);
-  }
-};
-
-
-/* ── API FETCH & RENDER ──────────────────────── */
-async function navigate(path = '') {
-  if (abortCtrl) abortCtrl.abort();
-  abortCtrl = new AbortController();
-  currentPath = path;
-  
-  history.pushState({path}, '', path ? `?path=${encodeURIComponent(path)}` : window.location.pathname);
-  
-  const parts = path ? path.split('/').filter(Boolean) : [];
-  breadcrumb.innerHTML = `<a onclick="navigate('')">${REPO}</a>`;
-  let acc='';
-  parts.forEach((part,i)=>{
-    acc+=(acc?'/':'')+part;
-    breadcrumb.innerHTML += ` <span class="sep">/</span> ` + (i===parts.length-1 ? `<span class="cur">${part}</span>` : `<a onclick="navigate('${acc}')">${part}</a>`);
-  });
-
-  if (dirCache.has(path)) return renderItems(dirCache.get(path), path, searchInput.value);
-
+/* ── INITIALIZE VAULT (GLOBAL TREE) ──────────── */
+async function initVault() {
   fileList.innerHTML = Array.from({length:6},(_,i)=>`<div class="skeleton skeleton-item" style="animation-delay:${i*35}ms"></div>`).join('');
   try {
-    const res = await fetch(API + path, { signal: abortCtrl.signal });
-    if (!res.ok) throw new Error();
+    // We only need 1 API call for the entire website. Uses PAT if available.
+    let res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/main?recursive=1`, { headers: getHeaders() });
+    if (!res.ok) res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/master?recursive=1`, { headers: getHeaders() });
+    if (!res.ok) throw new Error('Failed to load. Rate limit hit?');
+
     const data = await res.json();
-    const arr = Array.isArray(data) ? data : [data];
-    dirCache.set(path, arr);
-    allItems = arr;
-    renderItems(arr, path, searchInput.value);
-  } catch (e) {
-    if (e.name !== 'AbortError') { fileList.innerHTML = `<div class="empty-list">Error loading folder.</div>`; fileCount.textContent='0'; }
-  }
-}
-
-function renderItems(contents, path, filter) {
-  fileList.innerHTML = '';
-  const q = filter.trim().toLowerCase();
-  
-  const sorted = [...contents].sort((a,b) => (a.type === 'dir' ? -1 : 1) - (b.type === 'dir' ? -1 : 1) || a.name.localeCompare(b.name));
-  const filtered = q ? sorted.filter(i => i.name.toLowerCase().includes(q)) : sorted;
-  fileCount.textContent = filtered.length;
-
-  if (path && !q) {
-    const parent = path.split('/').slice(0, -1).join('/');
-    const btn = document.createElement('button');
-    btn.className = 'file-item back-item'; 
-    btn.innerHTML = `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg><span class="file-item-name">.. parent folder</span>`;
-    btn.onclick = () => navigate(parent);
-    fileList.appendChild(btn);
-  }
-
-  if(!filtered.length){
-    fileList.innerHTML+=`<div class="empty-list">${q?`No matches for "${q}"`:'Empty directory'}</div>`;
-    return;
-  }
-
-  filtered.forEach((item,idx) => {
-    const el = document.createElement('button');
-    el.className = 'file-item' + (activeFile===item.path ? ' active':''); 
-    el.style.animationDelay=`${idx*15}ms`;
-    el.innerHTML = `${fileIcon(item.name,item.type)}<span class="file-item-name">${item.name}</span>${item.type==='file'?extBadge(item.name):''}`;
+    vaultIndex = data.tree; // Global flat list
     
-    if (item.type === 'dir') {
-      el.onclick = () => navigate(item.path);
-    } else {
-      el.onclick = () => { document.querySelectorAll('.file-item').forEach(e=>e.classList.remove('active')); el.classList.add('active'); activeFile = item.path; viewFile(item); };
-    }
-    fileList.appendChild(el);
-  });
+    // Build Hierarchical Tree
+    treeRoot = {};
+    vaultIndex.forEach(item => {
+      const parts = item.path.split('/');
+      let current = treeRoot;
+      for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+        if (!current[part]) {
+          current[part] = { _item: i === parts.length - 1 ? item : { type: 'tree', path: parts.slice(0, i+1).join('/') }, _children: {} };
+        }
+        if (i < parts.length - 1) current = current[part]._children;
+      }
+    });
+
+    renderSidebar();
+    
+    // Load URL state
+    const urlPath = new URLSearchParams(window.location.search).get('path');
+    if (urlPath) openFileFromTree(urlPath);
+    else updateBreadcrumbs();
+
+  } catch (e) {
+    console.error(e);
+    fileList.innerHTML = `<div class="empty-list" style="color:var(--danger)">API Limit reached.<br><br>Please open Settings (gear icon) and paste a GitHub Token.</div>`;
+  }
 }
 
-async function viewFile(item) {
-  viewerTitle.textContent = item.name;
-  viewerTitle.classList.remove('placeholder');
-  const ext = item.name.split('.').pop().toLowerCase();
+/* ── NESTED SIDEBAR RENDERER ─────────────────── */
+function renderSidebar(filterText = '') {
+  const q = filterText.trim().toLowerCase();
   
-  viewerBadge.style.display=''; viewerBadge.textContent='.'+ext;
-  fileViewer.innerHTML = `<div class="state-card"><div class="skeleton skeleton-item" style="width:200px"></div></div>`;
+  function buildHTML(node) {
+    let html = '';
+    const keys = Object.keys(node).sort((a,b) => {
+      const aIsDir = node[a]._item.type === 'tree';
+      const bIsDir = node[b]._item.type === 'tree';
+      if(aIsDir !== bIsDir) return aIsDir ? -1 : 1;
+      return a.localeCompare(b);
+    });
 
-  // Image Preview Check
-  if(/\.(jpe?g|png|gif|webp|svg)$/i.test(item.name)) {
-    fileViewer.innerHTML=`<div class="image-preview"><img src="${item.download_url}" alt="${item.name}"></div>`;
+    for(const key of keys) {
+      const child = node[key];
+      const item = child._item;
+      item.name = key;
+
+      if(item.type === 'tree') {
+        const childrenHtml = buildHTML(child._children);
+        if (q && !childrenHtml) continue; // Hide empty folders during search
+        
+        const isOpen = q ? 'open' : '';
+        html += `<details class="sidebar-folder" ${isOpen}>
+                  <summary class="folder-summary">
+                    <svg class="folder-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    ${fileIcon(item.name, 'tree')}
+                    <span class="file-item-name">${key}</span>
+                  </summary>
+                  <div class="folder-contents">${childrenHtml}</div>
+                </details>`;
+      } else {
+        if (q && !key.toLowerCase().includes(q)) continue;
+        const isActive = activeFile === item.path ? 'active' : '';
+        const safePath = item.path.replace(/'/g, "\\'");
+        html += `<button class="file-item ${isActive}" onclick="openFileFromTree('${safePath}')">
+                  ${fileIcon(item.name, 'blob')}
+                  <span class="file-item-name">${item.name}</span>
+                  ${item.type==='blob' ? extBadge(item.name) : ''}
+                </button>`;
+      }
+    }
+    return html;
+  }
+
+  fileList.innerHTML = buildHTML(treeRoot);
+  
+  // Update file count
+  if(q) {
+    fileCount.textContent = fileList.querySelectorAll('.file-item').length;
+  } else {
+    fileCount.textContent = vaultIndex.filter(i=>i.type==='blob').length;
+  }
+}
+
+searchInput.addEventListener('input', e => renderSidebar(e.target.value));
+
+/* ── FILE READING (Bypasses API limits) ──────── */
+async function openFileFromTree(path) {
+  activeFile = path;
+  history.pushState({path}, '', `?path=${encodeURIComponent(path)}`);
+  
+  // Re-render sidebar to apply 'active' class accurately
+  renderSidebar(searchInput.value);
+  updateBreadcrumbs();
+
+  const item = vaultIndex.find(f => f.path === path);
+  if(!item) return;
+
+  const name = path.split('/').pop();
+  const ext = name.split('.').pop().toLowerCase();
+  viewerTitle.textContent = name;
+  viewerTitle.classList.remove('placeholder');
+  viewerBadge.style.display=''; viewerBadge.textContent='.'+ext;
+
+  fileViewer.innerHTML = `<div class="state-card"><div class="skeleton skeleton-item" style="width:200px"></div><div class="skeleton skeleton-item" style="width:100%"></div></div>`;
+
+  // We construct the raw download URL directly! ZERO API calls used for reading!
+  const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${path.split('/').map(encodeURIComponent).join('/')}`;
+
+  if(/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) {
+    fileViewer.innerHTML=`<div class="image-preview"><img src="${rawUrl}" alt="${name}"></div>`;
     return;
   }
 
   try {
-    const res = await fetch(item.download_url);
+    const res = await fetch(rawUrl);
+    if (!res.ok) throw new Error();
     const raw = await res.text();
 
     if (ext === 'md') {
       const div = document.createElement('div');
       div.className = 'md-content';
       
-      let processedRaw = preprocessObsidian(raw);
+      const { text: processedRaw, propertiesHtml } = preprocessObsidian(raw);
       
-      // Ensure strict breaks and standard markdown parsing (like Obsidian)
-      div.innerHTML = marked.parse(processedRaw, { breaks: true, gfm: true });
+      // Render properties box at the very top, then parsed markdown
+      div.innerHTML = propertiesHtml + marked.parse(processedRaw, { breaks: true, gfm: true });
       
       fileViewer.innerHTML = '';
       fileViewer.appendChild(div);
 
-      div.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+      // Fix relative markdown images (![img](./img.png))
+      div.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+          const parts = activeFile.split('/');
+          parts.pop(); // Remove current filename
+          const relativeParts = src.split('/');
+          for (const p of relativeParts) {
+            if (p === '..') parts.pop();
+            else if (p !== '.') parts.push(p);
+          }
+          img.src = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${parts.join('/').split('/').map(encodeURIComponent).join('/')}`;
+        }
+      });
 
-      if (window.MathJax) {
-        MathJax.typesetPromise([div]).catch(err => console.log('MathJax Error:', err));
-      }
+      div.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+      if (window.MathJax) MathJax.typesetPromise([div]).catch(e => console.log('MathJax Error:', e));
 
     } else {
       fileViewer.innerHTML = `<div class="raw-content">${raw.replace(/</g, '&lt;')}</div>`;
@@ -762,21 +580,164 @@ async function viewFile(item) {
   }
 }
 
+/* ── PRE-PROCESS OBSIDIAN SYNTAX ─────────────── */
+function preprocessObsidian(rawText) {
+  let text = rawText;
+  let propertiesHtml = '';
+
+  // 1. Extract Frontmatter (YAML Properties)
+  const fmRegex = /^---\n([\s\S]*?)\n---(\n|$)/;
+  const fmMatch = text.match(fmRegex);
+  if (fmMatch) {
+    text = text.replace(fmRegex, ''); // Remove it from raw markdown
+    const lines = fmMatch[1].split('\n').filter(l => l.trim());
+    let props = '';
+    
+    lines.forEach(l => {
+      const colonIdx = l.indexOf(':');
+      if (colonIdx === -1) return;
+      const key = l.substring(0, colonIdx).trim();
+      let val = l.substring(colonIdx + 1).trim();
+
+      if (val.startsWith('[') && val.endsWith(']')) {
+        const items = val.slice(1, -1).split(',').map(i => i.trim());
+        val = items.map(i => `<span class="property-pill">${i.replace(/['"]/g,'')}</span>`).join('');
+      } else if (val) {
+        if(val.startsWith('"') && val.endsWith('"')) val = val.slice(1,-1);
+        val = `<span class="property-pill">${val}</span>`;
+      }
+      props += `<div class="property-row"><div class="property-key">${key}</div><div class="property-value">${val}</div></div>`;
+    });
+    if (props) propertiesHtml = `<div class="obsidian-properties">${props}</div>`;
+  }
+
+  // 2. Checkboxes
+  text = text.replace(/^(\s*)- \[ \]/gm, '$1- <input type="checkbox" disabled>');
+  text = text.replace(/^(\s*)- \[(x|X)\]/gm, '$1- <input type="checkbox" checked disabled>');
+
+  // 3. Highlights
+  text = text.replace(/==(.*?)==/g, '<mark class="obsidian-highlight">$1</mark>');
+
+  // 4. Tags
+  text = text.replace(/(^|\s)#([a-zA-Z0-9_/-]+)/g, '$1<span class="obsidian-tag">#$2</span>');
+
+  // 5. Embeds ![[image.png]]
+  text = text.replace(/!\[\[(.*?)\]\]/g, (match, inner) => {
+    let [filename, size] = inner.split('|');
+    filename = filename.trim();
+    
+    // Search global vault index for the file
+    const found = vaultIndex.find(f => f.path.endsWith(filename));
+    if (found) {
+      const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${found.path.split('/').map(encodeURIComponent).join('/')}`;
+      if (/\.(jpe?g|png|gif|webp|svg)$/i.test(filename)) {
+        let widthStyle = size ? `width:${size}px;` : 'max-width:100%;';
+        return `<img src="${url}" alt="${filename}" style="${widthStyle} border-radius:var(--radius-lg); margin:8px 0; box-shadow:0 4px 16px rgba(0,0,0,0.1);">`;
+      } else {
+        return `<a class="wikilink" onclick="openWikilink('${found.path.replace(/'/g, "\\'")}')">📎 ${filename}</a>`;
+      }
+    }
+    return `<span style="color:var(--danger)">⚠️ Missing Embed: ${filename}</span>`;
+  });
+
+  // 6. Wikilinks [[Link#Header]]
+  text = text.replace(/\[\[(.*?)\]\]/g, (match, inner) => {
+    let [link, display] = inner.split('|');
+    display = display || link;
+    let [fileTarget, anchor] = link.split('#');
+    fileTarget = fileTarget.trim();
+
+    const safeLink = fileTarget.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    const anchorPart = anchor ? `', '${anchor.replace(/'/g, "\\'")}` : `', ''`;
+
+    return `<span class="wikilink" title="${link}" onclick="openWikilink('${safeLink}${anchorPart}')">${display}</span>`;
+  });
+
+  // 7. Callouts
+  text = text.replace(/^> \[!([a-zA-Z]+)\](.*?)\n([\s\S]*?)(?=\n\n|\n> \[!|$)/gm, (match, type, title, content) => {
+    const cleanContent = content.replace(/^>\s?/gm, '');
+    return `<div class="callout callout-${type.toLowerCase()}">
+              <div class="callout-title">${title.trim() || type.toUpperCase()}</div>
+              <div class="callout-content">\n\n${cleanContent}\n\n</div>
+            </div>`;
+  });
+
+  return { text, propertiesHtml };
+}
+
+/* ── WIKILINK ANCHOR NAVIGATION ──────────────── */
+window.openWikilink = async function(target, anchor='') {
+  let searchName = target.trim().toLowerCase();
+  
+  if(!searchName) {
+    if(anchor) scrollToAnchor(anchor);
+    return;
+  }
+
+  showToast(`Opening ${target}...`);
+  if (!searchName.endsWith('.md')) searchName += '.md';
+
+  const found = vaultIndex.find(f => f.path.toLowerCase().endsWith(searchName));
+  if (found) {
+    await openFileFromTree(found.path);
+    if(anchor) setTimeout(() => scrollToAnchor(anchor), 400); // Wait for render
+  } else {
+    showToast(`File not found: ${target}`);
+  }
+};
+
+function scrollToAnchor(anchor) {
+  const id = anchor.toLowerCase().replace(/[^\w]+/g, '-');
+  const el = document.getElementById(id);
+  if(el) {
+    el.scrollIntoView({behavior: 'smooth', block: 'start'});
+    el.style.color = 'var(--accent)';
+    setTimeout(()=>el.style.color='', 2000);
+  }
+}
+
+function updateBreadcrumbs() {
+  if(!activeFile) {
+    breadcrumb.innerHTML = `<span class="cur" style="color:var(--text3)">${REPO}</span>`;
+    return;
+  }
+  const parts = activeFile.split('/');
+  breadcrumb.innerHTML = `<span class="cur" style="color:var(--text3)">${REPO}</span>`;
+  parts.forEach((part, i) => {
+    breadcrumb.innerHTML += ` <span class="sep">/</span> <span class="cur" ${i===parts.length-1?'style="color:var(--text)"':''}>${part}</span>`;
+  });
+}
+
+/* ── SIDEBAR RESIZE ──────────────────────────── */
+document.getElementById('sidebarToggle').addEventListener('click', () => {
+  sidebarOpen = !sidebarOpen;
+  sidebar.classList.toggle('collapsed', !sidebarOpen);
+  workspace.classList.toggle('sidebar-collapsed', !sidebarOpen);
+  document.getElementById('toggleIcon').style.transform = sidebarOpen ? '' : 'rotate(180deg)';
+});
+(function(){
+  let drag=false,sx=0,sw=0;
+  const h=document.createElement('div'); h.className='resize-handle'; sidebar.after(h);
+  h.addEventListener('mousedown',e=>{ if(!sidebarOpen)return;drag=true;sx=e.clientX;sw=sidebar.offsetWidth; h.classList.add('dragging');document.body.style.cssText+='cursor:col-resize;user-select:none'; });
+  document.addEventListener('mousemove',e=>{ if(!drag)return; const w=Math.max(160,Math.min(500,sw+e.clientX-sx)); sidebar.style.width=w+'px';workspace.style.setProperty('--sidebar-w',w+'px'); });
+  document.addEventListener('mouseup',()=>{ if(!drag)return;drag=false;h.classList.remove('dragging'); document.body.style.cursor='';document.body.style.userSelect=''; });
+})();
+
 /* ── KEYBOARD SHORTCUTS ──────────────────────── */
 document.addEventListener('keydown',e=>{
-  if(e.target===searchInput){if(e.key==='Escape'){searchInput.value='';renderItems(allItems,currentPath,'');searchInput.blur();}return;}
-  if(e.key==='b'||e.key==='B'){ e.preventDefault(); toggleSidebar(); }
+  if(e.target===searchInput){if(e.key==='Escape'){searchInput.value='';renderSidebar();searchInput.blur();}return;}
   if(e.key==='f'||e.key==='F'){ e.preventDefault(); searchInput.focus(); }
-  if(e.key==='r'||e.key==='R'){ e.preventDefault(); dirCache.delete(currentPath); navigate(currentPath); showToast('Refreshed vault'); }
-  if(e.key==='Escape'&&currentPath) navigate(currentPath.split('/').slice(0,-1).join('/'));
+  if(e.key==='r'||e.key==='R'){ e.preventDefault(); initVault(); showToast('Refreshed vault'); }
 });
 
-document.getElementById('refreshBtn').onclick = () => { dirCache.delete(currentPath); navigate(currentPath); showToast('Refreshed vault'); };
-searchInput.addEventListener('input', e => renderItems(allItems, currentPath, e.target.value));
-window.addEventListener('popstate', () => navigate(new URLSearchParams(window.location.search).get('path') || ''));
+document.getElementById('refreshBtn').onclick = () => { initVault(); showToast('Refreshed vault'); };
+window.addEventListener('popstate', () => {
+  const p = new URLSearchParams(window.location.search).get('path');
+  if(p) openFileFromTree(p);
+});
 
-// Initialize
-navigate(new URLSearchParams(window.location.search).get('path') || '');
+// Start the Engine!
+initVault();
 </script>
 </body>
 </html>
