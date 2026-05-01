@@ -824,6 +824,7 @@ async function openFileFromTree(path) {
   if(/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) {
     fileViewer.innerHTML=`<div class="image-preview"><img src="${rawUrl}" alt="${name}"></div>`;
     tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
+    propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
     updateBacklinks(path);
     return;
   }
@@ -842,7 +843,11 @@ async function openFileFromTree(path) {
       
       const { text: processedRaw, propertiesHtml } = preprocessObsidian(raw);
       
-      div.innerHTML = propertiesHtml + marked.parse(processedRaw, { breaks: true, gfm: true });
+      // Put properties in the right sidebar
+      propertiesContainer.innerHTML = propertiesHtml || '<div style="font-size:12px;color:var(--text3)">No properties</div>';
+      
+      // Render clean markdown in the center
+      div.innerHTML = marked.parse(processedRaw, { breaks: true, gfm: true });
       
       fileViewer.innerHTML = '';
       fileViewer.appendChild(div);
@@ -870,6 +875,7 @@ async function openFileFromTree(path) {
     } else {
       fileViewer.innerHTML = `<div class="raw-content">${raw.replace(/</g, '&lt;')}</div>`;
       tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
+      propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
       updateBacklinks(path);
     }
   } catch (e) {
