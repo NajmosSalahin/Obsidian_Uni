@@ -978,10 +978,11 @@ function preprocessObsidian(rawText) {
     let [fileTarget, anchor] = link.split('#');
     fileTarget = fileTarget.trim();
 
+    // Safely format both the target and the anchor without creating dangling quotes
     const safeLink = fileTarget.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-    const anchorPart = anchor ? `', '${anchor.replace(/'/g, "\\'")}` : `', ''`;
+    const safeAnchor = anchor ? anchor.replace(/'/g, "\\'").replace(/"/g, '&quot;') : '';
 
-    return `<span class="wikilink" title="${link}" onclick="openWikilink('${safeLink}${anchorPart}')">${display}</span>`;
+    return `<span class="wikilink" title="${link}" onclick="openWikilink('${safeLink}', '${safeAnchor}')">${display}</span>`;
   });
 
   text = text.replace(/^> \[!([a-zA-Z]+)\](.*?)\n([\s\S]*?)(?=\n\n|\n> \[!|$)/gm, (match, type, title, content) => {
