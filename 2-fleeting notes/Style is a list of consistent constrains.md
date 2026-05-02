@@ -14,7 +14,8 @@ aliases:
 4. Not going outside for many days
 5. Not getting enough sunlight
 6. Not getting enough cold water
-7. 
+
+
 
 
 
