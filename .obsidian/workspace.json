@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Untitled 3.md",
+                "file": "2-fleeting notes/Style is a list of consistent constrains.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 3"
+              "title": "Style is a list of consistent constrains"
             }
           }
         ]
@@ -105,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Untitled 3.md"
+                "file": "2-fleeting notes/Style is a list of consistent constrains.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Untitled 3"
+              "title": "File properties for Style is a list of consistent constrains"
             }
           },
           {
@@ -227,8 +227,9 @@
   },
   "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
+    "6-templates/fleeting template.md",
+    "2-fleeting notes/Style is a list of consistent constrains.md",
     "2-fleeting notes/Distributions.md",
-    "2-fleeting notes/Untitled 3.md",
     "2-fleeting notes/Untitled 2.md",
     "2-fleeting notes/Untitled.md",
     "2-fleeting notes/Linear Mapping.md",
@@ -256,7 +257,6 @@
     "8-areas",
     "7-projects",
     "2-fleeting notes/Energy precedes emotion.md",
-    "6-templates/fleeting template.md",
     "0-myself/my routine.md",
     "3-literature notes/struggle-concept.md",
     "6-templates/daily note.md",

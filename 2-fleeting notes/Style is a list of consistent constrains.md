@@ -1,12 +1,11 @@
 ---
-title: <% tp.file.title %>
-created: <% tp.file.creation_date("YYYY-MM-DD") %>
+title: Style is a list of consistent constrains
+created: 2026-05-02
 type: fleeting
 tags:
   - fleeting
 aliases:
 ---
-
 
 
 
