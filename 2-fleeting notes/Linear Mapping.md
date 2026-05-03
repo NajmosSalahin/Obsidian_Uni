@@ -2,8 +2,8 @@
 
 ### Definitions
 
-<mark class="hltr-cyan">**Mapping:** Let $A$ and $B$ be arbitrary nonempty sets. Suppose to each element in $a\in A$ there is assigned a unique element of $B$; called the image of $a$. The collection $f$ of such assignments is called a mapping (or map) from $A$ into $B$, and it is denoted by $f:A\rightarrow B$.
-</mark>
+**Mapping:** Let $A$ and $B$ be arbitrary nonempty sets. Suppose to each element in $a\in A$ there is assigned a unique element of $B$; called the image of $a$. The collection $f$ of such assignments is called a mapping (or map) from $A$ into $B$, and it is denoted by $f:A\rightarrow B$.
+
 The set $A$ is called the domain of the mapping, and $B$ is called the target set. We write $f(a)$, read "f of a," for the unique element of $B$ that $f$ assigns to $a\in A$. One may also view a mapping $f:A\rightarrow B$ as a computer that, for each input value $a\in A.$ produces a unique output $f(a)\in B$.
 
 **Image and Inverse Image:** Consider a mapping $f:A\rightarrow B$. If $A^{\prime}$ is any subset of $A$, then $f(A^{\prime})$ denotes the set of images of elements of $A^{\prime}$ and if $B^{\prime}$ is any subset of $B$, then $f^{-1}(B^{\prime})$ denotes the set of elements of $A$, each of whose image lies in $B$. That is, $f(A^{\prime})=\{f(a):a\in A^{\prime}\}$ and $f^{-1}(B^{\prime})=\{a\in A:f(a)\in B^{\prime}\}$.
