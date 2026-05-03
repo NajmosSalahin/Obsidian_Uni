@@ -1,7 +1,7 @@
 {
   "cssTheme": "Minimal",
   "accentColor": "#7abd9c",
-  "textFontFamily": "OpenDyslexic",
+  "textFontFamily": "Fira Code,Fira Mono",
   "interfaceFontFamily": "Fira Mono",
   "monospaceFontFamily": "JetBrains Mono",
   "baseFontSize": 18,
