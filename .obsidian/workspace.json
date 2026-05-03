@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Untitled 3.md",
+                "file": "2-fleeting notes/Linear Mapping.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 3"
+              "title": "Linear Mapping"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5,
-    "collapsed": true
+    "width": 222.5
   },
   "right": {
     "id": "19a9e79c820ee9d4",
@@ -105,10 +104,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Untitled 3.md"
+                "file": "2-fleeting notes/Linear Mapping.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Untitled 3"
+              "title": "File properties for Linear Mapping"
             }
           },
           {
@@ -225,10 +224,10 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "c3fe80757e7522b4",
+  "active": "3222cfdb6bc10aea",
   "lastOpenFiles": [
-    "2-fleeting notes/Style is a list of consistent constrains.md",
     "2-fleeting notes/Untitled 3.md",
+    "2-fleeting notes/Style is a list of consistent constrains.md",
     "6-templates/fleeting template.md",
     "2-fleeting notes/Distributions.md",
     "2-fleeting notes/Untitled 2.md",
