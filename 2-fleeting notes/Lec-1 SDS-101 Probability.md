@@ -9,9 +9,10 @@ description: "We introduce sample spaces and the naive definition of probability
 tags:
   - "clippings"
 ---
-< https://www.youtube.com/watch?v=KbB0FjPg0mw >
+<mark class="hltr-cyan">> https://www.youtube.com/watch?v=KbB0FjPg0mw</mark> 
+ 
 We introduce sample spaces and the naive definition of probability (we'll get to the non-naive definition later). To apply the naive definition, we need to be able to count. So we introduce the multiplication rule, binomial coefficients, and the sampling table (for sampling with/without replacement when order does/doesn't matter).
-
+  
 ## Transcript
 
 ### Strategic Practice
