@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Lec-1 SDS-101 Probability.md",
+                "file": "2-fleeting notes/Linear Mapping.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Lec-1 SDS-101 Probability"
+              "title": "Linear Mapping"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5
+    "width": 222.5,
+    "collapsed": true
   },
   "right": {
     "id": "19a9e79c820ee9d4",
@@ -104,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Lec-1 SDS-101 Probability.md"
+                "file": "2-fleeting notes/Linear Mapping.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Lec-1 SDS-101 Probability"
+              "title": "File properties for Linear Mapping"
             }
           },
           {
@@ -226,8 +227,8 @@
   },
   "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
-    "2-fleeting notes/Untitled 4.md",
     "2-fleeting notes/Lec-1 SDS-101 Probability.md",
+    "2-fleeting notes/Untitled 4.md",
     "2-fleeting notes/Linear Mapping.md",
     "2-fleeting notes/Untitled 3.md",
     "2-fleeting notes/Style is a list of consistent constrains.md",
