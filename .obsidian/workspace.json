@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Untitled 4.md",
+                "file": "2-fleeting notes/Lec-1 SDS-101 Probability.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 4"
+              "title": "Lec-1 SDS-101 Probability"
             }
           }
         ]
@@ -104,10 +104,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Untitled 4.md"
+                "file": "2-fleeting notes/Lec-1 SDS-101 Probability.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Untitled 4"
+              "title": "File properties for Lec-1 SDS-101 Probability"
             }
           },
           {
@@ -226,8 +226,8 @@
   },
   "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
-    "2-fleeting notes/Lec-1 SDS-101 Probability.md",
     "2-fleeting notes/Untitled 4.md",
+    "2-fleeting notes/Lec-1 SDS-101 Probability.md",
     "2-fleeting notes/Linear Mapping.md",
     "2-fleeting notes/Untitled 3.md",
     "2-fleeting notes/Style is a list of consistent constrains.md",

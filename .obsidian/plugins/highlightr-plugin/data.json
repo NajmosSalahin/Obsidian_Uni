@@ -1,6 +1,6 @@
 {
   "highlighterStyle": "none",
-  "highlighterMethods": "css-classes",
+  "highlighterMethods": "inline-styles",
   "highlighters": {
     "Gruvbox-red": "#cc241d",
     "gruvbox-green": "#98971a",
