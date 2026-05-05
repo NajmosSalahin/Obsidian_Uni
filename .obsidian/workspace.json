@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Linear Mapping.md",
+                "file": "2-fleeting notes/Untitled 5.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Linear Mapping"
+              "title": "Untitled 5"
             }
           }
         ]
@@ -105,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Linear Mapping.md"
+                "file": "2-fleeting notes/Untitled 5.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Linear Mapping"
+              "title": "File properties for Untitled 5"
             }
           },
           {
@@ -227,9 +227,10 @@
   },
   "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
+    "2-fleeting notes/Linear Mapping.md",
+    "2-fleeting notes/Untitled 5.md",
     "2-fleeting notes/Lec-1 SDS-101 Probability.md",
     "2-fleeting notes/Untitled 4.md",
-    "2-fleeting notes/Linear Mapping.md",
     "2-fleeting notes/Untitled 3.md",
     "2-fleeting notes/Style is a list of consistent constrains.md",
     "6-templates/fleeting template.md",
@@ -248,7 +249,6 @@
     "8-areas",
     "7-projects",
     "4-bases/atomic.base",
-    "2-fleeting notes/Untitled 5.md",
     "2-fleeting notes/function.md",
     "3-literature notes/limit.md",
     "2-fleeting notes/Ninja.md",
