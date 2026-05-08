@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Untitled 5.md",
+                "file": "6-templates/fleeting template.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 5"
+              "title": "fleeting template"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5,
-    "collapsed": true
+    "width": 222.5
   },
   "right": {
     "id": "19a9e79c820ee9d4",
@@ -105,10 +104,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Untitled 5.md"
+                "file": "6-templates/fleeting template.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Untitled 5"
+              "title": "File properties for fleeting template"
             }
           },
           {
@@ -227,8 +226,8 @@
   },
   "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
-    "2-fleeting notes/Linear Mapping.md",
     "2-fleeting notes/Untitled 5.md",
+    "2-fleeting notes/Linear Mapping.md",
     "2-fleeting notes/Lec-1 SDS-101 Probability.md",
     "2-fleeting notes/Untitled 4.md",
     "2-fleeting notes/Untitled 3.md",
