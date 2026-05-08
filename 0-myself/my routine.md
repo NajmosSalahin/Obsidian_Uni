@@ -3,9 +3,113 @@ tags:
 type: self
 created: 2025-10-04
 ---
-You're right. That line was too much—overcooked metaphor that sounds like it's trying to be profound instead of just saying what happens. I went back through the last version and found a handful of others that leaned that way: things like "quiet anchor," "bleed the confusion onto the page," "washing away the commute," "I'm unclenching the day." I get how they break the tone you wanted.
+**Phase 0: Pre-Launch (Night Before, ~30 min before bed)**
+1. Open tomorrow’s daily note, paste template (`## Evening Review`, `## Top 3`, capture section)
+2. Lay out full outfit on a chair
+3. Fill water glass, place on nightstand
+4. Move phone charger across the room
+5. Mentally close the day: *“Today’s packed, tomorrow’s fresh”*
 
-So here's the same routine, stripped of that stuff. Still a conversation with a friend, still every micro-habit, still the quotes, headers, and time blocks. Just cleaner.
+---
+
+**Phase 1: Launch Sequence (5:45 AM – 7:45 AM)**
+1. Wake without snooze, drink half the bedside water
+2. Make bed immediately
+3. Bathroom: splash face, brush teeth (+10 calf raises), tongue scrape, moisturize
+4. Rate energy /10. If ≥5, do 5-min primer (box breathing, forward fold flow, twist, child’s pose); if <5, warm shower
+5. Shower (end with 30 sec cool water)
+6. Breakfast: whole foods, phone in other room, fork down between bites, chew slowly
+7. Open daily note → write Top 3 non-negotiables (at least one Pomodoro-sized), link each to project note
+8. Write one if/then: *“If urge to scroll during deep work → phone in bag + 3 breaths”*
+9. Bag check (laptop, charger, notebook, water, phone) – leave by 7:45
+
+---
+
+**Phase 2: Deep Work Zone (On Campus)**
+1. On arrival: turn on full DND, phone into bag pouch
+2. Pick seat: first 3 rows, off-center, water bottle on desk
+3. Pre-lecture: write 1 curiosity question from last session’s struggle tags
+4. In notes: wide right margin, mark confusion with `?` and short tag, do not resolve
+5. Top of every hour (or topic change): 3 sips of water
+6. Post-class (immediately, 2 min): open daily note, brain dump key takeaways, confusions, links
+7. Tag each confusion `#struggle-concept` and link to struggle hub note
+8. End ritual: close note, 3 deep breaths, stand, stretch arms overhead
+
+---
+
+**Phase 3: Recovery & Re-Entry (Post-Campus)**
+1. Bag on designated hook, say *“Recovery time, off the clock”*
+2. Wash hands + splash face
+3. Meal: eat 1 cup veggies first, finish before touching rest
+4. Mid-meal: fork down, rate hunger /10
+5. Rate fatigue /10
+   - High (≥7): 20-min nap (alarm 25 min), wake – drink water + 5 jumping jacks/downward dog
+   - Moderate (4-6): 20-30 min NSDR (Yoga Nidra), end with *“I am restored”*
+   - Low (<4): skip, do restful non-work
+
+---
+
+**Phase 4: Modular Evening (Execution & Growth)**
+1. Open capacity matrix, check time + energy + #struggle tags → declare version (A/B/C)
+2. Desk setup: clear space, Top 3 sticky note visible, Pomodoro timer 25 min
+3. First Pomodoro: resolve most foundational `#struggle-concept` → create atomic note, replace tag with `#resolved`
+4. Subsequent Pomodoros: assignment execution, checkbox each completed task + short victory phrase
+5. Pomodoro breaks: stand, 20-ft gaze, 10 air squats, sip water, log energy
+6. After academic block, shift physical space for upskill (if version includes it)
+7. Upskill Pomodoros: work from skill pathway note, final 2 min capture key insight + open question + link
+8. Write one sentence in `## Growth Log`, then declare *“Guilt-free time. I earned it.”*
+9. Disconnect: hobby, call, film – zero productivity overlay
+
+---
+
+**Phase 5: Shutdown Sequence (Wind Down)**
+1. 30 min before digital sunset: open `## Evening Review`, celebrate Top 3, write brief celebration
+2. `🧠 Loose ends`: dump everything, then assign one priority to tomorrow’s pre-made note
+3. Physical release: neck rolls, doorway stretch, forward fold, supine twist, legs-up-wall
+4. Deliberately relax jaw and eyes during stretch
+5. Digital sunset: phone charger in other room, standalone alarm clock
+6. Analogue wind-down: physical book, freehand journal, sleep story, or gratitude log (3 small moments)
+7. Bedtime: room cool/dark, 4-7-8 breathing 4 cycles, final exhale: *“The day is closed”*
+
+---
+
+**Phase 6: Freeday Eve – Wednesday Night (Weekend Opens)**
+1. After normal shutdown: open `[[Weekend Deep Dive]]`, copy all unresolved `#struggle-concepts` from Mon-Wed into it
+2. Write at top: *“Parked. Return Sunday evening if still relevant.”* Close note.
+3. Physically remove 3 academic items from desk, replace with non-academic object (novel, candle)
+4. Write one feeling-based intention on a sticky note (e.g. *“I want to feel rested and curious”*) – place on mirror/coffee tin
+5. Normal stretching + digital sunset + breath; last exhale: *“The week is complete. I step into the freedays.”*
+
+---
+
+**Phase 7: Thursday – First Freeday (Rest & Chosen Work)**
+1. Wake naturally, no alarm. First thought: *“No obligations until I choose one”*
+2. Water, bed made, bathroom reset (look in mirror: *“Today is mine”*)
+3. Morning lounge: make coffee/tea slowly, read 5 pages of a pleasure book
+4. Breakfast: no screens, read `[[Weekend Deep Dive]]` list but don’t act, then close it *“I see you. We’ll meet Sunday”*
+5. Journal prompt: *“What would make today restorative + satisfying by 9 PM?”* → extract one Chosen Work Block topic
+6. Chosen Work Block (2–3 Pomodoros, timer optional): explore a curiosity, capture insights under `💡 Insight` and `❓ Mysteries`, no resolution pressure
+7. End block with: *“Today I explored [X]. It reminded me I love this.”* Close notes.
+8. 45-60 min physical activity (sweat/breath work), then warm shower
+9. Leisure anchor: intentional screen-positive activity (film, cooking, call) – say *“This is the main event”*
+10. 9 PM wind-down: reflection in daily note (enjoyment, surprise, gratitude)
+11. Loose ends for Friday: list practical items in tomorrow’s note
+12. Stretch, digital sunset, breath: *“Day one of freedays sealed”*
+
+---
+
+**Phase 8: Friday – Recharge & Open Day Readiness**
+1. Soft alarm 9 AM if needed; water, bed, bathroom → read Wednesday’s sticky note + add *“I want to feel prepared, not frantic”*
+2. Breakfast no screens; open Friday daily note → write Open Day Prep List (capped at 1-hour tasks)
+3. Set Friday Anchor (restorative afternoon activity)
+4. Write if/then: *“If anxious about open day → write worry + ask ‘Can I control this now?’”*
+5. Prep sprint (60-min timer): execute prep list, check each off, mantra: *“Good enough now > perfect never”*
+6. At 60 min, close bag, shut closet, say *“Prep done. Free.”*
+7. Optional 1 Pomodoro: only if genuine desire to review – open `[[Open Day Queries]]`, write questions/talking points, no studying; close when timer ends
+8. Afternoon: pure leisure, no guilt; if anxiety intrudes, apply if/then
+9. 8:30 PM wind-down: evening review, mark prep done, dump worries, assign one 5-min peace-of-mind task to Saturday’s note
+10. 9:00 PM stretch, 9:30 PM digital sunset, analogue wind-down
+11. 10:00 PM in bed, 4-7-8 breath, final thought: *“The freedays did their work. I am rested and ready to be curious”*
 
 ---
 
