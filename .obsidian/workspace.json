@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-myself/my routine.md",
+                "file": "2-fleeting notes/Untitled 6.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "my routine"
+              "title": "Untitled 6"
             }
           }
         ]
@@ -104,10 +104,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "0-myself/my routine.md"
+                "file": "2-fleeting notes/Untitled 6.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for my routine"
+              "title": "File properties for Untitled 6"
             }
           },
           {
@@ -224,8 +224,10 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "3222cfdb6bc10aea",
+  "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
+    "0-myself/my routine.md",
+    "2-fleeting notes/Untitled 6.md",
     "6-templates/atomic note.md",
     "6-templates/daily note.md",
     "6-templates/fleeting template.md",
@@ -259,8 +261,6 @@
     "10-archives",
     "8-areas",
     "7-projects",
-    "2-fleeting notes/Energy precedes emotion.md",
-    "0-myself/my routine.md",
     "9-resources/Banners/Wallpapers/Excl_Autumn_Leaf.jpg",
     "9-resources/Banners/Wallpapers/elliott-engelmann-DjlKxYFJlTc.jpg",
     "9-resources/Banners/Wallpapers/dragon.png",
