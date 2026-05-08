@@ -1,21 +1,13 @@
 ---
-created: <% tp.file.creation_date("YYYY-MM-DD") %>
-type: literature
-tags:
-status: seedling
-source:
-author:
-rating:
-publish_date:
+title: "[[<% tp.file.title %>]]"
+type: literature note
 aliases:
+  - "[[]] # Alternative names.linking either word finds this note."
+tags: []
+date: '[[<% tp.date.now("YYYY-MM-DD") %>]]'
+time: <% tp.date.now("HH:mm") %>
+author: 
+  - "[[]] # Who wrote or created the original source material."
+source_url: "" # Link to the webpage, video, or book info.
+status: processing
 ---
-# title
-
-> [!summary] One-sentence vibe
-
-## Notes & thoughts
-
-## Quotes
-
-## Backlinks & connections
-

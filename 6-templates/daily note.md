@@ -1,24 +1,11 @@
 ---
-created: <% tp.file.creation_date("YYYY-MM-DD HH:mm") %>
-type: daily
-tags:
-status: seedling
+title: "[[<% tp.file.title %>]]"
+type: daily note
+aliases:
+  - "[[]] # Alternative names.linking either word finds this note."
+tags: []
+date: '[[<% tp.date.now("YYYY-MM-DD") %>]]'
+time: <% tp.date.now("HH:mm") %>
+energy_level: "" # e.g., Brain fog, hyperfocus, migraine, rested.
+status: logged
 ---
-# [[<% tp.date.now("dddd, MMMM Do YYYY") %>]]
-
-(dump everything here)
-
-
-## Tasks (manual - [ ])
-- [ ] 
-- [ ] 
-- [ ] 
-
-## Quick Wins / Links
-- Yesterday’s highlight: 
-- Today’s struggle link: [[ ]]
-- Pomodoros done: ___ (just type the number)
-
-[[Mood/energy]]: /10
-
-![[Daily.base]]

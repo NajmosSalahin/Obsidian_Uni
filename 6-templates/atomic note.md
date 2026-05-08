@@ -1,21 +1,12 @@
 ---
-created: <% tp.file.creation_date("YYYY-MM-DD") %>
-type: atomic
-tags:
-status: evergreen/ seedling
+title: "[[<% tp.file.title %>]]"
+type: atomic note
 aliases:
+  - "[[]] # Alternative names.linking either word finds this note."
+tags: []
+date: '[[<% tp.date.now("YYYY-MM-DD") %>]]'
+time: <% tp.date.now("HH:mm") %>
+related:
+  - "[[]] # Links to other notes that connect to or support this idea."
+status: evergreen
 ---
-
-# title
-
-
-
-
-
-
-
-
-
-## See also
-- 
-- 
