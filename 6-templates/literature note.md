@@ -4,7 +4,7 @@ type: literature note
 aliases:
   - "[[]] # Alternative names.linking either word finds this note."
 tags: []
-date: <% tp.date.now("YYYY-MM-DD") %>
+date:
 time: <% tp.date.now("HH:mm") %>
 author:
   - "[[]] # Who wrote or created the original source material."

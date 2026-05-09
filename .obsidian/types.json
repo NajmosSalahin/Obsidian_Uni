@@ -9,6 +9,7 @@
     "created": "text",
     "last": "multitext",
     "updated": "text",
-    "title": "text"
+    "title": "text",
+    "date": "date"
   }
 }

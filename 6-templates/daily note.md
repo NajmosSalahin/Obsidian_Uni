@@ -4,7 +4,7 @@ type: daily note
 aliases:
   - "[[]] # Alternative names.linking either word finds this note."
 tags: []
-date: <% tp.date.now("YYYY-MM-DD") %>
+date:
 time: <% tp.date.now("HH:mm") %>
 energy_level: ""
 status: logged

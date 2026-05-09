@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-templates/literature note.md",
+                "file": "6-templates/atomic note.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "literature note"
+              "title": "atomic note"
             }
           }
         ]
@@ -104,10 +104,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "6-templates/literature note.md"
+                "file": "6-templates/atomic note.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for literature note"
+              "title": "File properties for atomic note"
             }
           },
           {
@@ -226,9 +226,10 @@
   },
   "active": "c3fe80757e7522b4",
   "lastOpenFiles": [
-    "6-templates/fleeting template.md",
-    "6-templates/daily note.md",
     "6-templates/book template.md",
+    "6-templates/daily note.md",
+    "6-templates/fleeting template.md",
+    "6-templates/literature note.md",
     "6-templates/atomic note.md",
     "2-fleeting notes/Untitled 6.md",
     "0-myself/my routine.md",
@@ -256,7 +257,6 @@
     "2-fleeting notes/function.md",
     "3-literature notes/limit.md",
     "2-fleeting notes/Ninja.md",
-    "7-review/review function.md",
     "7-review",
     "10-archives",
     "8-areas",
