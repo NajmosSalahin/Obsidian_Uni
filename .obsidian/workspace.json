@@ -30,8 +30,21 @@
               "icon": "lucide-file",
               "title": "atomic note"
             }
+          },
+          {
+            "id": "7b708228a7530774",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,11 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "6-templates/atomic note.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for atomic note"
+              "title": "File properties"
             }
           },
           {
@@ -224,13 +235,13 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "c3fe80757e7522b4",
+  "active": "7b708228a7530774",
   "lastOpenFiles": [
+    "6-templates/atomic note.md",
     "6-templates/book template.md",
     "6-templates/daily note.md",
     "6-templates/fleeting template.md",
     "6-templates/literature note.md",
-    "6-templates/atomic note.md",
     "2-fleeting notes/Untitled 6.md",
     "0-myself/my routine.md",
     "2-fleeting notes/Untitled 5.md",
