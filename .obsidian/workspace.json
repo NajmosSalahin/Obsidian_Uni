@@ -35,12 +35,24 @@
             "id": "7b708228a7530774",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.12.7"
+                "file": "2-fleeting notes/Untitled 7.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.12.7"
+              "icon": "lucide-file",
+              "title": "Untitled 7"
             }
           }
         ],
@@ -116,9 +128,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "2-fleeting notes/Untitled 7.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Untitled 7"
             }
           },
           {
@@ -237,6 +251,7 @@
   },
   "active": "7b708228a7530774",
   "lastOpenFiles": [
+    "2-fleeting notes/Untitled 7.md",
     "6-templates/atomic note.md",
     "6-templates/book template.md",
     "6-templates/daily note.md",
@@ -267,7 +282,6 @@
     "4-bases/atomic.base",
     "2-fleeting notes/function.md",
     "3-literature notes/limit.md",
-    "2-fleeting notes/Ninja.md",
     "7-review",
     "10-archives",
     "8-areas",
