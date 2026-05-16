@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-templates/atomic note.md",
+                "file": "2-fleeting notes/Distributions.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "atomic note"
+              "title": "Distributions"
             }
           },
           {
@@ -55,8 +55,7 @@
               "title": "Untitled 7"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5
+    "width": 208.5
   },
   "right": {
     "id": "19a9e79c820ee9d4",
@@ -129,10 +128,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Untitled 7.md"
+                "file": "2-fleeting notes/Distributions.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Untitled 7"
+              "title": "File properties for Distributions"
             }
           },
           {
@@ -231,7 +230,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 238.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,10 +248,14 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "7b708228a7530774",
+  "active": "3222cfdb6bc10aea",
   "lastOpenFiles": [
-    "2-fleeting notes/Untitled 7.md",
+    "2-fleeting notes/coding everyday for a month.md",
+    "2-fleeting notes/Distributions.md",
+    "2-fleeting notes/Attention differs from place to place.md",
+    "2-fleeting notes/A little bit every day.md",
     "6-templates/atomic note.md",
+    "2-fleeting notes/Untitled 7.md",
     "6-templates/book template.md",
     "6-templates/daily note.md",
     "6-templates/fleeting template.md",
@@ -265,7 +268,6 @@
     "2-fleeting notes/Untitled 4.md",
     "2-fleeting notes/Untitled 3.md",
     "2-fleeting notes/Style is a list of consistent constrains.md",
-    "2-fleeting notes/Distributions.md",
     "2-fleeting notes/Untitled 2.md",
     "2-fleeting notes/Untitled.md",
     "9-resources/Attachments/Pasted image 20260423221730.png",
@@ -274,14 +276,11 @@
     "0-myself/my socials.md",
     "2-fleeting notes/Python Data Structures – Lists, Tuples, Dicts & Sets.md",
     "0-myself/sds self syllabus.md",
-    "2-fleeting notes/coding everyday for a month.md",
     "2-fleeting notes/vault structure.md",
     "10-archives",
     "8-areas",
     "7-projects",
     "4-bases/atomic.base",
-    "2-fleeting notes/function.md",
-    "3-literature notes/limit.md",
     "7-review",
     "10-archives",
     "8-areas",

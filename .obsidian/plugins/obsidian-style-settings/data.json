@@ -1,5 +1,14 @@
 {
   "obsidian-transparent@@preset-mode": "preset-default",
-  "obsidian-transparent@@bg-type": "bg-custom",
-  "obsidian-transparent@@background-blur": 200
+  "obsidian-transparent@@bg-type": "bg-auto",
+  "obsidian-transparent@@background-blur": 10,
+  "obsidian-transparent@@accent-everywhere": true,
+  "obsidian-transparent@@ui-blur": 29,
+  "obsidian-transparent@@bg-tint-opacity": 0,
+  "obsidian-transparent@@animate-modal-open": false,
+  "obsidian-transparent@@no-animation": true,
+  "obsidian-transparent@@disable-drawer-dimming": true,
+  "obsidian-transparent@@show-scrollbars": true,
+  "obsidian-transparent@@hide-canvas-dots": true,
+  "obsidian-transparent@@border-opacity": 1
 }
