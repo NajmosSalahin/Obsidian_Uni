@@ -55,7 +55,8 @@
               "title": "Untitled 7"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -128,10 +129,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Distributions.md"
+                "file": "2-fleeting notes/Untitled 7.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Distributions"
+              "title": "File properties for Untitled 7"
             }
           },
           {
@@ -230,7 +231,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 238.5
+    "width": 274.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -248,10 +249,10 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "3222cfdb6bc10aea",
+  "active": "7b708228a7530774",
   "lastOpenFiles": [
-    "2-fleeting notes/coding everyday for a month.md",
     "2-fleeting notes/Distributions.md",
+    "2-fleeting notes/coding everyday for a month.md",
     "2-fleeting notes/Attention differs from place to place.md",
     "2-fleeting notes/A little bit every day.md",
     "6-templates/atomic note.md",

@@ -9,8 +9,8 @@
   "showRibbon": true,
   "enabledCssSnippets": [
     "gruvbox-headers",
-    "gruvbox-base",
-    "minimal-outline"
+    "minimal-outline",
+    "gruvbox-base"
   ],
   "showViewHeader": false
 }

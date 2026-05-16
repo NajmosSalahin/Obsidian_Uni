@@ -25,19 +25,19 @@
 
 ## Foundational Concepts
 
-|**Symbol**|**Meaning**|
-|---|---|
-|$f(x)$|**Probability Density Function (PDF)** — continuous|
-|$P(X=x)$|**Probability Mass Function (PMF)** — discrete|
-|$F(x) = P(X \leq x)$|**Cumulative Distribution Function (CDF)**|
-|$S(x) = 1 - F(x)$|**Survival / Reliability Function**|
-|$h(x) = \frac{f(x)}{S(x)}$|**Hazard Function**|
-|$M(t) = E[e^{tX}]$|**Moment Generating Function (MGF)**|
-|$\phi(t) = E[e^{itX}]$|**Characteristic Function**|
-|$\mu = E[X]$|**Mean**|
-|$\sigma^2 = \text{Var}(X) = E[(X-\mu)^2]$|**Variance**|
-|$\gamma_1 = \frac{E[(X-\mu)^3]}{\sigma^3}$|**Skewness**|
-|$\gamma_2 = \frac{E[(X-\mu)^4]}{\sigma^4} - 3$|**Excess Kurtosis**|
+| **Symbol**                                     | **Meaning**                                         |
+| ---------------------------------------------- | --------------------------------------------------- |
+| $f(x)$                                         | **Probability Density Function (PDF)** — continuous |
+| $P(X=x)$                                       | **Probability Mass Function (PMF)** — discrete      |
+| $F(x) = P(X \leq x)$                           | **Cumulative Distribution Function (CDF)**          |
+| $S(x) = 1 - F(x)$                              | **Survival / Reliability Function**                 |
+| $h(x) = \frac{f(x)}{S(x)}$                     | **Hazard Function**                                 |
+| $M(t) = E[e^{tX}]$                             | **Moment Generating Function (MGF)**                |
+| $\phi(t) = E[e^{itX}]$                         | **Characteristic Function**                         |
+| $\mu = E[X]$                                   | **Mean**                                            |
+| $\sigma^2 = \text{Var}(X) = E[(X-\mu)^2]$      | **Variance**                                        |
+| $\gamma_1 = \frac{E[(X-\mu)^3]}{\sigma^3}$     | **Skewness**                                        |
+| $\gamma_2 = \frac{E[(X-\mu)^4]}{\sigma^4} - 3$ | **Excess Kurtosis**                                 |
 
 ---
 

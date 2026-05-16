@@ -1,6 +1,6 @@
 {
   "lightStyle": "minimal-light",
-  "darkStyle": "minimal-dark-tonal",
+  "darkStyle": "minimal-dark",
   "lightScheme": "minimal-default-light",
   "darkScheme": "minimal-flexoki-dark",
   "editorFont": "",
@@ -16,7 +16,7 @@
   "iframeWidth": "iframe-default-width",
   "mapWidth": "map-default-width",
   "chartWidth": "chart-default-width",
-  "colorfulHeadings": false,
+  "colorfulHeadings": true,
   "colorfulFrame": false,
   "colorfulActiveStates": false,
   "trimNames": true,
