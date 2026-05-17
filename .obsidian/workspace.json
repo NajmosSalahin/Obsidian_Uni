@@ -11,10 +11,24 @@
             "id": "fe5061f7713e3ae7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/Untitled 8.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled 8"
             }
           }
         ]
@@ -89,9 +103,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "2-fleeting notes/Untitled 8.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Untitled 8"
             }
           },
           {
@@ -211,6 +227,7 @@
   },
   "active": "fe5061f7713e3ae7",
   "lastOpenFiles": [
+    "2-fleeting notes/Untitled 8.md",
     "2-fleeting notes/Distributions.md",
     "2-fleeting notes/Untitled 7.md",
     "NinjaDiary.txt",

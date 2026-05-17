@@ -733,3 +733,3558 @@
   "operation": "Remote vault tree fetch from GitHub",
   "message": "Operation still running after 10.0s"
 }
+[2026-05-17T12:56:52.564Z] [Plugin] Manual sync requested
+[2026-05-17T12:56:52.575Z] 🚀 [SYNC START] Manual sync requested
+[2026-05-17T12:56:52.575Z] [FitSync] Sync already in progress - aborting new sync request
+[2026-05-17T12:56:52.575Z] [Plugin] Sync already in progress: {
+  "triggerType": "manual"
+}
+[2026-05-17T12:56:56.297Z] [Plugin] Manual sync requested
+[2026-05-17T12:56:56.301Z] 🚀 [SYNC START] Manual sync requested
+[2026-05-17T12:56:56.301Z] [FitSync] Sync already in progress - aborting new sync request
+[2026-05-17T12:56:56.301Z] [Plugin] Sync already in progress: {
+  "triggerType": "manual"
+}
+[2026-05-17T12:56:57.968Z] [Plugin] Manual sync requested
+[2026-05-17T12:56:57.971Z] 🚀 [SYNC START] Manual sync requested
+[2026-05-17T12:56:57.972Z] [FitSync] Sync already in progress - aborting new sync request
+[2026-05-17T12:56:57.972Z] [Plugin] Sync already in progress: {
+  "triggerType": "manual"
+}
+[2026-05-17T12:56:58.752Z] [Plugin] Manual sync requested
+[2026-05-17T12:56:58.955Z] 🚀 [SYNC START] Manual sync requested
+[2026-05-17T12:56:58.955Z] [FitSync] Sync already in progress - aborting new sync request
+[2026-05-17T12:56:58.955Z] [Plugin] Sync already in progress: {
+  "triggerType": "manual"
+}
+[2026-05-17T12:57:29.378Z] [Plugin] Starting plugin initialization
+[2026-05-17T12:57:29.391Z] .. 📦 [Cache] Loaded SHA caches from storage: {
+  "source": "plugin data.json",
+  "localShaCount": 0,
+  "remoteShaCount": 0,
+  "lastCommit": null
+}
+[2026-05-17T12:57:29.395Z] [Plugin] Plugin initialization completed successfully
+[2026-05-17T12:57:48.488Z] [Plugin] Manual sync requested
+[2026-05-17T12:57:48.517Z] 🚀 [SYNC START] Manual sync requested
+[2026-05-17T12:57:48.519Z] 🔄 [Sync] Checking local and remote changes (parallel)...
+[2026-05-17T12:57:48.519Z] .. 💾 [LocalVault] Scanning files...
+[2026-05-17T12:57:48.533Z] .. ☁️ [RemoteVault] Fetching from GitHub...
+[2026-05-17T12:57:50.162Z] ... ⬇️ [RemoteVault] Fetching initial state from GitHub (9fb8614)...
+[2026-05-17T12:57:51.004Z] ... ☁️ [RemoteVault] Fetched 1 files
+[2026-05-17T12:57:51.004Z] [Fit] Remote changes detected: {
+  "ADDED": 1,
+  "MODIFIED": 0,
+  "REMOVED": 0,
+  "total": 1
+}
+[2026-05-17T12:58:00.395Z] [Performance Warning] Slow operation detected: {
+  "operation": "Local vault SHA computation (295 files)",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:58:34.890Z] ... 💾 [LocalVault] Scanned 295 files
+[2026-05-17T12:58:34.896Z] .. ✅ [Sync] Change detection complete
+[2026-05-17T12:58:34.897Z] 🔄 [FitSync] Syncing changes (295 local, 1 remote): {
+  "local": {
+    "ADDED": [
+      "README.md",
+      "NinjaDiary.txt",
+      "index.html",
+      "desktop.ini",
+      "9-resources/Banners/Wallpapers/zelda_botw.png",
+      "9-resources/Banners/Wallpapers/zelda.png",
+      "9-resources/Banners/Wallpapers/xxxtentacion.png",
+      "9-resources/Banners/Wallpapers/wp11058333.png",
+      "9-resources/Banners/Wallpapers/wolf.jpg",
+      "9-resources/Banners/Wallpapers/White-Mountain.jpg",
+      "9-resources/Banners/Wallpapers/wave.jpg",
+      "9-resources/Banners/Wallpapers/waterfall2.png",
+      "9-resources/Banners/Wallpapers/waterfall-3.jpg",
+      "9-resources/Banners/Wallpapers/war-in-space.png",
+      "9-resources/Banners/Wallpapers/wall_secondary.png",
+      "9-resources/Banners/Wallpapers/wallpaper.png",
+      "9-resources/Banners/Wallpapers/wallhaven-2e2xyx.jpg",
+      "9-resources/Banners/Wallpapers/wall.jpg",
+      "9-resources/Banners/Wallpapers/vim.png",
+      "9-resources/Banners/Wallpapers/village.jpg",
+      "9-resources/Banners/Wallpapers/urban_architecture.jpg",
+      "9-resources/Banners/Wallpapers/uchiha-clan-logo.png",
+      "9-resources/Banners/Wallpapers/traf-ukTd6UiQbLQ.jpg",
+      "9-resources/Banners/Wallpapers/titlwinzbst81.jpg",
+      "9-resources/Banners/Wallpapers/this-wallpaper-is-not-available.png",
+      "9-resources/Banners/Wallpapers/table.png",
+      "9-resources/Banners/Wallpapers/sunset.png",
+      "9-resources/Banners/Wallpapers/sunset.jpg",
+      "9-resources/Banners/Wallpapers/sunset-beach.jpg",
+      "9-resources/Banners/Wallpapers/sunforest.jpg",
+      "9-resources/Banners/Wallpapers/street.jpg",
+      "9-resources/Banners/Wallpapers/starry-sky.png",
+      "9-resources/Banners/Wallpapers/stairs.jpg",
+      "9-resources/Banners/Wallpapers/staircase.jpg",
+      "9-resources/Banners/Wallpapers/space.png",
+      "9-resources/Banners/Wallpapers/snake.png",
+      "9-resources/Banners/Wallpapers/smile.png",
+      "9-resources/Banners/Wallpapers/smile-2.png",
+      "9-resources/Banners/Wallpapers/sea.jpg",
+      "9-resources/Banners/Wallpapers/Screen Shot 2025-07-17 at 19.12.36.png",
+      "9-resources/Banners/Wallpapers/saso-tusar-s-k-2N90yuY.jpg",
+      "9-resources/Banners/Wallpapers/rubiks-cube.png",
+      "9-resources/Banners/Wallpapers/room.jpg",
+      "9-resources/Banners/Wallpapers/rocket.png",
+      "9-resources/Banners/Wallpapers/road.jpg",
+      "9-resources/Banners/Wallpapers/road-3.jpg",
+      "9-resources/Banners/Wallpapers/road-2.jpg",
+      "9-resources/Banners/Wallpapers/river.jpg",
+      "9-resources/Banners/Wallpapers/result.png",
+      "9-resources/Banners/Wallpapers/red-moon.png",
+      "9-resources/Banners/Wallpapers/rain.png",
+      "9-resources/Banners/Wallpapers/rails.jpg",
+      "9-resources/Banners/Wallpapers/rails-2.jpg",
+      "9-resources/Banners/Wallpapers/PJbX0MG.png",
+      "9-resources/Banners/Wallpapers/philosophy.png",
+      "9-resources/Banners/Wallpapers/persepolis-shirdal.png",
+      "9-resources/Banners/Wallpapers/pacman-ghosts.png",
+      "9-resources/Banners/Wallpapers/orbit.png",
+      "9-resources/Banners/Wallpapers/nvim.png",
+      "9-resources/Banners/Wallpapers/nixos.png",
+      "9-resources/Banners/Wallpapers/nix.png",
+      "9-resources/Banners/Wallpapers/night_moon.png",
+      "9-resources/Banners/Wallpapers/nasa.png",
+      "9-resources/Banners/Wallpapers/nasa-3.png",
+      "9-resources/Banners/Wallpapers/nasa-2.png",
+      "9-resources/Banners/Wallpapers/moss.jpg",
+      "9-resources/Banners/Wallpapers/more-coffee.jpg",
+      "9-resources/Banners/Wallpapers/moon.png",
+      "9-resources/Banners/Wallpapers/mate.jpg",
+      "9-resources/Banners/Wallpapers/Manjaro.jpg",
+      "9-resources/Banners/Wallpapers/Mandalorian.jpg",
+      "9-resources/Banners/Wallpapers/looking-for.png",
+      "9-resources/Banners/Wallpapers/leaves-3.jpg",
+      "9-resources/Banners/Wallpapers/jake-weirick-EsvpmQ4zp5Y.jpg",
+      "9-resources/Banners/Wallpapers/Kurumi-Ebisuzawa.png",
+      "9-resources/Banners/Wallpapers/komeiji-koishi.png",
+      "9-resources/Banners/Wallpapers/Kita.png",
+      "9-resources/Banners/Wallpapers/kace-rodriguez-p3OzJuT_Dks.jpg",
+      "9-resources/Banners/Wallpapers/kiddae.jpg",
+      "9-resources/Banners/Wallpapers/jonas-denil-_PKzBUfuhgg.jpg",
+      "9-resources/Banners/Wallpapers/iuh3jkasndjans.jpg",
+      "9-resources/Banners/Wallpapers/ign-waifu.png",
+      "9-resources/Banners/Wallpapers/hut-2.jpg",
+      "9-resources/Banners/Wallpapers/hewlett-packard.png",
+      "9-resources/Banners/Wallpapers/haz-mat.png",
+      "9-resources/Banners/Wallpapers/gruvy-night.jpg",
+      "9-resources/Banners/Wallpapers/gruvb_solarsys.png",
+      "9-resources/Banners/Wallpapers/gruvbox_void_linux.png",
+      "9-resources/Banners/Wallpapers/gruvbox_ubuntu-splash.jpg",
+      "9-resources/Banners/Wallpapers/gruvbox_minimal_space.png",
+      "9-resources/Banners/Wallpapers/gruvbox_kubuntuGear.jpg",
+      "9-resources/Banners/Wallpapers/gruvbox_image55.png",
+      "9-resources/Banners/Wallpapers/gruvbox_image46.png",
+      "9-resources/Banners/Wallpapers/gruvbox_image40.png",
+      "9-resources/Banners/Wallpapers/gruvbox_image11.png",
+      "9-resources/Banners/Wallpapers/gruvbox_grid.png",
+      "9-resources/Banners/Wallpapers/gruvbox_girl.png",
+      "9-resources/Banners/Wallpapers/gruvbox-linux.png",
+      "9-resources/Banners/Wallpapers/gruvb99810.png",
+      "9-resources/Banners/Wallpapers/gruv.jpg",
+      "9-resources/Banners/Wallpapers/gruv-wallhaven-4yj28l.png",
+      "9-resources/Banners/Wallpapers/gruv-wallhaven-4gmevq.png",
+      "9-resources/Banners/Wallpapers/gruv-wallhaven-011km1.png",
+      "9-resources/Banners/Wallpapers/gruv-understand.png",
+      "9-resources/Banners/Wallpapers/gruv-portal-cake.png",
+      "9-resources/Banners/Wallpapers/gruv-mistakes.png",
+      "9-resources/Banners/Wallpapers/gruv-material.png",
+      "9-resources/Banners/Wallpapers/gruv-limits.png",
+      "9-resources/Banners/Wallpapers/gruv-kanji.png",
+      "9-resources/Banners/Wallpapers/gruv-focus.png",
+      "9-resources/Banners/Wallpapers/gruv-estimate.png",
+      "9-resources/Banners/Wallpapers/gruv-dev-minimal.png",
+      "9-resources/Banners/Wallpapers/gruv-commit.png",
+      "9-resources/Banners/Wallpapers/gruv-abstract-maze.png",
+      "9-resources/Banners/Wallpapers/great-wave-of-kanagawa-gruvbox.png",
+      "9-resources/Banners/Wallpapers/ganapathy-kumar-JxBcs2O6-C0.jpg",
+      "9-resources/Banners/Wallpapers/gamepad.png",
+      "9-resources/Banners/Wallpapers/freebsd.png",
+      "9-resources/Banners/Wallpapers/fox.png",
+      "9-resources/Banners/Wallpapers/flower.jpg",
+      "9-resources/Banners/Wallpapers/fingerprint.png",
+      "9-resources/Banners/Wallpapers/Excl_Autumn_Leaf.jpg",
+      "9-resources/Banners/Wallpapers/elliott-engelmann-DjlKxYFJlTc.jpg",
+      "9-resources/Banners/Wallpapers/dragon.png",
+      "9-resources/Banners/Wallpapers/door.png",
+      "9-resources/Banners/Wallpapers/dock.png",
+      "9-resources/Banners/Wallpapers/desk-gruvbox-material.jpg",
+      "9-resources/Banners/Wallpapers/dark-bench.png",
+      "9-resources/Banners/Wallpapers/cactus.png",
+      "9-resources/Banners/Wallpapers/cabin.png",
+      "9-resources/Banners/Wallpapers/bush.png",
+      "9-resources/Banners/Wallpapers/Boxes.png",
+      "9-resources/Banners/Wallpapers/atoms.png",
+      "9-resources/Banners/Wallpapers/arch-linux.png",
+      "9-resources/Banners/Wallpapers/1i918gwz1gl61.png",
+      "9-resources/Banners/Images/Adib.jpg",
+      "9-resources/Memes/Meme-1.png",
+      "9-resources/Attachments/Untitled.jpg",
+      "9-resources/Attachments/Probability-01.jpg",
+      "9-resources/Attachments/Pasted image 20260423221730.png",
+      "9-resources/Attachments/Pasted image 20251227093620.png",
+      "9-resources/Attachments/Pasted image 20251218211848.png",
+      "9-resources/Attachments/Pasted image 20251208195905.png",
+      "9-resources/Attachments/Pasted image 20251208195848.png",
+      "9-resources/Attachments/Pasted image 20251208195820.png",
+      "9-resources/Attachments/Pasted image 20251208195727.png",
+      "9-resources/Attachments/Pasted image 20251208195603.png",
+      "9-resources/Attachments/Pasted image 20251208121041.png",
+      "9-resources/Attachments/Pasted image 20251208121021.png",
+      "9-resources/Attachments/Pasted image 20251208120918.png",
+      "9-resources/Attachments/Pasted image 20251208120836.png",
+      "9-resources/Attachments/Pasted image 20251208120245.png",
+      "9-resources/Attachments/Pasted image 20251208120217.png",
+      "9-resources/Attachments/Pasted image 20251208120132.png",
+      "9-resources/Attachments/Pasted image 20251208120041.png",
+      "9-resources/Attachments/Pasted image 20251208120012.png",
+      "9-resources/Attachments/Pasted image 20251208115844.png",
+      "9-resources/Attachments/Pasted image 20251208115829.png",
+      "9-resources/Attachments/Pasted image 20251208115808.png",
+      "9-resources/Attachments/Pasted image 20251208115754.png",
+      "9-resources/Attachments/Pasted image 20251208115738.png",
+      "9-resources/Attachments/Pasted image 20251208115719.png",
+      "9-resources/Attachments/Pasted image 20251208115646.png",
+      "9-resources/Attachments/Pasted image 20251208115542.png",
+      "9-resources/Attachments/Pasted image 20251208114415.png",
+      "9-resources/Attachments/Pasted image 20251208115438.png",
+      "9-resources/Attachments/Pasted image 20251208115355.png",
+      "9-resources/Attachments/Pasted image 20251208115253.png",
+      "9-resources/Attachments/Pasted image 20251208115235.png",
+      "9-resources/Attachments/Pasted image 20251208114806.png",
+      "9-resources/Attachments/Pasted image 20251208114615.png",
+      "9-resources/Attachments/Pasted image 20251208114554.png",
+      "9-resources/Attachments/Pasted image 20251208114522.png",
+      "9-resources/Attachments/Pasted image 20251208114500.png",
+      "9-resources/Attachments/Pasted image 20251130210906.png",
+      "9-resources/Attachments/Pasted image 20251130210802.png",
+      "9-resources/Attachments/Pasted image 20251130210758.png",
+      "9-resources/Attachments/Pasted image 20251130210717.png",
+      "9-resources/Attachments/Pasted image 20251127162204.png",
+      "9-resources/Attachments/Pasted image 20251127161707.png",
+      "9-resources/Attachments/Pasted image 20251127161025.png",
+      "9-resources/Attachments/Pasted image 20251127161007.png",
+      "9-resources/Attachments/Pasted image 20251127160826.png",
+      "9-resources/Attachments/Pasted image 20251125215751.png",
+      "9-resources/Attachments/Pasted image 20251125214427.png",
+      "9-resources/Attachments/Pasted image 20251125214407.png",
+      "9-resources/Attachments/Pasted image 20251125214325.png",
+      "9-resources/Attachments/Pasted image 20251125214306.png",
+      "9-resources/Attachments/Pasted image 20251125212404.png",
+      "9-resources/Attachments/Pasted image 20251125212338.png",
+      "9-resources/Attachments/Pasted image 20251125212316.png",
+      "9-resources/Attachments/Pasted image 20251125212305.png",
+      "9-resources/Attachments/Pasted image 20251125211751.png",
+      "9-resources/Attachments/Pasted image 20251125211719.png",
+      "9-resources/Attachments/Pasted image 20251125211659.png",
+      "9-resources/Attachments/Pasted image 20251125211651.png",
+      "9-resources/Attachments/Pasted image 20251125211608.png",
+      "9-resources/Attachments/Pasted image 20251125205840.png",
+      "9-resources/Attachments/Pasted image 20251125205825.png",
+      "9-resources/Attachments/Pasted image 20251125205442.png",
+      "9-resources/Attachments/Pasted image 20251125205215.png",
+      "9-resources/Attachments/Pasted image 20251125205150.png",
+      "9-resources/Attachments/Pasted image 20251125204836.png",
+      "9-resources/Attachments/Pasted image 20251125200357.png",
+      "9-resources/Attachments/Pasted image 20251125185452.png",
+      "9-resources/Attachments/Pasted image 20251125171902.png",
+      "9-resources/Attachments/Pasted image 20251125171355.png",
+      "9-resources/Attachments/Pasted image 20251125165702.png",
+      "9-resources/Attachments/Pasted image 20251125161700.png",
+      "9-resources/Attachments/Pasted image 20251125161644.png",
+      "9-resources/Attachments/Pasted image 20251125161608.png",
+      "9-resources/Attachments/Pasted image 20251125161524.png",
+      "9-resources/Attachments/Pasted image 20251125161506.png",
+      "9-resources/Attachments/Pasted image 20251125161435.png",
+      "9-resources/Attachments/Pasted image 20251125161025.png",
+      "9-resources/Attachments/Pasted image 20251125161000.png",
+      "9-resources/Attachments/Pasted image 20251125160945.png",
+      "9-resources/Attachments/Pasted image 20251125160049.png",
+      "9-resources/Attachments/Pasted image 20251124195012.png",
+      "9-resources/Attachments/Pasted image 20251124194433.png",
+      "9-resources/Attachments/Pasted image 20251117214816.png",
+      "9-resources/Attachments/Pasted image 20251117214726.png",
+      "9-resources/Attachments/Pasted image 20251117214702.png",
+      "9-resources/Attachments/Pasted image 20251117214107.png",
+      "9-resources/Attachments/Pasted image 20251117214010.png",
+      "9-resources/Attachments/Pasted image 20251117205354.png",
+      "9-resources/Attachments/Pasted image 20251117205158.png",
+      "9-resources/Attachments/Pasted image 20251117204621.png",
+      "9-resources/Attachments/Pasted image 20251117204204.png",
+      "9-resources/Attachments/Pasted image 20251117204040.png",
+      "9-resources/Attachments/Pasted image 20251117203940.png",
+      "9-resources/Attachments/Pasted image 20251117203835.png",
+      "9-resources/Attachments/Pasted image 20251104190745.png",
+      "9-resources/Attachments/Pasted image 20251104190630.png",
+      "9-resources/Attachments/Pasted image 20251102205927.png",
+      "9-resources/Attachments/Pasted image 20251102205851.png",
+      "9-resources/Attachments/Pasted image 20251021212210.png",
+      "9-resources/Attachments/Pasted image 20251006155702.png",
+      "9-resources/Attachments/Pasted image 20250929211736.png",
+      "9-resources/Attachments/image.png",
+      "9-resources/Attachments/image-3.png",
+      "9-resources/Attachments/image-2.png",
+      "9-resources/Attachments/image-1.png",
+      "9-resources/Attachments/Graphs of functions.png",
+      "9-resources/Attachments/138851.jpg",
+      "6-templates/literature note.md",
+      "6-templates/fleeting template.md",
+      "6-templates/daily note.md",
+      "6-templates/book template.md",
+      "6-templates/atomic note.md",
+      "5-days/2026-03-17.md",
+      "5-days/2026-03-16.md",
+      "5-days/2026-03-15.md",
+      "4-bases/memes.base",
+      "4-bases/Daily.base",
+      "4-bases/atomic.base",
+      "3-literature notes/struggle-concept.md",
+      "3-literature notes/limit.md",
+      "2-fleeting notes/Untitled 8.md",
+      "2-fleeting notes/Why Tiny Changes Make a Big Difference - Copy.md",
+      "2-fleeting notes/What I am Doing.md",
+      "2-fleeting notes/vault structure.md",
+      "2-fleeting notes/Untitled.md",
+      "2-fleeting notes/Untitled 7.md",
+      "2-fleeting notes/Untitled 6.md",
+      "2-fleeting notes/Untitled 5.md",
+      "2-fleeting notes/Untitled 4.md",
+      "2-fleeting notes/Untitled 3.md",
+      "2-fleeting notes/Untitled 2.md",
+      "2-fleeting notes/Untitled 1.md",
+      "2-fleeting notes/Style is a list of consistent constrains.md",
+      "2-fleeting notes/Python Data Structures – Lists, Tuples, Dicts & Sets.md",
+      "2-fleeting notes/Parasocial bonds = cheap substitute for real connection.md",
+      "2-fleeting notes/No Longer Human.md",
+      "2-fleeting notes/Ninja.md",
+      "2-fleeting notes/lines.md",
+      "2-fleeting notes/Linear Mapping.md",
+      "2-fleeting notes/Lec-1 SDS-101 Probability.md",
+      "2-fleeting notes/hello world.md",
+      "2-fleeting notes/Habits Gaining Ideas.md",
+      "2-fleeting notes/function.md",
+      "2-fleeting notes/First Note for a zettelkasten.md",
+      "2-fleeting notes/Energy precedes emotion.md",
+      "2-fleeting notes/Distributions.md",
+      "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
+      "2-fleeting notes/coding everyday for a month.md",
+      "2-fleeting notes/Calculus.md",
+      "2-fleeting notes/Attention differs from place to place.md",
+      "2-fleeting notes/A little bit every day.md",
+      "2-fleeting notes/40 Yearly Questions.md",
+      "1-atomic notes/GG.md",
+      "0-myself/sds self syllabus.md",
+      "0-myself/profile.md",
+      "0-myself/my socials.md",
+      "0-myself/my routine.md"
+    ]
+  },
+  "remote": {
+    "ADDED": [
+      "README.md"
+    ]
+  }
+}
+[2026-05-17T12:58:34.901Z] [FitSync] Conflict detection complete: {
+  "safeLocal": 294,
+  "safeRemote": 0,
+  "clashes": 1
+}
+[2026-05-17T12:59:00.115Z] ... 📦 [RemoteVault] Using cached state (9fb8614)
+[2026-05-17T12:59:10.555Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.816Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.816Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.816Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.817Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.817Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.817Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.818Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.818Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.818Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.818Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.818Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.819Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.819Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.819Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.820Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.820Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.821Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.821Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.821Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.822Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.822Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.822Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.822Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.823Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.823Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.823Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.824Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.824Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.824Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.824Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.825Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.825Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.825Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.825Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.825Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.826Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.826Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.826Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.826Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.827Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.827Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.827Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.827Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.827Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.828Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.828Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.828Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.828Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.828Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.829Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.829Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.829Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.829Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.829Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.830Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.830Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.830Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.830Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.830Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.831Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.831Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.831Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.831Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.831Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.832Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.832Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.832Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.833Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.833Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.833Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.833Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.833Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.834Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.834Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.834Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.834Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.834Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.835Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.835Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.835Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.836Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.836Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.836Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.837Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.837Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.837Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.838Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.838Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.839Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.839Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.839Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.839Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.839Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.840Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.840Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.841Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.841Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.841Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.841Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.842Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.842Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.842Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.842Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.842Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.843Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.843Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.843Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.843Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.843Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.844Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.844Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.844Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.844Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.845Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.845Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.845Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.845Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.845Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.846Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.846Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.846Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.847Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.847Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.847Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.847Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.847Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.848Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.848Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.848Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.848Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.849Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.849Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.849Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.849Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.850Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.850Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.850Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.854Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.855Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.855Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.856Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.856Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.856Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.856Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.857Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.857Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.857Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.858Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.858Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.858Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.859Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.859Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.859Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.860Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.860Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.860Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.861Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.861Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.861Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.861Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.862Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.862Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.862Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.862Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.863Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.863Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.863Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.863Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.864Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.864Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.864Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.865Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.865Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.865Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.866Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.866Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.866Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.866Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.867Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.867Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.867Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.867Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.868Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.868Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.868Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.868Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.869Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.869Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.869Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.870Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.871Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.871Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.873Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.873Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.873Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.874Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.874Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.875Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.875Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.875Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.875Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.876Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.876Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.876Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.876Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.877Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.877Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.878Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.879Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.879Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.880Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.880Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.880Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.917Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.917Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.917Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.918Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.918Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.918Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.918Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.919Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.919Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.919Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.920Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.920Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.922Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.922Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.922Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.923Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.923Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.923Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.924Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.924Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.924Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.925Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.925Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.925Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.926Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.926Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.926Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.926Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.927Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.927Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.939Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.969Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.971Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.972Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.972Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.973Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.973Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.981Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.981Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.981Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.981Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.982Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.982Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.982Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.982Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.982Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.982Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.983Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.983Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.983Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.985Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.985Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.986Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.991Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.992Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:10.992Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.006Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.007Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.007Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.008Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.008Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.008Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.009Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.009Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.009Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.010Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.010Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.011Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.011Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.012Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.012Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.012Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.013Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.013Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.013Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.013Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.013Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.014Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.014Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:59:11.014Z] [Performance Warning] Slow operation detected: {
+  "operation": "GitHub blob creation",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T13:01:29.410Z] [Plugin] Auto sync requested
+[2026-05-17T13:01:29.413Z] 🚀 [SYNC START] Auto sync requested
+[2026-05-17T13:01:29.413Z] [FitSync] Sync already in progress - aborting new sync request
+[2026-05-17T13:01:29.413Z] [Plugin] Sync already in progress: {
+  "triggerType": "auto"
+}
+[2026-05-17T13:01:32.596Z] [Plugin] Sync failed: {
+  "type": "network",
+  "message": "Failed to process 40 file(s) for remote upload. Please check your internet connection.\n\nFailed files (40 total):\n  • 9-resources/Banners/Wallpapers/White-Mountain.jpg: Bad credentials - https://docs.github.com/rest\n  • 9-resources/Banners/Wallpapers/waterfall2.png: Bad credentials - https://docs.github.com/rest\n  • 9-resources/Banners/Wallpapers/village.jpg: Bad credentials - https://docs.github.com/rest\n  • ... and 37 more\n\n💡 To sync other files: Move problematic file(s) out of your vault temporarily, or use git to sync them manually. .gitignore support coming soon.",
+  "details": {
+    "errors": [
+      {
+        "path": "9-resources/Banners/Wallpapers/White-Mountain.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAw/El4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx... [1781406 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D07C5:394B6AA:6A09BB94",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3592",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1408"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/waterfall2.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAgAElEQVR4Xny955Ml2ZXk56GfTl3VEkAPMIPZWdJWcT/QjKTxj6cZjeQqktiZHQADoLvRJVM9rULQfn4isgrzgQmUVXVVZryIG/eee467H7/J5PZVVylTkkp100itpDRRlmUqs1yNOjVNo1PdqulaVamU54XOTaO26aQ09fd2Xed/V9NKeaqubqW27v8tUZJlajtJXevvrbJUSZbqeG6UJZ3KJFWS58rTRIfTWVmeKmkb1fyMEtW1dKw7f2+eJzr5Yv1X1ynhf0mitm39O188yqhLdVLDE6pW/Ayfz2fzlSpR2zTq0vh5/o2vjB/mk5NEjbheK6WdioTHy8VH1Emnc92qbeP7+F8uvp9nStSmifI002Q60ng80nK9VrM/qmCs20SqMk3GlSazse+bz87STNvNVqvng++uSxjHTkWW6VTXKrK4x7Is1Z7O... [5759058 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0846:394B728:6A09BB95",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3599",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1401"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/village.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAQEBAQEBAgICAgICAgICAgICAgIDAwMDAwMDAwMDAwMDAwP/2wBDAQEBAQEBAQIBAQIDAgICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAQ4B4ADAREAAhEBAxEB/8QAHwAAAQQDAQEBAQAAAAAAAAAABgMEBQcCCAkBAAoL/8QAVBAAAgIBAwMCBQIEAwcCAAIbAQIDBAUGERIAByETMQgUIkFRMmEJFSNxFkKBJDNSkaGxwRdiQ3LR4QolNPDxGIIZJkRTY5I1VGSisicoc4M2lML/xAAdAQABBQEBAQEAAAAAAAAAAAAEAAECAwUGBwgJ/8QAUxEAAgEDAwIEBAMGBQMCAQIXAQIDAAQREiExBUETIlFhBjJxgRSRoSNCscHR8AcVUuHxJDNi... [2097194 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D09AF:394B8BE:6A09BB95",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3586",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1414"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/urban_architecture.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQIDAgECAwMCAgICAwMDAwMDAwMFAwQEBAQDBQUFBgYGBQUHBwgIBwcKCgoKCgwMDAwMDAwMDAz/2wBDAQICAgQDBAcFBQcKCAcICgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAZAESkDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT... [3569306 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0983:394B891:6A09BB95",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3588",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1412"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/table.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAACAAAAAVUCAYAAABEb/gRAAAgAElEQVR4AWSdd3iVR5LuPcEZY6JAEkoIkXPOmGRyBhEUQOScM0iAkBASSCgjJIHIORjjMM7GGNsYTHDOGXvGM/aMx7Mzs7v3Pu99fiVKe9b3j3o6Vb1V3V84fbqq+7vrvgfu1oMP3aeHHn7AUvLVqt9v+Qeq3avf3X2XlWvWrq6Ha1Yzvuo1HrT2e+77naB77/+97r73t/rN7+7S7+/5jfHD6zjI3v/gPfrt7yuxatetITDA//3dd+nue36jmrUeUlC9Wqr20H164MF7LL33vt/pvvt/b+UHq92rh6rfb3y16zys6g8/INqRJ4Xuufe3uv+Bu60NXurAhh7G5mr3WrvrQKfj0g4mutFJfY2a1ayOFDxwfksf79hMis21alc3e5Fze+EHDx2Oi23opo08WK6fFFnqaYew5Xe/r+QBBzsg8rTTv9/89i7D... [5868378 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0A13:394B90B:6A09BB95",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3583",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1417"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/sunset.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCAuwD6ADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx... [4321578 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0A13:394B90D:6A09BB95",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3584",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1416"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/sunset-beach.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAQEAZABkAAD/4iOISUNDX1BST0ZJTEUAAQEAACN4bGNtcwIQAABtbnRyUkdCIFhZWiAH3wALAAoADAASADhhY3NwKm5peAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtkZXNjAAABCAAAALBjcHJ0AAABuAAAARJ3dHB0AAACzAAAABRjaGFkAAAC4AAAACxyWFlaAAADDAAAABRiWFlaAAADIAAAABRnWFlaAAADNAAAABRyVFJDAAADSAAAIAxnVFJDAAADSAAAIAxiVFJDAAADSAAAIAxjaHJtAAAjVAAAACRkZXNjAAAAAAAAABxzUkdCLWVsbGUtVjItc3JnYnRyYy5pY2MAAAAAAAAAAAAAAB0AcwBSAEcAQgAtAGUAbABs... [1720306 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0A13:394B90C:6A09BB95",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3582",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1418"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/sunforest.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAQEASABIAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA... [3268090 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0AD1:394B9E0:6A09BB96",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3577",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1423"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/street.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4QAWRXhpZgAATU0AKgAAAAgAAAAAAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAA... [6188250 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0AD1:394B9E1:6A09BB96",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3578",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1422"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/stairs.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4QAWRXhpZgAATU0AKgAAAAgAAAAAAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAA... [2860882 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0B35:394BA51:6A09BB96",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3576",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1424"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/staircase.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgPoBdwAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//E... [4219962 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0BE6:394BAF6:6A09BB96",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3572",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1428"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/sea.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAtkFEADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT... [2248010 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0BE6:394BAF8:6A09BB96",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3573",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1427"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/saso-tusar-s-k-2N90yuY.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAgEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAACAxiVFJD... [5759398 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0CC6:394BBDE:6A09BB96",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3571",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1429"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/road.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAljELADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT... [3346750 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0E32:394BD79:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3563",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1437"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/road-3.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAhwDwADAREAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAgMAAQQFBgf/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAB+N5FFCwagQBCiEIEUWXFg0QwdlKSEMDgaWUWGUMBFEKBF0RYwamlcxnBIEWGSKKNtKKMpRYyHjjODTIUWEEopBVQM7cRcVYkhCFlRCqEfDAlzpoWiCwUoEYECGMGqY1N8vPsgsh0I9FnSayoFcDUkMKhVNUjQZENWxjpaNXYZTQCj17mb2svK7ii... [2709410 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0D68:394BC8C:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3570",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1430"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/road-2.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wCEAAIDAwMEAwQFBQQGBgYGBggIBwcICA0JCgkKCQ0TDA4MDA4MExEUEQ8RFBEeGBUVGB4jHRwdIyolJSo1MjVFRVwBAgMDAwQDBAUFBAYGBgYGCAgHBwgIDQkKCQoJDRMMDgwMDgwTERQRDxEUER4YFRUYHiMdHB0jKiUlKjUyNUVFXP/CABEIDe0U4wMBIgACEQEDEQH/xAAeAAABBAMBAQEAAAAAAAAAAAAEAgMFBgABBwgJCv/aAAgBAQAAAAD4rimykDaSImf54VgMv7u8ELAVOwsrNHQkxNk9XnKr596fWbpzjo3D4+RAQnFsKUjWO3GkEPxCuhVyMfXpKUux5WwpwZ4WXhx1tPhMqOeb6tynqHKp3plCQyit5MPbbGH21pGSzDM1GokY9i6eqPHoYdjr5KLDb7NwA8YR6QBU4zcvfEJwrj3rijj/AEP+VM16w8vdPg+M13rXcOX0n7feCAuhfPD62fNL... [4311782 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0E32:394BD76:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3561",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1439"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/river.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAWgCgADAREAAhEBAxEB/8QAHQAAAgIDAQEBAAAAAAAAAAAABAUDBgECBwAICf/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwAEBQb/2gAMAwEAAhADEAAAAeIfEfbVGyVmhyZrirmb9R5OiyyKR7Uq3PVOvjfcnW3mzgXTspmVL08x8qsefstSrY1FYpEbNadqcdS7SdS6LuismWpZBmoMRYzGyAUvoFEtO+cvQZJ11F6GlIxrFTlbFAg3CLN0TnoYrVWiN0LRMxrPZHPvOnMYZVeppMhBAziutp8GIXoN... [5599198 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0E32:394BD7A:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3556",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1444"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/rain.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAACgAAAAWgCAIAAAAdYo2IAAAgAElEQVR4nLS925LkOq4liAspyd0jYl/q2PT0mdM/MWbz0P//NdPHqroyd4a7JJLAPCySol8ia1d1j2xXloe7RJEgAIJYAMj//f/5v42JSNzd3c3dnYmIiNyd7i9mfv7y+WIyZg4s7m5MZkYurdXHBoVdRIhIyZlZSN3dyIcXmQszszjNLFPUKFqI120vbqk4uuzC6DMedCLh+srAwszMTObFrdw1XrthZrgHPzE/EsHrZ8GXGCO51DvZHonm0lqvLdexuBORkbcbpD/I7VFmFiJrz0bhEFWZ2AuRZKNbSnXMzO7ubHWEzMwsIu6e844OuzszqyozC2bYnZnxamafYpjnSGY5mRcjImcys+yGO0WEhMnqg7iUmIgmDSFQZGI3M2MNay7ZnJ1wj4gYU3EjIhLe11txIw8iwpSJJE5LiLSEJQgFchHZc56W... [5620522 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0E9F:394BDFB:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3560",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1440"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/rails.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wAARCAQ4B4ADASIAAhEBAxEB/8QAHwAAAgIDAQEBAQEAAAAAAAAABgcFCAMECQIBAAoL/8QAVBAAAQMDAwIFAgQEAwYEAgAXAQIDBAUGEQASIQcxCBMiQVEUYQkVMnEjQoGRFqGxJDNSwdHwF2Lh8RglNENyChmCJlOSNWOiRFSyJyhzNjlFdMT/xAAcAQACAwEBAQEAAAAAAAAAAAAEBQIDBgEABwj/xABYEQABAwIEAgcGAwQHBQYEAA8BAgMRAAQFEiExQVEGEyJhcYGRB6GxwdHwFDLhFSNCkjNSYnKC... [1478690 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0E9F:394BDFC:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3546",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1454"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/orbit.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAFAAAAAyACAIAAABz1iKgAAEAAElEQVR4nOzdW27byBZAUVLwWLrnP8HmRZEURUm2I6TjZN/2WgEcPkq0AlhA5WP7zH//9dcy7ZZpmteDefy9HKfHAgAAAAAAAAAAAAAAAAAA4KfN56PlyHiPrndapvltmub1wrh7yn33xdJfAAAAAAAAAAAAAAAAAAD4VW717l3HOzLfed6y3/ky5vxer24uv+wNAAAAAAAAAAAAAAAAAAAAj+Zb2nue7LuMy8tymeZ/1vG/twnA19fd/30NhY8L83jy3SsAAAAAAAAAAAAAAAAAAIDpbrrv7tzlLss4Xcf+nhYs0zKS3uVyujyGAm8PPEfD28X5sta+ty9332e+r4wBAOCbu22yH37PDgAA8MT+GQAAXmf/DAAAr7N/BgCA19k/w7sfh3/rvUeMhvd+xch4Rwl8uV7b779t95dTSnwd+bvfGXHvsowX... [1606394 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D0E9F:394BE00:6A09BB97",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3549",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1451"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/moss.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wCEAAIDAwMEAwQFBQQGBgYGBggIBwcICA0JCgkKCQ0TDA4MDA4MExEUEQ8RFBEeGBUVGB4jHRwdIyolJSo1MjVFRVwBAgMDAwQDBAUFBAYGBgYGCAgHBwgIDQkKCQoJDRMMDgwMDgwTERQRDxEUER4YFRUYHiMdHB0jKiUlKjUyNUVFXP/CABEID6AXcAMBIgACEQEDEQH/xAA3AAAABwEBAQEAAAAAAAAAAAABAgMEBQYHAAgJCgEAAgMBAQEAAAAAAAAAAAAAAAIBAwQFBgf/2gAMAwEAAhADEAAAAPj53CjdwBDGUIoHGUWVg5cK2JygKqKa6Uql3A4U/AzHTMQY7tm5B4+YOIl+du8lTrOVldi6VXZETvDyMFnIkMIOUhyEBQUS5NfpNkVknNiZawa1R811YJcgRBJZrIzIdELFpFC1GHvEwDttEBn2l5dTdm1UsdWihy4jXj0OzEUiW3LrxDJ0/Vzs1LNB... [3519090 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1142:394C0A1:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3540",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1460"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/more-coffee.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAWgCgADASIAAhEBAxEB/8QAHwAAAQQDAQEBAQAAAAAAAAAABgMEBQcBAggJAAoL/8QAThAAAQMCBQIEBAQFAwMDAQATAQIDEQQhAAUSMUEGURMiYXEHMoGRFKGx8AgjQsHRFVLhCWLxFiQzckOCkhclorI0whgmNVNj4gonRJP/xAAdAQACAgMBAQEAAAAAAAAAAAAEBQMGAQIHAAgJ/8QASxEAAgECBQIEBAQFBAIBAQATAQIRAyEABBIxQQVREyJhcQaBkaEUMrHwByNCwdEVUuHxM2IkFnIINEOC... [2412050 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1132:394C088:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3542",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1458"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/mate.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/7gAOQWRvYmUAZEAAAAAB/9sAhAAEAwMEAwQHBAQHCQcFBwkLCQkJCQsODAwMDAwOEQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQQGBgwIDBYMDBYUDg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCA+gF3ADAREAAhEBAxEB/90ABALu/8QBogAAAAcBAQEBAQAAAAAAAAAABAUDAgYBAAcICQoLAQACAgMBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAIBAwMCBAIGBwMEAgYCcwECAxEEAAUhEjFBUQYTYSJxgRQykaEHFbFCI8FS0eEzFmLwJHKC8SVDNFOSorJjc8I1RCeTo7M2F1RkdMPS4ggmgwkKGBmElEVGpLRW01UoGvLj88TU5PRldYWVpbXF1eX1ZnaGlqa2xtbm9jdH... [5803958 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1223:394C16E:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3536",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1464"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/Manjaro.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAWgCgADAREAAhEBAxEB/8QAHQABAQEBAQEBAQEBAAAAAAAAAQACAwQFBgcICf/EABoBAQADAQEBAAAAAAAAAAAAAAABBAUDBgL/2gAMAwEAAhADEAAAAf8AjYRERCQEQkREREeg84gJERERERCAkAkREICRERCRCQCQkREQiAiZESEBASISIiIhNmQIQEgESEiECIiEiIhIhIiNAJEQkAkaAhAhIQEiE0BHc4CRCREICQgJAaICEiIiEiIiEiEiEBIiIhAhIiIiIQEBASIgEDQEREREQCAkBERERAJE... [1725058 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1169:394C0D9:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3533",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1467"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/Mandalorian.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAZgC2ADAREAAhEBAxEB/8QAHgABAAEEAwEBAAAAAAAAAAAAAAECBAUGAwcICQr/xAAdAQEAAgMBAQEBAAAAAAAAAAAAAQIDBAUGBwgJ/9oADAMBAAIQAxAAAAH5ldvycyQlIIAESmAAECQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkmJmszMJhKEUxPZXL6P20+SfRfQ/lvR0oiQAAEgAgAFMTCyszCaZL3Pi6K7XO8v9nm9adTn9Ydj... [2077750 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1223:394C16F:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3537",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1463"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/leaves-3.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCA+gF3ADAREAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAAAQIAAwQFBgcI/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/9oADAMBAAIQAxAAAAH49wzCm1EAippJWkAxCEHFJVkvM3a6hFulqZdIQBFgqAloDCjoywBEZYChEFGRlASslAARpGUiUQEklqgIaYeEDSlhtw522epBHEJUQSsMQJYVIy2JdLpzNebXZRVNV2qbsy+Mq1alhZLpjTDJWZqz1VZpiHI3qulLYtRpVM+ihHiEoREAbb8m... [4872218 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1189:394C0FB:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3538",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1462"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/jake-weirick-EsvpmQ4zp5Y.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAgEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAACAxiVFJD... [7184614 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1229:394C187:6A09BB98",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3534",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1466"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/Kita.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAADeAAAAjGCAIAAAC8wRj9AAEAAElEQVR4nOz9bXBUV57mi/5LFuiNllKQmZItkGRQqjFgimoxcodxMzb4NlS7cGAPzZ0zF4YT1WNwdcApD4FjKoLmyyWI8AkTHDsg3AZP+TYDt88Jj9vFhXI3zLWxD6fsW1bD2AYMbgmwEGCkVOJMMSAhIVT3w+P9+J9r7b2VSLwItJ5Q7Fi599prr732Wyrzl8/zo+td/z8REZHmY82J3i0tBWuN6cGBnnl5RQcHeuQmNS+vqKVgbbyiXEQi8Vh45Uyys6xtw7YHFk27/k5Qa0Pow6Si9eiAlu4Mt7v6xr6g9k+MWWr3ypjJl3p+eJ1JResTvVu6qjeKSFnbBqMA4WWyI32uZxP3CGsNOqSGmo81H+hvEZEF+YkD/S3Trr+DbnDKRSKC7p3r2YT5duXw6YL8RLyiHD3ECHdVbyxr29BSsBY70lC7Obz/... [6263758 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D13B9:394C33B:6A09BB99",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3531",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1469"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/kace-rodriguez-p3OzJuT_Dks.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAgEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAACAxiVFJD... [2377994 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D13B9:394C33C:6A09BB99",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3530",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1470"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/jonas-denil-_PKzBUfuhgg.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAgEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAACAxiVFJD... [7064054 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1749:394C6FD:6A09BB9A",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3517",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1483"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/ign-waifu.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAIAAABnsVYUAAEAAElEQVR4nOz9X8hn13kmiC59NG6343LwVx0wyNRIhWYu5MitvhDGOvHF8ThQGWsgEGifi8ikaRvknIFAemSmG4EJE0gspfuQ7uTI4G7SlDMmbk6DTscNhokDQaYZ4YsW8UldDErZp4iZAqk+YZUiKWLoOhf71GJ97/PnffavSnbZXT/Mx/7tvda7nvd5nvfd8tLW/t3z6d/4f538xZ8ef+jjd/LfMcadAOPu37t/7xr+7t+7Nrhjgd39e/fv3b97/94t57t/7xrm7t+7f+/+vfv31v/ebY93/9412N2/d/+2f//WjxxB8neMcSfAuPv37t+7hr/7964N7lhgd//e/Xv3796/d8v57t+7hrn79+7fu3/v/r31v3fb492/dw129+/dv+3fvzUNPT8/ckz49yfyX/iMPZ93Iv6PnIEfI/7fic+db/gE6t2/... [1271986 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D14D9:394C479:6A09BB99",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3525",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1475"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/gruvb99810.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAADwAAAAhwCAYAAACQvstyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAP+lSURBVHhe7P1RouTKrXSNfVeeiD0DD8GeiYfikUuOtSJAsvro/s9+aOzKBBAIIJFJFqt6dx/pf/5f/5//93/+z1/5K3/lr/yVv/JX/spf+St/5a/8lb/yV/7KX/krf+Wv/JW/8lf+yl/5K3/lr/yVv/JX/spf+St/5a/8lb/yV/7KX/krf+Wv/JW/8lf+yl/5K3/lr/yVv/JX/spf+St/5f8v5F//539+//vf/2E6aLH/+Y9o5D+NY8XQ/kn4pv5POP+RN9JHwXprISxV/KEV/BFJarjl/dapvMifFf5XMeVTicZZLsMaTyjrJWa/VzyxhpmJPWSl3VZXLjGW0LKfvJfn+nGpcPnu/S3x0r8i1vO/sDnfpr/y... [5649850 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1B51:394CB56:6A09BB9C",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3506",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1494"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/gruv-abstract-maze.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAHgAAABDgCAIAAAA584PEADNJf0lEQVR4nOy9fYyWdZrvCYqlDVU2FiBCobyJoGgh1Wg7oN21eMSXgQ679riOhZ3u8Y9V1mT1JO5kY7sxOX+4nk46JznG7tk4mXXAMyvEtIlvow3GOAMSYTZSTAqBxoJGUYTiUEWDNm+9H+7vPNf8uJ+niuJ5qqDqqe83t1e+v+/v+r3d93W/PPdNXQ6fNWvWMMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwjIGElmeemPGHA3cubPz1x3tTQhVIiwOZC6kSfEft2Ff+039BMYzy0PzUwhv2jvzLB3+giEKJ6BrgHKTFklzki29bP/jF++iGYQx26JLVNvHovesmvTD9oiWnTp/yb1w0tmoISxuk16vlLYu1BHhVkhdfeRNuGIZh9B+4y2Nz4LbILYb7I3zQIZ08HDtYUPJYCCzk+fk/4TFs+lW/pzgYwRKw... [4481646 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D1EDB:394CEFE:6A09BB9D",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3499",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1501"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/ganapathy-kumar-JxBcs2O6-C0.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4AAQSkZJRgABAgEASABIAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAACAxiVFJD... [5799990 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D4BA5:394FDE8:6A09BBB0",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3432",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1568"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/flower.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4QAWRXhpZgAATU0AKgAAAAgAAAAAAAD//gAgU1lTVEVNQVggSkZJRiBFbmNvZGVyIFZlci4yLjAA/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAXcCmsDAREAAhEBAxEB/8QBogAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoLEAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaX... [6555474 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D2372:394D3CD:6A09BB9F",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3493",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1507"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/Excl_Autumn_Leaf.jpg",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4RYMRXhpZgAASUkqAAgAAAALAA8BAgAGAAAAkgAAABABAgAVAAAAmAAAABIBAwABAAAAAQAAABoBBQABAAAArQAAABsBBQABAAAAtQAAACgBAwABAAAAAgAAADEBAgAfAAAAvQAAADIBAgAUAAAA3AAAADsBAgAcAAAA8AAAAJiCAgAvAAAADAEAAGmHBAABAAAAPAEAAHgDAABDYW5vbgBDYW5vbiBFT1MgNUQgTWFyayBJSQAAnyQAECcAAACfJAAQJwAAQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpADIwMTQ6MTA6MjQgMjM6MjM6NTUAUGhvdG9ncmFwaGVyOiBNYXJpdXMgTmVzdG9yAENvcHlyaWdodDogTWFyaXVzIE5lc3RvciAtIHd3dy5tYXJpdXNuZXN0b3Iucm8AAB8AmoIFAAEAAAC2AgAAnYIFAAEAAAC+AgAAIogDAAEAAAADAAAA... [2905166 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D23AA:394D40E:6A09BB9F",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3490",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1510"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/cactus.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"/9j/4QAWRXhpZgAATU0AKgAAAAgAAAAAAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAA... [1597998 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D23DD:394D447:6A09BB9F",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3488",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1512"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/cabin.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4EAYAAAC4Qx0AAAAgAElEQVR4AQADtPxLAXZ2e3t0dP//EhISEhISAAD09PT09PQAABQUFhYVFQAA//8AAP39AAABAQMDAwMAAP39///+/gAA9vb29vb2AAAEBAQEBAQAAP7+/v7+/gAA9fX19fPzAAD7+/v7+/sAAAYGBgYGBgAAFxcXFxcXAAAICAcHBwcAAPr6/Pz5+QAABAQEBAMDAAD39/f39/cAAP////8AAAAAAgIDAwcHAADv7+3t8PAAAPX19vb29gAAAgICAgMDAADx8fHx8fEAAP39/f38/AAAHR0eHhsbAAD39/f39/cAAAcHBwcFBQAAAAAAAAICAAD19fX19fUAAAUFBQUFBQAABwcGBgkJAAD+/v7+/v4AAPLy9fX09AAADQ0KCgwMAAD6+vr6+voAAPz8/Pz+/gAAAQEBAQEBAAAFBQUFBQUAAPr6+vr6... [22155734 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D4887:394FA7D:6A09BBAF",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3437",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1563"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Banners/Wallpapers/bush.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAgAElEQVR4Xuy9h5IjSXYt6NBAZpaaniFptKXt/v9/kW9ET3dXVSrotXPuPe7XPTwAZFX3CL5JsqcARISHi6vl5N8/rs+TNEn4/0t/5/M5TafTNJmcEz7jbzKxh/j9nNJ0Nk3H45H34b/T6cTr+Kxn8K8+632z2cw+nutpxOc1Ln6L78XYeP54OPJhuz7zfye8V/djDH2eTf2VmLvfr7lxPF9HnCuexfhaj/Yk74EvSO/EvzaO71FKNtc8D+ynzS/OTfOI7+Zvk/F9xPU4vyP23s9n5v/6FmObeQZnHA+OPoyr88I6NWY87/bsemtvnzMgKADWG2MAe+f+/RM/t/b+eM7Yb3wnHGJ9/m6d23SGI5/Zvp8OabFY+DnNEveNMDvh+vMzGDSldDgc+Jv+tJYD4A5ocD7zjPX7fD7nrdpPPIuzxjsxls7M7rdr... [3030342 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D7A6A:3952EAF:6A09BBC3",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3349",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1651"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "path": "9-resources/Attachments/Pasted image 20251104190745.png",
+        "error": {
+          "name": "VaultError",
+          "message": "Bad credentials - https://docs.github.com/rest",
+          "type": "authentication",
+          "details": {
+            "originalError": {
+              "name": "HttpError",
+              "message": "Bad credentials - https://docs.github.com/rest",
+              "status": 401,
+              "request": {
+                "method": "POST",
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "headers": {
+                  "accept": "application/vnd.github.v3+json",
+                  "user-agent": "octokit-core.js/6.0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) obsidian/1.8.10 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36",
+                  "if-none-match": "",
+                  "x-github-api-version": "2022-11-28",
+                  "authorization": "token [REDACTED]",
+                  "content-type": "application/json; charset=utf-8"
+                },
+                "body": "{\"content\":\"iVBORw0KGgoAAAANSUhEUgAAAwcAAANiCAIAAAC7AyLxAAAQAElEQVR4AVz9B6B1yXGYB1ZVn3Nuevn9aQICwWxatihLKwdpLYkiCQKDDAxyIECCOYOUmUBQzBJzEoMYJAADigjUCoFee+21bEtiAINIMMgEiTThnz++eO8953RX7df3zVBa9+vbp7u6clWHe+4/gP3AD37LT/zc933fT/zDr37L173iy177wMuf/8wXfMEDz3vmS1/+3K/7+jf+8A9/90/+kx//4Z/+ke/7sR/4nh/63n/8k//oJ37+h3/+l3/yl976T/75Qz/31nf84j97xy/8zNv/6Q/87E9/5bd9yxd91Ve++ou+8MFXv/RFL3/hi17xope99mWvfePrX/fGL3zJK1/6/Bc+50UvfuB1r37J977lTQ+99Sf/xTt+7q1v/9mf/+Wf/oEf/YEv/4av/YLnPvDs5z/wwAue9Zznf8FzX/Cs572w1gee... [1456806 bytes total]",
+                "request": {}
+              },
+              "response": {
+                "url": "https://api.github.com/repos/NajmosSalahin/Iphone-Mind/git/blobs",
+                "status": 401,
+                "headers": {
+                  "content-length": "109",
+                  "content-type": "application/json; charset=utf-8",
+                  "x-github-media-type": "github.v3; format=json",
+                  "x-github-request-id": "218B:36A517:36D4447:394F619:6A09BBAD",
+                  "x-ratelimit-limit": "5000",
+                  "x-ratelimit-remaining": "3443",
+                  "x-ratelimit-reset": "1779025133",
+                  "x-ratelimit-resource": "core",
+                  "x-ratelimit-used": "1557"
+                },
+                "data": {
+                  "message": "Bad credentials",
+                  "documentation_url": "https://docs.github.com/rest",
+                  "status": "401"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "failedPaths": [
+      "9-resources/Banners/Wallpapers/White-Mountain.jpg",
+      "9-resources/Banners/Wallpapers/waterfall2.png",
+      "9-resources/Banners/Wallpapers/village.jpg",
+      "9-resources/Banners/Wallpapers/urban_architecture.jpg",
+      "9-resources/Banners/Wallpapers/table.png",
+      "9-resources/Banners/Wallpapers/sunset.jpg",
+      "9-resources/Banners/Wallpapers/sunset-beach.jpg",
+      "9-resources/Banners/Wallpapers/sunforest.jpg",
+      "9-resources/Banners/Wallpapers/street.jpg",
+      "9-resources/Banners/Wallpapers/stairs.jpg",
+      "9-resources/Banners/Wallpapers/staircase.jpg",
+      "9-resources/Banners/Wallpapers/sea.jpg",
+      "9-resources/Banners/Wallpapers/saso-tusar-s-k-2N90yuY.jpg",
+      "9-resources/Banners/Wallpapers/road.jpg",
+      "9-resources/Banners/Wallpapers/road-3.jpg",
+      "9-resources/Banners/Wallpapers/road-2.jpg",
+      "9-resources/Banners/Wallpapers/river.jpg",
+      "9-resources/Banners/Wallpapers/rain.png",
+      "9-resources/Banners/Wallpapers/rails.jpg",
+      "9-resources/Banners/Wallpapers/orbit.png",
+      "9-resources/Banners/Wallpapers/moss.jpg",
+      "9-resources/Banners/Wallpapers/more-coffee.jpg",
+      "9-resources/Banners/Wallpapers/mate.jpg",
+      "9-resources/Banners/Wallpapers/Manjaro.jpg",
+      "9-resources/Banners/Wallpapers/Mandalorian.jpg",
+      "9-resources/Banners/Wallpapers/leaves-3.jpg",
+      "9-resources/Banners/Wallpapers/jake-weirick-EsvpmQ4zp5Y.jpg",
+      "9-resources/Banners/Wallpapers/Kita.png",
+      "9-resources/Banners/Wallpapers/kace-rodriguez-p3OzJuT_Dks.jpg",
+      "9-resources/Banners/Wallpapers/jonas-denil-_PKzBUfuhgg.jpg",
+      "9-resources/Banners/Wallpapers/ign-waifu.png",
+      "9-resources/Banners/Wallpapers/gruvb99810.png",
+      "9-resources/Banners/Wallpapers/gruv-abstract-maze.png",
+      "9-resources/Banners/Wallpapers/ganapathy-kumar-JxBcs2O6-C0.jpg",
+      "9-resources/Banners/Wallpapers/flower.jpg",
+      "9-resources/Banners/Wallpapers/Excl_Autumn_Leaf.jpg",
+      "9-resources/Banners/Wallpapers/cactus.png",
+      "9-resources/Banners/Wallpapers/cabin.png",
+      "9-resources/Banners/Wallpapers/bush.png",
+      "9-resources/Attachments/Pasted image 20251104190745.png"
+    ]
+  }
+}
