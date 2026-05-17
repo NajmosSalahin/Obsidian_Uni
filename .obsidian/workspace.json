@@ -8,55 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c3fe80757e7522b4",
+            "id": "fe5061f7713e3ae7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Distributions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Distributions"
-            }
-          },
-          {
-            "id": "7b708228a7530774",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Untitled 7.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 7"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -128,11 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "2-fleeting notes/Untitled 7.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Untitled 7"
+              "title": "File properties"
             }
           },
           {
@@ -246,17 +205,19 @@
       "bases:Create new base": false,
       "edge-tts:Read note aloud": false,
       "templater-obsidian:Templater": false,
-      "pexels-banner:🚩 Pixel Banner Menu": false
+      "pexels-banner:🚩 Pixel Banner Menu": false,
+      "fit:Sync to GitHub": false
     }
   },
-  "active": "7b708228a7530774",
+  "active": "fe5061f7713e3ae7",
   "lastOpenFiles": [
     "2-fleeting notes/Distributions.md",
+    "2-fleeting notes/Untitled 7.md",
+    "NinjaDiary.txt",
     "2-fleeting notes/coding everyday for a month.md",
     "2-fleeting notes/Attention differs from place to place.md",
     "2-fleeting notes/A little bit every day.md",
     "6-templates/atomic note.md",
-    "2-fleeting notes/Untitled 7.md",
     "6-templates/book template.md",
     "6-templates/daily note.md",
     "6-templates/fleeting template.md",
@@ -277,7 +238,6 @@
     "0-myself/my socials.md",
     "2-fleeting notes/Python Data Structures – Lists, Tuples, Dicts & Sets.md",
     "0-myself/sds self syllabus.md",
-    "2-fleeting notes/vault structure.md",
     "10-archives",
     "8-areas",
     "7-projects",
@@ -295,7 +255,6 @@
     "9-resources/Banners/Wallpapers/dark-bench.png",
     "9-resources/Banners/Wallpapers/cactus.png",
     "9-resources/Banners/Wallpapers/cabin.png",
-    "9-resources/Banners/Wallpapers",
-    "4-bases/memes.base"
+    "9-resources/Banners/Wallpapers"
   ]
 }
