@@ -712,3 +712,24 @@
     }
   }
 }
+[2026-05-17T12:50:59.895Z] [Plugin] Auto sync requested
+[2026-05-17T12:50:59.897Z] 🚀 [SYNC START] Auto sync requested
+[2026-05-17T12:50:59.897Z] 🔄 [Sync] Checking local and remote changes (parallel)...
+[2026-05-17T12:50:59.897Z] .. 💾 [LocalVault] Scanning files...
+[2026-05-17T12:50:59.902Z] .. ☁️ [RemoteVault] Fetching from GitHub...
+[2026-05-17T12:51:10.927Z] [Performance Warning] Slow operation detected: {
+  "operation": "Local vault SHA computation (294 files)",
+  "message": "Operation still running after 10.0s"
+}
+[2026-05-17T12:52:18.878Z] ... 💾 [LocalVault] Scanned 294 files
+[2026-05-17T12:54:59.886Z] [Plugin] Auto sync requested
+[2026-05-17T12:54:59.888Z] 🚀 [SYNC START] Auto sync requested
+[2026-05-17T12:54:59.888Z] [FitSync] Sync already in progress - aborting new sync request
+[2026-05-17T12:54:59.888Z] [Plugin] Sync already in progress: {
+  "triggerType": "auto"
+}
+[2026-05-17T12:56:16.760Z] ... ⬇️ [RemoteVault] Fetching initial state from GitHub (7093bc0)...
+[2026-05-17T12:56:26.887Z] [Performance Warning] Slow operation detected: {
+  "operation": "Remote vault tree fetch from GitHub",
+  "message": "Operation still running after 10.0s"
+}
