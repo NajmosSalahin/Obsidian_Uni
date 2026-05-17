@@ -11,10 +11,24 @@
             "id": "89ba31b5126c4a25",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/Untitled 9.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled 9"
             }
           }
         ]
@@ -89,9 +103,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "2-fleeting notes/Untitled 9.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Untitled 9"
             }
           },
           {
@@ -211,6 +227,7 @@
   },
   "active": "89ba31b5126c4a25",
   "lastOpenFiles": [
+    "2-fleeting notes/Untitled 9.md",
     "AutoSync.ps1",
     "New Text Document.txt",
     "2-fleeting notes/Untitled 8.md",
@@ -247,7 +264,6 @@
     "7-review",
     "10-archives",
     "8-areas",
-    "7-projects",
     "9-resources/Banners/Wallpapers/Excl_Autumn_Leaf.jpg",
     "9-resources/Banners/Wallpapers/elliott-engelmann-DjlKxYFJlTc.jpg",
     "9-resources/Banners/Wallpapers/dragon.png",
