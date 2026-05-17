@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8abf3b1d3d10fc03",
+        "id": "a064bc0f3bff3c20",
         "type": "tabs",
         "children": [
           {
-            "id": "fe5061f7713e3ae7",
+            "id": "89ba31b5126c4a25",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Untitled 8.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled 8"
+              "title": "New tab"
             }
           }
         ]
@@ -103,11 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "2-fleeting notes/Untitled 8.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Untitled 8"
+              "title": "File properties"
             }
           },
           {
@@ -225,7 +209,7 @@
       "fit:Sync to GitHub": false
     }
   },
-  "active": "fe5061f7713e3ae7",
+  "active": "89ba31b5126c4a25",
   "lastOpenFiles": [
     "2-fleeting notes/Untitled 8.md",
     "2-fleeting notes/Distributions.md",
