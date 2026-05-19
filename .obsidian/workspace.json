@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Calculus exam parts.md",
+                "file": "2-fleeting notes/Attention differs from place to place.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,11 +28,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Calculus exam parts"
+              "title": "Attention differs from place to place"
             }
           },
           {
-            "id": "7cd2a79b21c43372",
+            "id": "7d70d2ed4aa63178",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -54,9 +54,33 @@
               "icon": "lucide-file",
               "title": "Consistency Compounds While Intensity Collapses"
             }
+          },
+          {
+            "id": "f3b3338e75750c4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/Personal reflection.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Personal reflection"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -130,10 +154,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md"
+                "file": "2-fleeting notes/Personal reflection.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Consistency Compounds While Intensity Collapses"
+              "title": "File properties for Personal reflection"
             }
           },
           {
@@ -142,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
+                "file": "2-fleeting notes/Personal reflection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +176,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Consistency Compounds While Intensity Collapses"
+              "title": "Backlinks for Personal reflection"
             }
           },
           {
@@ -203,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
+                "file": "2-fleeting notes/Personal reflection.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Consistency Compounds While Intensity Collapses"
+              "title": "Outline of Personal reflection"
             }
           },
           {
@@ -218,7 +242,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md"
+                "file": "2-fleeting notes/Personal reflection.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -262,16 +286,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7cd2a79b21c43372",
+  "active": "f3b3338e75750c4b",
   "lastOpenFiles": [
-    "2-fleeting notes/First Note for a zettelkasten.md",
     "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
+    "2-fleeting notes/Attention differs from place to place.md",
+    "2-fleeting notes/Personal reflection.md",
+    "2-fleeting notes/First Note for a zettelkasten.md",
+    "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/A little bit every day.md",
     "2-fleeting notes/vault structure.md",
     "2-fleeting notes/No Longer Human.md",
     "2-fleeting notes/2026-05-19.md",
     "2-fleeting notes/2026-05-19-goals.md",
-    "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/9-resources/Attachments/calculus110.png",
     "9-resources/Attachments/calculus100.png",
     "9-resources/Attachments/Pasted image 20260519184140.png",

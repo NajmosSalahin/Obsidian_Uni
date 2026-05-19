@@ -15,4 +15,4 @@ survives interruption, because it asks less each time.
 -
 
 ## Source
-- Personal reflection, [[2026-03-15]]
+- [[Personal reflection]], [[2026-03-15]]
