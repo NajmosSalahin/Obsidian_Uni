@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/2026-05-19.md",
+                "file": "2-fleeting notes/First Note for a zettelkasten.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-05-19"
+              "title": "First Note for a zettelkasten"
             }
           }
         ],
@@ -130,10 +130,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/2026-05-19.md"
+                "file": "2-fleeting notes/First Note for a zettelkasten.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for 2026-05-19"
+              "title": "File properties for First Note for a zettelkasten"
             }
           },
           {
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2-fleeting notes/2026-05-19.md",
+                "file": "2-fleeting notes/First Note for a zettelkasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026-05-19"
+              "title": "Backlinks for First Note for a zettelkasten"
             }
           },
           {
@@ -203,13 +203,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2-fleeting notes/2026-05-19.md",
+                "file": "2-fleeting notes/First Note for a zettelkasten.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-05-19"
+              "title": "Outline of First Note for a zettelkasten"
             }
           },
           {
@@ -218,7 +218,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "2-fleeting notes/2026-05-19.md"
+                "file": "2-fleeting notes/First Note for a zettelkasten.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -264,6 +264,11 @@
   },
   "active": "7cd2a79b21c43372",
   "lastOpenFiles": [
+    "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
+    "2-fleeting notes/A little bit every day.md",
+    "2-fleeting notes/vault structure.md",
+    "2-fleeting notes/No Longer Human.md",
+    "2-fleeting notes/2026-05-19.md",
     "2-fleeting notes/2026-05-19-goals.md",
     "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/9-resources/Attachments/calculus110.png",
@@ -280,8 +285,6 @@
     "2-fleeting notes/9-resources/Attachments",
     "2-fleeting notes/9-resources",
     "2-fleeting notes/Pasted image 20260519111110.png.md",
-    "2-fleeting notes/Calculus1.md",
-    "2-fleeting notes/A little bit every day.md",
-    "2-fleeting notes/2026-05-19.md"
+    "2-fleeting notes/Calculus1.md"
   ]
 }
