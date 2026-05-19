@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/First Note for a zettelkasten.md",
+                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "First Note for a zettelkasten"
+              "title": "Consistency Compounds While Intensity Collapses"
             }
           }
         ],
@@ -130,10 +130,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/First Note for a zettelkasten.md"
+                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for First Note for a zettelkasten"
+              "title": "File properties for Consistency Compounds While Intensity Collapses"
             }
           },
           {
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2-fleeting notes/First Note for a zettelkasten.md",
+                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for First Note for a zettelkasten"
+              "title": "Backlinks for Consistency Compounds While Intensity Collapses"
             }
           },
           {
@@ -203,13 +203,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2-fleeting notes/First Note for a zettelkasten.md",
+                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of First Note for a zettelkasten"
+              "title": "Outline of Consistency Compounds While Intensity Collapses"
             }
           },
           {
@@ -218,7 +218,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "2-fleeting notes/First Note for a zettelkasten.md"
+                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -264,6 +264,7 @@
   },
   "active": "7cd2a79b21c43372",
   "lastOpenFiles": [
+    "2-fleeting notes/First Note for a zettelkasten.md",
     "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
     "2-fleeting notes/A little bit every day.md",
     "2-fleeting notes/vault structure.md",
