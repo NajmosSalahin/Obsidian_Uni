@@ -1,20 +1,12 @@
 {
+  "propertiesInDocument": "hidden",
   "showLineNumber": true,
-  "trashOption": "system",
-  "alwaysUpdateLinks": true,
-  "promptDelete": false,
+  "openBehavior": "",
   "newFileLocation": "folder",
   "newFileFolderPath": "2-fleeting notes",
   "attachmentFolderPath": "9-resources/Attachments",
-  "pdfExportSettings": {
-    "includeName": true,
-    "pageSize": "A4",
-    "landscape": false,
-    "margin": "0",
-    "downscalePercent": 100
-  },
-  "propertiesInDocument": "hidden",
-  "readableLineLength": true,
-  "showInlineTitle": true,
-  "openBehavior": "new"
+  "alwaysUpdateLinks": true,
+  "trashOption": "local",
+  "showInlineTitle": false,
+  "promptDelete": false
 }

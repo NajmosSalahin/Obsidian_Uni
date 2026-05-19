@@ -1,16 +1,13 @@
 {
-  "cssTheme": "Minimal",
-  "accentColor": "#7abd9c",
-  "textFontFamily": "Fira Code,Fira Mono,Fira Sans",
-  "interfaceFontFamily": "Fira Mono",
-  "monospaceFontFamily": "JetBrains Mono",
-  "baseFontSize": 18,
-  "nativeMenus": false,
-  "showRibbon": true,
   "enabledCssSnippets": [
+    "gruvbox-base",
     "gruvbox-headers",
-    "minimal-outline",
-    "gruvbox-base"
+    "minimal-outline"
   ],
-  "showViewHeader": false
+  "cssTheme": "Minimal",
+  "showViewHeader": true,
+  "interfaceFontFamily": "Fira Code",
+  "monospaceFontFamily": "JetBrains Mono,Fira Code,OpenDyslexic",
+  "textFontFamily": "Fira Code,JetBrains Mono",
+  "baseFontSize": 17
 }

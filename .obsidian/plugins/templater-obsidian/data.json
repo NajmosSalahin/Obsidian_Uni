@@ -15,8 +15,8 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "2-fleeting notes",
-      "template": "8-templates/fleeting template.md"
+      "folder": "",
+      "template": ""
     }
   ],
   "enable_file_templates": false,
@@ -28,7 +28,16 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
-  "enabled_templates_hotkeys": [],
-  "startup_templates": [],
-  "intellisense_render": 1
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": ""
+    }
+  ]
 }

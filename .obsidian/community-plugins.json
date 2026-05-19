@@ -1,10 +1,7 @@
 [
   "calendar",
-  "edge-tts",
-  "templater-obsidian",
-  "link-favicon",
+  "obsidian-minimal-settings",
   "pexels-banner",
-  "highlightr-plugin",
-  "note-refactor-obsidian",
-  "obsidian-minimal-settings"
+  "templater-obsidian",
+  "obsidian-style-settings"
 ]

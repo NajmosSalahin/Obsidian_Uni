@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "4d301aab34ba54e7",
+    "id": "f0360097ba0ae946",
     "type": "split",
     "children": [
       {
-        "id": "a064bc0f3bff3c20",
+        "id": "6366a838e23a48db",
         "type": "tabs",
         "children": [
           {
-            "id": "89ba31b5126c4a25",
+            "id": "b92a5b8f9a9b1a95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Untitled 9.md",
+                "file": "2-fleeting notes/Calculus exam parts.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,24 +28,49 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 9"
+              "title": "Calculus exam parts"
+            }
+          },
+          {
+            "id": "7cd2a79b21c43372",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/2026-05-19.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-05-19"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "559c8d35dfaf6af3",
+    "id": "229ac5310dd0ff11",
     "type": "split",
     "children": [
       {
-        "id": "64c9250f049c67c6",
+        "id": "8bae1e78a3b3eed8",
         "type": "tabs",
         "children": [
           {
-            "id": "3222cfdb6bc10aea",
+            "id": "40038ffa553f0692",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +83,7 @@
             }
           },
           {
-            "id": "9715d733298366c5",
+            "id": "659a8a257f48c951",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +100,7 @@
             }
           },
           {
-            "id": "be10d7c91deef7cf",
+            "id": "335e837340ab6b05",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -88,35 +113,37 @@
       }
     ],
     "direction": "horizontal",
-    "width": 208.5
+    "width": 200
   },
   "right": {
-    "id": "19a9e79c820ee9d4",
+    "id": "7dd42c1aad9d4a8c",
     "type": "split",
     "children": [
       {
-        "id": "516a04a5c76a7f7d",
+        "id": "a56baabb65f739f7",
         "type": "tabs",
+        "dimension": 52.37388724035609,
         "children": [
           {
-            "id": "14f6326fdae1d96f",
+            "id": "2d3a0613e62a6128",
             "type": "leaf",
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Untitled 9.md"
+                "file": "2-fleeting notes/2026-05-19.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Untitled 9"
+              "title": "File properties for 2026-05-19"
             }
           },
           {
-            "id": "ad47ff621123f5c1",
+            "id": "4a0f069e80f15200",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": true,
+                "file": "2-fleeting notes/2026-05-19.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -125,25 +152,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 2026-05-19"
             }
           },
           {
-            "id": "4de4e84c153334aa",
+            "id": "9a844a8f1ce03a85",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Untitled"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "3e2b1ff9ea8a9f6c",
+            "id": "afce767047824b80",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -158,7 +184,7 @@
             }
           },
           {
-            "id": "fdcfe48c07f96637",
+            "id": "5fbdb043c8426ea6",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -172,28 +198,41 @@
             }
           },
           {
-            "id": "92865974f5147b20",
+            "id": "411b63ea84778191",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "7-review/review function.md",
+                "file": "2-fleeting notes/2026-05-19.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of review function"
+              "title": "Outline of 2026-05-19"
+            }
+          },
+          {
+            "id": "ca55c471b6d79827",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "2-fleeting notes/2026-05-19.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
             }
           }
         ]
       },
       {
-        "id": "57f92e5ea097608b",
+        "id": "e47e5c4c95150ba1",
         "type": "tabs",
+        "dimension": 47.62611275964392,
         "children": [
           {
-            "id": "f36be1f1e3fcd512",
+            "id": "d7f8b719749e6aeb",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -206,72 +245,43 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 252.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "zk-prefixer:Create new unique note": false,
-      "random-note:Open random note": false,
+      "daily-notes:Open today's daily note": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "edge-tts:Read note aloud": false,
-      "templater-obsidian:Templater": false,
+      "random-note:Open random note": false,
+      "zk-prefixer:Create new unique note": false,
       "pexels-banner:🚩 Pixel Banner Menu": false,
-      "fit:Sync to GitHub": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "89ba31b5126c4a25",
+  "active": "7cd2a79b21c43372",
   "lastOpenFiles": [
-    "2-fleeting notes/Untitled 9.md",
-    "AutoSync.ps1",
-    "New Text Document.txt",
-    "2-fleeting notes/Untitled 8.md",
-    "2-fleeting notes/Distributions.md",
-    "2-fleeting notes/Untitled 7.md",
-    "NinjaDiary.txt",
-    "2-fleeting notes/coding everyday for a month.md",
-    "2-fleeting notes/Attention differs from place to place.md",
+    "2-fleeting notes/2026-05-19-goals.md",
+    "2-fleeting notes/Calculus exam parts.md",
+    "2-fleeting notes/9-resources/Attachments/calculus110.png",
+    "9-resources/Attachments/calculus100.png",
+    "9-resources/Attachments/Pasted image 20260519184140.png",
+    "9-resources/Attachments/Pasted image 20260519154138.png",
+    "9-resources/Attachments/calculus110.png",
+    "2-fleeting notes/9-resources/Attachments 1/Pasted image 20260519184140.png",
+    "2-fleeting notes/9-resources/Attachments 1/Pasted image 20260519154138.png",
+    "2-fleeting notes/9-resources/Attachments 1/calculus110.png",
+    "2-fleeting notes/9-resources/Attachments 1/calculus100.png",
+    "2-fleeting notes/9-resources/Attachments 1",
+    "2-fleeting notes/9-resources/Attachments/calculus100.png",
+    "2-fleeting notes/9-resources/Attachments",
+    "2-fleeting notes/9-resources",
+    "2-fleeting notes/Pasted image 20260519111110.png.md",
+    "2-fleeting notes/Calculus1.md",
     "2-fleeting notes/A little bit every day.md",
-    "6-templates/atomic note.md",
-    "6-templates/book template.md",
-    "6-templates/daily note.md",
-    "6-templates/fleeting template.md",
-    "6-templates/literature note.md",
-    "2-fleeting notes/Untitled 6.md",
-    "0-myself/my routine.md",
-    "2-fleeting notes/Untitled 5.md",
-    "2-fleeting notes/Linear Mapping.md",
-    "2-fleeting notes/Lec-1 SDS-101 Probability.md",
-    "2-fleeting notes/Untitled 4.md",
-    "2-fleeting notes/Untitled 3.md",
-    "2-fleeting notes/Style is a list of consistent constrains.md",
-    "2-fleeting notes/Untitled 2.md",
-    "2-fleeting notes/Untitled.md",
-    "9-resources/Attachments/Pasted image 20260423221730.png",
-    "2-fleeting notes/Parasocial bonds = cheap substitute for real connection.md",
-    "2-fleeting notes/Untitled 1.md",
-    "0-myself/my socials.md",
-    "2-fleeting notes/Python Data Structures – Lists, Tuples, Dicts & Sets.md",
-    "10-archives",
-    "8-areas",
-    "7-projects",
-    "4-bases/atomic.base",
-    "7-review",
-    "10-archives",
-    "8-areas",
-    "9-resources/Banners/Wallpapers/Excl_Autumn_Leaf.jpg",
-    "9-resources/Banners/Wallpapers/elliott-engelmann-DjlKxYFJlTc.jpg",
-    "9-resources/Banners/Wallpapers/dragon.png",
-    "9-resources/Banners/Wallpapers/door.png",
-    "9-resources/Banners/Wallpapers/dock.png",
-    "9-resources/Banners/Wallpapers/desk-gruvbox-material.jpg",
-    "9-resources/Banners/Wallpapers/dark-bench.png",
-    "9-resources/Banners/Wallpapers/cactus.png",
-    "9-resources/Banners/Wallpapers/cabin.png"
+    "2-fleeting notes/2026-05-19.md"
   ]
 }
