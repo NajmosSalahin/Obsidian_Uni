@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b92a5b8f9a9b1a95",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Attention differs from place to place.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Attention differs from place to place"
-            }
-          },
-          {
             "id": "7d70d2ed4aa63178",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
+                "file": "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -56,55 +32,17 @@
             }
           },
           {
-            "id": "f3b3338e75750c4b",
+            "id": "4ea25a0e55783fd1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Personal reflection.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Personal reflection"
-            }
-          },
-          {
-            "id": "e3d217b36a225ad4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Familiarity Feels Like Knowledge But Isn't"
+              "title": "New tab"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,11 +115,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Familiarity Feels Like Knowledge But Isn't"
+              "title": "File properties"
             }
           },
           {
@@ -190,7 +126,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -200,7 +135,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Familiarity Feels Like Knowledge But Isn't"
+              "title": "Backlinks"
             }
           },
           {
@@ -251,13 +186,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Familiarity Feels Like Knowledge But Isn't"
+              "title": "Outline"
             }
           },
           {
@@ -265,9 +199,7 @@
             "type": "leaf",
             "state": {
               "type": "footnotes",
-              "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md"
-              },
+              "state": {},
               "icon": "lucide-file-signature",
               "title": "Footnotes"
             }
@@ -310,13 +242,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e3d217b36a225ad4",
+  "active": "4ea25a0e55783fd1",
   "lastOpenFiles": [
-    "1-atomic notes/GG.md",
-    "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
+    "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
+    "1-atomic notes/Attention differs from place to place.md",
     "2-fleeting notes/Personal reflection.md",
-    "2-fleeting notes/Consistency Compounds While Intensity Collapses.md",
-    "2-fleeting notes/Attention differs from place to place.md",
+    "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
+    "1-atomic notes/GG.md",
     "2-fleeting notes/First Note for a zettelkasten.md",
     "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/A little bit every day.md",
