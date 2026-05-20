@@ -2,7 +2,7 @@
 
 ### Definitions
 
-**Mapping:** Let $A$ and $B$ be arbitrary nonempty sets. Suppose to each element in $a\in A$ there is assigned a unique element of $B$; called the image of $a$. The collection $f$ of such assignments is called a mapping (or map) from $A$ into $B$, and it is denoted by $f:A\rightarrow B$.
+**Mapping:** Let $A$ and $B$ be arbitrary non-empty sets. Suppose to each element in $a\in A$ there is assigned a unique element of $B$; called the image of $a$. The collection $f$ of such assignments is called a mapping (or map) from $A$ into $B$, and it is denoted by $f:A\rightarrow B$.
 
 The set $A$ is called the domain of the mapping, and $B$ is called the target set. We write $f(a)$, read "f of a," for the unique element of $B$ that $f$ assigns to $a\in A$. One may also view a mapping $f:A\rightarrow B$ as a computer that, for each input value $a\in A.$ produces a unique output $f(a)\in B$.
 

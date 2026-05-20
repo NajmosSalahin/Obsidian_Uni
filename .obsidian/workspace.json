@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d70d2ed4aa63178",
+            "id": "4ea25a0e55783fd1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
+                "file": "2-fleeting notes/Linear Mapping.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,17 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Familiarity Feels Like Knowledge But Isn't"
-            }
-          },
-          {
-            "id": "4ea25a0e55783fd1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Linear Mapping"
             }
           }
         ]
@@ -115,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md"
+                "file": "2-fleeting notes/Linear Mapping.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Familiarity Feels Like Knowledge But Isn't"
+              "title": "File properties for Linear Mapping"
             }
           },
           {
@@ -241,12 +231,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7d70d2ed4aa63178",
+  "active": "4ea25a0e55783fd1",
   "lastOpenFiles": [
+    "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
     "1-atomic notes/Attention differs from place to place.md",
     "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
     "2-fleeting notes/Personal reflection.md",
-    "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
     "1-atomic notes/GG.md",
     "2-fleeting notes/First Note for a zettelkasten.md",
     "2-fleeting notes/Calculus exam parts.md",

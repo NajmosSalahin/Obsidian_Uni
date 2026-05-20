@@ -7,5 +7,8 @@
   "minimal-style@@h4-size": "1.17em",
   "minimal-style@@h5-size": "1.09em",
   "minimal-style@@h6-size": "1.02em",
-  "minimal-advanced@@animations": "fast-animations"
+  "minimal-advanced@@animations": "fast-animations",
+  "minimal-advanced@@cursor": "crosshair",
+  "minimal-advanced@@font-ui-small": 15,
+  "minimal-advanced@@font-ui-smaller": 13
 }
