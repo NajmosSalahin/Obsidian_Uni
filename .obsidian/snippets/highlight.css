@@ -1,0 +1,25 @@
+/* 1. Primary Bold (Definition Title) - Flexoki Yellow 400 */
+.cm-strong, strong {
+  color: #D0A215 !important; 
+  font-weight: 700;
+}
+
+/* 2. Secondary Bold (Definition Body) - Flexoki Orange 400 */
+.cm-highlight, mark {
+  background-color: transparent !important; /* Strips background from normal text */
+  color: #DA702C !important; 
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* 3. FIX FOR LATEX: Strips background and forces color on Math elements inside highlights */
+.cm-highlight *, 
+mark *,
+.cm-highlight .cm-math-tex,
+mark .math-inline,
+mark mjx-container {
+  background-color: transparent !important; /* Forces background away on LaTeX blocks */
+  background: transparent !important;
+  color: #DA702C !important; /* Forces LaTeX characters to go orange */
+  fill: #DA702C !important;  /* Fixes vector math symbols rendering color */
+}

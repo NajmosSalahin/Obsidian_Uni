@@ -2,7 +2,8 @@
   "enabledCssSnippets": [
     "gruvbox-base",
     "gruvbox-headers",
-    "minimal-outline"
+    "minimal-outline",
+    "highlight"
   ],
   "cssTheme": "Minimal",
   "showViewHeader": true,

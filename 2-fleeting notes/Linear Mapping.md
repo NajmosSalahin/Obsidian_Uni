@@ -12,7 +12,7 @@ We call $f(A^{\prime})$ the image of $A^{\prime}$ and $f^{-1}(B^{\prime})$ the i
 
 **Graph of a Mapping:** To each mapping $f:A\rightarrow B$ there corresponds the subset of $A\times B$ given by $\{(a,f(a)):a\in A\}$. We call this set the graph of $f$.
 
-**Equality of Mappings:** Two mappings $f:A\rightarrow B$ and $g:A\rightarrow B$ are defined to be equal, written $f=g$, if $f(a)=g(a)$ for every $a\in A$ that is, if they have the same graph. The negation of $f=g$ is written $f\ne g$ and is the statement: There exists an $a\in A$ for which $f(a)\ne g(a).$.Thus, we do not distinguish between a function and its graph.
+**Equality of Mappings:** ==Two mappings $f:A\rightarrow B$ and $g:A\rightarrow B$ are defined to be equal, written $f=g$, if $f(a)=g(a)$ for every $a\in A$ that is, if they have the same graph. The negation of $f=g$ is written $f\ne g$ and is the statement: There exists an $a\in A$ for which $f(a)\ne g(a).$.Thus, we do not distinguish between a function and its graph.==
 
 ### Remarks
 
