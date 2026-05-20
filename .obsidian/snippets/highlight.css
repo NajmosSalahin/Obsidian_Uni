@@ -4,22 +4,34 @@
   font-weight: 700;
 }
 
-/* 2. Secondary Bold (Definition Body) - Flexoki Orange 400 */
+/* 2. Secondary Bold (Definition Body Text) - Flexoki Orange 400 */
 .cm-highlight, mark {
-  background-color: transparent !important; /* Strips background from normal text */
+  background-color: transparent !important; 
   color: #DA702C !important; 
   font-weight: 600;
   font-style: normal;
+  
+  /* FORCE OVERRIDE OF MINIMAL THEME VARIABLES */
+  /* This tricks Minimal into thinking "Orange" is the default math color for this section */
+  --text-math: #DA702C !important;
+  --math-color: #DA702C !important;
+  --text-normal: #DA702C !important;
 }
 
-/* 3. FIX FOR LATEX: Strips background and forces color on Math elements inside highlights */
-.cm-highlight *, 
-mark *,
-.cm-highlight .cm-math-tex,
-mark .math-inline,
-mark mjx-container {
-  background-color: transparent !important; /* Forces background away on LaTeX blocks */
-  background: transparent !important;
-  color: #DA702C !important; /* Forces LaTeX characters to go orange */
-  fill: #DA702C !important;  /* Fixes vector math symbols rendering color */
+/* 3. LIVE PREVIEW FORCING (The most stubborn part) */
+/* We select the math specifically inside the highlight and force it to inherit the variable we just hacked */
+.cm-highlight .cm-math,
+.cm-highlight .cm-inline-code, 
+.cm-highlight .math-inline,
+.cm-highlight .cm-hmd-internal-link {
+  color: var(--text-math) !important;
+  -webkit-text-fill-color: #DA702C !important; /* Webkit override for rigorous themes */
+}
+
+/* 4. READING VIEW & SVG VECTORS */
+mark mjx-container, 
+mark :is(mjx-container, .MathJax) * {
+  color: #DA702C !important;
+  fill: #DA702C !important;
+  stroke: #DA702C !important;
 }
