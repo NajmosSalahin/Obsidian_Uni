@@ -1,67 +1,50 @@
-/* 1. Primary Bold (Definition Title) - Flexoki Yellow 400 */
+/* ================================================================= */
+/* 1. PRIMARY BOLD (Title) - Flexoki Yellow 400                      */
+/* ================================================================= */
 .cm-strong, strong {
-  color: #D0A215 !important; 
-  font-weight: 700;
+    color: #D0A215 !important;
+    font-weight: 700;
 }
 
-/* 2. Secondary Bold (Definition Body) - Flexoki Orange 400 */
+/* ================================================================= */
+/* 2. SECONDARY BOLD (Definition Body) - Flexoki Orange 400          */
+/* ================================================================= */
 .cm-highlight, mark {
-  background-color: transparent !important; 
-  color: #DA702C !important; 
-  font-weight: 600;
-}
-
-/* ================================================================= */
-/*    FIX FOR LIVE PREVIEW (Editing View)                            */
-/*    Uses :has() to target math even if CodeMirror breaks the span  */
-/* ================================================================= */
-
-/* Target any math on a line that also contains a highlight */
-.cm-line:has(.cm-highlight) .cm-math,
-.cm-line:has(.cm-highlight) .math-inline,
-.cm-line:has(.cm-highlight) mjx-container {
+    background-color: transparent !important;
     color: #DA702C !important;
-    /* Override Minimal Theme's global math variables for this line */
-    --text-math: #DA702C !important;
-    --math-color: #DA702C !important;
-}
-
-/* Force the SVG vector fill (Critical for symbols like \rightarrow) */
-.cm-line:has(.cm-highlight) mjx-container svg,
-.cm-line:has(.cm-highlight) mjx-container path {
-    fill: #DA702C !important;
-    stroke: #DA702C !important;
+    
+    /* FEATURE: Elegant Italics (You liked this) */
+    font-style: italic !important; 
 }
 
 /* ================================================================= */
-/*    FIX FOR READING VIEW (Standard HTML)                           */
+/* 3. KEY TERM BADGES - Flexoki Aqua                                 */
+/*    Usage: Inside a definition, wrap words in `backticks`          */
 /* ================================================================= */
+/* Reading View */
+mark code {
+    color: #2E8987 !important;
+    background-color: rgba(46, 137, 135, 0.15) !important;
+    border: 1px solid rgba(46, 137, 135, 0.4) !important;
+    border-radius: 4px;
+    padding: 0px 4px;
+    font-style: normal; /* Keep tags upright even if definition is italic */
+    font-size: 0.9em;
+}
 
+/* Editing View (Targeting inline code that sits next to highlights) */
+.cm-highlight.cm-inline-code {
+    color: #2E8987 !important;
+    background-color: rgba(46, 137, 135, 0.15) !important;
+}
+
+/* ================================================================= */
+/* 4. MATH FIX - Reading View Only (Safe Mode)                       */
+/*    This colors math Orange ONLY in Reading View to avoid bugs.    */
+/* ================================================================= */
 mark .math-inline, 
 mark mjx-container,
 mark mjx-math {
     color: #DA702C !important;
     fill: #DA702C !important;
-}
-
-
-
-/* Use code blocks `like this` inside definitions to create subtle key-term tags */
-.cm-line:has(.cm-highlight) .cm-inline-code,
-mark code {
-    color: #2E8987 !important;
-    background-color: #1A2E2E !important; /* Soft deep teal backdrop */
-    border: 1px solid rgba(46, 137, 135, 0.3) !important;
-    border-radius: 4px;
-    padding: 1px 4px;
-}
-
-
-/* Make the orange definition body italicized */
-.cm-highlight, mark {
-    font-style: italic !important;
-}
-/* Keeps math symbols upright so they don't break rendering math rules */
-.cm-line:has(.cm-highlight) mjx-container {
-    font-style: normal !important;
 }
