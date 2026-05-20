@@ -15,5 +15,9 @@
   "minimal-style@@tx1@@dark": "#BDAE93",
   "minimal-style@@tx3@@dark": "#A89984",
   "minimal-style@@tx2@@dark": "#D5C4A1",
-  "minimal-style@@hl2@@dark": "#928374"
+  "minimal-style@@sp1@@dark": "#FBF1C7",
+  "minimal-style@@code-important@@dark": "#FBF1C7",
+  "minimal-style@@code-normal@@dark": "#FBF1C7",
+  "minimal-style@@blockquote-color@@dark": "#FBF1C7",
+  "minimal-style@@bold-color@@dark": "#FBF1C7"
 }
