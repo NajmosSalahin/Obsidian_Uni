@@ -10,5 +10,10 @@
   "minimal-advanced@@animations": "fast-animations",
   "minimal-advanced@@cursor": "crosshair",
   "minimal-advanced@@font-ui-small": 15,
-  "minimal-advanced@@font-ui-smaller": 13
+  "minimal-advanced@@font-ui-smaller": 13,
+  "minimal-style@@tx1@@light": "#EBDBB2",
+  "minimal-style@@tx1@@dark": "#BDAE93",
+  "minimal-style@@tx3@@dark": "#A89984",
+  "minimal-style@@tx2@@dark": "#D5C4A1",
+  "minimal-style@@hl2@@dark": "#928374"
 }
