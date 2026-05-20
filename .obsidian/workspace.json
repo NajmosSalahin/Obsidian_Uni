@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
+                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Consistency Compounds While Intensity Collapses"
+              "title": "Familiarity Feels Like Knowledge But Isn't"
             }
           },
           {
@@ -41,8 +41,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,9 +114,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Familiarity Feels Like Knowledge But Isn't"
             }
           },
           {
@@ -240,10 +241,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4ea25a0e55783fd1",
+  "active": "7d70d2ed4aa63178",
   "lastOpenFiles": [
-    "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
     "1-atomic notes/Attention differs from place to place.md",
+    "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
     "2-fleeting notes/Personal reflection.md",
     "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
     "1-atomic notes/GG.md",
