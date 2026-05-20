@@ -4,34 +4,64 @@
   font-weight: 700;
 }
 
-/* 2. Secondary Bold (Definition Body Text) - Flexoki Orange 400 */
+/* 2. Secondary Bold (Definition Body) - Flexoki Orange 400 */
 .cm-highlight, mark {
   background-color: transparent !important; 
   color: #DA702C !important; 
   font-weight: 600;
-  font-style: normal;
-  
-  /* FORCE OVERRIDE OF MINIMAL THEME VARIABLES */
-  /* This tricks Minimal into thinking "Orange" is the default math color for this section */
-  --text-math: #DA702C !important;
-  --math-color: #DA702C !important;
-  --text-normal: #DA702C !important;
 }
 
-/* 3. LIVE PREVIEW FORCING (The most stubborn part) */
-/* We select the math specifically inside the highlight and force it to inherit the variable we just hacked */
-.cm-highlight .cm-math,
-.cm-highlight .cm-inline-code, 
-.cm-highlight .math-inline,
-.cm-highlight .cm-hmd-internal-link {
-  color: var(--text-math) !important;
-  -webkit-text-fill-color: #DA702C !important; /* Webkit override for rigorous themes */
+/* ================================================================= */
+/*    FIX FOR LIVE PREVIEW (Editing View)                            */
+/*    Uses :has() to target math even if CodeMirror breaks the span  */
+/* ================================================================= */
+
+/* Target any math on a line that also contains a highlight */
+.cm-line:has(.cm-highlight) .cm-math,
+.cm-line:has(.cm-highlight) .math-inline,
+.cm-line:has(.cm-highlight) mjx-container {
+    color: #DA702C !important;
+    /* Override Minimal Theme's global math variables for this line */
+    --text-math: #DA702C !important;
+    --math-color: #DA702C !important;
 }
 
-/* 4. READING VIEW & SVG VECTORS */
-mark mjx-container, 
-mark :is(mjx-container, .MathJax) * {
-  color: #DA702C !important;
-  fill: #DA702C !important;
-  stroke: #DA702C !important;
+/* Force the SVG vector fill (Critical for symbols like \rightarrow) */
+.cm-line:has(.cm-highlight) mjx-container svg,
+.cm-line:has(.cm-highlight) mjx-container path {
+    fill: #DA702C !important;
+    stroke: #DA702C !important;
+}
+
+/* ================================================================= */
+/*    FIX FOR READING VIEW (Standard HTML)                           */
+/* ================================================================= */
+
+mark .math-inline, 
+mark mjx-container,
+mark mjx-math {
+    color: #DA702C !important;
+    fill: #DA702C !important;
+}
+
+
+
+/* Use code blocks `like this` inside definitions to create subtle key-term tags */
+.cm-line:has(.cm-highlight) .cm-inline-code,
+mark code {
+    color: #2E8987 !important;
+    background-color: #1A2E2E !important; /* Soft deep teal backdrop */
+    border: 1px solid rgba(46, 137, 135, 0.3) !important;
+    border-radius: 4px;
+    padding: 1px 4px;
+}
+
+
+/* Make the orange definition body italicized */
+.cm-highlight, mark {
+    font-style: italic !important;
+}
+/* Keeps math symbols upright so they don't break rendering math rules */
+.cm-line:has(.cm-highlight) mjx-container {
+    font-style: normal !important;
 }
