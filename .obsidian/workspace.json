@@ -30,30 +30,6 @@
               "icon": "lucide-file",
               "title": "Calculus"
             }
-          },
-          {
-            "id": "ce15de5374f3b1e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Untitled 10.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 10"
-            }
           }
         ]
       }
@@ -255,7 +231,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "924c078278f0dc59",
+  "active": "40038ffa553f0692",
   "lastOpenFiles": [
     "2-fleeting notes/Untitled 10.md",
     "7-tags",
