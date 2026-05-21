@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Linear Mapping.md",
-                "mode": "source",
+                "file": "2-fleeting notes/coding everyday for a month.md",
+                "mode": "preview",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Linear Mapping"
+              "title": "coding everyday for a month"
             }
           }
         ]
@@ -105,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Linear Mapping.md"
+                "file": "2-fleeting notes/coding everyday for a month.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Linear Mapping"
+              "title": "File properties for coding everyday for a month"
             }
           },
           {
@@ -233,6 +233,7 @@
   },
   "active": "4ea25a0e55783fd1",
   "lastOpenFiles": [
+    "2-fleeting notes/Linear Mapping.md",
     "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
     "1-atomic notes/Attention differs from place to place.md",
     "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
