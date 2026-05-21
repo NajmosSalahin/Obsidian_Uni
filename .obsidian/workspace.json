@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "2-fleeting notes/coding everyday for a month.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "coding everyday for a month"
             }
+          },
+          {
+            "id": "5d9d8109a8c8481e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/calculus math.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "calculus math"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,10 +130,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/coding everyday for a month.md"
+                "file": "2-fleeting notes/calculus math.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for coding everyday for a month"
+              "title": "File properties for calculus math"
             }
           },
           {
@@ -231,8 +256,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4ea25a0e55783fd1",
+  "active": "5d9d8109a8c8481e",
   "lastOpenFiles": [
+    "2-fleeting notes/coding everyday for a month.md",
+    "2-fleeting notes/calculus math.md",
     "2-fleeting notes/Linear Mapping.md",
     "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
     "1-atomic notes/Attention differs from place to place.md",
