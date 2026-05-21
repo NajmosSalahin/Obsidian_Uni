@@ -4,83 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "6366a838e23a48db",
+        "id": "e6537b613b0cd4bc",
         "type": "tabs",
         "children": [
           {
-            "id": "4ea25a0e55783fd1",
+            "id": "924c078278f0dc59",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/coding everyday for a month.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "coding everyday for a month"
-            }
-          },
-          {
-            "id": "5d9d8109a8c8481e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/calculus math.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "calculus math"
-            }
-          },
-          {
-            "id": "e24a9173d131d60a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/Untitled 10.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 10"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -153,11 +90,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "2-fleeting notes/Untitled 10.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Untitled 10"
+              "title": "File properties"
             }
           },
           {
@@ -280,10 +215,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e24a9173d131d60a",
+  "active": "924c078278f0dc59",
   "lastOpenFiles": [
     "2-fleeting notes/calculus math.md",
     "2-fleeting notes/Untitled 10.md",
+    "2-fleeting notes/Ninja.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
     "9-resources/Banners/Wallpapers/zelda_botw.png",
     "9-resources/Banners/Wallpapers/zelda.png",
