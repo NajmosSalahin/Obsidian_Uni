@@ -6,14 +6,6 @@ tags:
   - fleeting
 aliases:
 ---
-# lines
-
-
-
->sentence
-
-Dump everything here
-
 
 
 
