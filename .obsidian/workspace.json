@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7-tags/Calculus.md",
+                "file": "2-fleeting notes/function.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Calculus"
+              "title": "function"
             }
           }
         ]
@@ -105,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "7-tags/Calculus.md"
+                "file": "2-fleeting notes/function.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Calculus"
+              "title": "File properties for function"
             }
           },
           {
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7-tags/Calculus.md",
+                "file": "2-fleeting notes/function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Calculus"
+              "title": "Backlinks for function"
             }
           },
           {
@@ -136,12 +136,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7-tags/Calculus.md",
+                "file": "2-fleeting notes/function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Calculus"
+              "title": "Outgoing links from function"
             }
           },
           {
@@ -235,8 +235,8 @@
   },
   "active": "924c078278f0dc59",
   "lastOpenFiles": [
-    "2-fleeting notes/Calculus exam parts.md",
     "7-tags/Calculus.md",
+    "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/Lec-1 SDS-101 Probability.md",
     "7-tags/lines.md",
     "6-templates/tags.md",
