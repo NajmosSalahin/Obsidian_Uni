@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/lines.md",
+                "file": "2-fleeting notes/Calculus exam parts.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lines"
+              "title": "Calculus exam parts"
             }
           }
         ]
@@ -105,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/lines.md"
+                "file": "2-fleeting notes/Calculus exam parts.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for lines"
+              "title": "File properties for Calculus exam parts"
             }
           },
           {
@@ -233,6 +233,8 @@
   },
   "active": "924c078278f0dc59",
   "lastOpenFiles": [
+    "7-tags/lines.md",
+    "6-templates/tags.md",
     "2-fleeting notes/function.md",
     "7-tags/Calculus.md",
     "2-fleeting notes/Untitled 10.md",
