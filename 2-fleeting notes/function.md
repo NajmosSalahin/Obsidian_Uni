@@ -417,24 +417,5 @@ The review section synthesizes all concepts, including:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[^1]: 
+> [!info]+ PrismJS and editing views
+> [Source mode](https://obsidian.md/help/edit-and-read#Source%20mode) and [Live Preview](https://obsidian.md/help/edit-and-read#Live%20Preview) do not support PrismJS, and may render syntax highlighting differently.
