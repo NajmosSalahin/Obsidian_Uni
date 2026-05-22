@@ -1,5 +1,7 @@
-### First Image
-
+---
+links:
+  - "[[Calculus]]"
+---
 ## Increasing/Decreasing Functions
 
 The derivative of a function may be used to determine whether the function is increasing or decreasing on any intervals in its domain. If $f'(x) > 0$ at each point in an interval I, then the function is said to be increasing on I. $f'(x) < 0$ at each point in an interval I, then the function is said to be _decreasing on I_. Because the derivative is zero or does not exist only at critical points of the function, it must be positive or negative at all other points where the function exists.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-fleeting notes/Calculus exam parts.md",
+                "file": "7-tags/Calculus.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -24,11 +24,11 @@
                   "showSearch": false,
                   "searchQuery": "",
                   "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                  "unlinkedCollapsed": false
                 }
               },
               "icon": "lucide-file",
-              "title": "Calculus exam parts"
+              "title": "Calculus"
             }
           }
         ]
@@ -105,10 +105,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/Calculus exam parts.md"
+                "file": "7-tags/Calculus.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Calculus exam parts"
+              "title": "File properties for Calculus"
             }
           },
           {
@@ -117,6 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "7-tags/Calculus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Calculus"
             }
           },
           {
@@ -135,11 +136,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "7-tags/Calculus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Calculus"
             }
           },
           {
@@ -233,6 +235,7 @@
   },
   "active": "924c078278f0dc59",
   "lastOpenFiles": [
+    "2-fleeting notes/Calculus exam parts.md",
     "7-tags/lines.md",
     "6-templates/tags.md",
     "2-fleeting notes/function.md",
@@ -259,7 +262,6 @@
     "2-fleeting notes/Personal reflection.md",
     "1-atomic notes/GG.md",
     "2-fleeting notes/First Note for a zettelkasten.md",
-    "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/A little bit every day.md",
     "2-fleeting notes/vault structure.md",
     "2-fleeting notes/No Longer Human.md",
