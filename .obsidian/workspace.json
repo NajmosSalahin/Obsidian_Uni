@@ -11,13 +11,28 @@
             "id": "1fe823e85db7346c",
             "type": "leaf",
             "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://chatgpt.com/",
+                "title": "ChatGPT",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "ChatGPT"
+            }
+          },
+          {
+            "id": "79a6a256d5682a4f",
+            "type": "leaf",
+            "state": {
               "type": "empty",
               "state": {},
               "icon": "lucide-file",
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -235,7 +250,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "2d3a0613e62a6128",
+  "active": "79a6a256d5682a4f",
   "lastOpenFiles": [
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
     "0-myself/my routine.md",
