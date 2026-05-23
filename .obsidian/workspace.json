@@ -8,15 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b3daa2e43705baa8",
+            "id": "2cc49f05304158d6",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Lec_1"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -92,11 +90,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Lec_1"
+              "title": "File properties"
             }
           },
           {
@@ -220,13 +216,13 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "b3daa2e43705baa8",
+  "active": "2cc49f05304158d6",
   "lastOpenFiles": [
+    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf",
     "SDS-Vault/Year-1/Semester-2/2_Sampling-Distributions/03_My-Notes/Distributions.pdf",
     "SDS-Vault/Year-1/Semester-2/New shortcut.lnk",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Sir Notes.pdf",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_2.pdf",
-    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/Lecture note_Calculus.pdf",
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_3_Variate Transformations_MSR_20250723-1.pdf",
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_1_ Review of Probability_MSR_20250702-2.pdf",
