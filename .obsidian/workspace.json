@@ -20,16 +20,6 @@
               "icon": "globe-2",
               "title": "ChatGPT"
             }
-          },
-          {
-            "id": "79a6a256d5682a4f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
           }
         ]
       }
