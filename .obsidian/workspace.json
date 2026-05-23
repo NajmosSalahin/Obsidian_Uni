@@ -11,10 +11,24 @@
             "id": "b3daa2e43705baa8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Sir Notes"
             }
           }
         ]
@@ -74,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 222.51103591918945
   },
   "right": {
     "id": "7dd42c1aad9d4a8c",
@@ -90,9 +104,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Sir Notes"
             }
           },
           {
@@ -202,7 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 234.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,8 +232,9 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "40038ffa553f0692",
+  "active": "b3daa2e43705baa8",
   "lastOpenFiles": [
+    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
     "6-templates/Weekly-Review-Template.md",
     "2-fleeting notes/function.md",
     "SDS-Vault/Year-1/Semester-1/Lab-I_Computer-Fundamentals/03_Resources",
