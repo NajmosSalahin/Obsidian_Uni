@@ -11,24 +11,10 @@
             "id": "b3daa2e43705baa8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Sir Notes"
+              "title": "New tab"
             }
           }
         ]
@@ -104,11 +90,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Sir Notes"
+              "title": "File properties"
             }
           },
           {
@@ -234,7 +218,12 @@
   },
   "active": "b3daa2e43705baa8",
   "lastOpenFiles": [
+    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Lec_1.pdf",
+    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Lec_2.pdf",
+    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/03_My-Notes/Sir Notes.md",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
+    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.pdf",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/01_Lectures/Lecture note_Calculus.pdf",
     "6-templates/Weekly-Review-Template.md",
     "2-fleeting notes/function.md",
     "SDS-Vault/Year-1/Semester-1/Lab-I_Computer-Fundamentals/03_Resources",
@@ -244,9 +233,6 @@
     "SDS-Vault/Year-1/Semester-1/Lab-II_SPSS/03_Resources",
     "SDS-Vault/Year-1/Semester-1/Lab-II_SPSS/02_My-Work",
     "SDS-Vault/Year-1/Semester-1/Lab-II_SPSS/01_Lab-Sheets",
-    "SDS-Vault/Year-1/Semester-1/Lab-II_SPSS",
-    "SDS-Vault/Year-1/Semester-1/Lab-III_Excel-Minitab/03_Resources",
-    "SDS-Vault/Year-1/Semester-1/Lab-III_Excel-Minitab/02_My-Work",
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Preparation-Notes.md",
     "SDS-Vault/Year-4/Semester-2/9_Viva-Voce/Question-Bank.md",
@@ -268,8 +254,6 @@
     "6-templates/Lab-Note-Template.md",
     "6-templates/Lecture-Note-Template.md",
     "6-templates/Course-MOC-Template.md",
-    "SDS-Vault/_Dashboard/Home.md",
-    "SDS-Vault/_Inbox/README.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
     "9-resources/Banners/Wallpapers/zelda_botw.png",
     "9-resources/Banners/Wallpapers/zelda.png",
