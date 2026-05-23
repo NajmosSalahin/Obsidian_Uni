@@ -1,0 +1,24 @@
+# 📊 SDS Vault — Home
+
+## 🎯 Current: Year __, Semester __
+
+### Active Courses
+- 
+
+### 📥 Inbox — File these!
+- 
+
+### ✅ This Week
+- [ ] 
+- [ ] 
+- [ ] 
+
+---
+
+## 🗓️ All Semesters
+| | Semester 1 | Semester 2 |
+|---|---|---|
+| **Year 1** | [[Year-1/Semester-1]] | [[Year-1/Semester-2]] |
+| **Year 2** | [[Year-2/Semester-1]] | [[Year-2/Semester-2]] |
+| **Year 3** | [[Year-3/Semester-1]] | [[Year-3/Semester-2]] |
+| **Year 4** | [[Year-4/Semester-1]] | [[Year-4/Semester-2]] |

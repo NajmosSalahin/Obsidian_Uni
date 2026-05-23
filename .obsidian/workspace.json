@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "function"
             }
+          },
+          {
+            "id": "785ad2314061e357",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6-templates/Weekly-Review-Template.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Weekly-Review-Template"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,10 +130,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/function.md"
+                "file": "6-templates/Weekly-Review-Template.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for function"
+              "title": "File properties for Weekly-Review-Template"
             }
           },
           {
@@ -232,17 +257,41 @@
       "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
-  "active": "924c078278f0dc59",
+  "active": "40038ffa553f0692",
   "lastOpenFiles": [
-    "New project.md",
+    "SDS-Vault.zip",
+    "SDS-Vault/Year-3/Semester-2/0610-3206_Lab-XVI_SAS/03_Resources",
+    "SDS-Vault/Year-3/Semester-2/0610-3206_Lab-XVI_SAS/02_My-Work",
+    "SDS-Vault/Year-3/Semester-2/0610-3206_Lab-XVI_SAS/01_Lab-Sheets",
+    "SDS-Vault/Year-3/Semester-2/0610-3206_Lab-XVI_SAS",
+    "SDS-Vault/Year-3/Semester-2/0610-3202_Fundamentals-of-AI/05_Exams",
+    "SDS-Vault/Year-2/Semester-2/0610-2208_Lab-XII_DBMS-Planning/03_Resources",
+    "SDS-Vault/Year-2/Semester-2/0610-2208_Lab-XII_DBMS-Planning/02_My-Work",
+    "SDS-Vault/Year-2/Semester-2/0610-2208_Lab-XII_DBMS-Planning/01_Lab-Sheets",
+    "SDS-Vault/Year-2/Semester-2/0610-2208_Lab-XII_DBMS-Planning",
+    "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce/Question-Bank.md",
+    "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce/Preparation-Notes.md",
+    "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce",
+    "6-templates/Lab-Note-Template.md",
+    "6-templates/Lecture-Note-Template.md",
+    "6-templates/Course-MOC-Template.md",
+    "6-templates/Weekly-Review-Template.md",
     "2-fleeting notes/function.md",
+    "SDS-Vault/_Dashboard/Home.md",
+    "SDS-Vault/_Inbox/README.md",
+    "SDS-Vault/Year-4/Semester-2/0542-4209_Viva-Voce/Question-Bank.md",
+    "SDS-Vault/Year-4/Semester-2/0542-4209_Viva-Voce/Preparation-Notes.md",
+    "SDS-Vault/Year-3/Semester-2/0542-3209_Viva-Voce/Question-Bank.md",
+    "SDS-Vault/Year-3/Semester-2/0542-3209_Viva-Voce/Preparation-Notes.md",
+    "SDS-Vault/Year-2/Semester-2/0542-2209_Viva-Voce/Question-Bank.md",
+    "SDS-Vault/Year-2/Semester-2/0542-2209_Viva-Voce/Preparation-Notes.md",
+    "New project.md",
     "7-tags/Calculus.md",
     "2-fleeting notes/Calculus exam parts.md",
     "2-fleeting notes/Lec-1 SDS-101 Probability.md",
     "7-tags/lines.md",
     "6-templates/tags.md",
     "2-fleeting notes/Untitled 10.md",
-    "7-tags",
     "2-fleeting notes/calculus math.md",
     "2-fleeting notes/Ninja.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
@@ -255,23 +304,6 @@
     "9-resources/Banners/Wallpapers/wp11058333.png",
     "9-resources/Banners/Wallpapers/wp11058332.png",
     "9-resources/Banners/Wallpapers/woods.jpg",
-    "2-fleeting notes/coding everyday for a month.md",
-    "2-fleeting notes/Linear Mapping.md",
-    "1-atomic notes/Familiarity Feels Like Knowledge But Isn't.md",
-    "1-atomic notes/Attention differs from place to place.md",
-    "1-atomic notes/Consistency Compounds While Intensity Collapses.md",
-    "2-fleeting notes/Personal reflection.md",
-    "1-atomic notes/GG.md",
-    "2-fleeting notes/First Note for a zettelkasten.md",
-    "2-fleeting notes/A little bit every day.md",
-    "2-fleeting notes/vault structure.md",
-    "2-fleeting notes/No Longer Human.md",
-    "2-fleeting notes/2026-05-19.md",
-    "2-fleeting notes/2026-05-19-goals.md",
-    "2-fleeting notes/9-resources/Attachments 1",
-    "2-fleeting notes/9-resources/Attachments",
-    "2-fleeting notes/9-resources",
-    "2-fleeting notes/Pasted image 20260519111110.png.md",
-    "2-fleeting notes/Calculus1.md"
+    "2-fleeting notes/coding everyday for a month.md"
   ]
 }
