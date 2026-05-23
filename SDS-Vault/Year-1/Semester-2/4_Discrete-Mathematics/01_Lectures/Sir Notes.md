@@ -437,7 +437,8 @@ $$f_n = \frac{1}{\sqrt{5}}, r_1^n - \frac{1}{\sqrt{5}}, r_2^n$$
 
 $$\therefore f_n = \frac{1}{\sqrt{5}}\left(r_1^n - r_2^n\right) \quad \text{(solution of the given recurrence relation)}$$
 
-$$= \frac{1}{\sqrt{5}}\left{\left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n\right}$$
+$$= \frac{1}{\sqrt{5}}\left\{\left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n\right\}$$
 $$\boxed{\therefore f_n = \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n}$$
 
 which is the required formula. $\blacksquare$
+
