@@ -13,12 +13,12 @@
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://claude.ai/login",
-                "title": "Sign in - Claude",
+                "url": "https://chatgpt.com/",
+                "title": "ChatGPT",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "Sign in - Claude"
+              "title": "ChatGPT"
             }
           },
           {
