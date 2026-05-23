@@ -4,21 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d1d78b152683fd87",
+        "id": "96b4f9a45f6624d0",
         "type": "tabs",
         "children": [
           {
-            "id": "e63a239dd0a9d587",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "d26c553fdd157be0",
+            "id": "1fe823e85db7346c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -27,8 +17,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -40,7 +29,7 @@
       {
         "id": "8bae1e78a3b3eed8",
         "type": "tabs",
-        "dimension": 60.952380952380956,
+        "dimension": 57.14285714285714,
         "children": [
           {
             "id": "40038ffa553f0692",
@@ -85,25 +74,25 @@
         ]
       },
       {
-        "id": "ca5e08cd024bab0a",
+        "id": "3994994b028eee96",
         "type": "tabs",
-        "dimension": 39.04761904761905,
+        "dimension": 42.857142857142854,
         "children": [
           {
-            "id": "2cc49f05304158d6",
+            "id": "2d3a0613e62a6128",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "file-properties",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-info",
+              "title": "File properties"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 222.51103591918945
+    "width": 241.51103591918945
   },
   "right": {
     "id": "7dd42c1aad9d4a8c",
@@ -115,13 +104,13 @@
         "dimension": 52.37388724035609,
         "children": [
           {
-            "id": "2d3a0613e62a6128",
+            "id": "e63a239dd0a9d587",
             "type": "leaf",
             "state": {
-              "type": "file-properties",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-info",
-              "title": "File properties"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -240,14 +229,19 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "graph:Open graph view": false,
       "random-note:Open random note": false,
       "pexels-banner:🚩 Pixel Banner Menu": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "graph:Open graph view": false
     }
   },
-  "active": "d26c553fdd157be0",
+  "active": "2d3a0613e62a6128",
   "lastOpenFiles": [
+    "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
+    "0-myself/my routine.md",
+    "2-fleeting notes/Why Tiny Changes Make a Big Difference - Copy.md",
+    "2-fleeting notes/Obsidian.md",
+    "2-fleeting notes/40 Yearly Questions.md",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf",
     "SDS-Vault/Year-1/Semester-2/2_Sampling-Distributions/03_My-Notes/Distributions.pdf",
     "SDS-Vault/Year-1/Semester-2/New shortcut.lnk",
@@ -258,12 +252,10 @@
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_1_ Review of Probability_MSR_20250702-2.pdf",
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Probability Theory STAT-2101.pdf",
     "SDS-Vault/Year-1/Semester-2/5_Linear-Modern-Algebra/Howard Anton, Chris Rorres - Elementary linear algebra with applications-Wiley (2005).pdf",
-    "SDS-Vault/Year-1/Semester-2/5_Linear-Modern-Algebra/Linear_Algebra,_4th_Edition__(2009)Lipschutz-Lipson.pdf",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/03_My-Notes/Sir Notes.md",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
     "6-templates/Weekly-Review-Template.md",
     "2-fleeting notes/function.md",
-    "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Preparation-Notes.md",
     "SDS-Vault/Year-4/Semester-2/9_Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-4/Semester-2/9_Viva-Voce/Preparation-Notes.md",
@@ -281,9 +273,6 @@
     "SDS-Vault/Year-1/Semester-2/9_Viva-Voce/Preparation-Notes.md",
     "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce/Preparation-Notes.md",
-    "6-templates/Lab-Note-Template.md",
-    "6-templates/Lecture-Note-Template.md",
-    "6-templates/Course-MOC-Template.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
     "9-resources/Banners/Wallpapers/zelda_botw.png",
     "9-resources/Banners/Wallpapers/zelda.png",
