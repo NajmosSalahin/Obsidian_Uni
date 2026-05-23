@@ -13,12 +13,12 @@
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://chatgpt.com/",
-                "title": "ChatGPT",
+                "url": "https://claude.ai/login",
+                "title": "Sign in - Claude",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "ChatGPT"
+              "title": "Sign in - Claude"
             }
           },
           {
@@ -31,8 +31,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -250,7 +249,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "79a6a256d5682a4f",
+  "active": "1fe823e85db7346c",
   "lastOpenFiles": [
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
     "0-myself/my routine.md",
