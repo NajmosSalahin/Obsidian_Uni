@@ -11,10 +11,12 @@
             "id": "b3daa2e43705baa8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "pdf",
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Lec_1"
             }
           }
         ]
@@ -90,9 +92,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Lec_1"
             }
           },
           {
