@@ -229,9 +229,7 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "random-note:Open random note": false,
-      "pexels-banner:🚩 Pixel Banner Menu": false,
-      "templater-obsidian:Templater": false,
-      "true-recall:True Recall: Open dashboard": false
+      "pexels-banner:🚩 Pixel Banner Menu": false
     }
   },
   "active": "924c078278f0dc59",
