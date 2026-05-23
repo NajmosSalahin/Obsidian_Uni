@@ -4,11 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "496d2518fd30c07b",
+        "id": "d1d78b152683fd87",
         "type": "tabs",
         "children": [
           {
-            "id": "2cc49f05304158d6",
+            "id": "e63a239dd0a9d587",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "d26c553fdd157be0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -17,7 +27,8 @@
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -29,6 +40,7 @@
       {
         "id": "8bae1e78a3b3eed8",
         "type": "tabs",
+        "dimension": 60.952380952380956,
         "children": [
           {
             "id": "40038ffa553f0692",
@@ -68,6 +80,23 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ca5e08cd024bab0a",
+        "type": "tabs",
+        "dimension": 39.04761904761905,
+        "children": [
+          {
+            "id": "2cc49f05304158d6",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -208,15 +237,16 @@
     "hiddenItems": {
       "daily-notes:Open today's daily note": false,
       "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
+      "graph:Open graph view": false,
       "random-note:Open random note": false,
-      "pexels-banner:🚩 Pixel Banner Menu": false
+      "pexels-banner:🚩 Pixel Banner Menu": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "2cc49f05304158d6",
+  "active": "d26c553fdd157be0",
   "lastOpenFiles": [
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_1.pdf",
     "SDS-Vault/Year-1/Semester-2/2_Sampling-Distributions/03_My-Notes/Distributions.pdf",
