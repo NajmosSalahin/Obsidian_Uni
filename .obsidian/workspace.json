@@ -14,11 +14,11 @@
               "type": "webviewer",
               "state": {
                 "url": "https://chatgpt.com/",
-                "title": "data:text/plain,",
-                "mode": "blank"
+                "title": "ChatGPT",
+                "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "data:text/plain,"
+              "title": "ChatGPT"
             }
           }
         ]
