@@ -11,10 +11,24 @@
             "id": "51e73086fe8a7e10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/no longer human - osamu dazai.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "no longer human - osamu dazai"
             }
           }
         ]
@@ -83,9 +97,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "2-fleeting notes/no longer human - osamu dazai.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for no longer human - osamu dazai"
             }
           }
         ]
@@ -237,6 +253,7 @@
   },
   "active": "51e73086fe8a7e10",
   "lastOpenFiles": [
+    "2-fleeting notes/no longer human - osamu dazai.md",
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
     "0-myself/my routine.md",
     "2-fleeting notes/Why Tiny Changes Make a Big Difference - Copy.md",
@@ -272,7 +289,6 @@
     "SDS-Vault/Year-1/Semester-2/9_Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-1/Semester-2/9_Viva-Voce/Preparation-Notes.md",
     "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce/Question-Bank.md",
-    "SDS-Vault/Year-1/Semester-2/0542-1209_Viva-Voce/Preparation-Notes.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
     "9-resources/Banners/Wallpapers/zelda_botw.png",
     "9-resources/Banners/Wallpapers/zelda.png",
