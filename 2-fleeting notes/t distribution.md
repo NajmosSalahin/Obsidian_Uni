@@ -33,3 +33,5 @@ Further since $\bar{x} and S^2$ are independently distributed, $\frac{t^2}{n-1}$
 $$\begin{aligned} dF(t) &= \frac{1}{\beta_2 \left(\frac{1}{2}, \frac{\nu}{2}\right)} \cdot \frac{\left(\frac{t^2}{\nu}\right)^{\frac{1}{2}-1}}{\left(1 + \frac{t^2}{\nu}\right)^{\frac{\nu+1}{2}}} d\left(\frac{t^2}{\nu}\right), \ 0 \le t^2 \le \infty \\ & \qquad \qquad \qquad \qquad \qquad \left[ f(x) = \frac{1}{B(\alpha, \beta)} \cdot \frac{x^{\alpha-1}}{(1+x)^{\alpha+\beta}} \right] \\ &= \frac{1}{\beta_2 \left(\frac{1}{2}, \frac{\nu}{2}\right)} \cdot \frac{\frac{\sqrt{\nu}}{t}}{\left(1 + \frac{t^2}{\nu}\right)^{\frac{\nu+1}{2}}} \frac{2t}{\nu} dt, \ 0 \le t \le \infty \\ &= \frac{1}{\sqrt{\nu} \ B \left(\frac{1}{2}, \frac{\nu}{2}\right)} \cdot \frac{1}{\left(1 + \frac{t^2}{\nu}\right)^{\frac{\nu+1}{2}}} dt ; \ -\infty < t < \infty, \end{aligned}$$
 
 the factor 2 disappearing since the integral from $-\infty$ to $\infty$ must be unity. This is the required probability density function of Student's $t$-distribution with $\nu = (n - 1)$ degrees of freedom.
+
+
