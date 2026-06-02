@@ -35,10 +35,24 @@
             "id": "e033fb8b5bb5e7d6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/t distribution.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "t distribution"
             }
           }
         ],
@@ -108,9 +122,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "2-fleeting notes/t distribution.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for t distribution"
             }
           }
         ]
@@ -262,6 +278,7 @@
   },
   "active": "e033fb8b5bb5e7d6",
   "lastOpenFiles": [
+    "2-fleeting notes/t distribution.md",
     "2-fleeting notes/no longer human - osamu dazai.md",
     "2-fleeting notes/hello.md",
     "9-resources/Attachments/Pasted image 20260524173357.png",
@@ -298,7 +315,6 @@
     "SDS-Vault/Year-1/Semester-2/Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-1/Semester-2/Viva-Voce/Preparation-Notes.md",
     "SDS-Vault/Year-1/Semester-2/9_Viva-Voce/Question-Bank.md",
-    "SDS-Vault/Year-1/Semester-2/9_Viva-Voce/Preparation-Notes.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
     "9-resources/Banners/Wallpapers/zelda_botw.png",
     "9-resources/Banners/Wallpapers/zelda.png",

@@ -8,7 +8,7 @@
   "cssTheme": "Minimal",
   "showViewHeader": true,
   "interfaceFontFamily": "Fira Code",
-  "monospaceFontFamily": "JetBrains Mono,Fira Code,OpenDyslexic",
-  "textFontFamily": "Fira Code,JetBrains Mono",
+  "monospaceFontFamily": "JetBrains Mono,Fira Code",
+  "textFontFamily": "JetBrains Mono",
   "baseFontSize": 17
 }
