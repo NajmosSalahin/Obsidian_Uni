@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "no longer human - osamu dazai"
             }
+          },
+          {
+            "id": "de43260b3ac8d88d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-fleeting notes/hello.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "hello"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,11 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "2-fleeting notes/no longer human - osamu dazai.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for no longer human - osamu dazai"
+              "title": "File properties"
             }
           }
         ]
@@ -251,10 +274,11 @@
       "graph:Open graph view": false
     }
   },
-  "active": "51e73086fe8a7e10",
+  "active": "e63a239dd0a9d587",
   "lastOpenFiles": [
-    "9-resources/Attachments/Pasted image 20260524173357.png",
+    "2-fleeting notes/hello.md",
     "2-fleeting notes/no longer human - osamu dazai.md",
+    "9-resources/Attachments/Pasted image 20260524173357.png",
     "SDS-Vault/Year-4/Semester-2/Viva-Voce/Question-Bank.md",
     "0-myself/my routine.md",
     "2-fleeting notes/Why Tiny Changes Make a Big Difference - Copy.md",
@@ -297,7 +321,6 @@
     "9-resources/Banners/Wallpapers/xavier-cuenca-w4-3.jpg",
     "9-resources/Banners/Wallpapers/xander-ashwell-bhTjAUHHvSg.jpg",
     "9-resources/Banners/Wallpapers/wp11058333.png",
-    "9-resources/Banners/Wallpapers/wp11058332.png",
-    "9-resources/Banners/Wallpapers/woods.jpg"
+    "9-resources/Banners/Wallpapers/wp11058332.png"
   ]
 }
