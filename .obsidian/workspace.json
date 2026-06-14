@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Exam-2-Solutions"
             }
+          },
+          {
+            "id": "1350ec4364946b15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "ocr_output"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,10 +130,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md"
+                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Exam-2-Solutions"
+              "title": "File properties for ocr_output"
             }
           },
           {
@@ -237,12 +262,14 @@
       "graph:Open graph view": false
     }
   },
-  "active": "8a3bf95b3ca26102",
+  "active": "1350ec4364946b15",
   "lastOpenFiles": [
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr3.py",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr2.py",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr.py",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
     "2-fleeting notes/t distribution.md",
-    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/cleanup_ocr.py",
     "2-fleeting notes/no longer human - osamu dazai.md",
     "2-fleeting notes/hello.md",
@@ -259,8 +286,6 @@
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_2.pdf",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/Lecture note_Calculus.pdf",
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_3_Variate Transformations_MSR_20250723-1.pdf",
-    "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_1_ Review of Probability_MSR_20250702-2.pdf",
-    "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Probability Theory STAT-2101.pdf",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/03_My-Notes/Sir Notes.md",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
     "6-templates/Weekly-Review-Template.md",
