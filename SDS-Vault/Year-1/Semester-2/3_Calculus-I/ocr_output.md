@@ -4,16 +4,10 @@
 
 ---
 Increasing/Decreasing Functions
-The derivative of a function may be used to determine whether the function is
-increasing or decreasing on any intervals in its domain. If f(x) > 0 at each point in an
-interval I, then the function is said to be increasing on I. f(x) < 0 at each point in an
-interval I, then the function is said to be decreasing on I.
-In determining intervals where a function is increasing or decreasing, you first find
-domain values where all critical points will occur: then, test all intervals in the domain
-of the function to the left and to the right of these values to determine if the derivative
-is positive or negative. If f'(x) > 0, then f is increasing on the interval, and if f(x) < 0, then
-f is decreasing on the interval. This and other information may be used to show a
-reasonably accurate sketch of the graph of the function.
+The derivative of a function may be used to determine whether the function is increasing or decreasing on any intervals in its domain. If f(x) > 0 at each point in an interval I, then the function is said to be increasing on I. f(x) < 0 at each point in an interval I, then the function is said to be decreasing on I.
+In determining intervals where a function is increasing or decreasing, you first find domain values where all critical points will occur: then, test all intervals in the domain
+of the function to the left and to the right of these values to determine if the derivative is positive or negative. If f'(x) > 0, then f is increasing on the interval, and if f(x) < 0, then
+f is decreasing on the interval. This and other information may be used to show a reasonably accurate sketch of the graph of the function.
 ## Increasing, decreasing, and constant of functions
 The terms increasing, decreasing, and constant are used to describe the behavior of a
 function over an interval as we travel left to right along its graph, For example, the function
@@ -73,9 +67,9 @@ REMARK. Observe that in Theorem 5.1.2 it is only necessary to examine the deriva
 F on the open interval $(a, b)$ to determine whether / is increasing, decreasing, or constant
 on the closed interval $[a, b]$. Moreover, although this theorem was stated for a closed interval
 $[a, b]$, it is applicable to any interval / on which f is continuous and inside of which f is
-differentiable. For example, if f is continuous on (a, +∞)) and $f'(x)$ > 0 for each x in the
-interval (a, +), then f is increasing on [a, +∞); and if f’(x) < 0on (-∞, +20), then f is
-decreasing on (-∞, +22) [the continuity on (-∞, +∞) follows from the differentiability].
+differentiable. For example, if f is continuous on (a, +∞) and $f'(x)$ > 0 for each x in the
+interval (a, +), then f is increasing on [a, +∞); and if f’(x) < 0 on (-∞, +∞), then f is
+decreasing on (-∞, +∞) [the continuity on (-∞, +∞) follows from the differentiability].
 
 
 ---
@@ -87,9 +81,9 @@ decreasing on (-∞, +22) [the continuity on (-∞, +∞) follows from the diffe
 f on the open interval $(a, b)$ to determine whether f is increasing, decreasing, or constant
 on the closed interval [a, >]. Moreover, although this theorem was stated for a closed interval
 [a, b], it is applicable to any interval / on which f is continuous and inside of which f is
-differentiable. For example, if f is continuous on (a, +∞)) and f(x) > 0 for each x in the
-interval (a, +∞)), then f is increasing on [a, +∞); and if $f'(x)$ < 0on (-∞, s0, +20), then f is
-decreasing on (-∞, +22) [the continuity on (-∞c, +∞) follows from the differentiability).
+differentiable. For example, if f is continuous on (a, +∞) and f(x) > 0 for each x in the
+interval (a, +∞), then f is increasing on [a, +∞); and if $f'(x)$ < 0 on (-∞, s0, +∞), then f is
+decreasing on (-∞, +∞) [the continuity on (-∞c, +∞) follows from the differentiability).
 x Example 1
 = 5 Find the intervals on which the following functions are increasing and the intervals on which
 they are decreasing.
@@ -514,14 +508,14 @@ that follows it) to the function f’. It follows from that theorem and remark t
 Yee pee. is negative, This is the idea behind the following theorem.
 as a
 ~ x 5.14 THEOREM. Let f be twice differentiable on an open interval I.
-(a) If f"(x) > 0on I, then f is concave up on I.
-[b) If f(x) < 0on I, then f is concave down on 1.. Example 3
+(a) If f"(x) > 0 on I, then f is concave up on I.
+[b) If f(x) < 0 on I, then f is concave down on 1.. Example 3
 {down Find open intervals on which the following functions are concave up and open intervals on
 i I which they are concave down.
 
 Figure 5.1.8 Solution (a). Calculating the first two derivatives we obtain
 fe) =2x-4 and f"(x) =2
-a Since (x) > 0 for all x, the function f is concave up on (~2, +20). This is consistent
+a Since (x) > 0 for all x, the function f is concave up on (~2, +∞). This is consistent
 : with Figure 5.1.4.
 Solution (b). Calculating the first two derivatives we obtain
 f(x) =3x² and f"(x) = 6
@@ -2889,7 +2883,7 @@ aw=x-∞-1 sothat du=dx (4)
 From the first equality in (4)
 
 so that
-few -Idx = fo +∞u +1) Jadu = foe +20? +0") du
+few -Idx = fo +∞u +1) Jadu = foe +∞? +0") du
 
 
 ---
