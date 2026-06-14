@@ -1,6 +1,6 @@
 # Exam-2 Solutions
 
-*Answers taken **verbatim** from the lecture notes only.*
+> **All answers are taken verbatim from the lecture notes. No AI-generated content.**
 
 ---
 

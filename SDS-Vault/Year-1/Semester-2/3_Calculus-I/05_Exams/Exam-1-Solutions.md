@@ -1,8 +1,12 @@
 # Exam-1 Solutions
 
+> **Legend:** Parts marked **[AI generated]** were not found in the lecture notes. All other content is taken verbatim from the notes.
+
 ---
 
 ### 1. (a) What do you mean by function? What are the basic ways of expressing function? Illustrate vertical line test for verifying function. **[4]**
+
+**[AI generated] — Not found in notes.**
 
 A **function** is a relation between a set of inputs and a set of permissible outputs such that each input is related to exactly one output. If f is a function from set A to set B, we write f: A → B, and for every x ∈ A, there is exactly one y ∈ B such that y = f(x).
 
@@ -19,6 +23,8 @@ A **function** is a relation between a set of inputs and a set of permissible ou
 
 ### 1. (b) Define constant as well as linear function with illustrations. Hence, interpret the slope of a linear function. **[5]**
 
+**[AI generated] — Not found in notes.**
+
 **Constant Function:** A function of the form f(x) = c, where c is a constant. For every input x, the output is always c. Its graph is a horizontal line parallel to the x-axis.
 
 *Illustration:* f(x) = 5. For x = 1, 2, 3, ..., f(x) = 5 always.
@@ -32,6 +38,8 @@ A **function** is a relation between a set of inputs and a set of permissible ou
 ---
 
 ### 1. (c) Consider the following data table and answer the questions below: **[5]**
+
+**[AI generated] — Not found in notes.**
 
 | x | 1.5 | 2.5 | 3.5 | 5.5 | 9.5 |
 |---|---|---|---|---|---|
@@ -63,6 +71,8 @@ The linear function is **y = 0.8x − 0.9**.
 
 ### 2. (a) What do you mean by continuity of a function? Explain with example. What are the conditions to be meet for a continuous function? **[3+2]**
 
+**[AI generated] — Not found in notes.**
+
 **Continuity:** A function f(x) is said to be continuous at a point x = a if the function has no breaks, jumps, or holes at that point. Formally, f is continuous at x = a if the limit of f(x) as x approaches a equals the function value at a.
 
 **Conditions for continuity at x = a (all three must hold):**
@@ -80,6 +90,8 @@ A simple example of discontinuity: f(x) = 1/(x−2). At x = 2, f(2) is undefined
 ---
 
 ### 2. (b) i. Show that |x| is continuous everywhere. **[2]**
+
+**[AI generated] — Not found in notes.**
 
 The function f(x) = |x| is defined piecewise as:
 - f(x) = x for x ≥ 0
@@ -99,6 +111,8 @@ Since f(x) = |x| is continuous at x = 0 and at all other points, it is continuou
 ---
 
 ### 2. (b) ii. Show that \lim_{x \to 0} \frac{1 - \cos x}{x} = 0 **[3]**
+
+**[AI generated] — Not found in notes.**
 
 We evaluate the limit using the known trigonometric limit and algebraic manipulation:
 
@@ -123,6 +137,8 @@ lim_{x→0} (1 − cos x)/x = 1 · 0 = 0
 
 ### 2. (c) Prove that the function f(x) = \begin{cases} x \sin \frac{1}{x}, & x \neq 0 \\ 5 & x = 0 \end{cases} is not continuous at x = 0 **[4]**
 
+**[AI generated] — Not found in notes.**
+
 For f to be continuous at x = 0, we need lim_{x→0} f(x) = f(0) = 5.
 
 Let us evaluate lim_{x→0} x sin(1/x).
@@ -142,6 +158,8 @@ Since lim_{x→0} f(x) ≠ f(0), the function is **not continuous** at x = 0.
 ---
 
 ### 3. (a) What do you mean by differentiability? What are the necessary and sufficient conditions of differentiability? Hence, illustrate graphical interpretation of differentiability **[6]**
+
+**[AI generated except last paragraph] — Most of this section is not found in notes. The last paragraph about tangent lines is from notes.**
 
 **Differentiability:** A function f(x) is said to be differentiable at a point x = a if the derivative f'(a) exists. That is, the limit
 
@@ -163,6 +181,8 @@ From the notes: A differentiable function f is increasing on any interval where 
 ---
 
 ### 3. (b) What is successive differentiation and how does it work? Find out nth derivative of (ax + b)^m **[4]**
+
+**From notes.**
 
 **What is Successive Differentiation, and how does it work?**
 
@@ -191,6 +211,8 @@ yₙ = m(m−1)...(m−n+1)aⁿ(ax + b)^(m−n)
 ---
 
 ### 3. (c) Consider the function f(x) = x^3 \sin x and determine the nth derivative of the function. **[4]**
+
+**Leibnitz theorem formula is from notes. The application to x³ sin x is [AI generated].**
 
 Using **Leibnitz's Theorem**: If u and v are functions of x with derivatives up to order n, then
 
@@ -223,6 +245,8 @@ The general formula for the nth derivative can be obtained by continuing this pa
 
 ### 4. (a) State and prove Rolle's theorem. **[6]**
 
+**From notes.**
+
 **Statement:** Rolle's theorem states that "If a function f is defined in the closed interval [a, b] in such a way that it satisfies the following condition: i) f is continuous on [a, b], ii) f is differentiable on (a, b), and iii) f(a) = f(b), then there exists at least one value of x, let us assume this value to be c, which lies between a and b i.e. (a < c < b) in such a way that f'(c) = 0."
 
 **Proof:** When proving a theorem directly, you start by assuming all of the conditions are satisfied. So, our discussion below relates only to functions
@@ -253,6 +277,8 @@ No, because if f'<0 we know that function is decreasing, which means it was larg
 
 ### 4. (b) Illustrate Rolle's theorem graphically. **[4]**
 
+**From notes (modified — ASCII diagram representation).**
+
 ```
 Y
 |
@@ -271,6 +297,8 @@ The graph shows a function f(x) where f(a) = f(b). The curve starts at a, rises 
 ---
 
 ### 4. (c) Verify the function f(x) = x^2 + 2 satisfies the Rolle's theorem in the interval [-2, 2]. **[4]**
+
+**From notes.**
 
 Verify Rolle's theorem for the functions y = x² + 2, a = −2, and b = 2
 
@@ -299,6 +327,8 @@ As a result, Rolle's theorem is proven.
 ---
 
 ### 5. (a) What do you mean by Maclaurin's series. Hence, derive Maclaurin's formulae? **[7]**
+
+**From notes.**
 
 **What is Maclaurin Series?**
 
@@ -334,6 +364,8 @@ The coefficients cₙ = fⁿ(0)/n! are determined by evaluating the successive d
 ---
 
 ### 5. (b) Find the Maclaurin's series of f(x) = \sqrt{1 + 2x} up to the fourth order and use your answer from the given function to find an approximation for the value of \sqrt{1.02} and compare the approximation found to the actual value of the square root. **[7]**
+
+**From notes. The comparison paragraph at the end is [AI generated].**
 
 From the worked example in the notes:
 
@@ -381,6 +413,8 @@ The exact value of the square root is:
 
 ### 6. (a) What do you mean by indefinite integral. Hence, write down the properties of indefinite integral. **[4]**
 
+**From notes.**
+
 The process of finding antiderivatives is called antidifferentiation or integration. Thus, if
 
 (d/dx)[F(x)] = f(x)
@@ -419,7 +453,7 @@ This result is helpful for proving the following basic properties of antiderivat
 
 **∫ sin²x · cos²x dx**
 
-From the notes:
+**From notes.**
 
 We know, 2 sin x cos x = sin 2x
 sin x cos x = (sin 2x)/2
@@ -441,6 +475,8 @@ We know sin²θ = (1 − cos 2θ)/2. Let θ = 2x, then sin² 2x = (1 − cos 4x)
 = **x/8 − (sin 4x)/32 + C**
 
 **∫ 3x² sin³x dx**
+
+**[AI generated] — Not found in notes.**
 
 We use integration by parts. Let u = 3x², dv = sin³x dx.
 
@@ -471,7 +507,7 @@ The remaining integrals can be further evaluated using integration by parts and 
 
 **∫ x √(1−x²) dx**
 
-From the notes:
+**From notes.**
 
 Let u = 1−x². Then du/dx = −2x or du = −2x dx.
 Need: x dx. We get x dx = −½ du.
@@ -490,7 +526,7 @@ You may check this by differentiation.
 
 **∫ sec²(3x) / tan(3x) dx**
 
-From the notes:
+**From notes.**
 
 Let u = tan(3x). Then du/dx = sec²(3x) · 3 or du = 3 sec²(3x) dx.
 Need: sec²(3x) dx. We get sec²(3x) dx = du/3.
@@ -506,6 +542,8 @@ Need: sec²(3x) dx. We get sec²(3x) dx = du/3.
 ---
 
 ### 7. (a) Explain area under curve and net signed area for any interval. **[2+2]**
+
+**Area under the curve part is from notes. Net signed area part is [AI generated].**
 
 **Area under the curve:**
 
@@ -525,6 +563,8 @@ The **net signed area** is the sum of areas above the x-axis minus the sum of ar
 
 ### 7. (b) Explain the Riemann sum and definite integral. What is the relation between Riemann sum and definite integral? **[3+2]**
 
+**[AI generated except last sentence] — The last sentence about the Fundamental Theorem is from notes.**
+
 **Riemann sum:** A Riemann sum approximates the area under a curve by dividing the interval [a, b] into n subintervals of equal width Δx = (b−a)/n, choosing a sample point xᵢ* in each subinterval, and forming the sum:
 
 Sₙ = Σᵢ₌₁ⁿ f(xᵢ*) Δx
@@ -542,6 +582,8 @@ From the notes: The Fundamental Theorem of Calculus, which is the central theore
 ---
 
 ### 7. (c) Answer the following questions: **[2.5 × 2]**
+
+**[AI generated] — Not found in notes.**
 
 **(i) Using the definition of area under the curve with x_k^* as the left end point of each subinterval, obtain the area under the curve y = f(x) = 4 - \frac{1}{4}x^2 over the interval [0,3].**
 
@@ -601,6 +643,8 @@ Therefore, the area is **⅓ square units**.
 
 ### 8. (a) Show that definite integral can be expressed as a limit of a sum. **[8]**
 
+**From notes.**
+
 **Definite Integral as Limit of a Sum**
 
 Assuming that f is a continuous function and positive on the interval [a, b]. So, its graph is above the x-axis.
@@ -644,6 +688,8 @@ This expression is known as the definition of the definite integral as a limit o
 ---
 
 ### 8. (b) Find \int_0^2 (x^2 + 1) dx as the limit of sum. **[6]**
+
+**[AI generated] — Not found in notes.**
 
 We evaluate ∫₀² (x² + 1) dx as a limit of a Riemann sum.
 
