@@ -55,7 +55,8 @@
               "title": "ocr_output"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -130,10 +131,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md"
+                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Exam-2-Solutions"
+              "title": "File properties for ocr_output"
             }
           },
           {
@@ -262,10 +263,10 @@
       "graph:Open graph view": false
     }
   },
-  "active": "8a3bf95b3ca26102",
+  "active": "9cc0046569181f9a",
   "lastOpenFiles": [
-    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr_final.py",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr3.py",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr2.py",
