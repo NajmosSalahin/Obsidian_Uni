@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e033fb8b5bb5e7d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-fleeting notes/t distribution.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "t distribution"
-            }
-          },
-          {
             "id": "8a3bf95b3ca26102",
             "type": "leaf",
             "state": {
@@ -55,8 +31,7 @@
               "title": "Exam-2-Solutions"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.51103591918945,
-    "collapsed": true
+    "width": 241.51103591918945
   },
   "right": {
     "id": "7dd42c1aad9d4a8c",
@@ -265,7 +239,11 @@
   },
   "active": "8a3bf95b3ca26102",
   "lastOpenFiles": [
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr.py",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
     "2-fleeting notes/t distribution.md",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/cleanup_ocr.py",
     "2-fleeting notes/no longer human - osamu dazai.md",
     "2-fleeting notes/hello.md",
     "9-resources/Attachments/Pasted image 20260524173357.png",
@@ -283,7 +261,6 @@
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_3_Variate Transformations_MSR_20250723-1.pdf",
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Chapter_1_ Review of Probability_MSR_20250702-2.pdf",
     "SDS-Vault/Year-1/Semester-2/1_Probability-Theory-Distributions/Probability Theory STAT-2101.pdf",
-    "SDS-Vault/Year-1/Semester-2/5_Linear-Modern-Algebra/Howard Anton, Chris Rorres - Elementary linear algebra with applications-Wiley (2005).pdf",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/03_My-Notes/Sir Notes.md",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
     "6-templates/Weekly-Review-Template.md",
@@ -299,9 +276,6 @@
     "SDS-Vault/Year-2/Semester-2/Viva-Voce/Preparation-Notes.md",
     "SDS-Vault/Year-2/Semester-2/9_Viva-Voce/Question-Bank.md",
     "SDS-Vault/Year-2/Semester-2/9_Viva-Voce/Preparation-Notes.md",
-    "SDS-Vault/Year-1/Semester-2/Viva-Voce/Question-Bank.md",
-    "SDS-Vault/Year-1/Semester-2/Viva-Voce/Preparation-Notes.md",
-    "SDS-Vault/Year-1/Semester-2/9_Viva-Voce/Question-Bank.md",
     "9-resources/Banners/Wallpapers/01 (5th copy).png",
     "9-resources/Banners/Wallpapers/zelda_botw.png",
     "9-resources/Banners/Wallpapers/zelda.png",

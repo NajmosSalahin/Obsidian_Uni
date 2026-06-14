@@ -26,7 +26,7 @@ for page_num in range(doc.page_count):
         print(f"Page {page_num + 1}/{doc.page_count} done")
 
 full_text = "\n\n".join(all_text)
-output_path = os.path.join(output_dir, "ocr_output.txt")
+output_path = os.path.join(output_dir, "ocr_output.md")
 with open(output_path, "w", encoding="utf-8") as f:
     f.write(full_text)
 
