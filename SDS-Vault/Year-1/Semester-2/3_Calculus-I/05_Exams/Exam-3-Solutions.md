@@ -1,12 +1,14 @@
 # Exam-3 Solutions
 
+> **Legend:** Parts marked **[AI generated]** were not found in the lecture notes. Content labeled **[From notes]** is taken verbatim from the notes.
+
 ---
 
 ### 1. Sketch the graphs where the following functions are increasing or decreasing: **[25]**
 
 *Note: The questions.md lists "the following functions" but does not specify particular functions. Below are three representative examples covering the key concepts of increasing/decreasing functions, with sketches described in detail.*
 
----
+**The increasing/decreasing definitions and theorem are from notes. The function choices and example computations below are [AI generated].**
 
 **(a) f(x) = x² − 4x + 3**
 
@@ -119,7 +121,9 @@ y
 
 ### 2. Find the limiting value of the given function as x approaches 3? **[20]**
 
-*Note: The questions.md does not specify a particular function. Below we evaluate the limit for several common types of functions as x → 3.*
+**[AI generated] — Not found in notes. The questions.md also does not specify a function.*
+
+*Below we evaluate the limit for several common types of functions as x → 3.*
 
 ---
 
@@ -165,7 +169,7 @@ Since LHL ≠ RHL, the limit **does not exist**.
 
 ### 3. Find the expansion of the function f(x) = 2x - 2x² centered at a = -3 with Taylor's series formula. **[25]**
 
-From the notes:
+**From notes. The verification expansion at the end (the last 6 lines) is [AI generated].**
 
 **Example 1:** Find the expansion for the function, f(x) = 2x − 2x² centered at a = −3 using the Taylor series formula.
 

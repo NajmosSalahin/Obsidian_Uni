@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "t distribution"
             }
+          },
+          {
+            "id": "8a3bf95b3ca26102",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Exam-2-Solutions"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -88,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.51103591918945
+    "width": 241.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "7dd42c1aad9d4a8c",
@@ -105,10 +131,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2-fleeting notes/t distribution.md"
+                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for t distribution"
+              "title": "File properties for Exam-2-Solutions"
             }
           },
           {
@@ -221,7 +247,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 234.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,7 +263,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "2d3a0613e62a6128",
+  "active": "8a3bf95b3ca26102",
   "lastOpenFiles": [
     "2-fleeting notes/t distribution.md",
     "2-fleeting notes/no longer human - osamu dazai.md",
