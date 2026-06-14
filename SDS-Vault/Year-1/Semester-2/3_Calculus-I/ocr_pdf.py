@@ -1,6 +1,6 @@
 import pytesseract
 from PIL import Image
-import fitz  # PyMuPDF
+import fitz
 import io
 import os
 
@@ -14,13 +14,16 @@ all_text = []
 
 for page_num in range(doc.page_count):
     page = doc[page_num]
-    pix = page.get_pixmap(dpi=300)
+    pix = page.get_pixmap(dpi=150)
     img_data = pix.tobytes("png")
     img = Image.open(io.BytesIO(img_data))
     
-    text = pytesseract.image_to_string(img, lang='eng')
+    custom_config = r'--oem 1 --psm 6'
+    text = pytesseract.image_to_string(img, lang='eng', config=custom_config)
     all_text.append(f"--- Page {page_num + 1} ---\n{text}")
-    print(f"Page {page_num + 1}/{doc.page_count} done")
+    
+    if (page_num + 1) % 10 == 0:
+        print(f"Page {page_num + 1}/{doc.page_count} done")
 
 full_text = "\n\n".join(all_text)
 output_path = os.path.join(output_dir, "ocr_output.txt")
