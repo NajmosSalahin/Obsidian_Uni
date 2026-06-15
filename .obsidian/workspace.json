@@ -35,14 +35,27 @@
             "id": "9cc0046569181f9a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_results/Lecture note_Calculus I(6)(2)-1/Lecture note_Calculus I(6)(2)-1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Lecture note_Calculus I(6)(2)-1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,8 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.51103591918945,
-    "collapsed": true
+    "width": 241.51103591918945
   },
   "right": {
     "id": "7dd42c1aad9d4a8c",
@@ -249,8 +261,10 @@
       "graph:Open graph view": false
     }
   },
-  "active": "9cc0046569181f9a",
+  "active": "8a3bf95b3ca26102",
   "lastOpenFiles": [
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_results/Lecture note_Calculus I(6)(2)-1/Lecture note_Calculus I(6)(2)-1.md",
+    "SDS-Vault/Year-1/Semester-2/3_Calculus-I/output_bookmarked.pdf",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/05_Exams/Exam-2-Solutions.md",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
     "SDS-Vault/Year-1/Semester-2/3_Calculus-I/fix_ocr_final.py",
@@ -271,7 +285,6 @@
     "SDS-Vault/Year-1/Semester-2/2_Sampling-Distributions/03_My-Notes/Distributions.pdf",
     "SDS-Vault/Year-1/Semester-2/New shortcut.lnk",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Sir Notes.pdf",
-    "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/Lec_2.pdf",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/03_My-Notes/Sir Notes.md",
     "SDS-Vault/Year-1/Semester-2/4_Discrete-Mathematics/01_Lectures/Sir Notes.md",
     "6-templates/Weekly-Review-Template.md",
