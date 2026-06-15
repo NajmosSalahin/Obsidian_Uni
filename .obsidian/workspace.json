@@ -35,24 +35,10 @@
             "id": "9cc0046569181f9a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SDS-Vault/Year-1/Semester-2/3_Calculus-I/ocr_output.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ocr_output"
+              "title": "New tab"
             }
           }
         ],
