@@ -1,0 +1,9678 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Increasing/Decreasing Functions",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          76.5,
+          93.515625
+        ],
+        [
+          324.0,
+          93.515625
+        ],
+        [
+          324.0,
+          109.5
+        ],
+        [
+          76.5,
+          109.5
+        ]
+      ]
+    },
+    {
+      "title": "## Increasing, decreasing, and constant of functions",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.5,
+          366.6796875
+        ],
+        [
+          374.25,
+          366.6796875
+        ],
+        [
+          374.25,
+          379.5
+        ],
+        [
+          70.5,
+          379.5
+        ]
+      ]
+    },
+    {
+      "title": "### Determinant of increasing, decreasing, and constant by derivative approach",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.419921875,
+          351.9140625
+        ],
+        [
+          539.25,
+          351.9140625
+        ],
+        [
+          539.25,
+          366.0
+        ],
+        [
+          71.419921875,
+          366.0
+        ]
+      ]
+    },
+    {
+      "title": "Example 1",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          224.12109375,
+          181.125
+        ],
+        [
+          264.76171875,
+          181.125
+        ],
+        [
+          264.76171875,
+          190.96875
+        ],
+        [
+          224.12109375,
+          190.96875
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          207.685546875,
+          539.9296875
+        ],
+        [
+          255.75,
+          539.9296875
+        ],
+        [
+          255.75,
+          550.7578125
+        ],
+        [
+          207.685546875,
+          550.7578125
+        ]
+      ]
+    },
+    {
+      "title": "Table 5.1.1",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          306.896484375,
+          714.1640625
+        ],
+        [
+          345.75,
+          714.1640625
+        ],
+        [
+          345.75,
+          726.75
+        ],
+        [
+          306.896484375,
+          726.75
+        ]
+      ]
+    },
+    {
+      "title": "Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          78.0,
+          93.0
+        ],
+        [
+          359.25,
+          93.0
+        ],
+        [
+          359.25,
+          138.75
+        ],
+        [
+          78.0,
+          138.75
+        ]
+      ]
+    },
+    {
+      "title": "Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          75.0,
+          92.25
+        ],
+        [
+          356.25,
+          92.25
+        ],
+        [
+          356.25,
+          137.3203125
+        ],
+        [
+          75.0,
+          137.3203125
+        ]
+      ]
+    },
+    {
+      "title": "Increasing and Decreasing Functions Definition",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          76.5,
+          374.0625
+        ],
+        [
+          423.75,
+          374.0625
+        ],
+        [
+          423.75,
+          389.8125
+        ],
+        [
+          76.5,
+          389.8125
+        ]
+      ]
+    },
+    {
+      "title": "Graphical Representation of Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          75.75,
+          90.0
+        ],
+        [
+          456.75,
+          90.0
+        ],
+        [
+          456.75,
+          126.984375
+        ],
+        [
+          75.75,
+          126.984375
+        ]
+      ]
+    },
+    {
+      "title": "Rules to Check Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          75.75,
+          88.5
+        ],
+        [
+          444.0,
+          88.5
+        ],
+        [
+          444.0,
+          121.5703125
+        ],
+        [
+          75.75,
+          121.5703125
+        ]
+      ]
+    },
+    {
+      "title": "Properties of Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          74.25,
+          380.25
+        ],
+        [
+          425.25,
+          380.25
+        ],
+        [
+          425.25,
+          414.75
+        ],
+        [
+          74.25,
+          414.75
+        ]
+      ]
+    },
+    {
+      "title": "Important Notes on Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          77.25,
+          300.7265625
+        ],
+        [
+          411.0,
+          300.7265625
+        ],
+        [
+          411.0,
+          315.0
+        ],
+        [
+          77.25,
+          315.0
+        ]
+      ]
+    },
+    {
+      "title": "Question 3: Prove that a polynomial with positive coefficients is increasing.",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          76.201171875,
+          88.1015625
+        ],
+        [
+          489.0,
+          88.1015625
+        ],
+        [
+          489.0,
+          101.25
+        ],
+        [
+          76.201171875,
+          101.25
+        ]
+      ]
+    },
+    {
+      "title": "Solved Questions on Increasing and Decreasing Functions",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          76.5,
+          339.609375
+        ],
+        [
+          471.75,
+          339.609375
+        ],
+        [
+          471.75,
+          375.046875
+        ],
+        [
+          76.5,
+          375.046875
+        ]
+      ]
+    },
+    {
+      "title": "Decreasing Function in Calculus",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          74.70703125,
+          372.75
+        ],
+        [
+          343.5,
+          372.75
+        ],
+        [
+          343.5,
+          394.5
+        ],
+        [
+          74.70703125,
+          394.5
+        ]
+      ]
+    },
+    {
+      "title": "Graphical Representation:",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          75.3046875,
+          553.5
+        ],
+        [
+          222.75,
+          553.5
+        ],
+        [
+          222.75,
+          567.0
+        ],
+        [
+          75.3046875,
+          567.0
+        ]
+      ]
+    },
+    {
+      "title": "Increasing Function in Calculus",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          78.0,
+          90.0
+        ],
+        [
+          339.0,
+          90.0
+        ],
+        [
+          339.0,
+          108.75
+        ],
+        [
+          78.0,
+          108.75
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          77.994140625,
+          189.0
+        ],
+        [
+          129.0,
+          189.0
+        ],
+        [
+          129.0,
+          200.3203125
+        ],
+        [
+          77.994140625,
+          200.3203125
+        ]
+      ]
+    },
+    {
+      "title": "Graphical Representation:",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          78.0,
+          259.5
+        ],
+        [
+          225.75,
+          259.5
+        ],
+        [
+          225.75,
+          273.0
+        ],
+        [
+          78.0,
+          273.0
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          74.70703125,
+          330.75
+        ],
+        [
+          126.0,
+          330.75
+        ],
+        [
+          126.0,
+          343.5
+        ],
+        [
+          74.70703125,
+          343.5
+        ]
+      ]
+    },
+    {
+      "title": "Example 4",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          76.201171875,
+          92.0390625
+        ],
+        [
+          149.25,
+          92.0390625
+        ],
+        [
+          149.25,
+          107.25
+        ],
+        [
+          76.201171875,
+          107.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          78.890625,
+          450.3515625
+        ],
+        [
+          153.0,
+          450.3515625
+        ],
+        [
+          153.0,
+          465.75
+        ],
+        [
+          78.890625,
+          465.75
+        ]
+      ]
+    },
+    {
+      "title": "Example 5",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          72.75,
+          340.1015625
+        ],
+        [
+          114.75,
+          340.1015625
+        ],
+        [
+          114.75,
+          354.0
+        ],
+        [
+          72.75,
+          354.0
+        ]
+      ]
+    },
+    {
+      "title": "Remember this!",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          80.384765625,
+          555.1875
+        ],
+        [
+          135.0,
+          555.1875
+        ],
+        [
+          135.0,
+          567.0
+        ],
+        [
+          80.384765625,
+          567.0
+        ]
+      ]
+    },
+    {
+      "title": "Review",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          74.25,
+          299.25
+        ],
+        [
+          132.0,
+          299.25
+        ],
+        [
+          132.0,
+          312.75
+        ],
+        [
+          74.25,
+          312.75
+        ]
+      ]
+    },
+    {
+      "title": "INFLECTION POINTS",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          72.615234375,
+          494.25
+        ],
+        [
+          146.25,
+          494.25
+        ],
+        [
+          146.25,
+          505.4765625
+        ],
+        [
+          72.615234375,
+          505.4765625
+        ]
+      ]
+    },
+    {
+      "title": "Example 3",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          204.99609375,
+          208.6875
+        ],
+        [
+          253.5,
+          208.6875
+        ],
+        [
+          253.5,
+          219.75
+        ],
+        [
+          204.99609375,
+          219.75
+        ]
+      ]
+    },
+    {
+      "title": "294 Analysis of Functions and Their Graphs",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          71.71875,
+          779.1328125
+        ],
+        [
+          232.5,
+          779.1328125
+        ],
+        [
+          232.5,
+          791.25
+        ],
+        [
+          71.71875,
+          791.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 4",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          219.638671875,
+          92.53125
+        ],
+        [
+          264.0,
+          92.53125
+        ],
+        [
+          264.0,
+          103.5
+        ],
+        [
+          219.638671875,
+          103.5
+        ]
+      ]
+    },
+    {
+      "title": "Table 5.1.2",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          293.748046875,
+          322.875
+        ],
+        [
+          334.5,
+          322.875
+        ],
+        [
+          334.5,
+          336.75
+        ],
+        [
+          293.748046875,
+          336.75
+        ]
+      ]
+    },
+    {
+      "title": "Example 5",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          210.75,
+          517.2890625
+        ],
+        [
+          257.25,
+          517.2890625
+        ],
+        [
+          257.25,
+          528.1171875
+        ],
+        [
+          210.75,
+          528.1171875
+        ]
+      ]
+    },
+    {
+      "title": "INFLECTION POINTS IN\nAPPLICATIONS",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          72.75,
+          474.0
+        ],
+        [
+          153.75,
+          474.0
+        ],
+        [
+          153.75,
+          494.25
+        ],
+        [
+          72.75,
+          494.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 6",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          212.765625,
+          109.5
+        ],
+        [
+          259.5,
+          111.234375
+        ],
+        [
+          259.5,
+          122.25
+        ],
+        [
+          212.765625,
+          121.078125
+        ]
+      ]
+    },
+    {
+      "title": "5.2 ANALYSIS OF FUNCTIONS II: RELATIVE EXTREMA; FIRST AND SECOND DERIVATIVE TESTS",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          213.0,
+          100.5
+        ],
+        [
+          514.5,
+          100.5
+        ],
+        [
+          514.5,
+          125.25
+        ],
+        [
+          213.0,
+          125.25
+        ]
+      ]
+    },
+    {
+      "title": "RELATIVE MAXIMA AND MINIMA",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          85.763671875,
+          184.5
+        ],
+        [
+          194.25,
+          184.5
+        ],
+        [
+          194.25,
+          194.25
+        ],
+        [
+          85.763671875,
+          194.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 1",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          214.5,
+          355.359375
+        ],
+        [
+          259.5,
+          355.359375
+        ],
+        [
+          259.5,
+          366.75
+        ],
+        [
+          214.5,
+          366.75
+        ]
+      ]
+    },
+    {
+      "title": "Solution.",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          213.662109375,
+          388.828125
+        ],
+        [
+          250.119140625,
+          388.828125
+        ],
+        [
+          250.119140625,
+          396.703125
+        ],
+        [
+          213.662109375,
+          396.703125
+        ]
+      ]
+    },
+    {
+      "title": "CRITICAL POINTS",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          94.130859375,
+          245.109375
+        ],
+        [
+          149.25,
+          245.109375
+        ],
+        [
+          149.25,
+          255.75
+        ],
+        [
+          94.130859375,
+          255.75
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          220.53515625,
+          598.0078125
+        ],
+        [
+          266.25,
+          598.0078125
+        ],
+        [
+          266.25,
+          609.0
+        ],
+        [
+          220.53515625,
+          609.0
+        ]
+      ]
+    },
+    {
+      "title": "MORE ON THE SIGNIFICANCE OF INFLECTION POINTS",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          75.75,
+          96.0
+        ],
+        [
+          171.75,
+          92.25
+        ],
+        [
+          172.5,
+          111.75
+        ],
+        [
+          76.5,
+          116.25
+        ]
+      ]
+    },
+    {
+      "title": "5.2 Analysis of Functions II: Relative Extrema; First and Second Derivative Tests 303",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          204.75,
+          285.9609375
+        ],
+        [
+          455.25,
+          285.9609375
+        ],
+        [
+          455.25,
+          297.0
+        ],
+        [
+          204.75,
+          297.0
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          80.25,
+          94.5
+        ],
+        [
+          318.75,
+          94.5
+        ],
+        [
+          318.75,
+          118.5
+        ],
+        [
+          80.25,
+          118.5
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem Statement:",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          83.25,
+          302.203125
+        ],
+        [
+          267.75,
+          302.203125
+        ],
+        [
+          267.75,
+          314.015625
+        ],
+        [
+          83.25,
+          314.015625
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          135.75,
+          431.25
+        ],
+        [
+          228.75,
+          431.25
+        ],
+        [
+          228.75,
+          442.5
+        ],
+        [
+          135.75,
+          442.5
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem Proof",
+      "heading_level": null,
+      "page_id": 22,
+      "polygon": [
+        [
+          84.0,
+          94.5
+        ],
+        [
+          297.75,
+          94.5
+        ],
+        [
+          297.75,
+          113.25
+        ],
+        [
+          84.0,
+          113.25
+        ]
+      ]
+    },
+    {
+      "title": "Case 1: the function is constant",
+      "heading_level": null,
+      "page_id": 22,
+      "polygon": [
+        [
+          78.0,
+          561.5859375
+        ],
+        [
+          243.0,
+          561.5859375
+        ],
+        [
+          243.0,
+          572.4140625
+        ],
+        [
+          78.0,
+          572.4140625
+        ]
+      ]
+    },
+    {
+      "title": "Example on Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 24,
+      "polygon": [
+        [
+          81.0,
+          90.0703125
+        ],
+        [
+          363.75,
+          90.0703125
+        ],
+        [
+          363.75,
+          110.7421875
+        ],
+        [
+          81.0,
+          110.7421875
+        ]
+      ]
+    },
+    {
+      "title": "# Statement of Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 24,
+      "polygon": [
+        [
+          70.5,
+          438.75
+        ],
+        [
+          288.75,
+          438.75
+        ],
+        [
+          288.75,
+          450.75
+        ],
+        [
+          70.5,
+          450.75
+        ]
+      ]
+    },
+    {
+      "title": "What is Mean Value Theorem?",
+      "heading_level": null,
+      "page_id": 24,
+      "polygon": [
+        [
+          74.25,
+          586.6875
+        ],
+        [
+          368.25,
+          586.6875
+        ],
+        [
+          368.25,
+          604.40625
+        ],
+        [
+          74.25,
+          604.40625
+        ]
+      ]
+    },
+    {
+      "title": "Graphical Representation of Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 26,
+      "polygon": [
+        [
+          72.0,
+          88.5
+        ],
+        [
+          459.75,
+          88.5
+        ],
+        [
+          459.75,
+          125.015625
+        ],
+        [
+          72.0,
+          125.015625
+        ]
+      ]
+    },
+    {
+      "title": "Difference Between Mean Value Theorem and Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 27,
+      "polygon": [
+        [
+          76.5,
+          91.5
+        ],
+        [
+          515.25,
+          91.5
+        ],
+        [
+          515.25,
+          127.5
+        ],
+        [
+          76.5,
+          127.5
+        ]
+      ]
+    },
+    {
+      "title": "Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 27,
+      "polygon": [
+        [
+          93.234375,
+          417.75
+        ],
+        [
+          223.5,
+          417.75
+        ],
+        [
+          223.5,
+          430.6640625
+        ],
+        [
+          93.234375,
+          430.6640625
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 27,
+      "polygon": [
+        [
+          327.216796875,
+          419.25
+        ],
+        [
+          430.5,
+          419.25
+        ],
+        [
+          430.5,
+          449.859375
+        ],
+        [
+          327.216796875,
+          449.859375
+        ]
+      ]
+    },
+    {
+      "title": "Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 27,
+      "polygon": [
+        [
+          76.5,
+          601.9453125
+        ],
+        [
+          153.0,
+          601.9453125
+        ],
+        [
+          153.0,
+          612.7734375
+        ],
+        [
+          76.5,
+          612.7734375
+        ]
+      ]
+    },
+    {
+      "title": "Hide Solution \u25bc",
+      "heading_level": null,
+      "page_id": 28,
+      "polygon": [
+        [
+          72.615234375,
+          655.1015625
+        ],
+        [
+          120.75,
+          655.1015625
+        ],
+        [
+          120.75,
+          666.0
+        ],
+        [
+          72.615234375,
+          666.0
+        ]
+      ]
+    },
+    {
+      "title": "Examples of Mean Value \nTheorem",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          75.75,
+          217.546875
+        ],
+        [
+          396.0,
+          216.0
+        ],
+        [
+          396.0,
+          264.796875
+        ],
+        [
+          75.75,
+          264.796875
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          98.25,
+          444.0
+        ],
+        [
+          180.0,
+          444.9375
+        ],
+        [
+          180.0,
+          462.0
+        ],
+        [
+          98.25,
+          460.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 30,
+      "polygon": [
+        [
+          78.0,
+          475.5
+        ],
+        [
+          159.75,
+          475.5
+        ],
+        [
+          159.75,
+          493.5
+        ],
+        [
+          78.0,
+          493.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 31,
+      "polygon": [
+        [
+          72.9140625,
+          468.0703125
+        ],
+        [
+          123.75,
+          468.0703125
+        ],
+        [
+          123.75,
+          479.25
+        ],
+        [
+          72.9140625,
+          479.25
+        ]
+      ]
+    },
+    {
+      "title": "### State and Prove Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 31,
+      "polygon": [
+        [
+          70.224609375,
+          873.140625
+        ],
+        [
+          423.75,
+          873.140625
+        ],
+        [
+          423.75,
+          888.0
+        ],
+        [
+          70.224609375,
+          888.0
+        ]
+      ]
+    },
+    {
+      "title": "Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 32,
+      "polygon": [
+        [
+          71.25,
+          87.75
+        ],
+        [
+          141.75,
+          87.75
+        ],
+        [
+          141.75,
+          99.0
+        ],
+        [
+          71.25,
+          99.0
+        ]
+      ]
+    },
+    {
+      "title": "Proof",
+      "heading_level": null,
+      "page_id": 32,
+      "polygon": [
+        [
+          70.5,
+          149.25
+        ],
+        [
+          91.5,
+          149.25
+        ],
+        [
+          91.5,
+          161.25
+        ],
+        [
+          70.5,
+          161.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 4.2.2: Verifying that the Mean Value Theorem Applies",
+      "heading_level": null,
+      "page_id": 32,
+      "polygon": [
+        [
+          72.75,
+          554.203125
+        ],
+        [
+          270.75,
+          554.203125
+        ],
+        [
+          270.75,
+          566.015625
+        ],
+        [
+          72.75,
+          566.015625
+        ]
+      ]
+    },
+    {
+      "title": "Solution",
+      "heading_level": null,
+      "page_id": 32,
+      "polygon": [
+        [
+          75.3046875,
+          595.0546875
+        ],
+        [
+          101.6015625,
+          595.0546875
+        ],
+        [
+          101.6015625,
+          605.8828125
+        ],
+        [
+          75.3046875,
+          605.8828125
+        ]
+      ]
+    },
+    {
+      "title": "The Mean Value Theorem",
+      "heading_level": null,
+      "page_id": 33,
+      "polygon": [
+        [
+          72.31640625,
+          329.765625
+        ],
+        [
+          216.75,
+          329.765625
+        ],
+        [
+          216.75,
+          340.5
+        ],
+        [
+          72.31640625,
+          340.5
+        ]
+      ]
+    },
+    {
+      "title": "Proof",
+      "heading_level": null,
+      "page_id": 33,
+      "polygon": [
+        [
+          79.5,
+          624.0
+        ],
+        [
+          105.0,
+          624.5859375
+        ],
+        [
+          104.25,
+          636.0
+        ],
+        [
+          78.75,
+          635.4140625
+        ]
+      ]
+    },
+    {
+      "title": "##### Statement of Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 34,
+      "polygon": [
+        [
+          70.5,
+          515.25
+        ],
+        [
+          373.5,
+          515.25
+        ],
+        [
+          373.5,
+          530.0859375
+        ],
+        [
+          70.5,
+          530.0859375
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem Statement:",
+      "heading_level": null,
+      "page_id": 34,
+      "polygon": [
+        [
+          76.5,
+          541.40625
+        ],
+        [
+          282.0,
+          541.40625
+        ],
+        [
+          282.0,
+          554.25
+        ],
+        [
+          76.5,
+          554.25
+        ]
+      ]
+    },
+    {
+      "title": "Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 35,
+      "polygon": [
+        [
+          148.5,
+          95.25
+        ],
+        [
+          251.25,
+          95.25
+        ],
+        [
+          251.25,
+          108.0
+        ],
+        [
+          148.5,
+          108.0
+        ]
+      ]
+    },
+    {
+      "title": "The Mean Value Theorem and Its Meaning",
+      "heading_level": null,
+      "page_id": 35,
+      "polygon": [
+        [
+          73.810546875,
+          395.71875
+        ],
+        [
+          264.0,
+          395.71875
+        ],
+        [
+          264.0,
+          407.25
+        ],
+        [
+          73.810546875,
+          407.25
+        ]
+      ]
+    },
+    {
+      "title": "# Polynomial function is continuous function",
+      "heading_level": null,
+      "page_id": 35,
+      "polygon": [
+        [
+          70.5,
+          596.53125
+        ],
+        [
+          364.5,
+          596.53125
+        ],
+        [
+          364.5,
+          609.75
+        ],
+        [
+          70.5,
+          609.75
+        ]
+      ]
+    },
+    {
+      "title": "Example 4.2.1: Using Rolle's Theorem",
+      "heading_level": null,
+      "page_id": 35,
+      "polygon": [
+        [
+          74.109375,
+          611.7890625
+        ],
+        [
+          192.75,
+          611.7890625
+        ],
+        [
+          192.75,
+          623.25
+        ],
+        [
+          74.109375,
+          623.25
+        ]
+      ]
+    },
+    {
+      "title": "Solution",
+      "heading_level": null,
+      "page_id": 35,
+      "polygon": [
+        [
+          74.25,
+          680.6953125
+        ],
+        [
+          104.25,
+          680.6953125
+        ],
+        [
+          104.25,
+          691.5234375
+        ],
+        [
+          74.25,
+          691.5234375
+        ]
+      ]
+    },
+    {
+      "title": "### Example:",
+      "heading_level": null,
+      "page_id": 35,
+      "polygon": [
+        [
+          70.5,
+          863.25
+        ],
+        [
+          162.0,
+          863.25
+        ],
+        [
+          162.0,
+          876.75
+        ],
+        [
+          70.5,
+          876.75
+        ]
+      ]
+    },
+    {
+      "title": "Step 1:",
+      "heading_level": null,
+      "page_id": 36,
+      "polygon": [
+        [
+          74.109375,
+          360.0
+        ],
+        [
+          106.5,
+          360.0
+        ],
+        [
+          106.5,
+          369.75
+        ],
+        [
+          74.109375,
+          369.75
+        ]
+      ]
+    },
+    {
+      "title": "Step 2:",
+      "heading_level": null,
+      "page_id": 36,
+      "polygon": [
+        [
+          74.25,
+          413.4375
+        ],
+        [
+          106.5,
+          413.4375
+        ],
+        [
+          106.5,
+          422.25
+        ],
+        [
+          74.25,
+          422.25
+        ]
+      ]
+    },
+    {
+      "title": "Step 3:",
+      "heading_level": null,
+      "page_id": 36,
+      "polygon": [
+        [
+          74.25,
+          487.265625
+        ],
+        [
+          106.5,
+          487.265625
+        ],
+        [
+          106.5,
+          498.75
+        ],
+        [
+          74.25,
+          498.75
+        ]
+      ]
+    },
+    {
+      "title": "###### Successive Differentiation and Leibnitz's Theorem",
+      "heading_level": null,
+      "page_id": 37,
+      "polygon": [
+        [
+          70.5,
+          467.25
+        ],
+        [
+          510.75,
+          467.25
+        ],
+        [
+          510.75,
+          482.34375
+        ],
+        [
+          70.5,
+          482.34375
+        ]
+      ]
+    },
+    {
+      "title": "SUCCESSIVE DIFFERENTIATION\nAND\nLEIBNITZ'S THEOREM",
+      "heading_level": null,
+      "page_id": 37,
+      "polygon": [
+        [
+          138.0,
+          489.75
+        ],
+        [
+          476.25,
+          489.75
+        ],
+        [
+          476.25,
+          566.25
+        ],
+        [
+          138.0,
+          566.25
+        ]
+      ]
+    },
+    {
+      "title": "1.1 Introduction",
+      "heading_level": null,
+      "page_id": 37,
+      "polygon": [
+        [
+          94.5,
+          599.9765625
+        ],
+        [
+          194.25,
+          599.9765625
+        ],
+        [
+          194.25,
+          612.0
+        ],
+        [
+          94.5,
+          612.0
+        ]
+      ]
+    },
+    {
+      "title": "Differences in Chains:",
+      "heading_level": null,
+      "page_id": 38,
+      "polygon": [
+        [
+          78.0,
+          95.25
+        ],
+        [
+          323.25,
+          95.25
+        ],
+        [
+          323.25,
+          115.6640625
+        ],
+        [
+          78.0,
+          115.6640625
+        ]
+      ]
+    },
+    {
+      "title": "What is Successive Differentiation, and how does it work?",
+      "heading_level": null,
+      "page_id": 38,
+      "polygon": [
+        [
+          78.0,
+          336.0
+        ],
+        [
+          497.25,
+          336.0
+        ],
+        [
+          497.25,
+          377.015625
+        ],
+        [
+          78.0,
+          377.015625
+        ]
+      ]
+    },
+    {
+      "title": "Solved Examples \u2013 Successive Differentiation",
+      "heading_level": null,
+      "page_id": 39,
+      "polygon": [
+        [
+          78.0,
+          283.5
+        ],
+        [
+          549.75,
+          283.5
+        ],
+        [
+          549.75,
+          306.6328125
+        ],
+        [
+          78.0,
+          306.6328125
+        ]
+      ]
+    },
+    {
+      "title": "1.2 Calculation of nth Derivatives",
+      "heading_level": null,
+      "page_id": 40,
+      "polygon": [
+        [
+          78.75,
+          109.7578125
+        ],
+        [
+          267.75,
+          109.7578125
+        ],
+        [
+          267.75,
+          122.25
+        ],
+        [
+          78.75,
+          122.25
+        ]
+      ]
+    },
+    {
+      "title": "Leibnitz Theorem Formula",
+      "heading_level": null,
+      "page_id": 41,
+      "polygon": [
+        [
+          79.5,
+          91.0546875
+        ],
+        [
+          316.5,
+          91.0546875
+        ],
+        [
+          316.5,
+          106.5
+        ],
+        [
+          79.5,
+          106.5
+        ]
+      ]
+    },
+    {
+      "title": "Leibnitz Theorem Proof",
+      "heading_level": null,
+      "page_id": 42,
+      "polygon": [
+        [
+          76.5,
+          89.578125
+        ],
+        [
+          270.75,
+          89.578125
+        ],
+        [
+          270.75,
+          103.5
+        ],
+        [
+          76.5,
+          103.5
+        ]
+      ]
+    },
+    {
+      "title": "Solved Examples on Leibnitz Rule",
+      "heading_level": null,
+      "page_id": 43,
+      "polygon": [
+        [
+          74.25,
+          90.5625
+        ],
+        [
+          306.0,
+          90.5625
+        ],
+        [
+          306.0,
+          106.5
+        ],
+        [
+          74.25,
+          106.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 43,
+      "polygon": [
+        [
+          74.25,
+          491.25
+        ],
+        [
+          121.5,
+          491.25
+        ],
+        [
+          121.5,
+          502.5234375
+        ],
+        [
+          74.25,
+          502.5234375
+        ]
+      ]
+    },
+    {
+      "title": "Prcatice Problems on Leibnitz Theorem",
+      "heading_level": null,
+      "page_id": 44,
+      "polygon": [
+        [
+          74.109375,
+          428.6953125
+        ],
+        [
+          322.5,
+          428.6953125
+        ],
+        [
+          322.5,
+          441.75
+        ],
+        [
+          74.109375,
+          441.75
+        ]
+      ]
+    },
+    {
+      "title": "##### McLaurin series & Problems Solving",
+      "heading_level": null,
+      "page_id": 44,
+      "polygon": [
+        [
+          70.5,
+          577.5
+        ],
+        [
+          299.25,
+          577.5
+        ],
+        [
+          299.25,
+          589.5
+        ],
+        [
+          70.5,
+          589.5
+        ]
+      ]
+    },
+    {
+      "title": "Understanding the Maclaurin series formula",
+      "heading_level": null,
+      "page_id": 45,
+      "polygon": [
+        [
+          74.25,
+          403.1015625
+        ],
+        [
+          384.0,
+          403.1015625
+        ],
+        [
+          384.0,
+          418.5
+        ],
+        [
+          74.25,
+          418.5
+        ]
+      ]
+    },
+    {
+      "title": "MACLAURIN SERIES FORMULA",
+      "heading_level": null,
+      "page_id": 46,
+      "polygon": [
+        [
+          202.306640625,
+          100.40625
+        ],
+        [
+          369.75,
+          100.40625
+        ],
+        [
+          369.75,
+          112.5
+        ],
+        [
+          202.306640625,
+          112.5
+        ]
+      ]
+    },
+    {
+      "title": "How to find a Maclaurin series?",
+      "heading_level": null,
+      "page_id": 46,
+      "polygon": [
+        [
+          70.5,
+          315.4921875
+        ],
+        [
+          345.0,
+          315.4921875
+        ],
+        [
+          345.0,
+          332.25
+        ],
+        [
+          70.5,
+          332.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 1",
+      "heading_level": null,
+      "page_id": 48,
+      "polygon": [
+        [
+          74.25,
+          91.0546875
+        ],
+        [
+          112.5,
+          91.0546875
+        ],
+        [
+          112.5,
+          101.25
+        ],
+        [
+          74.25,
+          101.25
+        ]
+      ]
+    },
+    {
+      "title": "Solution",
+      "heading_level": null,
+      "page_id": 48,
+      "polygon": [
+        [
+          74.25,
+          131.25
+        ],
+        [
+          106.5,
+          131.25
+        ],
+        [
+          106.5,
+          142.5
+        ],
+        [
+          74.25,
+          142.5
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 49,
+      "polygon": [
+        [
+          74.25,
+          122.25
+        ],
+        [
+          114.75,
+          122.25
+        ],
+        [
+          114.75,
+          132.3984375
+        ],
+        [
+          74.25,
+          132.3984375
+        ]
+      ]
+    },
+    {
+      "title": "Solution",
+      "heading_level": null,
+      "page_id": 49,
+      "polygon": [
+        [
+          74.109375,
+          179.6484375
+        ],
+        [
+          105.1875,
+          179.6484375
+        ],
+        [
+          105.1875,
+          188.5078125
+        ],
+        [
+          74.109375,
+          188.5078125
+        ]
+      ]
+    },
+    {
+      "title": "Practice Questions",
+      "heading_level": null,
+      "page_id": 49,
+      "polygon": [
+        [
+          74.25,
+          493.6640625
+        ],
+        [
+          180.0,
+          493.6640625
+        ],
+        [
+          180.0,
+          505.5
+        ],
+        [
+          74.25,
+          505.5
+        ]
+      ]
+    },
+    {
+      "title": "Worked example",
+      "heading_level": null,
+      "page_id": 50,
+      "polygon": [
+        [
+          74.25,
+          91.546875
+        ],
+        [
+          168.75,
+          91.546875
+        ],
+        [
+          168.75,
+          103.5
+        ],
+        [
+          74.25,
+          103.5
+        ]
+      ]
+    },
+    {
+      "title": "Example",
+      "heading_level": null,
+      "page_id": 51,
+      "polygon": [
+        [
+          76.5,
+          88.5
+        ],
+        [
+          119.25,
+          88.5
+        ],
+        [
+          119.25,
+          100.5
+        ],
+        [
+          76.5,
+          100.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution",
+      "heading_level": null,
+      "page_id": 51,
+      "polygon": [
+        [
+          76.5,
+          139.5
+        ],
+        [
+          116.25,
+          139.5
+        ],
+        [
+          116.25,
+          150.75
+        ],
+        [
+          76.5,
+          150.75
+        ]
+      ]
+    },
+    {
+      "title": "#### Solve the following example.",
+      "heading_level": null,
+      "page_id": 52,
+      "polygon": [
+        [
+          69.75,
+          93.0
+        ],
+        [
+          413.25,
+          93.0
+        ],
+        [
+          413.25,
+          116.6484375
+        ],
+        [
+          69.75,
+          116.6484375
+        ]
+      ]
+    },
+    {
+      "title": "What Is Taylor Series Formula?",
+      "heading_level": null,
+      "page_id": 53,
+      "polygon": [
+        [
+          74.25,
+          93.0
+        ],
+        [
+          348.75,
+          93.0
+        ],
+        [
+          348.75,
+          113.203125
+        ],
+        [
+          74.25,
+          113.203125
+        ]
+      ]
+    },
+    {
+      "title": "Taylor Series Formula",
+      "heading_level": null,
+      "page_id": 53,
+      "polygon": [
+        [
+          86.958984375,
+          462.0
+        ],
+        [
+          226.5,
+          462.0
+        ],
+        [
+          226.5,
+          474.46875
+        ],
+        [
+          86.958984375,
+          474.46875
+        ]
+      ]
+    },
+    {
+      "title": "##### Derivation of Tailor's Series Expansion",
+      "heading_level": null,
+      "page_id": 54,
+      "polygon": [
+        [
+          72.0,
+          92.0390625
+        ],
+        [
+          369.36004638671875,
+          92.0390625
+        ],
+        [
+          369.36004638671875,
+          108.470947265625
+        ],
+        [
+          72.0,
+          108.470947265625
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 55,
+      "polygon": [
+        [
+          72.31640625,
+          147.75
+        ],
+        [
+          128.25,
+          147.75
+        ],
+        [
+          128.25,
+          158.9765625
+        ],
+        [
+          72.31640625,
+          158.9765625
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 56,
+      "polygon": [
+        [
+          75.603515625,
+          138.0
+        ],
+        [
+          126.75,
+          138.0
+        ],
+        [
+          126.75,
+          149.25
+        ],
+        [
+          75.603515625,
+          149.25
+        ]
+      ]
+    },
+    {
+      "title": "Example 3: Find the Taylor Series for f(x) = x^3 - 10x^2 + 6 at x=3.",
+      "heading_level": null,
+      "page_id": 57,
+      "polygon": [
+        [
+          73.5,
+          89.25
+        ],
+        [
+          399.75,
+          89.25
+        ],
+        [
+          399.75,
+          104.34375
+        ],
+        [
+          73.5,
+          104.34375
+        ]
+      ]
+    },
+    {
+      "title": "Example 1",
+      "heading_level": null,
+      "page_id": 57,
+      "polygon": [
+        [
+          95.25,
+          478.5
+        ],
+        [
+          136.5,
+          478.5
+        ],
+        [
+          136.5,
+          489.234375
+        ],
+        [
+          95.25,
+          489.234375
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 58,
+      "polygon": [
+        [
+          96.521484375,
+          97.9453125
+        ],
+        [
+          134.173828125,
+          97.9453125
+        ],
+        [
+          134.173828125,
+          106.8046875
+        ],
+        [
+          96.521484375,
+          106.8046875
+        ]
+      ]
+    },
+    {
+      "title": "###### Partial Derivative & Eler's Theorem",
+      "heading_level": null,
+      "page_id": 60,
+      "polygon": [
+        [
+          70.822265625,
+          567.984375
+        ],
+        [
+          463.6000061035156,
+          567.984375
+        ],
+        [
+          463.6000061035156,
+          591.332763671875
+        ],
+        [
+          70.822265625,
+          591.332763671875
+        ]
+      ]
+    },
+    {
+      "title": "Partial Derivative Definition",
+      "heading_level": null,
+      "page_id": 61,
+      "polygon": [
+        [
+          76.5,
+          90.0703125
+        ],
+        [
+          276.75,
+          90.0703125
+        ],
+        [
+          276.75,
+          102.8671875
+        ],
+        [
+          76.5,
+          102.8671875
+        ]
+      ]
+    },
+    {
+      "title": "Partial Derivative Symbol",
+      "heading_level": null,
+      "page_id": 61,
+      "polygon": [
+        [
+          76.5,
+          214.59375
+        ],
+        [
+          263.25,
+          214.59375
+        ],
+        [
+          263.25,
+          230.34375
+        ],
+        [
+          76.5,
+          230.34375
+        ]
+      ]
+    },
+    {
+      "title": "Partial Derivative Formula",
+      "heading_level": null,
+      "page_id": 61,
+      "polygon": [
+        [
+          76.5,
+          361.265625
+        ],
+        [
+          269.25,
+          361.265625
+        ],
+        [
+          269.25,
+          375.0
+        ],
+        [
+          76.5,
+          375.0
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Definitions of a partial derivatives",
+      "heading_level": null,
+      "page_id": 62,
+      "polygon": [
+        [
+          78.0,
+          93.0234375
+        ],
+        [
+          329.25,
+          93.0234375
+        ],
+        [
+          329.25,
+          108.0
+        ],
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "title": "Notations",
+      "heading_level": null,
+      "page_id": 62,
+      "polygon": [
+        [
+          114.15234375,
+          486.7734375
+        ],
+        [
+          176.25,
+          486.7734375
+        ],
+        [
+          176.25,
+          499.5
+        ],
+        [
+          114.15234375,
+          499.5
+        ]
+      ]
+    },
+    {
+      "title": "Partial Derivative Rules",
+      "heading_level": null,
+      "page_id": 63,
+      "polygon": [
+        [
+          75.75,
+          238.7109375
+        ],
+        [
+          246.0,
+          238.7109375
+        ],
+        [
+          246.0,
+          253.5
+        ],
+        [
+          75.75,
+          253.5
+        ]
+      ]
+    },
+    {
+      "title": "Product Rule",
+      "heading_level": null,
+      "page_id": 63,
+      "polygon": [
+        [
+          75.3046875,
+          305.15625
+        ],
+        [
+          154.5,
+          305.15625
+        ],
+        [
+          154.5,
+          317.25
+        ],
+        [
+          75.3046875,
+          317.25
+        ]
+      ]
+    },
+    {
+      "title": "Quotient Rule",
+      "heading_level": null,
+      "page_id": 63,
+      "polygon": [
+        [
+          75.603515625,
+          459.75
+        ],
+        [
+          159.0,
+          459.75
+        ],
+        [
+          159.0,
+          472.0078125
+        ],
+        [
+          75.603515625,
+          472.0078125
+        ]
+      ]
+    },
+    {
+      "title": "### State Euler's Theorem and Prove the Theorem",
+      "heading_level": null,
+      "page_id": 64,
+      "polygon": [
+        [
+          69.75,
+          93.0
+        ],
+        [
+          530.25,
+          94.5
+        ],
+        [
+          530.25,
+          113.25
+        ],
+        [
+          69.75,
+          111.0
+        ]
+      ]
+    },
+    {
+      "title": "Euler's Theorem on Homogeneous Function of Two Variables",
+      "heading_level": null,
+      "page_id": 64,
+      "polygon": [
+        [
+          78.75,
+          127.96875
+        ],
+        [
+          434.25,
+          127.96875
+        ],
+        [
+          434.25,
+          141.75
+        ],
+        [
+          78.75,
+          141.75
+        ]
+      ]
+    },
+    {
+      "title": "Euler's Theorem on Homogeneous Function of Three Variables",
+      "heading_level": null,
+      "page_id": 66,
+      "polygon": [
+        [
+          76.5,
+          91.0546875
+        ],
+        [
+          367.5,
+          91.0546875
+        ],
+        [
+          367.5,
+          102.0
+        ],
+        [
+          76.5,
+          102.0
+        ]
+      ]
+    },
+    {
+      "title": "Theorem",
+      "heading_level": null,
+      "page_id": 67,
+      "polygon": [
+        [
+          71.12109375,
+          802.265625
+        ],
+        [
+          154.5,
+          802.265625
+        ],
+        [
+          154.5,
+          820.5
+        ],
+        [
+          71.12109375,
+          820.5
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 68,
+      "polygon": [
+        [
+          104.888671875,
+          175.21875
+        ],
+        [
+          177.205078125,
+          175.21875
+        ],
+        [
+          177.205078125,
+          187.03125
+        ],
+        [
+          104.888671875,
+          187.03125
+        ]
+      ]
+    },
+    {
+      "title": "Solution:\n\ng(x, y) = x \\log(\\frac{y}{x})\ng(tx, ty) = tx \\log\\left(\\frac{ty}{tx}\\right).\ng \\text{ is a homogeneous function of degree 1.}\n\\therefore \\text{ By Euler's Theorem,}\nx \\frac{\\partial g}{\\partial x} + y \\frac{\\partial g}{\\partial y} = g\n\\text{Verification:}\ng(x, y) = x \\log(\\frac{y}{x})\n= x (\\log y - \\log x) = x \\log y - x \\log x\n\\frac{\\partial g}{\\partial x} = \\log y - \\log x - x \\times \\frac{1}{x}\n= \\log y - \\log x - 1\nx \\frac{\\partial g}{\\partial x} = x \\log y - x \\log x - x\n\\frac{\\partial g}{\\partial y} = x \\times \\frac{1}{y}\ny \\frac{\\partial g}{\\partial y} = x\nx \\frac{\\partial g}{\\partial x} + y \\frac{\\partial g}{\\partial y} = x \\log y - x \\log x - x + x\n= x \\log(\\frac{y}{x})\n= g\nx \\frac{\\partial g}{\\partial y} + y \\frac{\\partial g}{\\partial y} = g\nHence verified.",
+      "heading_level": null,
+      "page_id": 69,
+      "polygon": [
+        [
+          89.05078125,
+          114.1875
+        ],
+        [
+          297.0,
+          114.1875
+        ],
+        [
+          297.0,
+          549.0
+        ],
+        [
+          89.05078125,
+          549.0
+        ]
+      ]
+    },
+    {
+      "title": "Power Rule",
+      "heading_level": null,
+      "page_id": 69,
+      "polygon": [
+        [
+          74.25,
+          572.25
+        ],
+        [
+          150.75,
+          572.25
+        ],
+        [
+          150.75,
+          584.71875
+        ],
+        [
+          74.25,
+          584.71875
+        ]
+      ]
+    },
+    {
+      "title": "Chain Rule",
+      "heading_level": null,
+      "page_id": 69,
+      "polygon": [
+        [
+          74.25,
+          681.1875
+        ],
+        [
+          150.75,
+          681.1875
+        ],
+        [
+          150.75,
+          694.5
+        ],
+        [
+          74.25,
+          694.5
+        ]
+      ]
+    },
+    {
+      "title": "Chain Rule for One Independent variable:",
+      "heading_level": null,
+      "page_id": 69,
+      "polygon": [
+        [
+          74.25,
+          749.25
+        ],
+        [
+          302.25,
+          749.25
+        ],
+        [
+          302.25,
+          760.5
+        ],
+        [
+          74.25,
+          760.5
+        ]
+      ]
+    },
+    {
+      "title": "Chain Rule for Two Independent variables:",
+      "heading_level": null,
+      "page_id": 70,
+      "polygon": [
+        [
+          76.5,
+          90.5625
+        ],
+        [
+          310.5,
+          90.5625
+        ],
+        [
+          310.5,
+          102.75
+        ],
+        [
+          76.5,
+          102.75
+        ]
+      ]
+    },
+    {
+      "title": "Partial Derivative Examples",
+      "heading_level": null,
+      "page_id": 70,
+      "polygon": [
+        [
+          75.75,
+          287.4375
+        ],
+        [
+          277.5,
+          287.4375
+        ],
+        [
+          277.5,
+          303.1875
+        ],
+        [
+          75.75,
+          303.1875
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 70,
+      "polygon": [
+        [
+          75.603515625,
+          336.65625
+        ],
+        [
+          120.75,
+          336.65625
+        ],
+        [
+          120.75,
+          347.25
+        ],
+        [
+          75.603515625,
+          347.25
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 70,
+      "polygon": [
+        [
+          75.3046875,
+          504.4921875
+        ],
+        [
+          120.0,
+          504.4921875
+        ],
+        [
+          120.0,
+          515.3203125
+        ],
+        [
+          75.3046875,
+          515.3203125
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 71,
+      "polygon": [
+        [
+          74.25,
+          115.5
+        ],
+        [
+          120.0,
+          115.5
+        ],
+        [
+          120.0,
+          126.0
+        ],
+        [
+          74.25,
+          126.0
+        ]
+      ]
+    },
+    {
+      "title": "OPERATIONS WITH REAL NUMBERS",
+      "heading_level": null,
+      "page_id": 71,
+      "polygon": [
+        [
+          75.603515625,
+          360.75
+        ],
+        [
+          270.75,
+          361.5
+        ],
+        [
+          270.75,
+          373.5
+        ],
+        [
+          75.603515625,
+          372.09375
+        ]
+      ]
+    },
+    {
+      "title": "OPERATIONS WITH REAL NUMBERS",
+      "heading_level": null,
+      "page_id": 71,
+      "polygon": [
+        [
+          79.189453125,
+          561.0
+        ],
+        [
+          385.5,
+          561.0
+        ],
+        [
+          385.5,
+          573.0
+        ],
+        [
+          79.189453125,
+          573.0
+        ]
+      ]
+    },
+    {
+      "title": "7.2 THE INDEFINITE INTEGRAL; INTEGRAL CURVES AND DIRECTION FIELDS",
+      "heading_level": null,
+      "page_id": 72,
+      "polygon": [
+        [
+          82.5,
+          90.75
+        ],
+        [
+          377.25,
+          88.5
+        ],
+        [
+          377.25,
+          113.6953125
+        ],
+        [
+          82.5,
+          115.5
+        ]
+      ]
+    },
+    {
+      "title": "7.2.3 THEOREM",
+      "heading_level": null,
+      "page_id": 74,
+      "polygon": [
+        [
+          210.97265625,
+          174.7265625
+        ],
+        [
+          275.51953125,
+          174.7265625
+        ],
+        [
+          275.51953125,
+          183.5859375
+        ],
+        [
+          210.97265625,
+          183.5859375
+        ]
+      ]
+    },
+    {
+      "title": "7.3 INTEGRATION BY SUBSTITUTION",
+      "heading_level": null,
+      "page_id": 74,
+      "polygon": [
+        [
+          215.25,
+          546.328125
+        ],
+        [
+          398.25,
+          546.328125
+        ],
+        [
+          398.25,
+          558.140625
+        ],
+        [
+          215.25,
+          558.140625
+        ]
+      ]
+    },
+    {
+      "title": "## Integration by Method of Substitution Algorithm",
+      "heading_level": null,
+      "page_id": 75,
+      "polygon": [
+        [
+          80.25,
+          87.0
+        ],
+        [
+          480.75,
+          89.578125
+        ],
+        [
+          480.75,
+          111.0
+        ],
+        [
+          80.25,
+          109.265625
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 75,
+      "polygon": [
+        [
+          92.25,
+          259.3828125
+        ],
+        [
+          143.25,
+          259.3828125
+        ],
+        [
+          143.25,
+          270.2109375
+        ],
+        [
+          92.25,
+          270.2109375
+        ]
+      ]
+    },
+    {
+      "title": "Example 3",
+      "heading_level": null,
+      "page_id": 75,
+      "polygon": [
+        [
+          82.5,
+          420.328125
+        ],
+        [
+          132.75,
+          420.328125
+        ],
+        [
+          132.75,
+          432.140625
+        ],
+        [
+          82.5,
+          432.140625
+        ]
+      ]
+    },
+    {
+      "title": "Example 9",
+      "heading_level": null,
+      "page_id": 75,
+      "polygon": [
+        [
+          82.5,
+          545.34375
+        ],
+        [
+          133.5,
+          545.34375
+        ],
+        [
+          133.5,
+          557.25
+        ],
+        [
+          82.5,
+          557.25
+        ]
+      ]
+    },
+    {
+      "title": "7.2.3 THEOREM",
+      "heading_level": null,
+      "page_id": 76,
+      "polygon": [
+        [
+          210.97265625,
+          174.7265625
+        ],
+        [
+          275.51953125,
+          174.7265625
+        ],
+        [
+          275.51953125,
+          183.5859375
+        ],
+        [
+          210.97265625,
+          183.5859375
+        ]
+      ]
+    },
+    {
+      "title": "## Properties of Definite Integral and Their Justifications",
+      "heading_level": null,
+      "page_id": 76,
+      "polygon": [
+        [
+          69.75,
+          363.0
+        ],
+        [
+          540.75,
+          363.0
+        ],
+        [
+          540.75,
+          382.5
+        ],
+        [
+          69.75,
+          382.5
+        ]
+      ]
+    },
+    {
+      "title": "7.2.3 THEOREM.",
+      "heading_level": null,
+      "page_id": 76,
+      "polygon": [
+        [
+          209.478515625,
+          478.5
+        ],
+        [
+          278.25,
+          479.390625
+        ],
+        [
+          278.25,
+          491.25
+        ],
+        [
+          209.478515625,
+          489.234375
+        ]
+      ]
+    },
+    {
+      "title": "## Prove the Theorem of Substitution Rule",
+      "heading_level": null,
+      "page_id": 76,
+      "polygon": [
+        [
+          70.5,
+          654.0
+        ],
+        [
+          390.0,
+          654.0
+        ],
+        [
+          390.0,
+          668.25
+        ],
+        [
+          70.5,
+          668.25
+        ]
+      ]
+    },
+    {
+      "title": "## Integration by Method of Substitution Algorithm",
+      "heading_level": null,
+      "page_id": 78,
+      "polygon": [
+        [
+          79.5,
+          88.5
+        ],
+        [
+          480.75,
+          88.5
+        ],
+        [
+          480.75,
+          109.5
+        ],
+        [
+          79.5,
+          109.5
+        ]
+      ]
+    },
+    {
+      "title": "Example 2",
+      "heading_level": null,
+      "page_id": 78,
+      "polygon": [
+        [
+          92.25,
+          259.3828125
+        ],
+        [
+          143.25,
+          259.3828125
+        ],
+        [
+          143.25,
+          270.2109375
+        ],
+        [
+          92.25,
+          270.2109375
+        ]
+      ]
+    },
+    {
+      "title": "Example 3",
+      "heading_level": null,
+      "page_id": 78,
+      "polygon": [
+        [
+          82.5,
+          426.7265625
+        ],
+        [
+          132.75,
+          426.7265625
+        ],
+        [
+          132.75,
+          439.5234375
+        ],
+        [
+          82.5,
+          439.5234375
+        ]
+      ]
+    },
+    {
+      "title": "Solution.",
+      "heading_level": null,
+      "page_id": 78,
+      "polygon": [
+        [
+          82.775390625,
+          474.46875
+        ],
+        [
+          124.013671875,
+          474.46875
+        ],
+        [
+          124.013671875,
+          484.3125
+        ],
+        [
+          82.775390625,
+          484.3125
+        ]
+      ]
+    },
+    {
+      "title": "Integration by Substitution",
+      "heading_level": null,
+      "page_id": 79,
+      "polygon": [
+        [
+          78.75,
+          94.0078125
+        ],
+        [
+          276.75,
+          94.0078125
+        ],
+        [
+          276.75,
+          110.7421875
+        ],
+        [
+          78.75,
+          110.7421875
+        ]
+      ]
+    },
+    {
+      "title": "Examples from the Table we already know:",
+      "heading_level": null,
+      "page_id": 79,
+      "polygon": [
+        [
+          103.5,
+          215.25
+        ],
+        [
+          373.5,
+          215.25
+        ],
+        [
+          373.5,
+          229.5
+        ],
+        [
+          103.5,
+          229.5
+        ]
+      ]
+    },
+    {
+      "title": "Chain Rule for derivatives:",
+      "heading_level": null,
+      "page_id": 79,
+      "polygon": [
+        [
+          84.75,
+          438.0
+        ],
+        [
+          252.75,
+          438.0
+        ],
+        [
+          252.75,
+          451.5
+        ],
+        [
+          84.75,
+          451.5
+        ]
+      ]
+    },
+    {
+      "title": "Corresponding integral rule:",
+      "heading_level": null,
+      "page_id": 79,
+      "polygon": [
+        [
+          84.75,
+          489.75
+        ],
+        [
+          261.0,
+          489.75
+        ],
+        [
+          261.0,
+          504.0
+        ],
+        [
+          84.75,
+          504.0
+        ]
+      ]
+    },
+    {
+      "title": "Example:",
+      "heading_level": null,
+      "page_id": 79,
+      "polygon": [
+        [
+          85.5,
+          555.0
+        ],
+        [
+          144.75,
+          555.0
+        ],
+        [
+          144.75,
+          567.75
+        ],
+        [
+          85.5,
+          567.75
+        ]
+      ]
+    },
+    {
+      "title": "Substitution Method",
+      "heading_level": null,
+      "page_id": 80,
+      "polygon": [
+        [
+          74.25,
+          90.5625
+        ],
+        [
+          227.25,
+          90.5625
+        ],
+        [
+          227.25,
+          106.5
+        ],
+        [
+          74.25,
+          106.5
+        ]
+      ]
+    },
+    {
+      "title": "Four steps:",
+      "heading_level": null,
+      "page_id": 80,
+      "polygon": [
+        [
+          99.0,
+          257.90625
+        ],
+        [
+          170.25,
+          257.90625
+        ],
+        [
+          170.25,
+          271.6875
+        ],
+        [
+          99.0,
+          271.6875
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 80,
+      "polygon": [
+        [
+          82.5,
+          440.25
+        ],
+        [
+          140.25,
+          440.25
+        ],
+        [
+          140.25,
+          452.25
+        ],
+        [
+          82.5,
+          452.25
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 81,
+      "polygon": [
+        [
+          84.26953125,
+          127.4765625
+        ],
+        [
+          141.75,
+          127.4765625
+        ],
+        [
+          141.75,
+          141.75
+        ],
+        [
+          84.26953125,
+          141.75
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 81,
+      "polygon": [
+        [
+          87.85546875,
+          486.75
+        ],
+        [
+          144.75,
+          486.75
+        ],
+        [
+          144.75,
+          500.25
+        ],
+        [
+          87.85546875,
+          500.25
+        ]
+      ]
+    },
+    {
+      "title": "Definite Integral: Two ways to evaluate using u-substitution",
+      "heading_level": null,
+      "page_id": 82,
+      "polygon": [
+        [
+          95.25,
+          94.9921875
+        ],
+        [
+          452.25,
+          94.9921875
+        ],
+        [
+          452.25,
+          109.7578125
+        ],
+        [
+          95.25,
+          109.7578125
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 82,
+      "polygon": [
+        [
+          95.25,
+          209.671875
+        ],
+        [
+          152.25,
+          209.671875
+        ],
+        [
+          152.25,
+          222.75
+        ],
+        [
+          95.25,
+          222.75
+        ]
+      ]
+    },
+    {
+      "title": "Some tricky u-substitutions",
+      "heading_level": null,
+      "page_id": 82,
+      "polygon": [
+        [
+          85.46484375,
+          441.4921875
+        ],
+        [
+          261.0,
+          441.4921875
+        ],
+        [
+          261.0,
+          456.2578125
+        ],
+        [
+          85.46484375,
+          456.2578125
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 82,
+      "polygon": [
+        [
+          86.66015625,
+          501.75
+        ],
+        [
+          144.75,
+          501.75
+        ],
+        [
+          144.75,
+          514.5
+        ],
+        [
+          86.66015625,
+          514.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 83,
+      "polygon": [
+        [
+          80.982421875,
+          129.4453125
+        ],
+        [
+          138.0,
+          129.4453125
+        ],
+        [
+          138.0,
+          143.25
+        ],
+        [
+          80.982421875,
+          143.25
+        ]
+      ]
+    },
+    {
+      "title": "Section 5.7 - Miscellaneous Integrals",
+      "heading_level": null,
+      "page_id": 83,
+      "polygon": [
+        [
+          70.5,
+          387.75
+        ],
+        [
+          342.0,
+          387.75
+        ],
+        [
+          342.0,
+          408.0
+        ],
+        [
+          70.5,
+          408.0
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 84,
+      "polygon": [
+        [
+          83.970703125,
+          126.4921875
+        ],
+        [
+          141.75,
+          126.4921875
+        ],
+        [
+          141.75,
+          140.25
+        ],
+        [
+          83.970703125,
+          140.25
+        ]
+      ]
+    },
+    {
+      "title": "Example: Evaluate \\int \\frac{dx}{9+4x^2}.",
+      "heading_level": null,
+      "page_id": 84,
+      "polygon": [
+        [
+          82.5,
+          397.6875
+        ],
+        [
+          265.5,
+          397.6875
+        ],
+        [
+          266.25,
+          431.15625
+        ],
+        [
+          82.5,
+          431.15625
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 84,
+      "polygon": [
+        [
+          82.4765625,
+          436.5703125
+        ],
+        [
+          141.0,
+          436.5703125
+        ],
+        [
+          141.0,
+          449.3671875
+        ],
+        [
+          82.4765625,
+          449.3671875
+        ]
+      ]
+    },
+    {
+      "title": "Example 9",
+      "heading_level": null,
+      "page_id": 85,
+      "polygon": [
+        [
+          82.5,
+          91.5
+        ],
+        [
+          135.0,
+          91.5
+        ],
+        [
+          135.0,
+          103.8515625
+        ],
+        [
+          82.5,
+          103.8515625
+        ]
+      ]
+    },
+    {
+      "title": "Solution. Let",
+      "heading_level": null,
+      "page_id": 85,
+      "polygon": [
+        [
+          82.177734375,
+          141.75
+        ],
+        [
+          147.75,
+          141.75
+        ],
+        [
+          147.75,
+          153.0
+        ],
+        [
+          82.177734375,
+          153.0
+        ]
+      ]
+    },
+    {
+      "title": "The Integrals of \\sin^2 x and \\cos^2 x",
+      "heading_level": null,
+      "page_id": 85,
+      "polygon": [
+        [
+          88.154296875,
+          549.75
+        ],
+        [
+          261.75,
+          549.75
+        ],
+        [
+          261.75,
+          563.25
+        ],
+        [
+          88.154296875,
+          563.25
+        ]
+      ]
+    },
+    {
+      "title": "EXAMPLE 9",
+      "heading_level": null,
+      "page_id": 85,
+      "polygon": [
+        [
+          87.0,
+          618.75
+        ],
+        [
+          146.25,
+          618.75
+        ],
+        [
+          146.25,
+          631.5
+        ],
+        [
+          87.0,
+          631.5
+        ]
+      ]
+    },
+    {
+      "title": "Integration of Trigonometric Functions Formulas",
+      "heading_level": null,
+      "page_id": 86,
+      "polygon": [
+        [
+          81.0,
+          103.359375
+        ],
+        [
+          429.0,
+          103.359375
+        ],
+        [
+          429.0,
+          120.0
+        ],
+        [
+          81.0,
+          120.0
+        ]
+      ]
+    },
+    {
+      "title": "Question-Integrate 2cos<sup>2</sup>x with respect to x.",
+      "heading_level": null,
+      "page_id": 86,
+      "polygon": [
+        [
+          73.810546875,
+          383.25
+        ],
+        [
+          303.75,
+          383.25
+        ],
+        [
+          303.75,
+          396.75
+        ],
+        [
+          73.810546875,
+          396.75
+        ]
+      ]
+    },
+    {
+      "title": "Answer:",
+      "heading_level": null,
+      "page_id": 87,
+      "polygon": [
+        [
+          72.31640625,
+          467.578125
+        ],
+        [
+          116.25,
+          467.578125
+        ],
+        [
+          116.25,
+          478.5
+        ],
+        [
+          72.31640625,
+          478.5
+        ]
+      ]
+    },
+    {
+      "title": "Determine the integral of the following function: f(x) = \\cos^3 x.",
+      "heading_level": null,
+      "page_id": 88,
+      "polygon": [
+        [
+          152.25,
+          96.75
+        ],
+        [
+          517.5,
+          96.75
+        ],
+        [
+          517.5,
+          115.5
+        ],
+        [
+          152.25,
+          115.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 88,
+      "polygon": [
+        [
+          86.25,
+          128.25
+        ],
+        [
+          141.75,
+          128.25
+        ],
+        [
+          141.75,
+          140.25
+        ],
+        [
+          86.25,
+          140.25
+        ]
+      ]
+    },
+    {
+      "title": "Answer:",
+      "heading_level": null,
+      "page_id": 89,
+      "polygon": [
+        [
+          72.75,
+          338.625
+        ],
+        [
+          117.0,
+          338.625
+        ],
+        [
+          117.0,
+          351.0
+        ],
+        [
+          72.75,
+          351.0
+        ]
+      ]
+    },
+    {
+      "title": ": Find the integration of \\int \\frac{e^{tan^{-1}x}}{1+x^2} dx .",
+      "heading_level": null,
+      "page_id": 90,
+      "polygon": [
+        [
+          198.0,
+          103.8515625
+        ],
+        [
+          388.5,
+          100.5
+        ],
+        [
+          388.5,
+          122.5546875
+        ],
+        [
+          198.0,
+          127.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 90,
+      "polygon": [
+        [
+          144.0,
+          135.0
+        ],
+        [
+          196.5,
+          135.0
+        ],
+        [
+          196.5,
+          148.5
+        ],
+        [
+          144.0,
+          148.5
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 91,
+      "polygon": [
+        [
+          128.25,
+          176.203125
+        ],
+        [
+          180.0,
+          176.203125
+        ],
+        [
+          180.0,
+          186.75
+        ],
+        [
+          128.25,
+          186.75
+        ]
+      ]
+    },
+    {
+      "title": "Strategy for integrating",
+      "heading_level": null,
+      "page_id": 91,
+      "polygon": [
+        [
+          86.361328125,
+          518.765625
+        ],
+        [
+          218.25,
+          518.765625
+        ],
+        [
+          218.25,
+          531.0
+        ],
+        [
+          86.361328125,
+          531.0
+        ]
+      ]
+    },
+    {
+      "title": "Properties of Definite Integrals",
+      "heading_level": null,
+      "page_id": 93,
+      "polygon": [
+        [
+          77.09765625,
+          647.25
+        ],
+        [
+          259.5,
+          647.25
+        ],
+        [
+          259.5,
+          659.53125
+        ],
+        [
+          77.09765625,
+          659.53125
+        ]
+      ]
+    },
+    {
+      "title": "THE MEAN-VALUE THEOREM FOR INTEGRALS",
+      "heading_level": null,
+      "page_id": 94,
+      "polygon": [
+        [
+          83.373046875,
+          101.8828125
+        ],
+        [
+          200.25,
+          101.8828125
+        ],
+        [
+          200.25,
+          119.25
+        ],
+        [
+          83.373046875,
+          119.25
+        ]
+      ]
+    },
+    {
+      "title": "422 Integration",
+      "heading_level": null,
+      "page_id": 94,
+      "polygon": [
+        [
+          72.75,
+          235.265625
+        ],
+        [
+          135.0,
+          235.265625
+        ],
+        [
+          135.0,
+          246.75
+        ],
+        [
+          72.75,
+          246.75
+        ]
+      ]
+    },
+    {
+      "title": "7.6 THE FUNDAMENTAL THEOREM OF CALCULUS",
+      "heading_level": null,
+      "page_id": 95,
+      "polygon": [
+        [
+          79.5,
+          88.59375
+        ],
+        [
+          357.75,
+          88.59375
+        ],
+        [
+          357.75,
+          101.25
+        ],
+        [
+          79.5,
+          101.25
+        ]
+      ]
+    },
+    {
+      "title": "7.6 The Fundamental Theorem of Calculus 417",
+      "heading_level": null,
+      "page_id": 95,
+      "polygon": [
+        [
+          248.25,
+          378.0
+        ],
+        [
+          442.5,
+          378.0
+        ],
+        [
+          442.5,
+          390.75
+        ],
+        [
+          248.25,
+          390.0
+        ]
+      ]
+    },
+    {
+      "title": "### Show that Definite Integral as a limit of a SUM",
+      "heading_level": null,
+      "page_id": 96,
+      "polygon": [
+        [
+          69.75,
+          490.5
+        ],
+        [
+          449.25,
+          492.75
+        ],
+        [
+          449.25,
+          512.25
+        ],
+        [
+          69.75,
+          510.0
+        ]
+      ]
+    },
+    {
+      "title": "Definite Integral as Limit of a Sum",
+      "heading_level": null,
+      "page_id": 96,
+      "polygon": [
+        [
+          75.75,
+          518.765625
+        ],
+        [
+          278.25,
+          518.765625
+        ],
+        [
+          278.25,
+          530.578125
+        ],
+        [
+          75.75,
+          530.578125
+        ]
+      ]
+    },
+    {
+      "title": "######### Fundamental Theorem of Calculus",
+      "heading_level": null,
+      "page_id": 97,
+      "polygon": [
+        [
+          70.5,
+          616.7109375
+        ],
+        [
+          471.0,
+          616.7109375
+        ],
+        [
+          471.0,
+          632.25
+        ],
+        [
+          70.5,
+          632.25
+        ]
+      ]
+    },
+    {
+      "title": "# Explanation of Mean Value Theorem for Definite Integral",
+      "heading_level": null,
+      "page_id": 97,
+      "polygon": [
+        [
+          70.5,
+          651.1640625
+        ],
+        [
+          366.75,
+          651.1640625
+        ],
+        [
+          366.75,
+          663.0
+        ],
+        [
+          70.5,
+          663.0
+        ]
+      ]
+    },
+    {
+      "title": "The Fundamental Theorem of Calculus",
+      "heading_level": null,
+      "page_id": 97,
+      "polygon": [
+        [
+          143.4375,
+          683.25
+        ],
+        [
+          327.75,
+          684.0
+        ],
+        [
+          327.75,
+          696.75
+        ],
+        [
+          143.4375,
+          695.953125
+        ]
+      ]
+    },
+    {
+      "title": "Mean Value Theorem for Definite Integrals",
+      "heading_level": null,
+      "page_id": 97,
+      "polygon": [
+        [
+          213.0,
+          797.8359375
+        ],
+        [
+          372.75,
+          797.8359375
+        ],
+        [
+          372.75,
+          808.6640625
+        ],
+        [
+          213.0,
+          808.6640625
+        ]
+      ]
+    },
+    {
+      "title": "326 Chapter 5: Integration",
+      "heading_level": null,
+      "page_id": 98,
+      "polygon": [
+        [
+          70.822265625,
+          266.25
+        ],
+        [
+          182.25,
+          266.25
+        ],
+        [
+          182.25,
+          278.25
+        ],
+        [
+          70.822265625,
+          278.25
+        ]
+      ]
+    },
+    {
+      "title": "### Prove the following Theorem",
+      "heading_level": null,
+      "page_id": 100,
+      "polygon": [
+        [
+          70.5,
+          92.0390625
+        ],
+        [
+          293.25,
+          92.0390625
+        ],
+        [
+          293.25,
+          106.8046875
+        ],
+        [
+          70.5,
+          106.8046875
+        ]
+      ]
+    },
+    {
+      "title": "## Show that in interval [a,b], F'(x) = f(x)",
+      "heading_level": null,
+      "page_id": 101,
+      "polygon": [
+        [
+          70.5,
+          115.5
+        ],
+        [
+          291.75,
+          115.5
+        ],
+        [
+          291.75,
+          128.25
+        ],
+        [
+          70.5,
+          128.25
+        ]
+      ]
+    },
+    {
+      "title": "Fundamental Theorem, Part 1",
+      "heading_level": null,
+      "page_id": 101,
+      "polygon": [
+        [
+          221.25,
+          144.75
+        ],
+        [
+          339.0,
+          144.75
+        ],
+        [
+          339.0,
+          155.25
+        ],
+        [
+          221.25,
+          155.25
+        ]
+      ]
+    },
+    {
+      "title": "The Integral of a Rate",
+      "heading_level": null,
+      "page_id": 102,
+      "polygon": [
+        [
+          78.75,
+          445.4296875
+        ],
+        [
+          209.25,
+          445.4296875
+        ],
+        [
+          209.25,
+          459.75
+        ],
+        [
+          78.75,
+          459.75
+        ]
+      ]
+    },
+    {
+      "title": "The Integral of a Rate",
+      "heading_level": null,
+      "page_id": 103,
+      "polygon": [
+        [
+          78.75,
+          94.0078125
+        ],
+        [
+          208.5,
+          94.0078125
+        ],
+        [
+          208.5,
+          107.25
+        ],
+        [
+          78.75,
+          107.25
+        ]
+      ]
+    },
+    {
+      "title": "EXAMPLE 4 Here are several interpretations of the Net Change Theorem.",
+      "heading_level": null,
+      "page_id": 104,
+      "polygon": [
+        [
+          81.580078125,
+          92.0390625
+        ],
+        [
+          460.5,
+          92.0390625
+        ],
+        [
+          460.5,
+          105.75
+        ],
+        [
+          81.580078125,
+          105.75
+        ]
+      ]
+    },
+    {
+      "title": "Properties of Definite Integrals",
+      "heading_level": null,
+      "page_id": 105,
+      "polygon": [
+        [
+          77.25,
+          93.515625
+        ],
+        [
+          259.5,
+          93.515625
+        ],
+        [
+          259.5,
+          107.296875
+        ],
+        [
+          77.25,
+          107.296875
+        ]
+      ]
+    },
+    {
+      "title": "### Example of Definite Integral",
+      "heading_level": null,
+      "page_id": 105,
+      "polygon": [
+        [
+          69.75,
+          350.25
+        ],
+        [
+          286.5,
+          350.25
+        ],
+        [
+          286.5,
+          368.6484375
+        ],
+        [
+          69.75,
+          368.6484375
+        ]
+      ]
+    },
+    {
+      "title": "Solution:",
+      "heading_level": null,
+      "page_id": 105,
+      "polygon": [
+        [
+          79.5,
+          406.0546875
+        ],
+        [
+          135.0,
+          406.0546875
+        ],
+        [
+          135.0,
+          418.8515625
+        ],
+        [
+          79.5,
+          418.8515625
+        ]
+      ]
+    },
+    {
+      "title": "Even and Odd Functions",
+      "heading_level": null,
+      "page_id": 109,
+      "polygon": [
+        [
+          76.5,
+          352.40625
+        ],
+        [
+          171.75,
+          352.40625
+        ],
+        [
+          171.75,
+          360.75
+        ],
+        [
+          76.5,
+          360.75
+        ]
+      ]
+    },
+    {
+      "title": "Integration by reduction formulae",
+      "heading_level": null,
+      "page_id": 110,
+      "polygon": [
+        [
+          80.384765625,
+          493.5
+        ],
+        [
+          486.0,
+          493.5
+        ],
+        [
+          486.0,
+          520.5
+        ],
+        [
+          80.384765625,
+          520.5
+        ]
+      ]
+    },
+    {
+      "title": "How to find the reduction formula [edit]",
+      "heading_level": null,
+      "page_id": 111,
+      "polygon": [
+        [
+          80.25,
+          95.25
+        ],
+        [
+          426.75,
+          95.25
+        ],
+        [
+          426.75,
+          114.75
+        ],
+        [
+          80.25,
+          114.75
+        ]
+      ]
+    },
+    {
+      "title": "How to compute the integral [edit]",
+      "heading_level": null,
+      "page_id": 111,
+      "polygon": [
+        [
+          86.0625,
+          486.0
+        ],
+        [
+          271.5,
+          486.0
+        ],
+        [
+          271.5,
+          498.75
+        ],
+        [
+          86.0625,
+          498.75
+        ]
+      ]
+    },
+    {
+      "title": "Examples [edit]",
+      "heading_level": null,
+      "page_id": 112,
+      "polygon": [
+        [
+          80.25,
+          88.1015625
+        ],
+        [
+          186.0,
+          88.1015625
+        ],
+        [
+          186.0,
+          101.25
+        ],
+        [
+          80.25,
+          101.25
+        ]
+      ]
+    },
+    {
+      "title": "Cosine integral [edit]",
+      "heading_level": null,
+      "page_id": 112,
+      "polygon": [
+        [
+          80.0859375,
+          146.671875
+        ],
+        [
+          204.0,
+          146.671875
+        ],
+        [
+          204.0,
+          158.484375
+        ],
+        [
+          80.0859375,
+          158.484375
+        ]
+      ]
+    },
+    {
+      "title": "Exponential integral [edit]",
+      "heading_level": null,
+      "page_id": 113,
+      "polygon": [
+        [
+          81.0,
+          401.625
+        ],
+        [
+          233.25,
+          401.625
+        ],
+        [
+          233.25,
+          414.75
+        ],
+        [
+          81.0,
+          414.75
+        ]
+      ]
+    },
+    {
+      "title": "Reduction formulas",
+      "heading_level": null,
+      "page_id": 116,
+      "polygon": [
+        [
+          139.25390625,
+          96.46875
+        ],
+        [
+          289.5,
+          96.46875
+        ],
+        [
+          289.5,
+          109.5
+        ],
+        [
+          139.25390625,
+          109.5
+        ]
+      ]
+    },
+    {
+      "title": "## Problem of Trigonometric Function",
+      "heading_level": null,
+      "page_id": 117,
+      "polygon": [
+        [
+          69.75,
+          799.3125
+        ],
+        [
+          387.0,
+          797.25
+        ],
+        [
+          387.0,
+          819.0
+        ],
+        [
+          69.75,
+          819.0
+        ]
+      ]
+    },
+    {
+      "title": "6.4 Trigonometric integrals",
+      "heading_level": null,
+      "page_id": 118,
+      "polygon": [
+        [
+          78.0,
+          91.546875
+        ],
+        [
+          313.5,
+          91.546875
+        ],
+        [
+          313.5,
+          107.296875
+        ],
+        [
+          78.0,
+          107.296875
+        ]
+      ]
+    },
+    {
+      "title": "Theorem 6.14 - Powers of sine and cosine",
+      "heading_level": null,
+      "page_id": 118,
+      "polygon": [
+        [
+          87.556640625,
+          123.046875
+        ],
+        [
+          328.5,
+          123.046875
+        ],
+        [
+          328.5,
+          135.0
+        ],
+        [
+          87.556640625,
+          135.0
+        ]
+      ]
+    },
+    {
+      "title": "Theorem 6.15 - Powers of secant and tangent",
+      "heading_level": null,
+      "page_id": 118,
+      "polygon": [
+        [
+          87.2578125,
+          257.90625
+        ],
+        [
+          350.25,
+          257.90625
+        ],
+        [
+          350.25,
+          270.0
+        ],
+        [
+          87.2578125,
+          270.0
+        ]
+      ]
+    },
+    {
+      "title": "Techniques of integration",
+      "heading_level": null,
+      "page_id": 119,
+      "polygon": [
+        [
+          77.25,
+          255.4453125
+        ],
+        [
+          206.7890625,
+          255.4453125
+        ],
+        [
+          206.7890625,
+          267.0
+        ],
+        [
+          77.25,
+          267.0
+        ]
+      ]
+    },
+    {
+      "title": "6.5 Trigonometric substitutions",
+      "heading_level": null,
+      "page_id": 120,
+      "polygon": [
+        [
+          82.5,
+          121.078125
+        ],
+        [
+          353.25,
+          121.078125
+        ],
+        [
+          353.25,
+          136.828125
+        ],
+        [
+          82.5,
+          136.828125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          72
+        ],
+        [
+          "Line",
+          42
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          76
+        ],
+        [
+          "Line",
+          51
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          124
+        ],
+        [
+          "Line",
+          74
+        ],
+        [
+          "TableCell",
+          30
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "Equation",
+          9
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          48
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          38
+        ],
+        [
+          "Span",
+          27
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          33
+        ],
+        [
+          "Span",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          38
+        ],
+        [
+          "Span",
+          30
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          26
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          42
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          27
+        ],
+        [
+          "Span",
+          15
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          34
+        ],
+        [
+          "Span",
+          34
+        ],
+        [
+          "Equation",
+          9
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          22
+        ],
+        [
+          "Span",
+          16
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          31
+        ],
+        [
+          "Span",
+          31
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          17
+        ],
+        [
+          "Span",
+          7
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          48
+        ],
+        [
+          "Span",
+          37
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          91
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          70
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          99
+        ],
+        [
+          "Line",
+          57
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Figure",
+          5
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          76
+        ],
+        [
+          "Line",
+          51
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          91
+        ],
+        [
+          "Line",
+          82
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Caption",
+          5
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          27
+        ],
+        [
+          "Line",
+          16
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 21,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          38
+        ],
+        [
+          "Line",
+          37
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 22,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          45
+        ],
+        [
+          "Span",
+          19
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 23,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          31
+        ],
+        [
+          "Span",
+          8
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 24,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          45
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 25,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          34
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          6
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 26,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          23
+        ],
+        [
+          "Span",
+          21
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 27,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          51
+        ],
+        [
+          "Line",
+          47
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 28,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          42
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 29,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          32
+        ],
+        [
+          "Span",
+          23
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 30,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          24
+        ],
+        [
+          "Span",
+          18
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 31,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          37
+        ],
+        [
+          "Span",
+          27
+        ],
+        [
+          "Equation",
+          16
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 32,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          136
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Equation",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 33,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          49
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 34,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          67
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 35,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          91
+        ],
+        [
+          "Line",
+          58
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 36,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          34
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 37,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          36
+        ],
+        [
+          "Span",
+          27
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 38,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          52
+        ],
+        [
+          "Line",
+          37
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 39,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          30
+        ],
+        [
+          "Span",
+          28
+        ],
+        [
+          "Equation",
+          12
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 40,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          41
+        ],
+        [
+          "Span",
+          25
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 41,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          45
+        ],
+        [
+          "Span",
+          33
+        ],
+        [
+          "Text",
+          18
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 42,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          28
+        ],
+        [
+          "Span",
+          8
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 43,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          37
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "Code",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 44,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          34
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 45,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          21
+        ],
+        [
+          "Span",
+          12
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 46,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          45
+        ],
+        [
+          "Line",
+          26
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 47,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          14
+        ],
+        [
+          "Span",
+          8
+        ],
+        [
+          "Line",
+          7
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 48,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          28
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "TableCell",
+          22
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Table",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 49,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          43
+        ],
+        [
+          "Line",
+          36
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 50,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          20
+        ],
+        [
+          "Span",
+          7
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 51,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          34
+        ],
+        [
+          "Span",
+          16
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 52,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          37
+        ],
+        [
+          "Span",
+          34
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 53,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          26
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 54,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          7
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Line",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 55,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          41
+        ],
+        [
+          "Span",
+          28
+        ],
+        [
+          "Equation",
+          13
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 56,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          32
+        ],
+        [
+          "Span",
+          20
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 57,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          32
+        ],
+        [
+          "Span",
+          22
+        ],
+        [
+          "Equation",
+          9
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 58,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          32
+        ],
+        [
+          "TableCell",
+          32
+        ],
+        [
+          "Line",
+          21
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 59,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          20
+        ],
+        [
+          "Span",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 60,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Equation",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Line",
+          1
+        ],
+        [
+          "Span",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 61,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          62
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 62,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          66
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 63,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          27
+        ],
+        [
+          "Span",
+          23
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 64,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          29
+        ],
+        [
+          "Span",
+          16
+        ],
+        [
+          "Equation",
+          9
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 65,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          28
+        ],
+        [
+          "Span",
+          27
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          8
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 66,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          28
+        ],
+        [
+          "Span",
+          15
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 67,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          33
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 68,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          14
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "Span",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 69,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          57
+        ],
+        [
+          "Line",
+          40
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 70,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          43
+        ],
+        [
+          "Span",
+          42
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 71,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          87
+        ],
+        [
+          "Line",
+          72
+        ],
+        [
+          "Text",
+          23
+        ],
+        [
+          "SectionHeader",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 72,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          69
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 73,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          44
+        ],
+        [
+          "TableCell",
+          28
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 74,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          58
+        ],
+        [
+          "Span",
+          43
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 75,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          50
+        ],
+        [
+          "Span",
+          43
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 76,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          43
+        ],
+        [
+          "Span",
+          25
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 77,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          46
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          6
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 78,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          39
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 79,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          28
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 80,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          33
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 81,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          26
+        ],
+        [
+          "Equation",
+          11
+        ],
+        [
+          "Span",
+          8
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 82,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          41
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 83,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          21
+        ],
+        [
+          "Span",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 84,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          22
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "Span",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 85,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          33
+        ],
+        [
+          "Span",
+          13
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Text",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 86,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          50
+        ],
+        [
+          "Span",
+          26
+        ],
+        [
+          "ListItem",
+          12
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 87,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          45
+        ],
+        [
+          "Span",
+          32
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 88,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          18
+        ],
+        [
+          "Span",
+          9
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 89,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          32
+        ],
+        [
+          "Span",
+          20
+        ],
+        [
+          "Equation",
+          12
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 90,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          22
+        ],
+        [
+          "Span",
+          9
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 91,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          63
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 92,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          92
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "ListGroup",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 93,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          90
+        ],
+        [
+          "Line",
+          51
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 94,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          92
+        ],
+        [
+          "Line",
+          58
+        ],
+        [
+          "Text",
+          14
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 95,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          75
+        ],
+        [
+          "Line",
+          65
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 96,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          48
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 97,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          122
+        ],
+        [
+          "Line",
+          79
+        ],
+        [
+          "Text",
+          18
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 98,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          34
+        ],
+        [
+          "Line",
+          21
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 99,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          87
+        ],
+        [
+          "Line",
+          54
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          10
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 100,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          71
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 101,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          113
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 102,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          35
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 103,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          76
+        ],
+        [
+          "Line",
+          42
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 104,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          91
+        ],
+        [
+          "Line",
+          56
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "Figure",
+          4
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 105,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          28
+        ],
+        [
+          "Equation",
+          16
+        ],
+        [
+          "Span",
+          14
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 106,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          12
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Span",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 107,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          33
+        ],
+        [
+          "Span",
+          32
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 108,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          33
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Span",
+          10
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 109,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          40
+        ],
+        [
+          "Span",
+          18
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 110,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          31
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 111,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          26
+        ],
+        [
+          "Span",
+          20
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 112,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          37
+        ],
+        [
+          "Span",
+          13
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 113,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          31
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 114,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          21
+        ],
+        [
+          "Span",
+          15
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          6
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 115,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          21
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Span",
+          5
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 116,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          39
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 117,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          37
+        ],
+        [
+          "Span",
+          29
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 118,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          47
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListItem",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 119,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          33
+        ],
+        [
+          "Span",
+          23
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 120,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          55
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Lecture note_Calculus I(6)(2)-1"
+}
