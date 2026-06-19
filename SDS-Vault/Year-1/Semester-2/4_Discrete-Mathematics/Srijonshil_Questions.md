@@ -4,70 +4,52 @@
 
 ## Question 1: Discrete Mathematics & Propositions
 
-**Stem:**  
-Rahim and Karim are two friends discussing mathematics. Rahim says, "It will rain today and the temperature will be below 30°C." Karim says, "If the temperature is below 30°C, then it will not rain."
-
-**(a)** What is discrete mathematics? Explain.  
-**(b)** Express Rahim's statement in symbolic logic and construct its truth table.  
-**(c)** Construct the truth table for Karim's statement and identify what type of compound proposition it is.  
-**(d)** Explain the concepts of Tautology and Contradiction with examples.
+**(a)** What is discrete mathematics?  
+**(b)** What is a conjunction? Construct a truth table for p˄q.  
+**(c)** What is a conditional statement? Construct a truth table for p→q.  
+**(d)** What is a tautology? What is a contradiction?
 
 ---
 
 ## Question 2: Cryptography & Number Theory
 
-**Stem:**  
-Sumi wants to keep her private information secure while doing online banking. Her friend tells her to use cryptography.
-
 **(a)** What is cryptography?  
-**(b)** Distinguish between Encryption and Decryption.  
-**(c)** Explain the role of Number Theory and Modular Arithmetic in the RSA algorithm.  
-**(d)** Analyze how discrete mathematics contributes to cryptography.
+**(b)** What is encryption? What is decryption?  
+**(c)** What is the role of number theory and modular arithmetic in RSA?  
+**(d)** How does discrete mathematics contribute to cryptography?
 
 ---
 
 ## Question 3: Function, Predicate & Quantifier
 
-**Stem:**  
-Let f(x) = 2x + 3 be a function where A = {1, 2, 3} and B = {5, 7, 9}. Also, P(x): x² > 5 is a predicate.
-
 **(a)** What is a function?  
-**(b)** Determine whether the given function is one-to-one.  
-**(c)** Evaluate the truth of ∀x ∈ A, P(x) and ∃x ∈ A, P(x).  
-**(d)** Explain the difference between Injective and Surjective functions with examples.
+**(b)** What is a one-to-one function?  
+**(c)** What is a predicate? What are universal and existential quantifiers?  
+**(d)** What is an onto function?
 
 ---
 
 ## Question 4: Methods of Proof & Mathematical Structures
 
-**Stem:**  
-In a mathematics class, the teacher asked to prove: "The sum of two even integers is even." Ayesha proved it using direct proof.
-
-**(a)** What is the difference between a Theorem and an Axiom?  
-**(b)** Show Ayesha's proof step-by-step.  
-**(c)** Prove the same statement using Proof by Contradiction.  
-**(d)** Explain the concepts of Lemma, Corollary, and Conjecture with examples.
+**(a)** What is a theorem? What is an axiom?  
+**(b)** What is a direct proof?  
+**(c)** What is a proof by contradiction?  
+**(d)** What is a lemma? What is a corollary? What is a conjecture?
 
 ---
 
-## Question 5: Recurrence Relation — Distinct Roots & Application
-
-**Stem:**  
-10,000 Tk is deposited in a bank account at 5% annual interest compounded yearly. Also, consider the sequence aₙ = aₙ₋₁ + 2aₙ₋₂ where a₀ = 2, a₁ = 7.
+## Question 5: Recurrence Relation — Distinct Roots
 
 **(a)** What is a recurrence relation?  
-**(b)** Form the recurrence relation for the bank balance and find the amount after 30 years.  
-**(c)** Solve the recurrence relation aₙ = aₙ₋₁ + 2aₙ₋₂.  
-**(d)** Explain characteristic equation and characteristic roots, and derive the explicit formula for the Fibonacci sequence.
+**(b)** Solve: aₙ = aₙ₋₁ + 2aₙ₋₂, with a₀ = 2, a₁ = 7.  
+**(c)** What is the characteristic equation of a recurrence relation?  
+**(d)** Derive the explicit formula for the Fibonacci sequence: fₙ = fₙ₋₁ + fₙ₋₂, f₀ = 0, f₁ = 1.
 
 ---
 
 ## Question 6: Recurrence Relation — Repeated Roots & Degree Three
 
-**Stem:**  
-Consider the sequence aₙ = −6aₙ₋₁ − 9aₙ₋₂ where a₀ = −6, a₁ = 3. Also, consider the sequence aₙ = 6aₙ₋₁ − 11aₙ₋₂ + 6aₙ₋₃ where a₀ = 2, a₁ = 5, a₂ = 15.
-
-**(a)** What is a linear homogeneous recurrence relation?  
-**(b)** Solve the first sequence (which has equal/repeated roots).  
-**(c)** Find the characteristic equation and roots of the second sequence.  
-**(d)** Explain the difference between the general solution for real & distinct roots and real & equal roots with examples.
+**(a)** Solve: aₙ = −6aₙ₋₁ − 9aₙ₋₂, with a₀ = −6, a₁ = 3.  
+**(b)** Solve: aₙ = 6aₙ₋₁ − 11aₙ₋₂ + 6aₙ₋₃, with a₀ = 2, a₁ = 5, a₂ = 15.  
+**(c)** What is the general solution for a recurrence relation with real and distinct roots?  
+**(d)** What is the general solution for a recurrence relation with real and equal roots?
