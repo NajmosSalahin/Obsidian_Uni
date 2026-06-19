@@ -14,8 +14,27 @@ Discrete mathematics or finite mathematics is the branch of mathematics in which
 
 *(Source: Lec_1.pdf, pp. 1–2)*
 
-### (b) What is a conjunction? Construct a truth table for p˄q.
+### (b) What is a proposition? What are atomic and compound propositions?
 
+An assertion is a statement. A proposition is an assertion which is either true or false (but not both).
+
+Atomic Proposition: A simple proposition that cannot be broken down further. Example: "It is raining."
+
+Compound Proposition: Formed by combining simple propositions using logical connectives (¬, ∧, ∨, →, ↔). Example: "It is raining and it is cold."
+
+*(Source: Lec_1.pdf, pp. 8–9)*
+
+### (c) What is negation? What is conjunction? What is disjunction? Construct truth tables.
+
+**Negation:**
+The negation of statement p is "not p." The negation of p is symbolized by "~p or ¬p." The truth value of ~p is the opposite of the truth value of p.
+
+| p | ~p |
+|---|---|
+| T | F |
+| F | T |
+
+**Conjunction:**
 A conjunction is a compound statement formed by joining two statements with the connector AND. The conjunction "p and q" is symbolized by p˄q. A conjunction is true when both of its combined parts are true; otherwise it is false.
 
 | p | q | p˄q |
@@ -25,11 +44,32 @@ A conjunction is a compound statement formed by joining two statements with the 
 | F | T |   F   |
 | F | F |   F   |
 
-*(Source: Lec_1.pdf, pp. 13–14)*
+**Disjunction:**
+A disjunction is a compound statement formed by joining two statements with the connector OR. The disjunction "p or q" is symbolized by p˅q. A disjunction is false if and only if both statements are false; otherwise it is true.
 
-### (c) What is a conditional statement? Construct a truth table for p→q.
+| p | q | p˅q |
+|---|---|-------|
+| T | T |   T   |
+| T | F |   T   |
+| F | T |   T   |
+| F | F |   F   |
 
-Let p and q be propositions. The conditional statement p→q is the proposition "if p, then q." The conditional statement p→q is false when p is true and q is false, and true otherwise. In the conditional statement p→q, p is called the hypothesis and q is called the conclusion.
+*(Source: Lec_1.pdf, pp. 10–14)*
+
+### (d) What is exclusive or? What is a conditional statement? What is a bi-conditional statement? Construct truth tables.
+
+**Exclusive Or:**
+Let p and q be propositions. The exclusive or of p and q, denoted by p⊕q, is the proposition that is true when exactly one of p and q is true and is false otherwise.
+
+| p | q | p⊕q |
+|---|---|-------|
+| T | T |   F   |
+| T | F |   T   |
+| F | T |   T   |
+| F | F |   F   |
+
+**Conditional Statement:**
+Let p and q be propositions. The conditional statement p→q is the proposition "if p, then q." The conditional statement p→q is false when p is true and q is false, and true otherwise. In the conditional statement p→q, p is called the hypothesis and q is called the conclusion. A conditional statement is also called an implication.
 
 | p | q | p→q |
 |---|---|-------|
@@ -38,9 +78,23 @@ Let p and q be propositions. The conditional statement p→q is the proposition 
 | F | T |   T   |
 | F | F |   T   |
 
-*(Source: Lec_1.pdf, p. 16)*
+**Bi-conditional Statement:**
+Let p and q be propositions. The bi-conditional statement p↔q is the proposition "p if and only if q." The bi-conditional statement p↔q is true when p and q have the same truth values, and is false otherwise. Bi-conditional statements are also called bi-implications.
 
-### (d) What is a tautology? What is a contradiction?
+| p | q | p↔q |
+|---|---|-------|
+| T | T |   T   |
+| T | F |   F   |
+| F | T |   F   |
+| F | F |   T   |
+
+*(Source: Lec_1.pdf, pp. 15–16)*
+
+---
+
+## Question 2: Tautology, Contradiction, Cryptography & Applications
+
+### (a) What is a tautology? What is a contradiction?
 
 A compound statement, that is always true regardless of the truth value of the individual statements, is defined to be a tautology.
 
@@ -53,27 +107,17 @@ A proposition that is false under all circumstances is called Contradiction.
 
 *(Source: Lec_1.pdf, pp. 17, 19)*
 
----
-
-## Question 2: Cryptography & Number Theory
-
-### (a) What is cryptography?
+### (b) What is cryptography? What is encryption? What is decryption?
 
 Cryptography is the science of protecting information by transforming it into a secure format so that only authorized parties can read or understand it.
 
 In computer science, cryptography refers to secure information and communication techniques derived from mathematical concepts and a set of rule-based calculations called algorithms, to transform messages in ways that are hard to decipher.
 
-*(Source: Lec_1.pdf, pp. 5–6)*
-
-### (b) What is encryption? What is decryption?
-
 It involves two main processes:
-
 Encryption: Converting plain text into unreadable code (cipher text).
-
 Decryption: Converting cipher text back into the original plain text.
 
-*(Source: Lec_1.pdf, p. 6)*
+*(Source: Lec_1.pdf, pp. 5–6)*
 
 ### (c) What is the role of number theory and modular arithmetic in RSA?
 
@@ -91,7 +135,7 @@ Discrete mathematics has wide-ranging applications in computer science, cryptogr
 
 ---
 
-## Question 3: Function, Predicate & Quantifier
+## Question 3: Functions, Predicates & Quantifiers
 
 ### (a) What is a function?
 
@@ -105,7 +149,13 @@ A one-to-one function, also known as an injective function, is a function where 
 
 *(Source: Lec_2.pdf, p. 1)*
 
-### (c) What is a predicate? What are universal and existential quantifiers?
+### (c) What is an onto function?
+
+An onto function, also known as a surjective function, is a function where every element in its codomain (the set of all possible outputs) is mapped to by at least one element in its domain (the set of all inputs). In simpler terms, the function "covers" its entire codomain.
+
+*(Source: Lec_2.pdf, p. 2)*
+
+### (d) What is a predicate? What are universal and existential quantifiers?
 
 Predicate: A statement involving variables that becomes true or false when specific values are substituted.
 
@@ -117,37 +167,51 @@ Existential Quantifier (∃): "There exists."
 
 *(Source: Lec_2.pdf, p. 2)*
 
-### (d) What is an onto function?
-
-An onto function, also known as a surjective function, is a function where every element in its codomain (the set of all possible outputs) is mapped to by at least one element in its domain (the set of all inputs). In simpler terms, the function "covers" its entire codomain.
-
-*(Source: Lec_2.pdf, p. 2)*
-
 ---
 
-## Question 4: Methods of Proof & Mathematical Structures
+## Question 4: Theorem, Proof Methods, Logic & Fallacies
 
-### (a) What is a theorem? What is an axiom?
+### (a) What is a theorem? What is an axiom? What is a proof? What is logic?
 
 A theorem is a mathematical statement that has been proven to be true using logical reasoning based on axioms, definitions, and previously established theorems.
 
 Axioms (or postulates) are basic assumptions or self-evident truths accepted without proof, which serve as the foundation for developing a logical system or theory.
 
-*(Source: Lec_2.pdf, pp. 4–5)*
+A proof is a logical argument that demonstrates the truth of a theorem or mathematical statement using deductive reasoning, starting from axioms and known results.
 
-### (b) What is a direct proof?
+Logic is the systematic study of valid reasoning. It involves rules and principles used to distinguish correct reasoning from incorrect reasoning.
+
+*(Source: Lec_2.pdf, pp. 4–5, 9)*
+
+### (b) What is a direct proof? What is a proof by contradiction?
 
 Direct proof: Where you directly show that the conclusion follows from the premise.
-
-*(Source: Lec_2.pdf, p. 3)*
-
-### (c) What is a proof by contradiction?
 
 Proof by contradiction: Which assumes the negation of the statement and derives a false outcome.
 
 *(Source: Lec_2.pdf, p. 3)*
 
-### (d) What is a lemma? What is a corollary? What is a conjecture?
+### (c) What is a proof by contrapositive? What is a proof by mathematical induction?
+
+Proof by contrapositive: Which is a direct proof of the contrapositive statement; and proof by mathematical induction, used for proving statements about all natural numbers.
+
+*(Source: Lec_2.pdf, p. 3)*
+
+### (d) What is a fallacy? What is a division by zero fallacy?
+
+A fallacy is a flawed argument or error in reasoning that may appear logical but is invalid or misleading.
+
+Fallacies are various types of incorrect arguments or errors in reasoning that lead to invalid conclusions, often categorized as formal (logical structure errors) or informal (content or contextual errors).
+
+Division by Zero Fallacy
+
+*(Source: Lec_2.pdf, pp. 5–7)*
+
+---
+
+## Question 5: Lemma, Corollary, Conjecture & Recurrence Basics
+
+### (a) What is a lemma? What is a corollary? What is a conjecture?
 
 A lemma is a helping theorem — a proven statement used as a stepping stone to prove another, more significant theorem.
 
@@ -157,17 +221,41 @@ A conjecture is an unproven statement believed to be true based on observations 
 
 *(Source: Lec_2.pdf, pp. 7–9)*
 
----
-
-## Question 5: Recurrence Relation — Distinct Roots
-
-### (a) What is a recurrence relation?
+### (b) What is a recurrence relation? Derive the recurrence relation for the bank interest problem and find the amount after 30 years.
 
 A recurrence relation for the sequence {aₙ} is an equation that expresses aₙ in terms of one or more of the previous terms of the sequence, namely a₀, a₁, a₂, …, aₙ₋₁ for all integer n with n ≥ n₀, where n₀ is a non-negative integer.
 
-*(Source: Sir Notes.pdf, p. 1)*
+Example: aₙ = aₙ₋₁ − aₙ₋₂. The order of this equation is n − (n − 2) = 2.
 
-### (b) Solve: aₙ = aₙ₋₁ + 2aₙ₋₂, with a₀ = 2, a₁ = 7.
+Let Pₙ be the amount in account after n years. We can derive the following recurrence relation:
+Pₙ = Pₙ₋₁ + 0.05(Pₙ₋₁)
+⇒ Pₙ = Pₙ₋₁(1 + 0.05)
+⇒ Pₙ = (1.05)Pₙ₋₁
+
+Now, initial deposit P₀ = 10,000 Tk.
+
+P₁ = (1.05)P₀ = (1.05) × 10,000
+P₂ = (1.05)P₁ = (1.05)² × 10,000
+...
+∴ P₃₀ = (1.05)³⁰ × 10,000 Tk
+
+*(Source: Sir Notes.pdf, pp. 1, 4–5)*
+
+### (c) What is the characteristic equation? What are characteristic roots?
+
+When solving recurrence relations, we try to find solutions of the form aₙ = rⁿ, where r is a constant.
+
+If aₙ = rⁿ is a solution of aₙ = c₁aₙ₋₁ + c₂aₙ₋₂ + … + cₖaₙ₋ₖ if and only if:
+rⁿ = c₁rⁿ⁻¹ + c₂rⁿ⁻² + … + cₖrⁿ⁻ᵏ
+
+Divide by rⁿ⁻ᵏ and subtract:
+rᵏ − c₁rᵏ⁻¹ − c₂rᵏ⁻² − … − cₖ₋₁r − cₖ = 0
+
+This is called the characteristic equation of the recurrence relation. The solutions of this equation are called the characteristic roots of the recurrence relation.
+
+*(Source: Sir Notes.pdf, pp. 2–3)*
+
+### (d) Solve: aₙ = aₙ₋₁ + 2aₙ₋₂, with a₀ = 2, a₁ = 7.
 
 aₙ = aₙ₋₁ + 2aₙ₋₂, with a₀ = 2, a₁ = 7.
 
@@ -203,59 +291,9 @@ which is the solution of the given recurrence relation.
 
 *(Source: Sir Notes.pdf, pp. 5–7)*
 
-### (c) What is the characteristic equation of a recurrence relation?
-
-When solving recurrence relations, we try to find solutions of the form aₙ = rⁿ, where r is a constant.
-
-If aₙ = rⁿ is a solution of aₙ = c₁aₙ₋₁ + c₂aₙ₋₂ + … + cₖaₙ₋ₖ if and only if:
-rⁿ = c₁rⁿ⁻¹ + c₂rⁿ⁻² + … + cₖrⁿ⁻ᵏ
-
-Divide by rⁿ⁻ᵏ and subtract:
-rᵏ − c₁rᵏ⁻¹ − c₂rᵏ⁻² − … − cₖ₋₁r − cₖ = 0
-
-This is called the characteristic equation of the recurrence relation. The solutions of this equation are called the characteristic roots of the recurrence relation.
-
-*(Source: Sir Notes.pdf, pp. 2–3)*
-
-### (d) Derive the explicit formula for the Fibonacci sequence: fₙ = fₙ₋₁ + fₙ₋₂, f₀ = 0, f₁ = 1.
-
-fₙ = fₙ₋₁ + fₙ₋₂, f₀ = 0, f₁ = 1.
-
-Let fₙ = rⁿ be a solution.
-
-rⁿ = rⁿ⁻¹ + rⁿ⁻²
-
-Dividing both sides by rⁿ⁻²:
-r² = r + 1
-⇒ r² − r − 1 = 0
-
-r = (1 ± √5)/2
-
-∴ r₁ = (1 + √5)/2, r₂ = (1 − √5)/2
-
-The roots are real and distinct.
-
-The general solution is:
-fₙ = α₁r₁ⁿ + α₂r₂ⁿ
-
-When n = 0:
-f₀ = α₁ + α₂ = 0 ⇒ α₁ + α₂ = 0 … (3)
-
-When n = 1:
-f₁ = α₁r₁ + α₂r₂ = 1 … (4)
-
-Solving (3) and (4):
-α₁ = 1/√5, α₂ = −1/√5
-
-∴ fₙ = (1/√5)[(1 + √5)/2]ⁿ − (1/√5)[(1 − √5)/2]ⁿ
-
-which is the required formula.
-
-*(Source: Sir Notes.pdf, pp. 11–12)*
-
 ---
 
-## Question 6: Recurrence Relation — Repeated Roots & Degree Three
+## Question 6: Advanced Recurrence Relations & Fibonacci
 
 ### (a) Solve: aₙ = −6aₙ₋₁ − 9aₙ₋₂, with a₀ = −6, a₁ = 3.
 
@@ -316,19 +354,71 @@ r³ = 6r² − 11r + 6
 
 Here, the roots are real and distinct.
 
-*(Source: Sir Notes.pdf, pp. 8–9)*
+The general solution is:
+aₙ = α₁r₁ⁿ + α₂r₂ⁿ + α₃r₃ⁿ
 
-### (c) What is the general solution for a recurrence relation with real and distinct roots?
+When n = 0:
+a₀ = α₁ + α₂ + α₃ = 2 ⇒ α₁ + α₂ + α₃ − 2 = 0 … (3)
 
+When n = 1:
+a₁ = α₁r₁ + α₂r₂ + α₃r₃ = 5 ⇒ α₁ + 2α₂ + 3α₃ − 5 = 0 … (4)
+
+When n = 2:
+a₂ = α₁r₁² + α₂r₂² + α₃r₃² = 15 ⇒ α₁ + 4α₂ + 9α₃ − 15 = 0 … (5)
+
+Solving: α₁ = 1, α₂ = −1, α₃ = 2
+
+∴ aₙ = 1·(1)ⁿ + (−1)(2)ⁿ + (2)(3)ⁿ = 1 − 2ⁿ + 2·3ⁿ
+
+which is the required solution of the given recurrence relation.
+
+*(Source: Sir Notes.pdf, pp. 8–10)*
+
+### (c) Derive the explicit formula for the Fibonacci sequence.
+
+fₙ = fₙ₋₁ + fₙ₋₂, f₀ = 0, f₁ = 1.
+
+Let fₙ = rⁿ be a solution.
+
+Now, rⁿ = rⁿ⁻¹ + rⁿ⁻²
+
+Dividing both sides by rⁿ⁻²:
+r² = r + 1
+⇒ r² − r − 1 = 0
+
+r = (1 ± √5)/2
+
+∴ r₁ = (1 + √5)/2, r₂ = (1 − √5)/2
+
+The roots are real and distinct.
+
+The general solution is:
+fₙ = α₁r₁ⁿ + α₂r₂ⁿ
+
+When n = 0:
+f₀ = α₁ + α₂ = 0 ⇒ α₁ + α₂ = 0 … (3)
+
+When n = 1:
+f₁ = α₁r₁ + α₂r₂ = 1 … (4)
+
+Solving (3) and (4):
+α₁ = 1/√5, α₂ = −1/√5
+
+∴ fₙ = (1/√5)[(1 + √5)/2]ⁿ − (1/√5)[(1 − √5)/2]ⁿ
+
+which is the required formula.
+
+*(Source: Sir Notes.pdf, pp. 11–12)*
+
+### (d) What is the general solution for real and distinct roots? What is the general solution for real and equal roots?
+
+**Distinct Roots:**
 Let c₁ and c₂ be real numbers. Suppose that r² − c₁r − c₂ = 0 has two distinct roots r₁ and r₂. Then the sequence {aₙ} is a solution of the recurrence relation aₙ = c₁aₙ₋₁ + c₂aₙ₋₂ if and only if:
 aₙ = α₁r₁ⁿ + α₂r₂ⁿ for n = 0, 1, 2, …
 where α₁ and α₂ are constants.
 
-*(Source: Sir Notes.pdf, p. 2)*
-
-### (d) What is the general solution for a recurrence relation with real and equal roots?
-
+**Equal Roots:**
 The general solution is:
 aₙ = α₁r₁ⁿ + nα₂r₂ⁿ
 
-*(Source: Sir Notes.pdf, p. 7)*
+*(Source: Sir Notes.pdf, pp. 2, 7)*
