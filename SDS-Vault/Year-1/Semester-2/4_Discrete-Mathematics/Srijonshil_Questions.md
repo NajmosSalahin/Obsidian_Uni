@@ -53,3 +53,25 @@
 **(b)** Solve: aₙ = 6aₙ₋₁ − 11aₙ₋₂ + 6aₙ₋₃, with a₀ = 2, a₁ = 5, a₂ = 15.  
 **(c)** Derive the explicit formula for the Fibonacci sequence.  
 **(d)** What is the general solution for real and distinct roots? What is the general solution for real and equal roots?
+
+---
+
+## Question 7: Logic Gates & Boolean Circuits
+
+> *Added — present in Lec_1.pdf (pp. 19–22) but not in the original Srijonshil set.*
+
+**(a)** What is a logic gate? Explain the AND, OR, and NOT gates with truth tables.  
+**(b)** What are NAND, NOR, XOR, and XNOR gates? Construct their truth tables.  
+**(c)** A circuit has inputs A, B, C, where one AND gate produces AB, an OR gate produces B+C, a second AND gate produces BC, and a third AND gate combines BC with (B+C). All outputs feed a final OR gate. Derive the boolean expression for the output Q.  
+**(d)** Two XOR gates take inputs (A,B) and (C,D); their outputs feed an AND gate to give output F. Separately, inputs A and B feed both an OR gate and a NAND gate, whose outputs feed a final AND gate to give output Y. Derive the boolean expressions for F and Y, and show what identity Y demonstrates.
+
+---
+
+## Question 8: Cryptography History, Tautology Practice & Recurrence Verification
+
+> *Added — present in Lec_1.pdf (p. 7) and Lec_1.pdf (pp. 17–18) and Sir_Notes.pdf (p. 3) but not in the original Srijonshil set.*
+
+**(a)** Give a brief timeline of the history of cryptography, from ancient times to the modern era.  
+**(b)** Is x→(x∨y) a tautology? Is [(p→q)∧p]→p a tautology? Construct truth tables and justify your answer.  
+**(c)** Is (p∨q)→(p∧q) a tautology? Is (r→s)↔(s→r) a tautology? Construct truth tables and justify your answer.  
+**(d)** What does it mean for a sequence to be a "solution" of a recurrence relation? Verify that aₙ = 3n is a solution of the recurrence relation aₙ = 2aₙ₋₁ − aₙ₋₂.

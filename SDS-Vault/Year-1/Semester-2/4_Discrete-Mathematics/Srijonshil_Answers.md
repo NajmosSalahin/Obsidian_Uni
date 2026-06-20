@@ -203,7 +203,17 @@ A fallacy is a flawed argument or error in reasoning that may appear logical but
 
 Fallacies are various types of incorrect arguments or errors in reasoning that lead to invalid conclusions, often categorized as formal (logical structure errors) or informal (content or contextual errors).
 
-Division by Zero Fallacy
+**Worked example — the "1 = 2" proof and where it breaks:**
+
+Let a = b. Then:
+1. Multiply both sides by a: a² = ab
+2. Subtract b² from both sides: a² − b² = ab − b²
+3. Factor both sides: (a − b)(a + b) = b(a − b)
+4. Divide both sides by (a − b): a + b = b
+5. Since a = b, substitute b for a: b + b = b ⇒ 2b = b
+6. Divide both sides by b: 2 = 1
+
+The error happens in step 4. Since a = b, we know a − b = 0. So step 4 is secretly dividing both sides by zero — the equation at that point is really 0·(a+b) = 0·b, and dividing by zero is undefined in mathematics. This is the division by zero fallacy: an argument that looks valid step-by-step but silently performs an illegal operation (division by 0) to reach a false conclusion.
 
 *(Source: Lec_2.pdf, pp. 5–7)*
 
@@ -422,3 +432,199 @@ The general solution is:
 aₙ = α₁r₁ⁿ + nα₂r₂ⁿ
 
 *(Source: Sir Notes.pdf, pp. 2, 7)*
+
+---
+
+## Question 7: Logic Gates & Boolean Circuits
+
+> *Added — present in Lec_1.pdf (pp. 19–22) but not in the original Srijonshil set.*
+
+### (a) What is a logic gate? Explain the AND, OR, and NOT gates with truth tables.
+
+A logic gate is a basic building block of digital circuits that performs a Boolean (logical) operation on one or more binary inputs and produces a single binary output.
+
+**NOT gate (negation):** Output is the opposite of the input.
+
+| A | Y |
+|---|---|
+| 0 | 1 |
+| 1 | 0 |
+
+**AND gate (conjunction):** Output is 1 only when both inputs are 1.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+**OR gate (disjunction):** Output is 1 if at least one input is 1.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+*(Source: Lec_1.pdf, p. 19)*
+
+### (b) What are NAND, NOR, XOR, and XNOR gates? Construct their truth tables.
+
+**NAND gate:** The complement of AND — output is 0 only when both inputs are 1.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+**NOR gate:** The complement of OR — output is 1 only when both inputs are 0.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 0 |
+
+**XOR gate (exclusive or):** Output is 1 when the inputs differ.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+**XNOR gate (exclusive nor):** Output is 1 when the inputs are the same.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+*(Source: Lec_1.pdf, pp. 19–20)*
+
+### (c) Derive the boolean expression for the circuit producing output Q.
+
+Given: AND gate → AB; OR gate → B+C; AND gate → BC; another AND gate combines BC with (B+C) → BC(B+C); final OR gate combines AB with BC(B+C).
+
+Solution:
+Q = AB + BC(B + C)
+
+This is the final simplified output of the circuit — the AND of B+C and BC is OR'd together with AB.
+
+*(Source: Lec_1.pdf, pp. 21–22)*
+
+### (d) Derive the boolean expressions for F and Y. What identity does Y demonstrate?
+
+**For F:** Two XOR gates take inputs (A,B) and (C,D); their outputs feed a final AND gate.
+
+F = (A⊕B)·(C⊕D)
+
+**For Y:** Inputs A and B feed an OR gate (G1: A+B) and a NAND gate (G2: $\overline{AB}$); G1 and G2 feed a final AND gate (G3).
+
+Y = (A + B)·$\overline{AB}$
+
+This expression is logically equivalent to A⊕B (XOR). In other words, this circuit demonstrates how the XOR gate can be built from OR, NAND, and AND gates alone.
+
+*(Source: Lec_1.pdf, p. 22)*
+
+---
+
+## Question 8: Cryptography History, Tautology Practice & Recurrence Verification
+
+> *Added — present in Lec_1.pdf (p. 7), Lec_1.pdf (pp. 17–18), and Sir_Notes.pdf (p. 3) but not in the original Srijonshil set.*
+
+### (a) Give a brief timeline of the history of cryptography.
+
+1. Cryptography refers to the practice of exchanging secret messages.
+2. Ancient Egypt used secret hieroglyphic writing.
+3. The Greeks used a device called the Scytale to conceal messages.
+4. Julius Caesar used the "Caesar cipher," in which letters were shifted by a fixed amount.
+5. In the 9th century, Al-Kindi invented the frequency analysis method for breaking ciphers.
+6. In the 16th century, the more complex Vigenère cipher was created.
+7. In World War II, Germany's Enigma machine was broken by Alan Turing.
+8. In 1976, public key cryptography was discovered.
+9. In the modern era, RSA, AES, and ECC are very popular encryption methods.
+10. Today, cryptography plays a vital role in internet security, banking, and cybersecurity.
+
+*(Source: Lec_1.pdf, p. 7)*
+
+### (b) Is x→(x∨y) a tautology? Is [(p→q)∧p]→p a tautology?
+
+**Is x→(x∨y) a tautology?**
+
+| x | y | x∨y | x→(x∨y) |
+|---|---|-----|---------|
+| T | T |  T  |    T    |
+| T | F |  T  |    T    |
+| F | T |  T  |    T    |
+| F | F |  F  |    T    |
+
+Solution: Yes — the truth values of x→(x∨y) are {T, T, T, T}, so it is a tautology.
+
+**Is [(p→q)∧p]→p a tautology?**
+
+| p | q | p→q | (p→q)∧p | [(p→q)∧p]→p |
+|---|---|-----|---------|-------------|
+| T | T |  T  |    T    |      T      |
+| T | F |  F  |    F    |      T      |
+| F | T |  T  |    F    |      T      |
+| F | F |  T  |    F    |      T      |
+
+Solution: Yes — the truth values of [(p→q)∧p]→p are {T, T, T, T}, so it is a tautology.
+
+*(Source: Lec_1.pdf, p. 18)*
+
+### (c) Is (p∨q)→(p∧q) a tautology? Is (r→s)↔(s→r) a tautology?
+
+**Is (p∨q)→(p∧q) a tautology?**
+
+| p | q | p∨q | p∧q | (p∨q)→(p∧q) |
+|---|---|-----|-----|-------------|
+| T | T |  T  |  T  |      T      |
+| T | F |  T  |  F  |      F      |
+| F | T |  T  |  F  |      F      |
+| F | F |  F  |  F  |      T      |
+
+Solution: No — the truth values of (p∨q)→(p∧q) are {T, F, F, T}, so it is not a tautology.
+
+**Is (r→s)↔(s→r) a tautology?**
+
+| r | s | r→s | s→r | (r→s)↔(s→r) |
+|---|---|-----|-----|-------------|
+| T | T |  T  |  T  |      T      |
+| T | F |  F  |  T  |      F      |
+| F | T |  T  |  F  |      F      |
+| F | F |  T  |  T  |      T      |
+
+Solution: No — the truth values of (r→s)↔(s→r) are {T, F, F, T}, so it is not a tautology.
+
+*(Source: Lec_1.pdf, p. 18)*
+
+### (d) What does it mean for a sequence to be a "solution" of a recurrence relation? Verify that aₙ = 3n is a solution of aₙ = 2aₙ₋₁ − aₙ₋₂.
+
+A sequence is called a solution of a recurrence relation if it satisfies the recurrence relation — that is, if substituting the sequence's formula into both sides of the relation makes the two sides equal.
+
+**Verification:** Given recurrence relation: aₙ = 2aₙ₋₁ − aₙ₋₂ (1)
+
+We are told aₙ = 3n, so:
+aₙ₋₁ = 3(n − 1), aₙ₋₂ = 3(n − 2)
+
+Right-hand side of equation (1):
+R.H.S. = 2aₙ₋₁ − aₙ₋₂
+= 2·3(n − 1) − 3(n − 2)
+= 6n − 6 − 3n + 6
+= 3n
+= aₙ
+= L.H.S.
+
+∴ aₙ = 3n is a solution of the recurrence relation aₙ = 2aₙ₋₁ − aₙ₋₂.
+
+*(Source: Sir Notes.pdf, p. 3)*
