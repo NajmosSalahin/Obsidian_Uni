@@ -1,5 +1,7 @@
 # Srijonshil Questions — Discrete Mathematics
 
+> See `Srijonshil_Answers.md` for full answers, embedded diagrams, and an Appendix covering extra slide content (examples, exercises, one bonus gate-comparison topic) not phrased as a numbered question here.
+
 ---
 
 ## Question 1: Discrete Mathematics & Propositions
@@ -58,7 +60,7 @@
 
 ## Question 7: Logic Gates & Boolean Circuits
 
-> *Added — present in Lec_1.pdf (pp. 19–22) but not in the original Srijonshil set.*
+> _Added — present in Lec_1.pdf (pp. 19–22) but not in the original Srijonshil set._
 
 **(a)** What is a logic gate? Explain the AND, OR, and NOT gates with truth tables.  
 **(b)** What are NAND, NOR, XOR, and XNOR gates? Construct their truth tables.  
@@ -69,7 +71,7 @@
 
 ## Question 8: Cryptography History, Tautology Practice & Recurrence Verification
 
-> *Added — present in Lec_1.pdf (p. 7) and Lec_1.pdf (pp. 17–18) and Sir_Notes.pdf (p. 3) but not in the original Srijonshil set.*
+> _Added — present in Lec_1.pdf (p. 7) and Lec_1.pdf (pp. 17–18) and Sir_Notes.pdf (p. 3) but not in the original Srijonshil set._
 
 **(a)** Give a brief timeline of the history of cryptography, from ancient times to the modern era.  
 **(b)** Is x→(x∨y) a tautology? Is [(p→q)∧p]→p a tautology? Construct truth tables and justify your answer.  
