@@ -1,0 +1,19 @@
+# Ignore everything at root level
+/*
+
+# But allow root-level files
+!/.gitignore
+!/index.html
+!/README.md
+!/AutoSync.ps1
+!/NinjaDiary.txt
+
+# Allow the specific folders and their contents
+!/SDS-Vault/
+!/SDS-Vault/**
+!/10-archives/
+!/10-archives/**
+!/9-resources/
+!/9-resources/**
+!/7-tags/
+!/7-tags/**
