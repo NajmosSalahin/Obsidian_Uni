@@ -20,6 +20,7 @@ while ($true) {
         
         git add .
         git commit -m "Auto-sync: Ninja robot saved this"
+        git pull --rebase
         git push
         
         Add-Content -Path $DiaryFile -Value "[$Time] All done! Saved safely."
