@@ -4,6 +4,7 @@
 # But allow root-level files
 !/.gitignore
 !/README.md
+!/index.html
 
 # Allow the specific folders and their contents
 !/SDS-Vault/
