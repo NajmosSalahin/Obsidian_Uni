@@ -15,7 +15,7 @@ Go to the repo → click the **Fork** button
 ### Step 2: Create Your Folder
 - Go to `1.2 self notes/` in your fork
 - Click **Add file → Create new file**
-- In the filename box, type: `Your Name/welcome.md`
+- In the filename box, type: `Course Name/Your Name/welcome.md`
 - In the content area, type: `# Notes by "Your Name"`
 - Click **Commit new file**
 
@@ -41,6 +41,8 @@ Knock me on messaging app and I will review and merge.
 | Markdown (`.md`) | |
 | Text (`.txt`) | |
 | Word (`.docx` / `.doc`) | |
+
+> ⚠️ **Size limit**: Any file over **40MB** will not be merged.
 
 ---
 
