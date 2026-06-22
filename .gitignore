@@ -1,0 +1,12 @@
+# Ignore everything at root level
+/*
+
+# But allow root-level files
+!/.gitignore
+!/README.md
+
+# Allow the specific folders and their contents
+!/SDS-Vault/
+!/SDS-Vault/**
+!/9-resources/
+!/9-resources/**
