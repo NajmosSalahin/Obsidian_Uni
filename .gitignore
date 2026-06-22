@@ -11,11 +11,5 @@
 # Allow the specific folders and their contents
 !/SDS-Vault/
 !/SDS-Vault/**
-!/10-archives/
-!/10-archives/**
 !/9-resources/
 !/9-resources/**
-!/7-tags/
-!/7-tags/**
-!/1.2 self notes/
-!/1.2 self notes/**
