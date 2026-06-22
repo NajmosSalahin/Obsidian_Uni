@@ -10,3 +10,7 @@
 !/SDS-Vault/**
 !/9-resources/
 !/9-resources/**
+
+# Ignore Extra Knowledge inside SDS Vault
+/SDS-Vault/Extra Knowledge/
+/SDS-Vault/Extra Knowledge/**
