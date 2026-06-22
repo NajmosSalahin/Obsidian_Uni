@@ -15,14 +15,22 @@ Go to the repo → click the **Fork** button
 ### Step 2: Create Your Folder
 - Go to `1.2 self notes/` in your fork
 - Click **Add file → Create new file**
-- In the filename box, type: `Course Name/Your Name/welcome.md`
-- In the content area, type: `# Notes by "Your Name"`
+- In the filename box, type: `Your Name/Course Name/welcome.md`
+- In the content area, write:
+
+  ```
+  # Course Name
+  **Contributor:** Your Name
+  ```
 - Click **Commit new file**
 
 ### Step 3: Upload Your Notes
 - Go inside your `Your Name/` folder
 - Click **Add file → Upload files**
 - Drag & drop your files, click **Commit changes**
+
+**📌 Adding more courses later**  
+Already have your `Your Name/` folder? Just go inside it, click **Add file → Create new file**, type `Another Course Name/notes.md`, and commit.
 
 ### Step 4: Open a Pull Request
 - Go back to the original repo
