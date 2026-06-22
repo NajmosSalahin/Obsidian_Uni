@@ -29,8 +29,11 @@ Go to the repo → click the **Fork** button
 - Click **Add file → Upload files**
 - Drag & drop your files, click **Commit changes**
 
-**📌 Adding more courses later**  
-Already have your `Your Name/` folder? Just go inside it, click **Add file → Create new file**, type `Another Course Name/notes.md`, and commit.
+**📌 Adding a new course later**  
+Already have your `Your Name/` folder? Go inside it, click **Add file → Create new file**, type `New Course Name/welcome.md`, and commit.
+
+**📌 Adding more notes to an existing course**  
+Already have a course folder? Go inside `Your Name/Course Name/`, click **Add file → Upload files**, drag & drop your files, and commit.
 
 ### Step 4: Open a Pull Request
 - Go back to the original repo
