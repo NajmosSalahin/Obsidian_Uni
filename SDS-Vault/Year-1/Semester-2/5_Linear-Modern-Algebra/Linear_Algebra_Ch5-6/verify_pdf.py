@@ -60,9 +60,9 @@ def verify_file(label, md_path, pdf_words):
     print(f"  Match ratio:              {match_ratio:.4f}")
     
     if not differences:
-        print(f"  ✅ No content differences found — word-for-word match!")
+        print(f"  [OK] No content differences found - word-for-word match!")
     else:
-        print(f"  ⚠️  {len(differences)} difference(s) found:")
+        print(f"  [DIFF] {len(differences)} difference(s) found:")
         for d in differences:
             print(d)
 
