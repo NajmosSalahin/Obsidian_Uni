@@ -131,14 +131,16 @@ Thus, (1, 2, 3) and (0, 1, 1) form a basis of Im F. Hence, dim(Im F) = 2 and ran
     2x − 2y + 3z + 4t = 0
     3x − 3y + 4z + 5t = 0
 
-    which reduces to:
+    or
+
     x − y + z + t = 0
     z + 2t = 0
+    0 = 0
 
     The free variables are y and t. Hence, dim(Ker F) = 2 or nullity(F) = 2.
-    (i) Set y = 1, t = 0 to obtain the solution (−1, 1, 0, 0).
+    (i) Set y = 1, t = 0 to obtain the solution (1, 1, 0, 0).
     (ii) Set y = 0, t = 1 to obtain the solution (1, 0, −2, 1).
-    Thus, (−1, 1, 0, 0) and (1, 0, −2, 1) form a basis for Ker F.
+    Thus, (1, 1, 0, 0) and (1, 0, −2, 1) form a basis for Ker F.
 
 (c) As expected from Theorem 5.6, dim(Im F) + dim(Ker F) = 4 = dim R⁴.
 
@@ -188,7 +190,7 @@ Thus, G ∘ F is linear.
 
 ## Set 9: Algebra A(V), Polynomials, Square Matrices, Invertible Operators
 
-**1.** Let V be a vector space over a field K. We will write A(V), instead of Hom(V, V), for the space of all linear mappings from V into itself. A(V) is a vector space over K, and if dim V = n, then dim A(V) = n². A(V) is an associative algebra over K with respect to composition of mappings. If dim V = n, then dim A(V) = n².
+**1.** Let V be a vector space over a field K. We will write A(V), instead of Hom(V, V), for the space of all linear mappings from V into itself. A(V) is a vector space over K, and if dim V = n, then dim A(V) = n². A(V) is an associative algebra over K with respect to composition of mappings.
 
 **2.** Observe that the identity mapping I : V → V belongs to A(V). Also, for any linear operator F in A(V), we have FI = IF = F. We can also form "powers" of F. Namely, we define
     F⁰ = I, F² = F ∘ F, F³ = F² ∘ F = F ∘ F ∘ F, F⁴ = F³ ∘ F, ...
@@ -220,3 +222,25 @@ In other words, the matrix product AB corresponds to the composition of A and B 
     Solve for x and y in terms of s and t to obtain x = 2s − t, y = −3s + 2t. Thus,
     F⁻¹(s, t) = (2s − t, −3s + 2t) or F⁻¹(x, y) = (2x − y, −3x + 2y),
     where we rewrite the formula for F⁻¹ using x and y instead of s and t.
+
+---
+
+## Extra 1: Application to Systems of Linear Equations
+
+**1.** Let AX = 0 be a homogeneous system of m equations in n unknowns, with A viewed as a linear mapping A : Kⁿ → K^m. The solution space of the system AX = 0 is precisely the kernel of the linear mapping A. Similarly, the solution of AX = B may be viewed as the preimage of the vector B ∈ K^m under A.
+
+**2.** Applying Theorem 5.6 to the mapping A : Kⁿ → K^m gives
+    dim(Ker A) = dim Kⁿ − dim(Im A) = n − rank A.
+Since n is the number of unknowns and rank A = r, the dimension of the solution space is s = n − r. Observe that r is also the number of pivot variables in an echelon form of AX = 0, so s = n − r is also the number of free variables. Thus, we have proved the following theorem of Chapter 4 — Theorem 4.19: the dimension of the solution space of a homogeneous system AX = 0 is s = n − r, where n is the number of unknowns and r is the rank of the coefficient matrix A.
+
+---
+
+## Extra 2: Nonsingular vs. Invertible — Infinite-Dimensional Case
+
+**1.** Let V = P(t) and let F be the shift operator defined by
+    F(a₀ + a₁t + a₂t² + ··· + aₛtˢ) = a₀t + a₁t² + a₂t³ + ··· + aₛtˢ⁺¹.
+F is linear. To see F is nonsingular: suppose F(p) = 0; then every coefficient of F(p) is 0, which forces every coefficient of p to be 0, so p = 0. Thus Ker F = {0} and F is nonsingular.
+
+However, F is not onto: no polynomial in Im F has a nonzero constant term (since F always produces a polynomial with zero constant term), so, for example, the constant polynomial 1 has no preimage under F. Because F is not onto, F is not invertible.
+
+This shows that for infinite-dimensional V, nonsingular does not imply invertible. The situation changes for finite-dimensional V: by Theorem 5.14, on a finite-dimensional space all four conditions — nonsingular, one-to-one, onto, and invertible — are equivalent.

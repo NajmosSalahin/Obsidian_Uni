@@ -158,3 +158,23 @@
    for a linear operator F on V.
    (b) Let F be the linear operator on R² defined by F(x, y) = (2x + y, 3x + 2y).
    Show that F is invertible and find a formula for F⁻¹.
+
+---
+
+## Extra 1: Application to Systems of Linear Equations
+
+1. Let AX = 0 be a homogeneous system of m linear equations in n unknowns.
+   Viewing A as a linear mapping A : Kⁿ → K^m, what does the solution space of AX = 0
+   correspond to in terms of A?
+
+2. Apply Theorem 5.6 to the mapping A : Kⁿ → K^m to derive the dimension of the
+   solution space of AX = 0 in terms of n and rank A.
+
+---
+
+## Extra 2: Nonsingular vs. Invertible — Infinite-Dimensional Case
+
+1. Let V = P(t), the vector space of polynomials over K. Define the shift operator F on V by
+   F(a₀ + a₁t + a₂t² + ··· + aₛtˢ) = a₀t + a₁t² + a₂t³ + ··· + aₛtˢ⁺¹.
+   Show that F is nonsingular. Is F invertible? What does this say about the relationship
+   between nonsingular and invertible when V is infinite-dimensional?
