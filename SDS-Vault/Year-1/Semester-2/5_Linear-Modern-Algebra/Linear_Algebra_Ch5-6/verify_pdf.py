@@ -1,8 +1,10 @@
 """Verify combined .md matches source .md files word-for-word, and check PDF content."""
 
-import re, unicodedata, difflib
+import re, unicodedata, difflib, sys
 
 DIR = r"C:\Users\Aurnob\Desktop\Barnackle\SDS-Vault\Year-1\Semester-2\5_Linear-Modern-Algebra\Linear_Algebra_Ch5-6"
+# Force UTF-8 for stdout
+sys.stdout.reconfigure(encoding='utf-8')
 
 def normalize(text):
     text = unicodedata.normalize('NFKD', text)
