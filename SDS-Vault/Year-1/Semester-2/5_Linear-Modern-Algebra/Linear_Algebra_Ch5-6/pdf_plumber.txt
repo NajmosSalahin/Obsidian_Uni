@@ -1,0 +1,796 @@
+CHAPTER 5
+Linear Mappings
+5.1 Introduction
+The main subject matter of linear algebra is the study of linear mappings and their representation by
+meansofmatrices.ThischapterintroducesustotheselinearmapsandChapter6showshowtheycanbe
+represented by matrices. First, however, we begin with a study of mappings in general.
+5.2 Mappings, Functions
+Let A and B be arbitrary nonempty sets. Suppose to each element in a A there is assigned a unique
+2
+element of B; called the image of a. The collection f of such assignments is called a mapping (or map)
+from A into B, and it is denoted by
+f :A B
+!
+ThesetAiscalledthedomainofthemapping,andBiscalledthetargetset.Wewritef a ,read‘‘f ofa;’’
+ð Þ
+for the unique element of B that f assigns to a A.
+2
+One may also view a mapping f :A B as a computer that, for each input value a A, produces a
+! 2
+unique output f a B.
+ð Þ2
+Remark: The term function is used synonymously with the word mapping, although some texts
+reserve the word ‘‘function’’ for a real-valued or complex-valued mapping.
+Consider a mapping f :A B. If A is any subset of A, then f A denotes the set of images of
+0 0
+! ð Þ
+elementsofA;andifB isanysubsetofB,thenf 1 B denotesthesetofelementsofA;eachofwhose
+0 0 0
+ð Þ
+image lies in B. That is,
+f A f a :a A and f 1 B a A:f a B
+0 0 0 0
+ð Þ1⁄4f ð Þ 2 g ð Þ1⁄4f 2 ð Þ2 g
+Wecallf A)theimageofA andf 1 B theinverseimageorpreimageofB.Inparticular,thesetofall
+0 0 0 0
+ð ð Þ
+images (i.e., f A ) is called the image or range of f.
+ð Þ
+To each mapping f :A B there corresponds the subset of A B given by a;f a :a A . We
+! fð ð ÞÞ 2 g
+call this set the graph of f. Two mappings f :A B and g:A B are defined to be equal, written
+! !
+f g, if f a g a for every a A—that is, if they have the same graph. Thus, we do notdistinguish
+1⁄4 ð Þ1⁄4 ð Þ 2
+between a function and its graph. The negation of f g is written f g and is the statement:
+1⁄4 61⁄4
+Thereexistsana Aforwhichf a g a :
+2 ð Þ61⁄4 ð Þ
+Sometimesthe‘‘barred’’arrow isusedtodenotetheimageofanarbitraryelementx Aundera
+7! 2
+mapping f :A B by writing
+!
+x f x
+7! ð Þ
+This is illustrated in the following example.
+164
+CHAPTER 5 LinearMappings 165
+EXAMPLE 5.1
+(a) Letf :R R bethefunctionthatassignstoeachrealnumberxitssquarex2.Wecandenotethisfunctionby
+!
+writing
+f x x2 or x x2
+ð Þ1⁄4 7!
+Here the image of 3 is 9, so we may write f 3 9. However, f 1 9 3; 3 . Also,
+
+ ð Þ1⁄4 ð Þ1⁄4f g
+f R 0; x:x 0 is the image of f.
+ð Þ1⁄41⁄2 1Þ1⁄4f g
+(b) Let A a;b;c;d and B x;y;z;t . Then the following defines a mapping f :A B:
+1⁄4f g 1⁄4f g !
+f a y; f b x; f c z; f d y or f a;y ; b;x ; c;z ; d;y
+ð Þ1⁄4 ð Þ1⁄4 ð Þ1⁄4 ð Þ1⁄4 1⁄4fð Þ ð Þ ð Þ ð Þg
+The first defines the mapping explicitly, and the second defines the mapping by its graph. Here,
+f a;b;d f a ;f b ;f d y;x;y x;y
+ðf gÞ1⁄4f ð Þ ð Þ ð Þg1⁄4f g1⁄4f g
+Furthermore, f A x;y;z is the image of f.
+ð Þ1⁄4f g
+EXAMPLE 5.2 Let V be the vector space of polynomials over R, and let p t 3t2 5t 2.
+ðÞ1⁄4 þ
+(a) The derivative defines a mapping D:V V where, for any polynomials f t , we have D f df=dt. Thus,
+! ðÞ ð Þ1⁄4
+D p D 3t2 5t 2 6t 5
+ð Þ1⁄4 ð þ Þ1⁄4 
+(b) The integral, say from 0 to 1, defines a mapping J:V R. That is, for any polynomial f t ,
+! ðÞ
+1 1
+J f f t dt; andso J p 3t2 5t 2 1
+ð Þ1⁄4 ð Þ ð Þ1⁄4 ð þ Þ1⁄42
+ð0 ð0
+Observethatthemappingin(b)isfromthevectorspaceV intothescalarfieldR,whereasthemappingin(a)isfrom
+the vector space V into itself.
+Matrix Mappings
+Let A be any m n matrix over K. Then A determines a mapping F :Kn Km by
+ A !
+F u Au
+Að Þ1⁄4
+where the vectors in Kn and Km are written as columns. For example, suppose
+1
+1 4 5
+A and u 3
+1⁄4 2 3 6 1⁄42 3
+ 5
+
+4 5
+then
+1
+1 4 5 36
+F u Au 3 
+Að Þ1⁄4 1⁄4 2 3 6 2 31⁄4 41
+ 5 
+
+4 5
+Remark: Fornotationalconvenience,wewillfrequentlydenotethemappingF bytheletterA,the
+A
+same symbol as used for the matrix.
+Composition of Mappings
+Consider two mappings f :A B and g:B C, illustrated below:
+! !
+f g
+A B C
+! !
+The composition of f and g, denoted by g f, is the mapping g f :A C defined by
+ !
+g f a g f a
+ð Þð Þ ð ð ÞÞ
+166 CHAPTER 5 LinearMappings
+Thatis,firstweapplyf toa A,andthenweapplyg tof a Btogetg f a C.Viewingf andg
+2 ð Þ2 ð ð ÞÞ2
+as‘‘computers,’’thecompositionmeanswefirstinputa Atogettheoutputf a Busingf,andthen
+2 ð Þ2
+we input f a to get the output g f a C using g.
+ð Þ ð ð ÞÞ2
+Our first theorem tells us that the composition of mappings satisfies the associative law.
+THEOREM5.1: Let f :A B, g:B C, h:C D. Then
+! ! !
+h g f h g f
+ð Þ1⁄4ð Þ
+We prove this theorem here. Let a A. Then
+2
+h g f a h g f a h g f a
+ð ð ÞÞð Þ1⁄4 ðð Þð ÞÞ1⁄4 ð ð ð ÞÞÞ
+h g f a h g f a h g f a
+ðð Þ Þð Þ1⁄4ð Þð ð ÞÞ1⁄4 ð ð ð ÞÞÞ
+Thus, h g f a h g f a for every a A, and so h g f h g f.
+ð ð ÞÞð Þ1⁄4ðð Þ Þð Þ 2 ð Þ1⁄4ð Þ
+One-to-One and Onto Mappings
+We formally introduce some special types of mappings.
+DEFINITION: A mapping f :A B is said to be one-to-one (or 1-1 or injective) if different elements
+!
+of A have distinct images; that is,
+If f a f a ;thena a:
+0 0
+ð Þ1⁄4 ð Þ 1⁄4
+DEFINITION: Amappingf :A Bissaidtobeonto(orf mapsAontoBorsurjective)ifeveryb B
+! 2
+is the image of at least one a A.
+2
+DEFINITION: A mapping f :A B is said to be a one-to-one correspondence between A and B (or
+!
+bijective) if f is both one-to-one and onto.
+EXAMPLE 5.3 Let f :R R, g:R R, h:R R be defined by
+! ! !
+f x 2x; g x x3 x; h x x2
+ð Þ1⁄4 ð Þ1⁄4 ð Þ1⁄4
+ThegraphsofthesefunctionsareshowninFig.5-1.Thefunctionf isone-to-one.Geometrically,thismeans
+that each horizontal line does not contain more than one point of f. The function g is onto. Geometrically,
+thismeansthateachhorizontallinecontainsatleastonepointofg.Thefunctionhisneitherone-to-onenor
+onto. For example, both 2 and 2 have the same image 4, and 16 has no preimage.
+ 
+Figure 5-1
+Identity and Inverse Mappings
+Let A be any nonempty set. The mapping f :A A defined by f a a—that is, the function that
+! ð Þ1⁄4
+assignstoeachelementinAitself—iscalledidentitymapping.Itisusuallydenotedby1 or1orI.Thus,
+A
+for any a A, we have 1 a a.
+2 Að Þ1⁄4
+CHAPTER 5 LinearMappings 167
+Now let f :A B. We call g:B A the inverse of f, written f 1, if
+
+! !
+f g 1 and g f 1
+ 1⁄4 B 1⁄4 A
+Weemphasizethatf hasaninverseifandonlyiff isaone-to-onecorrespondencebetweenAandB;that
+is,f isone-to-oneandonto(Problem5.7).Also,ifb B,thenf 1 b a,whereaistheuniqueelement
+
+2 ð Þ1⁄4
+of A for which f a b
+ð Þ1⁄4
+5.3 Linear Mappings (Linear Transformations)
+We begin with a definition.
+DEFINITION: Let V and U be vector spaces over the same field K. A mappingF:V U is called a
+!
+linear mapping or linear transformation if it satisfies the following two conditions:
+(1) For any vectors v;w V, F v w F v F w .
+2 ð þ Þ1⁄4 ð Þþ ð Þ
+(2) For any scalar k and vector v V, F kv kF v .
+2 ð Þ1⁄4 ð Þ
+Namely, F:V U is linear if it ‘‘preserves’’ the two basic operations of a vector space, that of
+!
+vector addition and that of scalar multiplication.
+Substituting k 0 into condition (2), we obtain F 0 0. Thus, every linear mapping takes the zero
+1⁄4 ð Þ1⁄4
+vector into the zero vector.
+Now for any scalars a;b K and any vector v;w V, we obtain
+2 2
+F av bw F av F bw aF v bF w
+ð þ Þ1⁄4 ð Þþ ð Þ1⁄4 ð Þþ ð Þ
+Moregenerally,foranyscalarsa K andanyvectorsv V,weobtainthefollowingbasicpropertyof
+i 2 i 2
+linear mappings:
+F a v a v a v a F v a F v a F v
+ð 1 1þ 2 2þþ m mÞ1⁄4 1 ð 1Þþ 2 ð 2Þþþ m ð mÞ
+Remark 1: A linear mapping F:V U is completely characterized by the condition
+!
+F av bw aF v bF w *
+ð þ Þ1⁄4 ð Þþ ð Þ ð Þ
+and so this condition is sometimes used as its defintion.
+Remark2: Thetermlineartransformationratherthanlinearmappingisfrequentlyusedforlinear
+mappings of the form F:Rn Rm.
+!
+EXAMPLE 5.4
+(a) Let F:R3 R3 be the ‘‘projection’’ mapping into the xy-plane; that is, F is the mapping defined by
+!
+F x;y;z x;y;0 . We show that F is linear. Let v a;b;c and w a;b;c . Then
+0 0 0
+ð Þ1⁄4ð Þ 1⁄4ð Þ 1⁄4ð Þ
+F v w F a a; b b; c c a a; b b; 0
+0 0 0 0 0
+ð þ Þ1⁄4 ð þ þ þ Þ1⁄4ð þ þ Þ
+a;b;0 a;b;0 F v F w
+0 0
+1⁄4ð Þþð Þ1⁄4 ð Þþ ð Þ
+and, for any scalar k,
+F kv F ka;kb;kc ka;kb;0 k a;b;0 kF v
+ð Þ1⁄4 ð Þ1⁄4ð Þ1⁄4 ð Þ1⁄4 ð Þ
+Thus, F is linear.
+(b) LetG:R2 R2bethe‘‘translation’’mappingdefinedbyG x;y x 1; y 2 .[Thatis,Gaddsthevector
+(1,2) to an ! y vector v x;y in R2.] Note that ð Þ1⁄4ð þ þ Þ
+1⁄4ð Þ
+G 0 G 0;0 1;2 0
+ð Þ1⁄4 ð Þ1⁄4ð Þ61⁄4
+Thus, the zero vector is not mapped into the zero vector. Hence, G is not linear.
+168 CHAPTER 5 LinearMappings
+EXAMPLE 5.5 (Derivative and Integral Mappings) Consider the vector space V P t of polynomials over the
+1⁄4 ðÞ
+real field R. Let u t and v t be any polynomials in V and let k be any scalar.
+ðÞ ðÞ
+(a) Let D:V V be the derivative mapping. One proves in calculus that
+!
+d u v du dv d ku du
+ð þ Þ and ð Þ k
+dt 1⁄4 dt þ dt dt 1⁄4 dt
+That is, D u v D u D v and D ku kD u . Thus, the derivative mapping is linear.
+ð þ Þ1⁄4 ð Þþ ð Þ ð Þ1⁄4 ð Þ
+(b) Let J:V R be an integral mapping, say
+!
+1
+J f t f t dt
+ð ð ÞÞ1⁄4 ð Þ
+ð0
+One also proves in calculus that,
+1 1 1
+u t v t dt u t dt v t dt
+1⁄2 ð Þþ ð Þ 1⁄4 ð Þ þ ð Þ
+ð0 ð0 ð0
+and
+1 1
+ku t dt k u t dt
+ð Þ 1⁄4 ð Þ
+ð0 ð0
+That is, J u v J u J v and J ku kJ u . Thus, the integral mapping is linear.
+ð þ Þ1⁄4 ð Þþ ð Þ ð Þ1⁄4 ð Þ
+EXAMPLE 5.6 (Zero and Identity Mappings)
+(a) LetF:V U bethemappingthatassignsthezerovector0 U toeveryvectorv V.Then,foranyvectors
+! 2 2
+v;w V and any scalar k K, we have
+2 2
+F v w 0 0 0 F v F w and F kv 0 k0 kF v
+ð þ Þ1⁄4 1⁄4 þ 1⁄4 ð Þþ ð Þ ð Þ1⁄4 1⁄4 1⁄4 ð Þ
+Thus, F is linear. We call F the zero mapping, and we usually denote it by 0.
+(b) Consider the identity mapping I:V V, which maps each v V into itself. Then, for any vectors v;w V
+! 2 2
+and any scalars a;b K, we have
+2
+I av bw av bw aI v bI w
+ð þ Þ1⁄4 þ 1⁄4 ð Þþ ð Þ
+Thus, I is linear.
+Our next theorem (proved in Problem 5.13) gives us an abundance of examples of linear mappings. In
+particular,ittellsusthatalinearmappingiscompletelydeterminedbyitsvaluesontheelementsofabasis.
+THEOREM5.2: Let V and U be vector spaces over a field K. Let v ;v ;...;v be a basis of V and
+f 1 2 ng
+let u ;u ;...;u be any vectors in U. Then there exists a unique linear mapping
+1 2 n
+F:V U such that F v u ;F v u ;...;F v u .
+! ð 1Þ1⁄4 1 ð 2Þ1⁄4 2 ð nÞ1⁄4 n
+We emphasize that the vectors u ;u ;...;u in Theorem 5.2 are completely arbitrary; they may be
+1 2 n
+linearly dependent or they may even be equal to each other.
+Matrices as Linear Mappings
+Let A be any real m n matrix. Recall that A determines a mapping F :Kn Km by F u Au
+ A ! Að Þ1⁄4
+(wherethevectorsinKn andKm arewrittenascolumns).WeshowF islinear.Bymatrixmultiplication,
+A
+F v w A v w Av Aw F v F w
+Að þ Þ1⁄4 ð þ Þ1⁄4 þ 1⁄4 Að Þþ Að Þ
+F kv A kv k Av kF v
+Að Þ1⁄4 ð Þ1⁄4 ð Þ1⁄4 Að Þ
+In other words, using A to represent the mapping, we have
+A v w Av Aw and A kv k Av
+ð þ Þ1⁄4 þ ð Þ1⁄4 ð Þ
+Thus, the matrix mapping A is linear.
+CHAPTER 5 LinearMappings 169
+Vector Space Isomorphism
+The notion of two vector spaces being isomorphic was defined in Chapter 4 when we investigated the
+coordinates of a vector relative to a basis. We now redefine this concept.
+DEFINITION: Two vector spaces V and U over K are isomorphic, written V U, if there exists a
+ffi
+bijective (one-to-one and onto) linear mapping F:V U. The mapping F is then
+!
+called an isomorphism between V and U.
+Consider any vector space V of dimension n and let S be any basis of V. Then the mapping
+v v
+7!1⁄2 S
+which maps each vector v V into its coordinate vector v , is an isomorphism between V and Kn.
+2 1⁄2 S
+5.4 Kernel and Image of a Linear Mapping
+We begin by defining two concepts.
+DEFINITION: Let F:V U be a linear mapping. The kernel of F, written KerF, is the set of
+!
+elements in V that map into the zero vector 0 in U; that is,
+KerF v V :F v 0
+1⁄4f 2 ð Þ1⁄4 g
+The image (or range) of F, written ImF, is the set of image points in U; that is,
+ImF u U :thereexistsv V forwhichF v u
+1⁄4f 2 2 ð Þ1⁄4 g
+The following theorem is easily proved (Problem 5.22).
+THEOREM5.3: Let F:V U be a linear mapping. Then the kernel of F is a subspace of V and the
+!
+image of F is a subspace of U.
+Now suppose that v ;v ;...;v span a vector space V and that F:V U is linear. We show that
+1 2 m !
+F v ;F v ;...;F v span ImF. Let u ImF. Then there existsv V such that F v u. Because
+ð 1Þ ð 2Þ ð mÞ 2 2 ð Þ1⁄4
+the v ’s span V and v V, there exist scalars a ;a ;...;a for which
+i 2 1 2 m
+v a v a v a v
+1⁄4 1 1þ 2 2þþ m m
+Therefore,
+u F v F a v a v a v a F v a F v a F v
+1⁄4 ð Þ1⁄4 ð 1 1þ 2 2þþ m mÞ1⁄4 1 ð 1Þþ 2 ð 2Þþþ m ð mÞ
+Thus, the vectors F v ;F v ;...;F v span ImF.
+ð 1Þ ð 2Þ ð mÞ
+We formally state the above result.
+PROPOSITION 5.4: Suppose v ;v ;...;v span a vector space V, and suppose F:V U is linear.
+1 2 m !
+Then F v ;F v ;...;F v span ImF.
+ð 1Þ ð 2Þ ð mÞ
+EXAMPLE 5.7
+(a) Let F:R3 R3 be the projection of a vector v into the xy-plane [as pictured in Fig. 5-2(a)]; that is,
+!
+F x;y;z x;y;0
+ð Þ1⁄4ð Þ
+ClearlytheimageofF istheentirexy-plane—thatis,pointsoftheform(x;y;0).Moreover,thekernelofF is
+the z-axis—that is, points of the form (0;0;c). That is,
+ImF a;b;c :c 0 xy-plane and KerF a;b;c :a 0;b 0 z-axis
+1⁄4fð Þ 1⁄4 g1⁄4 1⁄4fð Þ 1⁄4 1⁄4 g1⁄4
+(b) LetG:R3 R3bethelinearmappingthatrotatesavectorvaboutthez-axisthroughanangley[aspicturedin
+!
+Fig. 5-2(b)]; that is,
+G x;y;z xcosy ysiny; xsiny ycosy; z
+ð Þ1⁄4ð þ Þ
+170 CHAPTER 5 LinearMappings
+Figure 5-2
+Observethatthedistanceofavectorv fromtheoriginOdoesnotchangeundertherotation,andsoonlythezero
+vector0ismappedintothezerovector0.Thus,KerG 0 .Ontheotherhand,everyvectoruinR3 istheimage
+ofavectorv inR3 thatcanbeobtainedbyrotatingu 1⁄4 ba f ck g byanangleofy.Thus,ImG R3,theentirespace.
+1⁄4
+EXAMPLE5.8 ConsiderthevectorspaceV P t ofpolynomialsovertherealfieldR,andletH:V V bethe
+third-derivative operator; that is, H f t d 1⁄43f= ð dt Þ3. [Sometimes the notation D3 is used for H, whe ! re D is the
+1⁄2 ðÞ1⁄4
+derivative operator.] We claim that
+KerH polynomialsof degree 2 P t and ImH V
+1⁄4f g1⁄4 2ð Þ 1⁄4
+The first comes from the fact that H at2 bt c 0 but H tn 0 for n 3. The second comes from that fact
+ð þ þ Þ1⁄4 ð Þ61⁄4 
+thateverypolynomialg t inV isthethirdderivativeofsomepolynomialf t (whichcanbeobtainedbytakingthe
+ðÞ ðÞ
+antiderivative of g t three times).
+ðÞ
+Kernel and Image of Matrix Mappings
+Consider, say, a 3 4 matrix A and the usual basis e ;e ;e ;e of K4 (written as columns):
+ f 1 2 3 4g
+1 1 1 1
+a a a a
+1 2 3 4 0 0 0 0
+A b b b b ; e 2 3; e 2 3; e 2 3; e 2 3
+1⁄42 1 2 3 43 1 1⁄4 0 2 1⁄4 0 3 1⁄4 0 4 1⁄4 0
+c c c c
+1 2 3 4 607 607 607 607
+4 5 6 7 6 7 6 7 6 7
+4 5 4 5 4 5 4 5
+Recall that A may be viewed as a linear mapping A:K4 K3, where the vectors in K4 and K3 are
+!
+viewedascolumnvectors.NowtheusualbasisvectorsspanK4,sotheirimagesAe ,Ae ,Ae ,Ae span
+1 2 3 4
+the image of A. But the vectors Ae , Ae , Ae , Ae are precisely the columns of A:
+1 2 3 4
+Ae a ;b ;c T; Ae a ;b ;c T; Ae a ;b ;c T; Ae a ;b ;c T
+1 1⁄41⁄2 1 1 1 2 1⁄41⁄2 2 2 2 3 1⁄41⁄2 3 3 3 4 1⁄41⁄2 4 4 4
+Thus, the image of A is precisely the column space of A.
+On the other hand, the kernel of A consists of all vectors v for which Av 0. This means that the
+1⁄4
+kernel of A is the solution space of the homogeneous system AX 0, called the null space of A.
+1⁄4
+We state the above results formally.
+PROPOSITION5.5: LetAbeanym nmatrixoverafieldK viewedasalinearmapA:Kn Km.Then
+ !
+KerA nullsp A and ImA colsp A
+1⁄4 ð Þ 1⁄4 ð Þ
+Here colsp(A) denotes the column space of A, and nullsp(A) denotes the null space of A.
+CHAPTER 5 LinearMappings 171
+Rank and Nullity of a Linear Mapping
+Let F:V U be a linear mapping. The rank of F is defined to be the dimension of its image, and the
+!
+nullity of F is defined to be the dimension of its kernel; namely,
+rank F dim ImF and nullity F dim KerF
+ð Þ1⁄4 ð Þ ð Þ1⁄4 ð Þ
+The following important theorem (proved in Problem 5.23) holds.
+THEOREM5.6 Let V be of finite dimension, and let F:V U be linear. Then
+!
+dimV dim KerF dim ImF nullity F rank F
+1⁄4 ð Þþ ð Þ1⁄4 ð Þþ ð Þ
+Recall that the rank of amatrix A was alsodefined to be the dimension ofits columnspace and row
+space.IfwenowviewAasalinearmapping,thenbothdefinitionscorrespond,becausetheimageofAis
+precisely its column space.
+EXAMPLE 5.9 Let F :R4 R3 be the linear mapping defined by
+!
+F x;y;z;t x y z t; 2x 2y 3z 4t; 3x 3y 4z 5t
+ð Þ1⁄4ð þ þ þ þ þ þ Þ
+(a) Find a basis and the dimension of the image of F.
+First find the image of the usual basis vectors of R4,
+F 1;0;0;0 1;2;3 ; F 0;0;1;0 1;3;4
+ð Þ1⁄4ð Þ ð Þ1⁄4ð Þ
+F 0;1;0;0 1; 2; 3 ; F 0;0;0;1 1;4;5
+ð Þ1⁄4ð Þ ð Þ1⁄4ð Þ
+ByProposition5.4,theimagevectorsspanImF.Hence,formthematrixM whoserowsaretheseimagevectors
+and row reduce to echelon form:
+1 2 3 1 2 3 1 2 3
+1 2 3 0 0 0 0 1 1
+M 2 3 2 3 2 3
+1⁄4 1 3 4 0 1 1 0 0 0
+6 1 4 57 60 2 27 60 0 07
+6 7 6 7 6 7
+4 5 4 5 4 5
+Thus, (1,2,3) and (0,1,1) form a basis of ImF. Hence, dim ImF 2 and rank F 2.
+ð Þ1⁄4 ð Þ1⁄4
+(b) Find a basis and the dimension of the kernel of the map F.
+Set F v 0, where v x;y;z;t ,
+ð Þ1⁄4 1⁄4ð Þ
+F x;y;z;t x y z t; 2x 2y 3z 4t; 3x 3y 4z 5t 0;0;0
+ð Þ1⁄4ð þ þ þ þ þ þ Þ1⁄4ð Þ
+Setcorrespondingcomponentsequaltoeachothertoformthefollowinghomogeneoussystemwhosesolution
+space is KerF:
+x y z t 0 x y z t 0
+ þ þ 1⁄4 þ þ 1⁄4 x y z t 0
+2x 2y 3z 4t 0 or z 2t 0 or þ þ 1⁄4
+ þ þ 1⁄4 þ 1⁄4 z 2t 0
+3x 3y 4z 5t 0 z 2t 0 þ 1⁄4
+ þ þ 1⁄4 þ 1⁄4
+The free variables are y and t. Hence, dim KerF 2 or nullity F 2.
+ð Þ1⁄4 ð Þ1⁄4
+(i) Set y 1, t 0 to obtain the solution ( 1;1;0;0 ,
+1⁄4 1⁄4 Þ
+(ii) Set y 0, t 1 to obtain the solution (1;0; 2;1 .
+1⁄4 1⁄4 Þ
+Thus, ( 1;1;0;0) and (1;0; 2;1) form a basis for KerF.
+ 
+As expected from Theorem 5.6, dim ImF dim KerF 4 dimR4.
+ð Þþ ð Þ1⁄4 1⁄4
+Application to Systems of Linear Equations
+Let AX B denotethe matrixform ofasystem of mlinearequationsinn unknowns.Now thematrixA
+1⁄4
+may be viewed as a linear mapping
+A:Kn Km
+!
+172 CHAPTER 5 LinearMappings
+Thus,thesolutionoftheequationAX BmaybeviewedasthepreimageofthevectorB Kmunderthe
+1⁄4 2
+linear mapping A. Furthermore, the solution of the associated homogeneous system
+AX 0
+1⁄4
+maybeviewedasthekernelofthelinearmappingA.ApplyingTheorem5.6tothishomogeneoussystem
+yields
+dim KerA dimKn dim ImA n rankA
+ð Þ1⁄4 ð Þ1⁄4 
+ButnisexactlythenumberofunknownsinthehomogeneoussystemAX 0.Thus,wehaveprovedthe
+1⁄4
+following theorem of Chapter 4.
+THEOREM 4.19: The dimension of the solution space W of a homogenous system AX 0 of linear
+1⁄4
+equations is s n r, where n is the number of unknowns and r is the rank of the
+1⁄4 
+coefficient matrix A.
+ObservethatrisalsothenumberofpivotvariablesinanechelonformofAX 0,sos n risalso
+1⁄4 1⁄4 
+the number of free variables. Furthermore, the s solution vectors of AX 0 described in Theorem 3.14
+1⁄4
+are linearly independent (Problem 4.52). Accordingly, because dimW s, they form a basis for the
+1⁄4
+solution space W. Thus, we have also proved Theorem 3.14.
+5.5 Singular and Nonsingular Linear Mappings, Isomorphisms
+Let F:V U be a linear mapping. Recall that F 0 0. F is said to be singular if the image of some
+! ð Þ1⁄4
+nonzerovectorvis0—thatis,ifthereexistsv 0suchthatF v 0.Thus,F:V U isnonsingularif
+61⁄4 ð Þ1⁄4 !
+the zero vector 0 is the only vector whose image under F is 0 or, in other words, if KerF 0 .
+1⁄4f g
+EXAMPLE 5.10 Consider the projection map F:R3 R3 and the rotation map G:R3 R3 appearing in
+! !
+Fig.5-2.(SeeExample5.7.)BecausethekernelofF isthez-axis,F issingular.Ontheotherhand,thekernelofG
+consists only of the zero vector 0. Thus, G is nonsingular.
+Nonsingularlinearmappingsmayalsobecharacterizedasthosemappingsthatcarryindependentsets
+into independent sets. Specifically, we prove (Problem 5.28) the following theorem.
+THEOREM 5.7: Let F:V U be a nonsingular linear mapping. Then the image of any linearly
+!
+independent set is linearly independent.
+Isomorphisms
+Suppose a linear mapping F:V U is one-to-one. Then only 0 V can map into 0 U, and so F is
+! 2 2
+nonsingular. The converse is also true. For suppose F is nonsingular and F v F w , then
+ð Þ1⁄4 ð Þ
+F v w F v F w 0, and hence, v w 0 or v w. Thus, F v F w implies v w—
+ð Þ1⁄4 ð Þ ð Þ1⁄4 1⁄4 1⁄4 ð Þ1⁄4 ð Þ 1⁄4
+that is, F is one-to-one. We have proved the following proposition.
+PROPOSITION5.8: A linear mapping F:V U is one-to-one if and only if F is nonsingular.
+!
+RecallthatamappingF:V U iscalledanisomorphismifF islinearandifF isbijective(i.e.,ifF
+!
+is one-to-one and onto). Also, recall that a vector space V is said to be isomorphic to a vector space U,
+written V U, if there is an isomorphism F:V U.
+ffi !
+The following theorem (proved in Problem 5.29) applies.
+THEOREM 5.9: Suppose V has finite dimension and dimV dimU. Suppose F:V U is linear.
+1⁄4 !
+Then F is an isomorphism if and only if F is nonsingular.
+CHAPTER 5 LinearMappings 173
+5.6 Operations with Linear Mappings
+Weareabletocombinelinearmappingsinvariouswaystoobtainnewlinearmappings.Theseoperations
+are very important and will be used throughout the text.
+Let F:V U and G:V U be linear mappings over a field K. The sum F G and the scalar
+! ! þ
+product kF, where k K, are defined to be the following mappings from V into U:
+2
+F G v F v G v and kF v kF v
+ð þ Þð Þ ð Þþ ð Þ ð Þð Þ ð Þ
+WenowshowthatifF andG arelinear,thenF G andkF arealsolinear.Specifically,foranyvectors
+þ
+v;w V and any scalars a;b K,
+2 2
+F G av bw F av bw G av bw
+ð þ Þð þ Þ1⁄4 ð þ Þþ ð þ Þ
+aF v bF w aG v bG w
+1⁄4 ð Þþ ð Þþ ð Þþ ð Þ
+aF v G v bF w G w
+1⁄4 1⁄2 ð Þþ ð Þþ 1⁄2 ð Þþ ð Þ
+a F G v b F G w
+1⁄4 ð þ Þð Þþ ð þ Þð Þ
+and kF av bw kF av bw k aF v bF w
+ð Þð þ Þ1⁄4 ð þ Þ1⁄4 1⁄2 ð Þþ ð Þ
+akF v bkF w a kF v b kF w
+1⁄4 ð Þþ ð Þ1⁄4 ð Þð Þþ ð Þð Þ
+Thus, F G and kF are linear.
+þ
+The following theorem holds.
+THEOREM 5.10: Let V and U be vector spaces over a field K. Then the collection of all linear
+mappings from V into U with the above operations of addition and scalar multi-
+plication forms a vector space over K.
+The vector space of linear mappings in Theorem 5.10 is usually denoted by
+Hom V;U
+ð Þ
+Here Hom comes from the word ‘‘homomorphism.’’ We emphasize that the proof of Theorem 5.10
+reduces to showing thatHom V;U doessatisfy theeightaxioms ofavectorspace. The zeroelementof
+ð Þ
+Hom V;U is the zero mapping from V into U, denoted by 0 and defined by
+ð Þ
+0 v 0
+ð Þ1⁄4
+for every vector v V.
+2
+Suppose V and U are of finite dimension. Then we have the following theorem.
+THEOREM5.11: Suppose dimV m and dimU n. Then dimHom V;U mn.
+1⁄4 1⁄4 1⁄2 ð Þ1⁄4
+Composition of Linear Mappings
+Now suppose V, U, and W are vector spaces over the same field K, and suppose F:V U and
+!
+G:U W are linear mappings. We picture these mappings as follows:
+!
+F G
+V U W
+! !
+Recall that the composition function G F is the mapping from V into W defined by
+
+G F v G F v . We show that G F is linear whenever F and G are linear. Specifically, for
+ð Þð Þ1⁄4 ð ð ÞÞ 
+any vectors v;w V and any scalars a;b K, we have
+2 2
+G F av bw G F av bw G aF v bF w
+ð Þð þ Þ1⁄4 ð ð þ ÞÞ1⁄4 ð ð Þþ ð ÞÞ
+aG F v bG F w a G F v b G F w
+1⁄4 ð ð ÞÞþ ð ð ÞÞ1⁄4 ð Þð Þþ ð Þð Þ
+Thus, G F is linear.
+
+The composition of linear mappings and the operations of addition and scalar multiplication are
+related as follows.
+174 CHAPTER 5 LinearMappings
+THEOREM5.12: Let V, U, W be vector spaces over K. Suppose the following mappings are linear:
+F:V U; F :V U and G:U W; G :U W
+0 0
+! ! ! !
+Then, for any scalar k K:
+2
+(i) G F F G F G F .
+ð þ 0 Þ1⁄4 þ 0
+(ii) G G F G F G F.
+ð þ 0 Þ 1⁄4 þ 0
+(iii) k G F kG F G kF .
+ð Þ1⁄4ð Þ 1⁄4 ð Þ
+5.7 Algebra A V of Linear Operators
+ð Þ
+LetV beavectorspaceoverafieldK.Thissectionconsidersthespecialcaseoflinearmappingsfromthe
+vector space V into itself—that is, linear mappings of the form F:V V. They are also called linear
+!
+operatorsorlineartransformationsonV.WewillwriteA V ,insteadofHom V;V ,forthespaceofall
+ð Þ ð Þ
+such mappings.
+Now A V isavector spaceoverK (Theorem5.8),and, ifdimV n, thendimA V n2. Moreover,
+ð Þ 1⁄4 ð Þ1⁄4
+for any mappings F;G A V , the composition G F exists and also belongs to A V . Thus, we have a
+2 ð Þ ð Þ
+‘‘multiplication’’ defined in A V . [We sometimes write FG instead of G F in the space A V .]
+ð Þ ð Þ
+Remark: An algebra A over a field K is a vector space over K in which an operation of
+multiplication is defined satisfying, for every F;G;H A and every k K:
+2 2
+(i) F G H FG FH,
+ð þ Þ1⁄4 þ
+(ii) G H F GF HF,
+ð þ Þ 1⁄4 þ
+(iii) k GF kG F G kF .
+ð Þ1⁄4ð Þ 1⁄4 ð Þ
+The algebra is said to be associative if, in addition, FG H F GH .
+ð Þ 1⁄4 ð Þ
+The above definition of an algebra and previous theorems give us the following result.
+THEOREM 5.13: Let V be a vector space over K. Then A V is an associative algebra over K with
+ð Þ
+respect to composition of mappings. If dimV n, then dimA V n2.
+1⁄4 ð Þ1⁄4
+This is why A V is called the algebra of linear operators on V.
+ð Þ
+Polynomials and Linear Operators
+Observe that the identity mapping I:V V belongs to A V . Also, for any linear operator F in A V ,
+! ð Þ ð Þ
+we have FI IF F. We can also form ‘‘powers’’ of F. Namely, we define
+1⁄4 1⁄4
+F0 I; F2 F F; F3 F2 F F F F; F4 F3 F; ...
+1⁄4 1⁄4 1⁄4 1⁄4 1⁄4 
+Furthermore, for any polynomial p t over K, say,
+ð Þ
+p t a a t a t2 a t2
+ð Þ1⁄4 0þ 1 þ 2 þþ s
+we can form the linear operator p F defined by
+ð Þ
+p F a I a F a F2 a Fs
+ð Þ1⁄4 0 þ 1 þ 2 þþ s
+(Foranyscalark,theoperatorkI issometimesdenotedsimplybyk.)Inparticular,wesayF isazeroof
+the polynomial p t if p F 0.
+ð Þ ð Þ1⁄4
+EXAMPLE 5.11 Let F:K3 K3 be defined by F x;y;z 0;x;y . For any a;b;c K3,
+! ð Þ1⁄4ð Þ ð Þ2
+F I a;b;c 0;a;b a;b;c a; a b; b c
+ð þ Þð Þ1⁄4ð Þþð Þ1⁄4ð þ þ Þ
+F3 a;b;c F2 0;a;b F 0;0;a 0;0;0
+ð Þ1⁄4 ð Þ1⁄4 ð Þ1⁄4ð Þ
+Thus, F3 0, the zero mapping in A V . This means F is a zero of the polynomial p t t3.
+1⁄4 ð Þ ðÞ1⁄4
+CHAPTER 5 LinearMappings 175
+Square Matrices as Linear Operators
+Let M M be the vector space of all square n n matrices over K. Then any matrix A in M defines a
+1⁄4 n;n 
+linearmappingF :Kn Kn byF u Au(wherethevectorsinKn arewrittenascolumns).Becausethe
+A ! Að Þ1⁄4
+mapping is from Kn into itself, the square matrix A is a linear operator, not simply a linear mapping.
+Suppose A and B are matrices in M. Then the matrix product AB is defined. Furthermore, for any
+(column) vector u in Kn,
+F u AB u A Bu A F U F F u F F u
+ABð Þ1⁄4ð Þ 1⁄4 ð Þ1⁄4 ð Bð ÞÞ1⁄4 Að Bð ÞÞ1⁄4ð A BÞð Þ
+In other words, the matrix product AB corresponds to the composition of A and B as linear mappings.
+Similarly, the matrix sum A B corresponds to the sum of A and B as linear mappings, and the scalar
+þ
+product kA corresponds to the scalar product of A as a linear mapping.
+Invertible Operators in A V
+ð Þ
+Let F:V V be a linear operator. F is said to be invertible if it has an inverse—that is, if there exists
+!
+F 1 in A V such that FF 1 F 1F I. On the other hand, F is invertible as a mapping if F is both
+ 
+ð Þ 1⁄4 1⁄4
+one-to-one and onto. In such a case, F 1 is also linear and F 1 is the inverse of F as a linear operator
+ 
+(proved in Problem 5.15).
+SupposeF isinvertible.Thenonly0 V canmapintoitself,andsoF isnonsingular.Theconverseis
+2
+not true, as seen by the following example.
+EXAMPLE5.12 LetV P t ,thevectorspaceofpolynomialsoverK.LetF bethemappingonV thatincreases
+1⁄4 ðÞ
+by 1 the exponent of t in each term of a polynomial; that is,
+F a a t a t2 a ts a t a t2 a t3 a ts 1
+ð 0þ 1 þ 2 þþ s Þ1⁄4 0 þ 1 þ 2 þþ s þ
+Then F is a linear mapping and F is nonsingular. However, F is not onto, and so F is not invertible.
+The vector space V P t in the above example has infinite dimension. The situation changes
+1⁄4 ð Þ
+significantly when V has finite dimension. Namely, the following theorem applies.
+THEOREM5.14: LetF bealinearoperatoronafinite-dimensionalvectorspaceV.Thenthefollowing
+four conditions are equivalent.
+(i) F is nonsingular: KerF 0 . (iii) F is an onto mapping.
+1⁄4f g
+(ii) F is one-to-one. (iv) F is invertible.
+The proof of the above theorem mainly follows from Theorem 5.6, which tells us that
+dimV dim KerF dim ImF
+1⁄4 ð Þþ ð Þ
+By Proposition 5.8,(i) and (ii) are equivalent. Note that (iv) is equivalentto (ii) and (iii). Thus, to prove
+the theorem, we need only show that (i) and (iii) are equivalent. This we do below.
+(a) Suppose(i)holds.Thendim KerF 0,andsotheaboveequationtellsusthatdimV dim ImF .
+ð Þ1⁄4 1⁄4 ð Þ
+This means V ImF or, in other words, F is an onto mapping. Thus, (i) implies (iii).
+1⁄4
+(b) Suppose (iii) holds. Then V ImF, and so dimV dim ImF . Therefore, the above equation
+1⁄4 1⁄4 ð Þ
+tells us that dim KerF 0, and so F is nonsingular. Therefore, (iii) implies (i).
+ð Þ1⁄4
+Accordingly, all four conditions are equivalent.
+Remark: SupposeAisasquaren nmatrixoverK.ThenAmaybeviewedasalinearoperatoron
+
+Kn.BecauseKn hasfinitedimension,Theorem5.14holdsforthesquarematrixA.Thisiswhytheterms
+‘‘nonsingular’’ and ‘‘invertible’’ are used interchangeably when applied to square matrices.
+EXAMPLE 5.13 Let F be the linear operator on R2 defined by F x;y 2x y; 3x 2y .
+ð Þ1⁄4ð þ þ Þ
+(a) To show that F is invertible, we need only show that F is nonsingular. Set F x;y 0;0 to obtain the
+ð Þ1⁄4ð Þ
+homogeneous system
+2x y 0 and 3x 2y 0
+þ 1⁄4 þ 1⁄4
+176 CHAPTER 5 LinearMappings
+Solve for x and y to get x 0, y 0. Hence, F is nonsingular and so invertible.
+1⁄4 1⁄4
+(b) To find a formula for F 1, we set F x;y s;t and so F 1 s;t x;y . We have
+ 
+ð Þ1⁄4ð Þ ð Þ1⁄4ð Þ
+2x y s
+2x y; 3x 2y s;t or þ 1⁄4
+ð þ þ Þ1⁄4ð Þ 3x 2y t
+þ 1⁄4
+Solve for x and y in terms of s and t to obtain x 2s t, y 3s 2t. Thus,
+1⁄4 1⁄4 þ
+F 1 s;t 2s t; 3s 2t or F 1 x;y 2x y; 3x 2y
+ 
+ð Þ1⁄4ð þ Þ ð Þ1⁄4ð þ Þ
+where we rewrite the formula for F 1 using x and y instead of s and t.
+
+SOLVED PROBLEMS
+Mappings
+5.1. State whether each diagram in Fig. 5-3 defines a mapping from A a;b;c into B x;y;z .
+1⁄4f g 1⁄4f g
+(a) No. There is nothing assigned to the element b A.
+2
+(b) No. Two elements, x and z, are assigned to c A.
+2
+(c) Yes.
+Figure 5-3
+5.2. Let f :A B and g:B C be defined by Fig. 5-4.
+! !
+(a) Find the composition mapping g f :A C.
+ð Þ !
+(b) Find the images of the mappings f, g, g f.
+
+Figure 5-4
+(a) Use the definition of the composition mapping to compute
+g f a g f a g y t; g f b g f b g x s
+ð Þð Þ1⁄4 ð ð ÞÞ1⁄4 ð Þ1⁄4 ð Þð Þ1⁄4 ð ð ÞÞ1⁄4 ð Þ1⁄4
+g f c g f c g y t
+ð Þð Þ1⁄4 ð ð ÞÞ1⁄4 ð Þ1⁄4
+Observe that we arrive at the same answer if we ‘‘follow the arrows’’ in Fig. 5-4:
+a y t; b x s; c y t
+! ! ! ! ! !
+(b) ByFig.5-4,theimagevaluesunderthemappingf arexandy,andtheimagevaluesundergarer,s,t.
