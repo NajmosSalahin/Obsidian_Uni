@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Aurnob\Desktop\Barnackle\SDS-Vault\Year-1\Semester-2\5_Linear-Modern-Algebra\Linear_Algebra_Ch5-6\verify_pdf.py", line 110, in <module>
+    print(f"    - \"{l[:80]}...\"" if len(l) > 80 else f"    - \"{l}\"")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 65: character maps to <undefined>
