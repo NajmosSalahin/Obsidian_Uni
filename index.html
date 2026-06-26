@@ -2319,6 +2319,7 @@ document.addEventListener('keydown', e => {
       if (e.target===searchInput) { searchInput.value=''; renderSidebar(); }
       if (e.target===findInput) { hideFindBar(); }
     }
+    if (focusMode) { toggleFocusMode(); return; }
     return;
   }
 
