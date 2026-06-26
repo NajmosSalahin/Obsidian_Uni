@@ -23,6 +23,7 @@
     :root {
       --sidebar-w: 280px; --right-w: 240px;
       --font-body: 'Literata', Georgia, serif;
+      --body-size: 15.5px;
       --font-mono: 'JetBrains Mono', monospace;
       --font-ui: 'Syne', sans-serif;
       --trans: 180ms ease; --top-h: 52px;
@@ -224,12 +225,11 @@
     .bl-icon{color:var(--accent);width:13px;height:13px;flex-shrink:0}
 
     /* ── MARKDOWN STYLES ─────────────────────────────────────── */
-    .md-content{font-family:var(--font-body);font-size:15.5px;line-height:1.78;color:var(--text);max-width:720px;margin:0 auto;padding:36px 40px 72px}
+    .md-content{font-family:var(--font-body);font-size:var(--body-size);line-height:1.78;color:var(--text);max-width:720px;margin:0 auto;padding:36px 40px 72px}
     .md-content h1{font-family:var(--font-ui);font-size:28px;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:12px;margin:0 0 24px}
     .md-content h2{font-family:var(--font-ui);font-size:21px;font-weight:600;color:var(--text);margin:40px 0 14px}
     .md-content h3{font-family:var(--font-ui);font-size:17px;font-weight:600;color:var(--accent2);margin:28px 0 10px}
-    /* h4/h5 use neutral text2, not warn/success colours */
-    .md-content h4{font-family:var(--font-ui);font-size:15px;font-weight:600;color:var(--text2);margin:24px 0 10px}
+    .md-content h4{font-family:var(--font-ui);font-size:15px;font-weight:600;color:var(--warn);margin:24px 0 10px}
     .md-content h5{font-family:var(--font-ui);font-size:14px;font-weight:600;color:var(--text2);margin:20px 0 8px}
     .md-content h6{font-family:var(--font-ui);font-size:13px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin:20px 0 8px}
     .md-content p{margin:0 0 16px}
@@ -482,8 +482,6 @@
       <select class="sort-select" id="sortSelect" aria-label="Sort files">
         <option value="name">A–Z</option>
         <option value="name-desc">Z–A</option>
-        <option value="mtime">Modified</option>
-        <option value="ctime">Created</option>
       </select>
     </div>
     <div class="search-wrap">
@@ -1009,7 +1007,7 @@ if (localStorage.getItem('oe-right-sidebar') === '0') {
 
 /* ── FONT SIZE SLIDER ──────────────────────────────────────────── */
 function applyFontSize(val) {
-  document.documentElement.style.setProperty('--font-body', `${val}px`);
+  document.documentElement.style.setProperty('--body-size', `${val}px`);
   localStorage.setItem('oe-font-size', val);
 }
 const savedSize = localStorage.getItem('oe-font-size');
@@ -1631,6 +1629,7 @@ function renderSidebar(filter='') {
 
   const openPaths = Array.from(fileList.querySelectorAll('details.sidebar-folder[open]'))
     .map(d => d.dataset.path).filter(Boolean);
+  treeFocusIdx = -1;
   fileList.innerHTML = '';
   fileList.appendChild(buildNode(treeRoot));
   if (!q) {
@@ -1743,6 +1742,7 @@ async function openFileFromTree(path, replaceState=false) {
       fileViewer.innerHTML = ''; fileViewer.appendChild(div);
 
       // Star toggle in viewer header
+      viewerBadge.closest('.viewer-header').querySelectorAll('.star-toggle').forEach(el => el.remove());
       const starBtn = document.createElement('button');
       starBtn.className = 'star-toggle' + (starredFiles.includes(path) ? ' starred' : '');
       starBtn.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
@@ -1801,14 +1801,14 @@ async function openFileFromTree(path, replaceState=false) {
         if (!caret) return;
         const heading = caret.closest('h1,h2,h3,h4,h5,h6');
         if (!heading) return;
+        const level = parseInt(heading.tagName[1]);
         let sibling = heading.nextElementSibling;
-        const nextHeading = heading.parentElement?.querySelector(
-          `h1, h2, h3, h4, h5, h6`
-        );
         const isCollapsed = caret.classList.toggle('collapsed');
-        while (sibling && sibling.tagName !== heading.tagName && sibling.tagName !== 'H1' &&
-               sibling.tagName !== 'H2' && sibling.tagName !== 'H3' &&
-               sibling.tagName !== 'H4' && sibling.tagName !== 'H5' && sibling.tagName !== 'H6') {
+        while (sibling) {
+          const tag = sibling.tagName;
+          if (tag === 'H1' || tag === 'H2' || tag === 'H3' || tag === 'H4' || tag === 'H5' || tag === 'H6') {
+            if (parseInt(tag[1]) <= level) break;
+          }
           const next = sibling.nextElementSibling;
           if (isCollapsed) sibling.style.display = 'none';
           else sibling.style.display = '';
