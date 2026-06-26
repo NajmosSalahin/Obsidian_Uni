@@ -305,6 +305,125 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
     #toast{position:fixed;bottom:20px;right:20px;background:var(--bg4);border:1px solid var(--border2);color:var(--text);font-size:12.5px;padding:9px 14px;border-radius:var(--radius-lg);z-index:9999;transform:translateY(55px);opacity:0;transition:transform .2s ease,opacity .2s ease;box-shadow:0 8px 24px rgba(0,0,0,.3)}
     #toast.show{transform:translateY(0);opacity:1}
+
+    /* ── CODE BLOCK LANGUAGE ──────────────────────────────────── */
+    .code-lang-badge{position:absolute;top:8px;right:60px;font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--text3);background:var(--bg3);padding:2px 8px;border-radius:4px;border:1px solid var(--border);pointer-events:none;z-index:1;opacity:.7}
+    .md-content pre:hover .code-lang-badge{opacity:1}
+
+    /* ── TASK PROGRESS BAR ────────────────────────────────────── */
+    .task-progress{display:flex;align-items:center;gap:10px;margin:0 0 16px;font-family:var(--font-ui);font-size:12px;color:var(--text3)}
+    .task-bar{flex:1;height:6px;background:var(--bg3);border-radius:99px;overflow:hidden}
+    .task-fill{height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+
+    /* ── FONT SIZE SLIDER ─────────────────────────────────────── */
+    .s-range{width:100%;accent-color:var(--accent);cursor:pointer}
+    .s-range-wrap{display:flex;align-items:center;gap:10px}
+    .s-range-val{font-family:var(--font-mono);font-size:12px;color:var(--text2);min-width:40px;text-align:right}
+
+    /* ── FOCUS MODE ───────────────────────────────────────────── */
+    .focus-mode .sidebar,.focus-mode .right-sidebar{width:0!important;opacity:0!important;padding:0!important;border-color:transparent!important;overflow:hidden!important}
+    .focus-mode .topbar{height:0!important;padding:0!important;overflow:hidden!important;border:none!important}
+    .focus-mode .resize-handle{display:none!important}
+    .focus-mode .md-content{max-width:860px}
+
+    /* ── RECENT FILES ─────────────────────────────────────────── */
+    .recent-title{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3);padding:8px 12px 4px;display:flex;align-items:center;gap:6px}
+    .recent-item{display:flex;align-items:center;gap:7px;padding:5px 12px;cursor:pointer;transition:background var(--trans);font-size:12.5px;color:var(--text2);border:none;background:none;width:100%;text-align:left}
+    .recent-item:hover{background:var(--bg3);color:var(--text)}
+    .recent-clear{font-size:9.5px;color:var(--text3);cursor:pointer;margin-left:auto;background:none;border:none;font-family:var(--font-ui);padding:2px 4px;border-radius:3px}
+    .recent-clear:hover{color:var(--danger)}
+    .sort-select{font-size:10.5px;font-family:var(--font-ui);background:transparent;border:1px solid var(--border);border-radius:4px;color:var(--text3);padding:2px 4px;cursor:pointer;margin-left:auto}
+    .sort-select:hover,.sort-select:focus{color:var(--text);border-color:var(--border2)}
+
+    /* ── STARRED FILES ────────────────────────────────────────── */
+    .starred-section{border-bottom:1px solid var(--border);padding-bottom:4px;margin-bottom:4px}
+    .star-toggle{background:none;border:none;cursor:pointer;padding:2px;color:var(--text3);display:flex;align-items:center;border-radius:3px;transition:color var(--trans)}
+    .star-toggle:hover,.star-toggle.starred{color:var(--warn)}
+    .star-toggle.starred svg{fill:var(--warn);stroke:var(--warn)}
+
+    /* ── COLLAPSIBLE HEADINGS ─────────────────────────────────── */
+    .heading-caret{display:inline-block;width:16px;height:16px;margin-left:-18px;margin-right:2px;cursor:pointer;color:var(--text3);transition:transform .15s;vertical-align:middle;flex-shrink:0}
+    .heading-caret.collapsed{transform:rotate(-90deg)}
+    .md-content h1,.md-content h2,.md-content h3,.md-content h4,.md-content h5,.md-content h6{cursor:pointer;display:flex;align-items:center;gap:2px}
+    .md-content h1 .heading-caret,.md-content h2 .heading-caret,.md-content h3 .heading-caret,.md-content h4 .heading-caret,.md-content h5 .heading-caret,.md-content h6 .heading-caret{display:inline-flex}
+
+    /* ── KEYBOARD TREE NAV ────────────────────────────────────── */
+    .file-item.kbd-focus,.folder-summary.kbd-focus{outline:2px solid var(--accent);outline-offset:-2px;border-radius:6px;background:var(--bg3)}
+
+    /* ── SEARCH CONTEXT ───────────────────────────────────────── */
+    .search-result-file{font-size:12.5px;font-weight:600;color:var(--text);padding:6px 10px;cursor:pointer;display:flex;align-items:center;gap:6px;border:none;background:none;width:100%;text-align:left;border-radius:6px;transition:background var(--trans)}
+    .search-result-file:hover{background:var(--bg3)}
+    .search-context{font-size:11.5px;color:var(--text3);padding:2px 10px 6px 26px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+    .search-context mark{background:var(--accent-bg);color:var(--accent);padding:0 3px;border-radius:2px}
+
+    /* ── BACKLINKS CONTEXT ────────────────────────────────────── */
+    .bl-header{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text2);padding:6px 8px;border-radius:6px;cursor:pointer;background:none;border:none;width:100%;text-align:left;transition:background .15s}
+    .bl-header:hover{background:var(--bg3);color:var(--text)}
+    .bl-context{font-size:11px;color:var(--text3);padding:0 8px 8px 30px;line-height:1.5;white-space:pre-wrap;word-break:break-word}
+    .bl-context mark{background:var(--accent-bg);color:var(--accent);padding:0 2px;border-radius:2px}
+    .bl-unlinked{opacity:.55}
+
+    /* ── TAG PANE ─────────────────────────────────────────────── */
+    .tag-pane-tag{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600;font-family:var(--font-ui);cursor:pointer;transition:all .15s;color:var(--accent);background:var(--accent-bg);border:1px solid transparent;margin:2px 4px 2px 0}
+    .tag-pane-tag:hover{background:var(--bg3);border-color:var(--accent)}
+    .tag-pane-count{font-family:var(--font-mono);font-size:10px;color:var(--text3);background:var(--bg4);padding:0 5px;border-radius:99px}
+    .tag-pane-nested{padding-left:16px;display:flex;flex-direction:column;gap:2px}
+
+    /* ── QUICK SWITCHER ───────────────────────────────────────── */
+    .switcher-panel{width:520px;max-width:92vw;max-height:70vh;display:flex;flex-direction:column;padding:0!important}
+    .switcher-input{width:100%;padding:14px 16px;font-family:var(--font-ui);font-size:14px;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--text);outline:none}
+    .switcher-input::placeholder{color:var(--text3)}
+    .switcher-results{flex:1;overflow-y:auto;padding:6px 0;max-height:50vh}
+    .switcher-item{display:flex;align-items:center;gap:8px;padding:8px 16px;cursor:pointer;transition:background var(--trans);font-size:13px;color:var(--text2);border:none;background:none;width:100%;text-align:left}
+    .switcher-item:hover,.switcher-item.highlighted{background:var(--bg3);color:var(--text)}
+    .switcher-item mark{background:var(--accent-bg);color:var(--accent);font-weight:600;padding:0}
+    .switcher-item-path{font-size:10.5px;color:var(--text3);margin-left:auto;flex-shrink:0}
+    .switcher-empty{padding:32px 16px;text-align:center;font-size:13px;color:var(--text3)}
+
+    /* ── WIKILINK PREVIEW ─────────────────────────────────────── */
+    #wikilinkPreview{position:fixed;z-index:9998;background:var(--bg2);border:1px solid var(--border2);border-radius:12px;box-shadow:0 12px 48px rgba(0,0,0,.4);padding:16px;max-width:420px;max-height:320px;overflow-y:auto;font-family:var(--font-body);font-size:13px;line-height:1.6;color:var(--text);display:none}
+    #wikilinkPreview .md-content{padding:0;font-size:13px;line-height:1.6;max-width:none;margin:0}
+    #wikilinkPreview .md-content h1{font-size:18px;margin:0 0 8px;padding-bottom:4px}
+    #wikilinkPreview .md-content h2{font-size:15px;margin:8px 0 4px}
+    #wikilinkPreview .md-content p{margin:0 0 6px}
+
+    /* ── IMAGE LIGHTBOX ZOOM ──────────────────────────────────── */
+    .lightbox img{cursor:grab;transition:transform .15s;max-width:95vw;max-height:95vh;transform-origin:center center}
+    .lightbox img:active{cursor:grabbing}
+    .lightbox-zoom-hint{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:12px;font-family:var(--font-ui);pointer-events:none;opacity:0;transition:opacity .3s}
+    .lightbox.open .lightbox-zoom-hint{opacity:1}
+
+    /* ── FOOTNOTES ────────────────────────────────────────────── */
+    .footnotes{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;color:var(--text2)}
+    .footnotes ol{margin:0 0 0 20px}
+    .footnotes li{margin-bottom:4px}
+    .footnotes a{color:var(--accent);text-decoration:none}
+    .footnotes .footnote-backref{font-size:11px;margin-left:4px;color:var(--text3)}
+
+    /* ── EMBEDDED NOTES ───────────────────────────────────────── */
+    .embed-container{border-left:2px solid var(--border2);padding:4px 0 4px 14px;margin:12px 0;font-size:14px;border-radius:0 4px 4px 0;background:var(--bg2)}
+    .embed-container .md-content{padding:0;font-size:14px;max-width:none;margin:0}
+    .embed-container .md-content h1{font-size:20px;margin:0 0 6px;padding-bottom:4px}
+    .embed-container .md-content h2{font-size:16px;margin:6px 0 4px}
+    .embed-container .md-content p{margin:0 0 4px}
+
+    /* ── OUTGOING LINKS ───────────────────────────────────────── */
+    .outgoing-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text2);padding:6px 8px;border-radius:6px;cursor:pointer;transition:background .15s;background:none;border:none;width:100%;text-align:left}
+    .outgoing-item:hover{background:var(--bg3);color:var(--text)}
+
+    /* ── SEARCH IN FILE ───────────────────────────────────────── */
+    #findBar{display:none;align-items:center;gap:6px;padding:6px 12px;background:var(--bg2);border-bottom:1px solid var(--border);font-family:var(--font-ui);font-size:12px;flex-shrink:0}
+    #findBar.visible{display:flex}
+    #findInput{flex:1;padding:4px 8px;border-radius:4px;border:1px solid var(--border2);background:var(--bg3);color:var(--text);font-family:var(--font-ui);font-size:12px;outline:none;min-width:0}
+    #findInput:focus{border-color:var(--accent)}
+    .find-count{color:var(--text3);font-family:var(--font-mono);font-size:11px;min-width:50px;text-align:center}
+    .find-btn{background:none;border:1px solid var(--border2);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--text2);font-family:var(--font-ui);font-size:11px;transition:all .15s}
+    .find-btn:hover{background:var(--bg3);color:var(--text)}
+    .find-btn:disabled{opacity:.3;cursor:default}
+    .find-highlight{background:var(--warn);color:var(--bg);padding:0 2px;border-radius:2px}
+    .find-highlight.active{background:var(--accent);color:var(--bg)}
+    .find-close{background:none;border:none;color:var(--text3);cursor:pointer;padding:2px;display:flex;border-radius:3px}
+    .find-close:hover{color:var(--text)}
   </style>
 </head>
 <body>
@@ -313,7 +432,7 @@
 <div id="readingProgress"></div>
 
 <!-- Image Lightbox -->
-<div class="lightbox" id="imgLightbox"><img id="lightboxImg" src="" alt=""></div>
+<div class="lightbox" id="imgLightbox"><img id="lightboxImg" src="" alt=""><div class="lightbox-zoom-hint">Scroll to zoom · Drag to pan · Double-click to reset</div></div>
 
 <!-- Mobile Sidebar Backdrop -->
 <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
@@ -360,6 +479,12 @@
       <svg style="width:13px;height:13px;color:var(--text3);flex-shrink:0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
       <span class="sidebar-header-title">Files</span>
       <span class="count-badge" id="fileCount">—</span>
+      <select class="sort-select" id="sortSelect" aria-label="Sort files">
+        <option value="name">A–Z</option>
+        <option value="name-desc">Z–A</option>
+        <option value="mtime">Modified</option>
+        <option value="ctime">Created</option>
+      </select>
     </div>
     <div class="search-wrap">
       <div class="search-rel">
@@ -375,6 +500,14 @@
         Indexing vault for full-text search…
       </div>
     </div>
+    <div class="starred-section" id="starredSection" style="display:none">
+      <div class="recent-title">★ Starred</div>
+      <div id="starredList"></div>
+    </div>
+    <div class="recent-section" id="recentSection" style="display:none">
+      <div class="recent-title">Recent</div>
+      <div id="recentList"></div>
+    </div>
     <div class="file-list" id="fileList" role="tree"></div>
   </aside>
 
@@ -384,6 +517,13 @@
       <span class="viewer-filename placeholder" id="viewerTitle">Select a file to view</span>
       <span class="viewer-badge" id="viewerBadge" style="display:none"></span>
       <span class="viewer-meta" id="viewerMeta"></span>
+    </div>
+    <div id="findBar">
+      <input id="findInput" type="text" placeholder="Find in page…" autocomplete="off" spellcheck="false">
+      <span class="find-count" id="findCount"></span>
+      <button class="find-btn" id="findPrevBtn" title="Previous (Shift+Enter)">▲</button>
+      <button class="find-btn" id="findNextBtn" title="Next (Enter)">▼</button>
+      <button class="find-close" id="findCloseBtn" aria-label="Close find bar">✕</button>
     </div>
     <div class="file-viewer" id="fileViewer">
       <div class="state-card">
@@ -444,9 +584,29 @@
     </div>
 
     <div class="s-section">
+      <div class="s-label">Reading Size</div>
+      <div class="s-row">
+        <div class="s-range-wrap">
+          <span style="font-size:12px;color:var(--text3)">A</span>
+          <input class="s-range" type="range" id="fontSizeSlider" min="12" max="26" step="0.5">
+          <span style="font-size:18px;color:var(--text3)">A</span>
+        </div>
+        <span class="s-range-val" id="fontSizeVal">15.5</span>
+      </div>
+    </div>
+
+    <div class="s-section">
       <div class="s-label">Code Font</div>
       <div class="font-opts" id="monoFontOpts"></div>
     </div>
+  </div>
+</div>
+
+<!-- ── QUICK SWITCHER ──────────────────────────────────────────── -->
+<div class="overlay" id="switcherOverlay" role="dialog" aria-modal="true" aria-label="Quick switcher">
+  <div class="panel switcher-panel">
+    <input class="switcher-input" id="switcherInput" type="text" placeholder="Type to search files…" autofocus autocomplete="off" spellcheck="false">
+    <div class="switcher-results" id="switcherResults"></div>
   </div>
 </div>
 
@@ -472,6 +632,7 @@
 </div>
 
 <div id="toast" role="status" aria-live="polite"></div>
+<div id="wikilinkPreview"></div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <script>
