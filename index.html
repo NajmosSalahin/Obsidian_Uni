@@ -539,6 +539,9 @@ function getHeaders() {
   const pat = localStorage.getItem('oe-pat');
   return pat ? { Authorization: `token ${pat}` } : {};
 }
+function rawHeaders() {
+  return {};
+}
 
 /* ── FONT LAZY LOADING ────────────────────────────────────────── */
 const FONT_PARAMS = {
@@ -908,7 +911,7 @@ async function buildVaultIndex() {
     idxText.textContent = `Indexing ${Math.min(i+BATCH, mdFiles.length)}/${mdFiles.length}`;
     await Promise.all(slice.map(async f => {
       try {
-        const res = await fetch(rawUrl(f.path), { headers: getHeaders() });
+        const res = await fetch(rawUrl(f.path), { headers: rawHeaders() });
         if (!res.ok) return;
         const text = await res.text();
         fileContents.set(f.path, text);
@@ -1113,7 +1116,7 @@ async function openFileFromTree(path, replaceState=false) {
   try {
     let raw = fileContents.get(path);
     if (!raw) {
-      const res = await fetch(url, { headers: getHeaders() });
+      const res = await fetch(url, { headers: rawHeaders() });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       raw = await res.text();
     }
