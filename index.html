@@ -542,6 +542,10 @@
     <div id="tocContainer"><div style="font-size:12px;color:var(--text3)">Open a file to see headings</div></div>
     <div class="rs-title">Backlinks</div>
     <div id="backlinksContainer"><div style="font-size:12px;color:var(--text3)">Indexing…</div></div>
+    <div class="rs-title">Outgoing Links</div>
+    <div id="outgoingContainer"><div style="font-size:12px;color:var(--text3)">Open a file to see outgoing links</div></div>
+    <div class="rs-title">Tags</div>
+    <div id="tagPaneContainer"><div style="font-size:12px;color:var(--text3)">Indexing…</div></div>
   </aside>
 </div>
 
@@ -621,12 +625,20 @@
     </div>
     <div class="shortcut-list">
       <div class="shortcut-row"><span class="shortcut-desc">Focus search</span><span class="shortcut-keys"><span class="kbd">F</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Quick switcher</span><span class="shortcut-keys"><span class="kbd">Ctrl</span> + <span class="kbd">O</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Search in file</span><span class="shortcut-keys"><span class="kbd">Ctrl</span> + <span class="kbd">F</span></span></div>
       <div class="shortcut-row"><span class="shortcut-desc">Refresh vault</span><span class="shortcut-keys"><span class="kbd">R</span></span></div>
       <div class="shortcut-row"><span class="shortcut-desc">Toggle left sidebar</span><span class="shortcut-keys"><span class="kbd">B</span></span></div>
       <div class="shortcut-row"><span class="shortcut-desc">Toggle right sidebar</span><span class="shortcut-keys"><span class="kbd">E</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Toggle focus mode</span><span class="shortcut-keys"><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">F</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Star / unstar file</span><span class="shortcut-keys"><span class="kbd">Ctrl</span> + <span class="kbd">S</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Toggle heading fold</span><span class="shortcut-keys"><span class="kbd">Ctrl</span> + <span class="kbd">Click</span></span></div>
       <div class="shortcut-row"><span class="shortcut-desc">Open settings</span><span class="shortcut-keys"><span class="kbd">S</span></span></div>
       <div class="shortcut-row"><span class="shortcut-desc">Show shortcuts</span><span class="shortcut-keys"><span class="kbd">?</span></span></div>
       <div class="shortcut-row"><span class="shortcut-desc">Close modals / clear search</span><span class="shortcut-keys"><span class="kbd">Esc</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Tree nav: ↑↓</span><span class="shortcut-keys"><span class="kbd">↑</span> <span class="kbd">↓</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Tree nav: expand/collapse</span><span class="shortcut-keys"><span class="kbd">←</span> <span class="kbd">→</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Open selected file</span><span class="shortcut-keys"><span class="kbd">Enter</span></span></div>
     </div>
   </div>
 </div>
@@ -653,6 +665,15 @@ let fileContents = new Map();
 let backlinkMap  = new Map();
 let lunrIdx      = null;
 let navDebounce  = null;
+let searchMode   = 'name';        // 'name' | 'content'
+let sortMode     = 'name';        // 'name' | 'name-desc' | 'mtime' | 'ctime'
+let focusMode    = false;
+let starredFiles = JSON.parse(localStorage.getItem('oe-starred') || '[]');
+let recentFiles  = JSON.parse(localStorage.getItem('oe-recent') || '[]');
+let allTags      = new Map();      // tagName -> Set of filepaths
+let findMatches  = []; let findIdx = -1;
+let flattenTree  = [];             // flat list for keyboard tree nav
+let treeFocusIdx = -1;
 
 /* ── DOM ──────────────────────────────────────────────────────── */
 const sidebar       = document.getElementById('sidebar');
@@ -668,10 +689,31 @@ const fileCount     = document.getElementById('fileCount');
 const tocContainer        = document.getElementById('tocContainer');
 const backlinksContainer  = document.getElementById('backlinksContainer');
 const propertiesContainer = document.getElementById('propertiesContainer');
-const progressBar   = document.getElementById('readingProgress');
-const imgLightbox   = document.getElementById('imgLightbox');
-const lightboxImg   = document.getElementById('lightboxImg');
+const progressBar    = document.getElementById('readingProgress');
+const imgLightbox    = document.getElementById('imgLightbox');
+const lightboxImg    = document.getElementById('lightboxImg');
+let lightboxZoom     = 1; let lightboxPanX = 0; let lightboxPanY = 0; let lightboxDragging = false;
 const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+const sortSelect      = document.getElementById('sortSelect');
+const fontSizeSlider  = document.getElementById('fontSizeSlider');
+const fontSizeVal     = document.getElementById('fontSizeVal');
+const switcherOverlay = document.getElementById('switcherOverlay');
+const switcherInput   = document.getElementById('switcherInput');
+const switcherResults = document.getElementById('switcherResults');
+const findBar         = document.getElementById('findBar');
+const findInput       = document.getElementById('findInput');
+const findCount       = document.getElementById('findCount');
+const findPrevBtn     = document.getElementById('findPrevBtn');
+const findNextBtn     = document.getElementById('findNextBtn');
+const findCloseBtn    = document.getElementById('findCloseBtn');
+const starredSection  = document.getElementById('starredSection');
+const starredList     = document.getElementById('starredList');
+const recentSection   = document.getElementById('recentSection');
+const recentList      = document.getElementById('recentList');
+const outgoingContainer = document.getElementById('outgoingContainer');
+const tagPaneContainer  = document.getElementById('tagPaneContainer');
+const wikilinkPreview  = document.getElementById('wikilinkPreview');
 
 /* ── UTILITIES ────────────────────────────────────────────────── */
 function escapeHtml(s) {
@@ -869,11 +911,58 @@ document.getElementById('closeHelpBtn').addEventListener('click', () => closeOve
 document.getElementById('helpOverlay').addEventListener('click', e => { if (e.target.id === 'helpOverlay') closeOverlay('helpOverlay'); });
 
 /* ── IMAGE LIGHTBOX ───────────────────────────────────────────── */
-imgLightbox.addEventListener('click', () => imgLightbox.classList.remove('open'));
+function resetLightboxTransform() {
+  lightboxZoom = 1; lightboxPanX = 0; lightboxPanY = 0;
+  lightboxImg.style.transform = 'scale(1) translate(0,0)';
+  lightboxImg.style.cursor = 'grab';
+}
+imgLightbox.addEventListener('click', e => {
+  if (e.target === imgLightbox || e.target.classList.contains('lightbox-zoom-hint')) {
+    imgLightbox.classList.remove('open'); resetLightboxTransform();
+  }
+});
 document.addEventListener('click', e => {
   const img = e.target.closest('.md-content img, .image-preview img');
-  if (img) { lightboxImg.src = img.src; imgLightbox.classList.add('open'); }
+  if (img) {
+    lightboxImg.src = img.src;
+    resetLightboxTransform();
+    imgLightbox.classList.add('open');
+  }
 });
+imgLightbox.addEventListener('wheel', e => {
+  if (!imgLightbox.classList.contains('open')) return;
+  e.preventDefault();
+  const rect = imgLightbox.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) / rect.width;
+  const my = (e.clientY - rect.top) / rect.height;
+  const delta = e.deltaY > 0 ? 0.9 : 1.1;
+  const newZoom = Math.min(Math.max(lightboxZoom * delta, 0.25), 10);
+  lightboxPanX = mx * (1 - newZoom / lightboxZoom) * (lightboxImg.naturalWidth || 800) + lightboxPanX;
+  lightboxPanY = my * (1 - newZoom / lightboxZoom) * (lightboxImg.naturalHeight || 600) + lightboxPanY;
+  lightboxZoom = newZoom;
+  lightboxImg.style.transform = `scale(${lightboxZoom}) translate(${lightboxPanX}px,${lightboxPanY}px)`;
+  lightboxImg.style.cursor = lightboxZoom > 1 ? 'grab' : 'grab';
+});
+let lightboxMouseDown = false; let lx = 0; let ly = 0;
+imgLightbox.addEventListener('mousedown', e => {
+  if (e.target !== lightboxImg) return;
+  lightboxDragging = true; lightboxMouseDown = true;
+  lx = e.clientX - lightboxPanX; ly = e.clientY - lightboxPanY;
+  lightboxImg.style.cursor = 'grabbing';
+  e.preventDefault();
+});
+document.addEventListener('mousemove', e => {
+  if (!lightboxMouseDown || !imgLightbox.classList.contains('open')) return;
+  lightboxPanX = e.clientX - lx; lightboxPanY = e.clientY - ly;
+  lightboxImg.style.transform = `scale(${lightboxZoom}) translate(${lightboxPanX}px,${lightboxPanY}px)`;
+});
+document.addEventListener('mouseup', () => {
+  if (lightboxMouseDown) {
+    lightboxMouseDown = false; lightboxDragging = false;
+    if (lightboxImg) lightboxImg.style.cursor = lightboxZoom > 1 ? 'grab' : 'grab';
+  }
+});
+lightboxImg.addEventListener('dblclick', resetLightboxTransform);
 
 /* ── READING PROGRESS ─────────────────────────────────────────── */
 fileViewer.addEventListener('scroll', () => {
@@ -1620,8 +1709,11 @@ function updateBreadcrumbs() {
 document.addEventListener('keydown', e => {
   const tag = e.target.tagName.toLowerCase();
   const inInput = tag==='input' || tag==='textarea' || e.target.isContentEditable;
+  const ctrl = e.ctrlKey || e.metaKey;
 
   if (e.key==='Escape') {
+    if (switcherOverlay.classList.contains('open'))
+      { closeOverlay('switcherOverlay'); return; }
     if (document.getElementById('helpOverlay').classList.contains('open'))
       { closeOverlay('helpOverlay'); return; }
     if (document.getElementById('settingsOverlay').classList.contains('open'))
@@ -1631,19 +1723,54 @@ document.addEventListener('keydown', e => {
     if (inInput) {
       e.target.blur();
       if (e.target===searchInput) { searchInput.value=''; renderSidebar(); }
+      if (e.target===findInput) { hideFindBar(); }
     }
     return;
   }
 
-  if (inInput) return; // Don't hijack keys while typing in any input
+  if (e.key==='o' && ctrl) { e.preventDefault(); openSwitcher(); return; }
+  if (e.key==='f' && ctrl && !inInput) {
+    e.preventDefault();
+    if (activeFile && !findBar.classList.contains('visible')) { showFindBar(); return; }
+  }
+  if (e.key==='f' && ctrl && e.shiftKey) {
+    e.preventDefault(); toggleFocusMode(); return;
+  }
+  if (e.key==='s' && ctrl && !inInput) {
+    e.preventDefault(); if (activeFile) toggleStar(activeFile); return;
+  }
+
+  // Find bar navigation
+  if (findBar.classList.contains('visible') && (e.key==='Enter' || e.key==='F3')) {
+    if (e.shiftKey) { e.preventDefault(); findPrev(); }
+    else { e.preventDefault(); findNext(); }
+    return;
+  }
+
+  if (inInput) return;
 
   const k = e.key.toLowerCase();
-  if (k==='f')  { e.preventDefault(); searchInput.focus(); }
-  if (k==='r')  { e.preventDefault(); initVault(); showToast('Refreshing vault…'); }
-  if (k==='b')  { e.preventDefault(); toggleSidebar(); }
-  if (k==='e')  { e.preventDefault(); toggleRightSidebar(); }
-  if (k==='s')  { e.preventDefault(); openOverlay('settingsOverlay'); }
-  if (k==='?')  { e.preventDefault(); openOverlay('helpOverlay'); }
+  if (k==='f' && !ctrl)  { e.preventDefault(); searchInput.focus(); }
+  if (k==='r')    { e.preventDefault(); initVault(); showToast('Refreshing vault…'); }
+  if (k==='b')    { e.preventDefault(); toggleSidebar(); }
+  if (k==='e')    { e.preventDefault(); toggleRightSidebar(); }
+  if (k==='s' && !ctrl)  { e.preventDefault(); openOverlay('settingsOverlay'); }
+  if (k==='?')    { e.preventDefault(); openOverlay('helpOverlay'); }
+
+  // Keyboard tree navigation
+  if (k==='ArrowDown'||k==='ArrowUp'||k==='ArrowLeft'||k==='ArrowRight') {
+    e.preventDefault();
+    navTree(e.key);
+  }
+  if (k==='Enter' && treeFocusIdx>=0 && flattenTree[treeFocusIdx]) {
+    e.preventDefault();
+    const item = flattenTree[treeFocusIdx];
+    if (item.dataset?.path) openFileFromTree(item.dataset.path);
+    else if (item.closest) {
+      const detail = item.closest('details');
+      if (detail) detail.open = !detail.open;
+    }
+  }
 });
 
 document.getElementById('refreshBtn').addEventListener('click', () => { initVault(); showToast('Refreshing vault…'); });
