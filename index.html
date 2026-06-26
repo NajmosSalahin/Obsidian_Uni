@@ -724,6 +724,10 @@ function slugify(t) {
   return String(t).toLowerCase().replace(/[^\w\s-]/g,'').replace(/[\s_]+/g,'-').replace(/^-+|-+$/g,'');
 }
 
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 let _toastTimer;
 function showToast(msg, ms=2200) {
   const el = document.getElementById('toast');
@@ -911,6 +915,7 @@ document.getElementById('helpOverlay').addEventListener('click', e => { if (e.ta
 /* ── IMAGE LIGHTBOX ───────────────────────────────────────────── */
 function resetLightboxTransform() {
   lightboxZoom = 1; lightboxPanX = 0; lightboxPanY = 0;
+  lightboxMouseDown = false; lightboxDragging = false;
   lightboxImg.style.transform = 'scale(1) translate(0,0)';
   lightboxImg.style.cursor = 'grab';
 }
@@ -1512,6 +1517,7 @@ async function buildVaultIndex() {
   statusEl.classList.remove('visible');
   hint.classList.remove('visible');
   document.getElementById('searchOpts').classList.remove('disabled');
+  updateTagPane();
   if (activeFile) updateBacklinks(activeFile);
 }
 
@@ -1548,15 +1554,15 @@ function renderSidebar(filter='') {
         btn.addEventListener('click', () => openFileFromTree(f.path));
         fileList.appendChild(btn);
 
-        // Search context lines
+        // Search context lines (show all matches)
         const raw = fileContents.get(f.path);
         if (raw) {
           const cleanRaw = raw.replace(/^---[\s\S]*?---\n?/, '');
           const lines = cleanRaw.split('\n');
-          let found = false;
+          let matchCount = 0;
           lines.forEach((line, i) => {
-            if (!found && line.toLowerCase().includes(q)) {
-              found = true;
+            if (line.toLowerCase().includes(q)) {
+              matchCount++;
               const ctx = document.createElement('div');
               ctx.className = 'search-context';
               const start = Math.max(0, i - 1);
@@ -1569,6 +1575,13 @@ function renderSidebar(filter='') {
               fileList.appendChild(ctx);
             }
           });
+          if (matchCount > 1) {
+            const countBadge = document.createElement('div');
+            countBadge.className = 'search-context';
+            countBadge.style.cssText = 'font-size:10px;color:var(--text3);padding:0 10px 6px 26px';
+            countBadge.textContent = `— ${matchCount} matches`;
+            fileList.appendChild(countBadge);
+          }
         }
       });
       fileCount.textContent = results.length;
@@ -1828,26 +1841,34 @@ async function openFileFromTree(path, replaceState=false) {
       });
 
       // Embedded markdown files: fetch and render inline
-      div.querySelectorAll('.embed-placeholder').forEach(async el => {
-        const embedPath = el.dataset.embedPath;
-        if (!embedPath) return;
-        let embedRaw = fileContents.get(embedPath);
-        if (!embedRaw) {
+      (async () => {
+        const embeds = [...div.querySelectorAll('.embed-placeholder')];
+        await Promise.all(embeds.map(async el => {
+          const embedPath = el.dataset.embedPath;
+          if (!embedPath) return;
           try {
-            const r = await fetch(rawUrl(embedPath));
-            if (r.ok) embedRaw = await r.text();
-          } catch { return; }
-        }
-        if (!embedRaw) return;
-        const cleaned = embedRaw.replace(/^---[\s\S]*?---\n?/, '');
-        const wrap = document.createElement('div');
-        wrap.className = 'embed-container';
-        const inner = document.createElement('div');
-        inner.className = 'md-content';
-        inner.innerHTML = marked.parse(cleaned, { breaks:true, gfm:true });
-        wrap.appendChild(inner);
-        el.replaceWith(wrap);
-      });
+            let embedRaw = fileContents.get(embedPath);
+            if (!embedRaw) {
+              const r = await fetch(rawUrl(embedPath));
+              if (!r.ok) throw new Error(`HTTP ${r.status}`);
+              embedRaw = await r.text();
+            }
+            const cleaned = embedRaw.replace(/^---[\s\S]*?---\n?/, '');
+            const wrap = document.createElement('div');
+            wrap.className = 'embed-container';
+            const inner = document.createElement('div');
+            inner.className = 'md-content';
+            inner.innerHTML = marked.parse(cleaned, { breaks:true, gfm:true });
+            wrap.appendChild(inner);
+            el.replaceWith(wrap);
+          } catch {
+            const fallback = document.createElement('span');
+            fallback.className = 'wikilink';
+            fallback.textContent = '⚠️ Failed to load: ' + embedPath;
+            el.replaceWith(fallback);
+          }
+        }));
+      })();
 
       if (window.MathJax) MathJax.typesetPromise([div]).catch(()=>{});
 
@@ -1856,7 +1877,6 @@ async function openFileFromTree(path, replaceState=false) {
 
       trackRecent(path);
       updateOutgoingLinks(path, div);
-      updateTagPane();
 
       // Auto-reveal active file in tree
       const activeBtn = fileList.querySelector(`.file-item.active`);
@@ -1955,13 +1975,17 @@ function updateBacklinks(path) {
     const raw = fileContents.get(src);
     if (raw) {
       const cleanRaw = raw.replace(/^---[\s\S]*?---\n?/, '');
-      const idx = cleanRaw.toLowerCase().indexOf(path.split('/').pop().replace(/\.md$/i,'').toLowerCase());
+      const fileName = path.split('/').pop().replace(/\.md$/i,'');
+      const wlPattern = `\\[\\[${escapeRegex(fileName)}`;
+      const wlRegex = new RegExp(wlPattern, 'i');
+      const match = wlRegex.exec(cleanRaw);
+      const idx = match ? match.index : cleanRaw.toLowerCase().indexOf(fileName.toLowerCase());
       if (idx >= 0) {
         const start = Math.max(0, idx - 60);
         const end = Math.min(cleanRaw.length, idx + 80);
         let snippet = cleanRaw.slice(start, end);
-        if (start > 0) snippet = '…' + snippet;
-        if (end < cleanRaw.length) snippet = snippet + '…';
+        if (start > 0) snippet = '...' + snippet;
+        if (end < cleanRaw.length) snippet = snippet + '...';
         const ctx = document.createElement('div');
         ctx.className = 'bl-context';
         ctx.textContent = snippet;
@@ -2081,7 +2105,25 @@ function preprocessObsidian(rawText) {
   text = text.replace(/(^|\s)#([a-zA-Z0-9_/-]+)/g, (_, pre, tag) =>
     `${pre}<span class="obsidian-tag">#${escapeHtml(tag)}</span>`);
 
-  // 6. Embeds  ![[file|optionalSize]]
+  // 6. Footnotes [^id] syntax — convert to HTML before marked
+  const fnDefs = [];
+  text = text.replace(/^\[\^([^\]]+)\]:\s*(.*?)(?:\n|$)/gm, (_, id, content) => {
+    fnDefs.push({ id, content: content.trim() });
+    return '';
+  });
+  text = text.replace(/\[\^([^\]]+)\]/g, (_, id) => {
+    const idx = fnDefs.findIndex(d => d.id === id);
+    const num = idx + 1;
+    return `<sup id="fnref-${escapeHtml(id)}"><a href="#fn-${escapeHtml(id)}" class="footnote-ref">[${num}]</a></sup>`;
+  });
+  if (fnDefs.length) {
+    const list = fnDefs.map((d, i) =>
+      `<li id="fn-${escapeHtml(d.id)}">${marked.parseInline(d.content)} <a href="#fnref-${escapeHtml(d.id)}" class="footnote-backref">↩</a></li>`
+    ).join('');
+    text += `\n\n<div class="footnotes"><hr><ol>${list}</ol></div>`;
+  }
+
+  // 7. Embeds  ![[file|optionalSize]]
   text = text.replace(/!\[\[(.*?)\]\]/g, (_, inner) => {
     let [fname, size] = inner.split('|');
     fname = fname.trim();
@@ -2100,7 +2142,7 @@ function preprocessObsidian(rawText) {
     return `<span style="color:var(--danger)">⚠️ Missing: ${escapeHtml(fname)}</span>`;
   });
 
-  // 7. Wikilinks  [[target|display]]  [[target#anchor]]
+  // 8. Wikilinks  [[target|display]]  [[target#anchor]]
   text = text.replace(/\[\[(.*?)\]\]/g, (_, inner) => {
     const [linkPart, display] = inner.split('|');
     const [fileTarget, anchor=''] = linkPart.split('#');
@@ -2108,7 +2150,7 @@ function preprocessObsidian(rawText) {
     return `<span class="wikilink" data-target="${escapeHtml(fileTarget.trim())}" data-anchor="${escapeHtml(anchor.trim())}">${escapeHtml(label)}</span>`;
   });
 
-  // 8. Callouts — support foldable +/- syntax and multi-line body
+  // 9. Callouts — support foldable +/- syntax and multi-line body
   text = text.replace(
     /^> \[!([A-Za-z]+)\]([+-]?)(.*?)(?:\n)((?:> ?.*(?:\n|$))*)/gm,
     (_, type, fold, titleRaw, body) => {
@@ -2127,7 +2169,7 @@ function preprocessObsidian(rawText) {
     }
   );
 
-  // 9. Restore protected code blocks
+  // 10. Restore protected code blocks
   text = text.replace(/\x00P(\d+)\x00/g, (_, i) => protected_[+i]);
 
   return { text, propertiesHtml };
