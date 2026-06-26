@@ -5,2276 +5,1480 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obsidian Explorer</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: only load Syne (UI) + active body/mono fonts; updated dynamically -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&family=Fira+Code:wght@400;500&family=Source+Code+Pro:wght@400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link id="googleFontsLink" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
 
-  <!-- Markdown & Highlighting Libraries -->
+  <!-- Markdown / Highlighting / Math / Search -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-  <!-- MathJax for LaTeX -->
-  <script>
-    window.MathJax = {
-      tex: { 
-        inlineMath: [['$', '$']], 
-        displayMath: [['$$', '$$']] 
-      },
-      startup: { typeset: false } 
-    };
-  </script>
+  <script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},startup:{typeset:false}};</script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <!-- Pro Libraries (Search) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
 
   <style>
-    /* ── CORE VARIABLES ────────────────────────────────────── */
+    /* ── VARIABLES ───────────────────────────────────────────── */
     :root {
-      --sidebar-w: 280px;
-      --right-w: 240px;
+      --sidebar-w: 280px; --right-w: 240px;
       --font-body: 'Literata', Georgia, serif;
       --font-mono: 'JetBrains Mono', monospace;
       --font-ui: 'Syne', sans-serif;
-      --trans: 180ms ease;
-      --top-h: 52px;
-      --radius: 8px;
-      --radius-lg: 12px;
+      --trans: 180ms ease; --top-h: 52px;
+      --radius: 8px; --radius-lg: 12px;
     }
 
-    /* ── POPULAR THEMES ────────────────────────────────────── */
-    [data-theme="catppuccin"] {
-      --bg: #1e1e2e; --bg2: #181825; --bg3: #313244; --bg4: #45475a;
-      --border: rgba(205, 214, 244, 0.08); --border2: rgba(205, 214, 244, 0.16);
-      --text: #cdd6f4; --text2: #a6adc8; --text3: #6c7086;
-      --accent: #cba6f7; --accent2: #d0bfff; --accent-bg: rgba(203, 166, 247, 0.12);
-      --danger: #f38ba8; --warn: #fab387; --success: #a6e3a1; --scrollbar: #45475a;
-    }
-    [data-theme="dracula"] {
-      --bg: #282a36; --bg2: #21222c; --bg3: #343746; --bg4: #44475a;
-      --border: rgba(248, 248, 242, 0.08); --border2: rgba(248, 248, 242, 0.15);
-      --text: #f8f8f2; --text2: #bfbfcf; --text3: #6272a4;
-      --accent: #bd93f9; --accent2: #d4aaff; --accent-bg: rgba(189, 147, 249, 0.12);
-      --danger: #ff5555; --warn: #ffb86c; --success: #50fa7b; --scrollbar: #44475a;
-    }
-    [data-theme="nord"] {
-      --bg: #2e3440; --bg2: #272c36; --bg3: #3b4252; --bg4: #434c5e;
-      --border: rgba(236, 239, 244, 0.08); --border2: rgba(236, 239, 244, 0.15);
-      --text: #eceff4; --text2: #d8dee9; --text3: #616e88;
-      --accent: #88c0d0; --accent2: #a3d0de; --accent-bg: rgba(136, 192, 208, 0.12);
-      --danger: #bf616a; --warn: #ebcb8b; --success: #a3be8c; --scrollbar: #434c5e;
-    }
-    [data-theme="rosepine"] {
-      --bg: #191724; --bg2: #1f1d2e; --bg3: #26233a; --bg4: #403d52;
-      --border: rgba(224, 222, 244, 0.08); --border2: rgba(224, 222, 244, 0.14);
-      --text: #e0def4; --text2: #908caa; --text3: #6e6a86;
-      --accent: #eb6f92; --accent2: #f19fc0; --accent-bg: rgba(235, 111, 146, 0.12);
-      --danger: #eb6f92; --warn: #f6c177; --success: #31748f; --scrollbar: #403d52;
-    }
-    [data-theme="github"] {
-      --bg: #ffffff; --bg2: #f6f8fa; --bg3: #eaeef2; --bg4: #d0d7de;
-      --border: rgba(31, 35, 40, 0.10); --border2: rgba(31, 35, 40, 0.18);
-      --text: #1f2328; --text2: #57606a; --text3: #8c959f;
-      --accent: #0969da; --accent2: #1a7fd4; --accent-bg: rgba(9, 105, 218, 0.08);
-      --danger: #d1242f; --warn: #9a6700; --success: #1a7f37; --scrollbar: #d0d7de;
-    }
-    [data-theme="solarized"] {
-      --bg: #002b36; --bg2: #073642; --bg3: #083f4d; --bg4: #0a4c5c;
-      --border: rgba(131, 148, 150, 0.12); --border2: rgba(131, 148, 150, 0.22);
-      --text: #93a1a1; --text2: #839496; --text3: #586e75;
-      --accent: #2aa198; --accent2: #38bdb4; --accent-bg: rgba(42, 161, 152, 0.13);
-      --danger: #dc322f; --warn: #b58900; --success: #859900; --scrollbar: #0a4c5c;
-    }
-    [data-theme="gruvbox"] {
-      --bg: #282828; --bg2: #3c3836; --bg3: #504945; --bg4: #665c54;
-      --border: rgba(235, 219, 178, 0.08); --border2: rgba(235, 219, 178, 0.16);
-      --text: #ebdbb2; --text2: #d5c4a1; --text3: #bdae93;
-      --accent: #fe8019; --accent2: #fabd2f; --accent-bg: rgba(254, 128, 25, 0.12);
-      --danger: #cc241d; --warn: #d79921; --success: #b8bb26; --scrollbar: #665c54;
-    }
-    [data-theme="everforest"] {
-      --bg: #2b3339; --bg2: #323c41; --bg3: #3a454a; --bg4: #445055;
-      --border: rgba(211, 198, 170, 0.08); --border2: rgba(211, 198, 170, 0.16);
-      --text: #d3c6aa; --text2: #a7c080; --text3: #859289;
-      --accent: #a7c080; --accent2: #83c092; --accent-bg: rgba(167, 192, 128, 0.12);
-      --danger: #e67e80; --warn: #dbbc7f; --success: #a7c080; --scrollbar: #445055;
-    }
-    [data-theme="monokai"] {
-      --bg: #272822; --bg2: #1e1f1c; --bg3: #3e3d32; --bg4: #49483e;
-      --border: rgba(248, 248, 242, 0.08); --border2: rgba(248, 248, 242, 0.16);
-      --text: #f8f8f2; --text2: #ccccc6; --text3: #75715e;
-      --accent: #fd971f; --accent2: #a6e22e; --accent-bg: rgba(253, 151, 31, 0.12);
-      --danger: #f92672; --warn: #e6db74; --success: #a6e22e; --scrollbar: #49483e;
-    }
-    [data-theme="tokyonight"] {
-      --bg: #1a1b26; --bg2: #16161e; --bg3: #292e42; --bg4: #414868;
-      --border: rgba(192, 202, 245, 0.08); --border2: rgba(192, 202, 245, 0.16);
-      --text: #c0caf5; --text2: #a9b1d6; --text3: #565f89;
-      --accent: #7aa2f7; --accent2: #bb9af7; --accent-bg: rgba(122, 162, 247, 0.12);
-      --danger: #f7768e; --warn: #e0af68; --success: #9ece6a; --scrollbar: #414868;
-    }
-    [data-theme="onedark"] {
-      --bg: #282c34; --bg2: #21252b; --bg3: #2c313a; --bg4: #3e4451;
-      --border: rgba(171, 178, 191, 0.08); --border2: rgba(171, 178, 191, 0.16);
-      --text: #abb2bf; --text2: #5c6370; --text3: #4b5263;
-      --accent: #61afef; --accent2: #c678dd; --accent-bg: rgba(97, 175, 239, 0.12);
-      --danger: #e06c75; --warn: #e5c07b; --success: #98c379; --scrollbar: #3e4451;
-    }
-    [data-theme="ayu"] {
-      --bg: #0f1419; --bg2: #0a0e14; --bg3: #151a1e; --bg4: #1b2127;
-      --border: rgba(230, 225, 207, 0.08); --border2: rgba(230, 225, 207, 0.16);
-      --text: #e6e1cf; --text2: #3e4b59; --text3: #5c6773;
-      --accent: #ffb454; --accent2: #f29668; --accent-bg: rgba(255, 180, 84, 0.12);
-      --danger: #ff3333; --warn: #ffb454; --success: #91b362; --scrollbar: #1b2127;
-    }
-    [data-theme="material"] {
-      --bg: #263238; --bg2: #1f292e; --bg3: #37474f; --bg4: #455a64;
-      --border: rgba(238, 255, 255, 0.08); --border2: rgba(238, 255, 255, 0.16);
-      --text: #eeffff; --text2: #b0bec5; --text3: #546e7a;
-      --accent: #80cbc4; --accent2: #00bcd4; --accent-bg: rgba(128, 203, 196, 0.12);
-      --danger: #ff5252; --warn: #ffd740; --success: #69f0ae; --scrollbar: #455a64;
-    }
-    [data-theme="synthwave"] {
-      --bg: #2b213a; --bg2: #241b30; --bg3: #34294f; --bg4: #463866;
-      --border: rgba(249, 42, 173, 0.08); --border2: rgba(249, 42, 173, 0.16);
-      --text: #f92aad; --text2: #ff7edb; --text3: #8a7f9d;
-      --accent: #36f9f6; --accent2: #72f1b8; --accent-bg: rgba(54, 249, 246, 0.12);
-      --danger: #fe4450; --warn: #f97e72; --success: #72f1b8; --scrollbar: #463866;
-    }
-    [data-theme="cyberpunk"] {
-      --bg: #0f0f15; --bg2: #0a0a0f; --bg3: #1f1f2e; --bg4: #2a2a3e;
-      --border: rgba(0, 255, 159, 0.08); --border2: rgba(0, 255, 159, 0.16);
-      --text: #00ff9f; --text2: #00cccc; --text3: #008080;
-      --accent: #fdf500; --accent2: #ff003c; --accent-bg: rgba(253, 245, 0, 0.12);
-      --danger: #ff003c; --warn: #ff8a00; --success: #00ff9f; --scrollbar: #2a2a3e;
-    }
-    [data-theme="obsidian-light"] {
-      --bg: #ffffff; --bg2: #f7f7f7; --bg3: #e3e3e3; --bg4: #d0d0d0;
-      --border: rgba(0, 0, 0, 0.1); --border2: rgba(0, 0, 0, 0.15);
-      --text: #2e3338; --text2: #5c6370; --text3: #999999;
-      --accent: #7a5cfa; --accent2: #5c3be8; --accent-bg: rgba(122, 92, 250, 0.12);
-      --danger: #e65050; --warn: #e5a020; --success: #00b368; --scrollbar: #d0d0d0;
-    }
-    [data-theme="sepia"] {
-      --bg: #f4ecd8; --bg2: #e8dcc4; --bg3: #dfd0b2; --bg4: #d2c2a3;
-      --border: rgba(67, 52, 34, 0.1); --border2: rgba(67, 52, 34, 0.15);
-      --text: #433422; --text2: #5e4d3a; --text3: #8b7861;
-      --accent: #d16e3c; --accent2: #a65126; --accent-bg: rgba(209, 110, 60, 0.12);
-      --danger: #b53d3d; --warn: #c98e26; --success: #5b8232; --scrollbar: #d2c2a3;
-    }
-    [data-theme="oled"] {
-      --bg: #000000; --bg2: #050505; --bg3: #141414; --bg4: #1f1f1f;
-      --border: rgba(255, 255, 255, 0.1); --border2: rgba(255, 255, 255, 0.16);
-      --text: #e0e0e0; --text2: #a0a0a0; --text3: #666666;
-      --accent: #ffffff; --accent2: #cccccc; --accent-bg: rgba(255, 255, 255, 0.12);
-      --danger: #ff4444; --warn: #ffaa00; --success: #44ff44; --scrollbar: #1f1f1f;
+    /* ── THEMES ──────────────────────────────────────────────── */
+    [data-theme="catppuccin"]{--bg:#1e1e2e;--bg2:#181825;--bg3:#313244;--bg4:#45475a;--border:rgba(205,214,244,.08);--border2:rgba(205,214,244,.16);--text:#cdd6f4;--text2:#a6adc8;--text3:#6c7086;--accent:#cba6f7;--accent2:#d0bfff;--accent-bg:rgba(203,166,247,.12);--danger:#f38ba8;--warn:#fab387;--success:#a6e3a1;--scrollbar:#45475a}
+    [data-theme="dracula"]{--bg:#282a36;--bg2:#21222c;--bg3:#343746;--bg4:#44475a;--border:rgba(248,248,242,.08);--border2:rgba(248,248,242,.15);--text:#f8f8f2;--text2:#bfbfcf;--text3:#6272a4;--accent:#bd93f9;--accent2:#d4aaff;--accent-bg:rgba(189,147,249,.12);--danger:#ff5555;--warn:#ffb86c;--success:#50fa7b;--scrollbar:#44475a}
+    [data-theme="nord"]{--bg:#2e3440;--bg2:#272c36;--bg3:#3b4252;--bg4:#434c5e;--border:rgba(236,239,244,.08);--border2:rgba(236,239,244,.15);--text:#eceff4;--text2:#d8dee9;--text3:#616e88;--accent:#88c0d0;--accent2:#a3d0de;--accent-bg:rgba(136,192,208,.12);--danger:#bf616a;--warn:#ebcb8b;--success:#a3be8c;--scrollbar:#434c5e}
+    [data-theme="rosepine"]{--bg:#191724;--bg2:#1f1d2e;--bg3:#26233a;--bg4:#403d52;--border:rgba(224,222,244,.08);--border2:rgba(224,222,244,.14);--text:#e0def4;--text2:#908caa;--text3:#6e6a86;--accent:#eb6f92;--accent2:#f19fc0;--accent-bg:rgba(235,111,146,.12);--danger:#eb6f92;--warn:#f6c177;--success:#31748f;--scrollbar:#403d52}
+    [data-theme="github"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--bg4:#d0d7de;--border:rgba(31,35,40,.10);--border2:rgba(31,35,40,.18);--text:#1f2328;--text2:#57606a;--text3:#8c959f;--accent:#0969da;--accent2:#1a7fd4;--accent-bg:rgba(9,105,218,.08);--danger:#d1242f;--warn:#9a6700;--success:#1a7f37;--scrollbar:#d0d7de}
+    [data-theme="solarized"]{--bg:#002b36;--bg2:#073642;--bg3:#083f4d;--bg4:#0a4c5c;--border:rgba(131,148,150,.12);--border2:rgba(131,148,150,.22);--text:#93a1a1;--text2:#839496;--text3:#586e75;--accent:#2aa198;--accent2:#38bdb4;--accent-bg:rgba(42,161,152,.13);--danger:#dc322f;--warn:#b58900;--success:#859900;--scrollbar:#0a4c5c}
+    [data-theme="gruvbox"]{--bg:#282828;--bg2:#3c3836;--bg3:#504945;--bg4:#665c54;--border:rgba(235,219,178,.08);--border2:rgba(235,219,178,.16);--text:#ebdbb2;--text2:#d5c4a1;--text3:#bdae93;--accent:#fe8019;--accent2:#fabd2f;--accent-bg:rgba(254,128,25,.12);--danger:#cc241d;--warn:#d79921;--success:#b8bb26;--scrollbar:#665c54}
+    [data-theme="everforest"]{--bg:#2b3339;--bg2:#323c41;--bg3:#3a454a;--bg4:#445055;--border:rgba(211,198,170,.08);--border2:rgba(211,198,170,.16);--text:#d3c6aa;--text2:#a7c080;--text3:#859289;--accent:#a7c080;--accent2:#83c092;--accent-bg:rgba(167,192,128,.12);--danger:#e67e80;--warn:#dbbc7f;--success:#a7c080;--scrollbar:#445055}
+    [data-theme="monokai"]{--bg:#272822;--bg2:#1e1f1c;--bg3:#3e3d32;--bg4:#49483e;--border:rgba(248,248,242,.08);--border2:rgba(248,248,242,.16);--text:#f8f8f2;--text2:#ccccc6;--text3:#75715e;--accent:#fd971f;--accent2:#a6e22e;--accent-bg:rgba(253,151,31,.12);--danger:#f92672;--warn:#e6db74;--success:#a6e22e;--scrollbar:#49483e}
+    [data-theme="tokyonight"]{--bg:#1a1b26;--bg2:#16161e;--bg3:#292e42;--bg4:#414868;--border:rgba(192,202,245,.08);--border2:rgba(192,202,245,.16);--text:#c0caf5;--text2:#a9b1d6;--text3:#565f89;--accent:#7aa2f7;--accent2:#bb9af7;--accent-bg:rgba(122,162,247,.12);--danger:#f7768e;--warn:#e0af68;--success:#9ece6a;--scrollbar:#414868}
+    [data-theme="onedark"]{--bg:#282c34;--bg2:#21252b;--bg3:#2c313a;--bg4:#3e4451;--border:rgba(171,178,191,.08);--border2:rgba(171,178,191,.16);--text:#abb2bf;--text2:#5c6370;--text3:#4b5263;--accent:#61afef;--accent2:#c678dd;--accent-bg:rgba(97,175,239,.12);--danger:#e06c75;--warn:#e5c07b;--success:#98c379;--scrollbar:#3e4451}
+    [data-theme="ayu"]{--bg:#0f1419;--bg2:#0a0e14;--bg3:#151a1e;--bg4:#1b2127;--border:rgba(230,225,207,.08);--border2:rgba(230,225,207,.16);--text:#e6e1cf;--text2:#3e4b59;--text3:#5c6773;--accent:#ffb454;--accent2:#f29668;--accent-bg:rgba(255,180,84,.12);--danger:#ff3333;--warn:#ffb454;--success:#91b362;--scrollbar:#1b2127}
+    [data-theme="material"]{--bg:#263238;--bg2:#1f292e;--bg3:#37474f;--bg4:#455a64;--border:rgba(238,255,255,.08);--border2:rgba(238,255,255,.16);--text:#eeffff;--text2:#b0bec5;--text3:#546e7a;--accent:#80cbc4;--accent2:#00bcd4;--accent-bg:rgba(128,203,196,.12);--danger:#ff5252;--warn:#ffd740;--success:#69f0ae;--scrollbar:#455a64}
+    [data-theme="synthwave"]{--bg:#2b213a;--bg2:#241b30;--bg3:#34294f;--bg4:#463866;--border:rgba(249,42,173,.08);--border2:rgba(249,42,173,.16);--text:#f92aad;--text2:#ff7edb;--text3:#8a7f9d;--accent:#36f9f6;--accent2:#72f1b8;--accent-bg:rgba(54,249,246,.12);--danger:#fe4450;--warn:#f97e72;--success:#72f1b8;--scrollbar:#463866}
+    [data-theme="cyberpunk"]{--bg:#0f0f15;--bg2:#0a0a0f;--bg3:#1f1f2e;--bg4:#2a2a3e;--border:rgba(0,255,159,.08);--border2:rgba(0,255,159,.16);--text:#00ff9f;--text2:#00cccc;--text3:#008080;--accent:#fdf500;--accent2:#ff003c;--accent-bg:rgba(253,245,0,.12);--danger:#ff003c;--warn:#ff8a00;--success:#00ff9f;--scrollbar:#2a2a3e}
+    [data-theme="obsidian-light"]{--bg:#fff;--bg2:#f7f7f7;--bg3:#e3e3e3;--bg4:#d0d0d0;--border:rgba(0,0,0,.10);--border2:rgba(0,0,0,.15);--text:#2e3338;--text2:#5c6370;--text3:#999;--accent:#7a5cfa;--accent2:#5c3be8;--accent-bg:rgba(122,92,250,.12);--danger:#e65050;--warn:#e5a020;--success:#00b368;--scrollbar:#d0d0d0}
+    [data-theme="sepia"]{--bg:#f4ecd8;--bg2:#e8dcc4;--bg3:#dfd0b2;--bg4:#d2c2a3;--border:rgba(67,52,34,.10);--border2:rgba(67,52,34,.15);--text:#433422;--text2:#5e4d3a;--text3:#8b7861;--accent:#d16e3c;--accent2:#a65126;--accent-bg:rgba(209,110,60,.12);--danger:#b53d3d;--warn:#c98e26;--success:#5b8232;--scrollbar:#d2c2a3}
+    [data-theme="oled"]{--bg:#000;--bg2:#050505;--bg3:#141414;--bg4:#1f1f1f;--border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.16);--text:#e0e0e0;--text2:#a0a0a0;--text3:#666;--accent:#fff;--accent2:#ccc;--accent-bg:rgba(255,255,255,.12);--danger:#ff4444;--warn:#fa0;--success:#44ff44;--scrollbar:#1f1f1f}
+
+    /* ── BASE ────────────────────────────────────────────────── */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-ui);background:var(--bg);color:var(--text);display:flex;flex-direction:column}
+    ::-webkit-scrollbar{width:8px;height:8px}
+    ::-webkit-scrollbar-track{background:transparent}
+    ::-webkit-scrollbar-thumb{background:var(--scrollbar);border-radius:99px;border:2px solid transparent;background-clip:content-box}
+    ::-webkit-scrollbar-thumb:hover{background-color:var(--text3)}
+
+    /* ── READING PROGRESS ────────────────────────────────────── */
+    #readingProgress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;border-radius:0 2px 2px 0;pointer-events:none;transition:width 80ms linear}
+
+    /* ── TOPBAR ──────────────────────────────────────────────── */
+    .topbar{height:var(--top-h);background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;padding:0 14px;flex-shrink:0;z-index:100}
+    .topbar-logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--text);white-space:nowrap;user-select:none}
+    .logo-gem{width:26px;height:26px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .logo-gem svg{width:14px;height:14px;color:#fff}
+    .topbar-sep{width:1px;height:22px;background:var(--border2);flex-shrink:0}
+    .breadcrumb{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--text3);flex:1;min-width:0;overflow:hidden}
+    .breadcrumb .sep{color:var(--text3);font-size:11px;flex-shrink:0}
+    .breadcrumb .bc-part{display:inline-block;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle}
+    .topbar-actions{display:flex;align-items:center;gap:5px;flex-shrink:0}
+
+    /* ── BUTTONS ─────────────────────────────────────────────── */
+    .icon-btn{height:32px;padding:0 10px;min-width:32px;border:1px solid var(--border2);border-radius:var(--radius);background:var(--bg3);color:var(--text2);display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-family:var(--font-ui);font-size:12px;transition:background var(--trans),color var(--trans),border-color var(--trans);flex-shrink:0;white-space:nowrap;outline:none}
+    .icon-btn:focus-visible{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--accent)}
+    .icon-btn:hover,.icon-btn.active{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+    .icon-btn svg{width:14px;height:14px;flex-shrink:0}
+
+    /* ── INDEXING STATUS ─────────────────────────────────────── */
+    #indexingStatus{display:none;align-items:center;gap:5px;font-size:11px;color:var(--accent);white-space:nowrap}
+    #indexingStatus.visible{display:flex}
+
+    /* ── SETTINGS OVERLAY ────────────────────────────────────── */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(3px)}
+    .overlay.open{display:flex}
+    .panel{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;box-shadow:0 24px 80px rgba(0,0,0,.5);padding:20px;transform:scale(.96);opacity:0;transition:all .18s cubic-bezier(.4,0,.2,1)}
+    .overlay.open .panel{transform:scale(1);opacity:1}
+    .settings-panel{width:460px;max-width:92vw;max-height:88vh;overflow-y:auto}
+    .help-panel{width:360px;max-width:92vw}
+
+    /* Settings sections */
+    .s-section{padding:14px 0}
+    .s-section+.s-section{border-top:1px solid var(--border);margin-top:2px}
+    .s-label{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+    .s-row{display:flex;gap:8px;margin-bottom:8px;align-items:center}
+    .s-input{flex:1;padding:8px 12px;border-radius:8px;border:1px solid var(--border2);background:var(--bg3);color:var(--text);font-family:var(--font-ui);font-size:13px;outline:none;transition:all .15s;min-width:0}
+    .s-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+    .s-input-narrow{max-width:90px}
+    .s-btn{padding:8px 14px;border-radius:8px;border:none;background:var(--accent);color:var(--bg);font-family:var(--font-ui);font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:opacity .15s}
+    .s-btn:hover{opacity:.85}
+    .s-note{font-size:11px;color:var(--text3);line-height:1.5;margin-top:6px}
+
+    /* Theme cards */
+    .theme-slider{display:flex;overflow-x:auto;gap:8px;padding-bottom:10px;scroll-snap-type:x mandatory}
+    .theme-slider::-webkit-scrollbar{height:5px}
+    .theme-card{flex:0 0 100px;scroll-snap-align:start;border:1px solid var(--border2);border-radius:10px;padding:10px;cursor:pointer;transition:all .15s;background:var(--bg2);display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+    .theme-card:hover{background:var(--bg3);border-color:var(--text3)}
+    .theme-card.active{background:var(--accent-bg);border-color:var(--accent)}
+    .theme-card.active::after{content:'✓';position:absolute;top:8px;right:8px;width:16px;height:16px;background:var(--accent);color:var(--bg);border-radius:50%;text-align:center;line-height:16px;font-size:10px;font-weight:800}
+    .theme-swatches{display:flex}
+    .swatch{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--bg2);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+    .swatch+.swatch{margin-left:-5px}
+    .theme-name{font-size:11.5px;font-weight:600;color:var(--text2)}
+    .theme-card.active .theme-name{color:var(--accent)}
+
+    /* Font options */
+    .font-opts{display:flex;flex-direction:column;gap:5px}
+    .font-opt{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:9px;cursor:pointer;border:1px solid transparent;transition:all .15s;background:var(--bg3)}
+    .font-opt:hover{background:var(--bg4)}
+    .font-opt.active{background:var(--accent-bg);border-color:var(--accent)}
+    .font-opt-name{font-size:13px;color:var(--text)}
+    .font-opt.active .font-opt-name{color:var(--accent);font-weight:600}
+    .font-opt-preview{font-size:12px;color:var(--text3)}
+
+    /* Help modal */
+    .shortcut-list{display:flex;flex-direction:column;gap:7px}
+    .shortcut-row{display:flex;align-items:center;justify-content:space-between;font-size:12.5px}
+    .shortcut-desc{color:var(--text2)}
+    .shortcut-keys{display:flex;gap:4px}
+    .kbd{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:2px 7px;border-radius:5px;font-family:var(--font-mono);font-size:11px;box-shadow:0 1px 0 var(--border2)}
+
+    /* ── LAYOUT ──────────────────────────────────────────────── */
+    .workspace{flex:1;display:flex;overflow:hidden;position:relative}
+
+    /* Mobile backdrop */
+    .sidebar-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:140}
+    @media(max-width:640px){.sidebar-backdrop.visible{display:block}}
+
+    /* ── LEFT SIDEBAR ────────────────────────────────────────── */
+    .sidebar{width:var(--sidebar-w);flex-shrink:0;display:flex;flex-direction:column;background:var(--bg2);border-right:1px solid var(--border);transition:width 250ms cubic-bezier(.4,0,.2,1),opacity 250ms ease;overflow:hidden}
+    .sidebar.collapsed{width:0;opacity:0;border-right-color:transparent}
+    .sidebar-header{height:44px;display:flex;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid var(--border);flex-shrink:0}
+    .sidebar-header-title{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3);flex:1;white-space:nowrap}
+
+    /* Search */
+    .search-wrap{padding:8px 10px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;gap:7px}
+    .search-rel{position:relative}
+    .search-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);width:13px;height:13px;color:var(--text3);pointer-events:none}
+    .search-input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 10px 6px 28px;font-family:var(--font-ui);font-size:12.5px;color:var(--text);outline:none;transition:border-color var(--trans),background var(--trans),box-shadow var(--trans)}
+    .search-input::placeholder{color:var(--text3)}
+    .search-input:focus{border-color:var(--accent);background:var(--bg4);box-shadow:0 0 0 3px var(--accent-bg)}
+    .search-opts{display:flex;gap:10px;font-size:11px;color:var(--text3);align-items:center}
+    .search-opts label{display:flex;align-items:center;gap:3px;cursor:pointer}
+    .search-opts input[type="radio"]{accent-color:var(--accent);cursor:pointer}
+    .search-opts.disabled{opacity:.38;pointer-events:none}
+    .idx-hint{font-size:10.5px;color:var(--accent);display:none;align-items:center;gap:4px}
+    .idx-hint.visible{display:flex}
+
+    /* File tree */
+    .file-list{flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 0}
+    .sidebar-folder{margin:1px 0}
+    .folder-summary{display:flex;align-items:center;gap:6px;padding:6px 8px;cursor:pointer;font-size:13px;color:var(--text2);user-select:none;border-radius:6px;transition:background var(--trans);list-style:none;outline:none}
+    .folder-summary:hover{background:var(--bg3);color:var(--text)}
+    .folder-summary:focus-visible{box-shadow:0 0 0 2px var(--accent) inset}
+    details.sidebar-folder>summary::marker,details.sidebar-folder>summary::-webkit-details-marker{display:none}
+    .folder-chevron{width:13px;height:13px;color:var(--text3);transition:transform .18s;flex-shrink:0}
+    details[open]>.folder-summary>.folder-chevron{transform:rotate(90deg)}
+    .folder-icon{width:15px;height:15px;color:var(--accent);flex-shrink:0}
+    .folder-contents{margin-left:12px;padding-left:6px;border-left:1px solid var(--border);display:flex;flex-direction:column}
+    .file-item{display:flex;align-items:center;gap:7px;padding:6px 12px;cursor:pointer;transition:background var(--trans);font-size:13px;color:var(--text2);border:none;background:none;width:100%;text-align:left;min-width:0;position:relative;animation:fadeUp 120ms ease both}
+    .file-item:hover{background:var(--bg3);color:var(--text)}
+    .file-item.active{background:var(--accent-bg);color:var(--accent2)}
+    .file-item.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent);border-radius:0 2px 2px 0}
+    .file-item-icon{flex-shrink:0;width:15px;height:15px}
+    .file-item-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .file-item-ext{font-family:var(--font-mono);font-size:10px;color:var(--text3);background:var(--bg4);padding:1px 5px;border-radius:3px;flex-shrink:0}
+    .ext-md{color:var(--accent2)!important;background:var(--accent-bg)!important}
+
+    /* Resize handle */
+    .resize-handle{width:4px;background:transparent;cursor:col-resize;flex-shrink:0;z-index:10;transition:background var(--trans)}
+    .resize-handle:hover,.resize-handle.dragging{background:var(--accent)}
+
+    /* ── COUNT BADGE ─────────────────────────────────────────── */
+    .count-badge{font-family:var(--font-mono);font-size:10px;background:var(--bg3);color:var(--text3);padding:1px 6px;border-radius:99px;border:1px solid var(--border)}
+
+    /* ── CENTER PANEL ────────────────────────────────────────── */
+    .content-panel{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+    .viewer-header{height:44px;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid var(--border);background:var(--bg2);flex-shrink:0}
+    .viewer-filename{font-size:13.5px;font-weight:500;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .viewer-filename.placeholder{color:var(--text3);font-weight:400;font-style:italic}
+    .viewer-badge{font-family:var(--font-mono);font-size:10px;padding:2px 7px;border-radius:4px;background:var(--bg3);color:var(--text3);border:1px solid var(--border);flex-shrink:0}
+    .viewer-meta{font-size:11px;color:var(--text3);flex-shrink:0;display:none;white-space:nowrap}
+    .file-viewer{flex:1;overflow-y:auto;background:var(--bg);position:relative}
+
+    /* Image preview */
+    .image-preview{display:flex;align-items:center;justify-content:center;padding:40px;min-height:100%}
+    .image-preview img{max-width:100%;max-height:80vh;border-radius:var(--radius-lg);box-shadow:0 8px 32px rgba(0,0,0,.2);cursor:zoom-in}
+
+    /* Lightbox */
+    .lightbox{display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.9);align-items:center;justify-content:center;cursor:zoom-out}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:95vw;max-height:95vh;border-radius:8px}
+
+    /* ── RIGHT SIDEBAR ───────────────────────────────────────── */
+    .right-sidebar{width:var(--right-w);flex-shrink:0;display:flex;flex-direction:column;background:var(--bg2);border-left:1px solid var(--border);overflow-y:auto;padding:14px;transition:width 250ms cubic-bezier(.4,0,.2,1),opacity 250ms ease,padding 250ms ease}
+    .right-sidebar.collapsed{width:0;opacity:0;padding:14px 0;border-left-color:transparent}
+    .rs-title{font-size:10px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;margin-top:20px}
+    .rs-title:first-child{margin-top:0}
+    .obsidian-properties{display:flex;flex-direction:column;gap:10px;font-family:var(--font-ui);font-size:12.5px}
+    .property-row{display:flex;flex-direction:column;gap:3px}
+    .property-key{color:var(--text3);font-weight:600;text-transform:capitalize;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .property-value{display:flex;flex-wrap:wrap;gap:4px}
+    .property-pill{background:var(--bg3);padding:2px 8px;border-radius:99px;border:1px solid var(--border2);color:var(--accent2)}
+    .toc-link{display:block;font-size:12.5px;color:var(--text2);text-decoration:none;margin-bottom:2px;padding:3px 8px;margin-left:-8px;border-radius:5px;cursor:pointer;transition:all .15s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .toc-link:hover{color:var(--accent);background:var(--bg3)}
+    .toc-link.active{color:var(--accent);background:var(--accent-bg)}
+    .toc-h1{font-weight:600}
+    .toc-h2{padding-left:12px}
+    .toc-h3{padding-left:24px;font-size:11.5px}
+    .backlink-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text2);padding:6px 8px;border-radius:6px;cursor:pointer;transition:background .15s;background:none;border:none;width:100%;text-align:left}
+    .backlink-item:hover{background:var(--bg3);color:var(--text)}
+    .bl-icon{color:var(--accent);width:13px;height:13px;flex-shrink:0}
+
+    /* ── MARKDOWN STYLES ─────────────────────────────────────── */
+    .md-content{font-family:var(--font-body);font-size:15.5px;line-height:1.78;color:var(--text);max-width:720px;margin:0 auto;padding:36px 40px 72px}
+    .md-content h1{font-family:var(--font-ui);font-size:28px;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:12px;margin:0 0 24px}
+    .md-content h2{font-family:var(--font-ui);font-size:21px;font-weight:600;color:var(--text);margin:40px 0 14px}
+    .md-content h3{font-family:var(--font-ui);font-size:17px;font-weight:600;color:var(--accent2);margin:28px 0 10px}
+    /* h4/h5 use neutral text2, not warn/success colours */
+    .md-content h4{font-family:var(--font-ui);font-size:15px;font-weight:600;color:var(--text2);margin:24px 0 10px}
+    .md-content h5{font-family:var(--font-ui);font-size:14px;font-weight:600;color:var(--text2);margin:20px 0 8px}
+    .md-content h6{font-family:var(--font-ui);font-size:13px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin:20px 0 8px}
+    .md-content p{margin:0 0 16px}
+    .md-content a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-bg);transition:border-color var(--trans)}
+    .md-content a:hover{border-bottom-color:var(--accent)}
+    .md-content ul,.md-content ol{margin:0 0 16px 24px}
+    .md-content li{margin-bottom:6px}
+    .md-content li::marker{color:var(--text3);font-weight:bold}
+    .md-content blockquote{border-left:3px solid var(--accent);background:var(--accent-bg);margin:0 0 16px;padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;font-style:italic}
+    .md-content pre{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px;margin:0 0 20px;overflow-x:auto;position:relative}
+    .md-content pre code{font-family:var(--font-mono);font-size:13px;color:var(--text);background:none;padding:0;border:none}
+    .md-content code{font-family:var(--font-mono);font-size:13px;background:var(--bg3);border:1px solid var(--border);color:var(--accent2);padding:2px 6px;border-radius:4px}
+    .md-content img{max-width:100%;border-radius:var(--radius-lg);margin:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:zoom-in}
+    .md-content hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+    .md-content table{display:block;overflow-x:auto;white-space:nowrap;width:100%;border-collapse:collapse;margin:0 0 20px;font-size:14px}
+    .md-content th{background:var(--bg2);text-align:left;padding:8px 12px;border:1px solid var(--border);font-weight:600;font-family:var(--font-ui);font-size:13px}
+    .md-content td{padding:8px 12px;border:1px solid var(--border)}
+    .md-content tr:nth-child(even) td{background:var(--bg2)}
+    .md-content input[type="checkbox"]{appearance:none;width:15px;height:15px;border:2px solid var(--text3);border-radius:4px;margin-right:7px;vertical-align:middle;position:relative;background:var(--bg2);cursor:not-allowed;transform:translateY(-1px);flex-shrink:0}
+    .md-content input[type="checkbox"]:checked{background:var(--accent);border-color:var(--accent)}
+    .md-content input[type="checkbox"]:checked::after{content:'';position:absolute;left:3px;top:1px;width:5px;height:8px;border:solid var(--bg);border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+    /* Copy code button */
+    .copy-btn{position:absolute;top:8px;right:8px;padding:3px 10px;border-radius:5px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);font-family:var(--font-ui);font-size:11px;cursor:pointer;opacity:0;transition:opacity .15s,background .15s,color .15s}
+    .md-content pre:hover .copy-btn{opacity:1}
+    .copy-btn:hover{background:var(--accent-bg);color:var(--accent);border-color:var(--accent)}
+
+    /* Obsidian elements */
+    .wikilink{color:var(--accent);cursor:pointer;font-weight:500;background:var(--accent-bg);padding:0 4px;border-radius:4px;transition:filter var(--trans)}
+    .wikilink:hover{filter:brightness(1.4);text-decoration:underline}
+    .obsidian-tag{background:var(--bg3);color:var(--accent);padding:2px 8px;border-radius:99px;font-size:12.5px;font-weight:600;font-family:var(--font-ui);cursor:pointer}
+    .obsidian-tag:hover{background:var(--accent-bg)}
+    .obsidian-highlight{background:rgba(255,198,110,.28);color:var(--text);padding:1px 5px;border-radius:4px;font-weight:500}
+
+    /* Callouts */
+    .callout{border-left:4px solid var(--accent);background:var(--bg2);border-radius:4px;padding:12px 16px;margin:16px 0;font-family:var(--font-ui)}
+    .callout-title{font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:7px;color:var(--accent)}
+    .callout-title svg{width:15px;height:15px;flex-shrink:0}
+    .callout-content{font-family:var(--font-body)}
+    .callout-content p:last-child{margin-bottom:0}
+    details.callout-foldable>summary{list-style:none;cursor:pointer}
+    details.callout-foldable>summary::marker,details.callout-foldable>summary::-webkit-details-marker{display:none}
+    .fold-chevron{width:13px;height:13px;margin-left:auto;transition:transform .18s}
+    details.callout-foldable[open] .fold-chevron{transform:rotate(90deg)}
+    .callout-warning,.callout-caution{border-left-color:var(--warn)}
+    .callout-warning .callout-title,.callout-caution .callout-title{color:var(--warn)}
+    .callout-danger,.callout-error,.callout-bug{border-left-color:var(--danger)}
+    .callout-danger .callout-title,.callout-error .callout-title,.callout-bug .callout-title{color:var(--danger)}
+    .callout-success,.callout-check,.callout-done{border-left-color:var(--success)}
+    .callout-success .callout-title,.callout-check .callout-title,.callout-done .callout-title{color:var(--success)}
+    .callout-question,.callout-faq,.callout-help,.callout-example{border-left-color:var(--accent2)}
+    .callout-question .callout-title,.callout-faq .callout-title,.callout-help .callout-title,.callout-example .callout-title{color:var(--accent2)}
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media(max-width:960px){.right-sidebar{display:none}#rightSidebarBtn{display:none}}
+    @media(max-width:640px){
+      .sidebar{position:absolute;height:100%;z-index:150;box-shadow:4px 0 24px rgba(0,0,0,.3)}
+      .breadcrumb{display:none}
+      .md-content{padding:24px 18px 60px;font-size:15px}
     }
 
-    /* ── BASE ELEMENTS ─────────────────────────────────────── */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html, body {
-      height: 100%;
-      overflow: hidden;
-    }
-    body {
-      font-family: var(--font-ui);
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-    }
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--scrollbar);
-      border-radius: 99px;
-      border: 2px solid transparent;
-      background-clip: content-box;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: var(--text3);
-    }
-
-    /* ── TOPBAR ────────────────────────────────────────────── */
-    .topbar {
-      height: var(--top-h);
-      background: var(--bg2);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 0 16px;
-      flex-shrink: 0;
-      z-index: 100;
-    }
-    .topbar-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 15px;
-      color: var(--text);
-      white-space: nowrap;
-      user-select: none;
-    }
-    .logo-gem {
-      width: 26px;
-      height: 26px;
-      background: var(--accent);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .logo-gem svg {
-      width: 14px;
-      height: 14px;
-      color: white;
-    }
-    .topbar-sep {
-      width: 1px;
-      height: 22px;
-      background: var(--border2);
-      flex-shrink: 0;
-    }
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 13px;
-      color: var(--text3);
-      flex: 1;
-      min-width: 0;
-      overflow: hidden;
-    }
-    .breadcrumb a {
-      color: var(--text2);
-      text-decoration: none;
-      cursor: pointer;
-      transition: color var(--trans);
-      display: inline-block;
-      max-width: 150px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      vertical-align: middle;
-    }
-    .breadcrumb a:hover {
-      color: var(--accent);
-    }
-    .breadcrumb .sep {
-      color: var(--text3);
-      font-size: 11px;
-      flex-shrink: 0;
-    }
-    .breadcrumb .cur {
-      color: var(--text);
-      display: inline-block;
-      max-width: 200px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      vertical-align: middle;
-    }
-    .topbar-actions {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-
-    /* ── BUTTONS ───────────────────────────────────────────── */
-    .icon-btn {
-      height: 32px;
-      padding: 0 10px;
-      min-width: 32px;
-      border: 1px solid var(--border2);
-      border-radius: var(--radius);
-      background: var(--bg3);
-      color: var(--text2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      cursor: pointer;
-      font-family: var(--font-ui);
-      font-size: 12px;
-      transition: background var(--trans), color var(--trans), border-color var(--trans), box-shadow var(--trans);
-      flex-shrink: 0;
-      white-space: nowrap;
-      outline: none;
-    }
-    .icon-btn:focus-visible {
-      box-shadow: 0 0 0 2px var(--accent-bg), 0 0 0 3px var(--accent);
-    }
-    .icon-btn:hover, .icon-btn.active {
-      background: var(--accent-bg);
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-    .icon-btn svg {
-      width: 14px;
-      height: 14px;
-      flex-shrink: 0;
-    }
-    .primary-btn {
-      background: var(--accent);
-      color: var(--bg);
-      border: none;
-      font-weight: 600;
-    }
-    .primary-btn:hover {
-      background: var(--accent2);
-      color: var(--bg);
-    }
-
-    /* ── SETTINGS MODAL ────────────────────────────────────── */
-    .settings-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 2000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }
-    .settings-overlay.open {
-      display: flex;
-    }
-    .settings-panel {
-      width: 440px;
-      max-width: 90vw;
-      max-height: 85vh;
-      overflow-y: auto;
-      background: var(--bg2);
-      border: 1px solid var(--border2);
-      border-radius: 16px;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
-      padding: 16px 8px 16px 16px;
-      transform: scale(0.95);
-      opacity: 0;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .settings-overlay.open .settings-panel {
-      transform: scale(1);
-      opacity: 1;
-    }
-    .panel-section {
-      padding: 12px 8px 12px 0;
-      background: transparent;
-    }
-    .panel-section + .panel-section {
-      border-top: 1px solid var(--border);
-      margin-top: 4px;
-      padding-top: 16px;
-      border-radius: 0;
-    }
-    .panel-label {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text3);
-      margin-bottom: 12px;
-      padding-left: 4px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* Theme Slider in Settings */
-    .theme-slider {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      padding-bottom: 12px;
-      scroll-snap-type: x mandatory;
-    }
-    .theme-slider::-webkit-scrollbar {
-      height: 6px;
-    }
-    .theme-slider::-webkit-scrollbar-thumb {
-      background: var(--border2);
-      border-radius: 4px;
-    }
-    .theme-slider::-webkit-scrollbar-thumb:hover {
-      background: var(--text3);
-    }
-    .theme-card {
-      flex: 0 0 110px;
-      scroll-snap-align: start;
-      border: 1px solid var(--border2);
-      border-radius: 12px;
-      padding: 12px;
-      cursor: pointer;
-      transition: all 0.2s;
-      background: var(--bg2);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-    .theme-card:hover {
-      background: var(--bg3);
-      transform: translateY(-2px);
-      border-color: var(--text3);
-    }
-    .theme-card.active {
-      background: var(--accent-bg);
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent) inset;
-    }
-    .theme-card.active::after {
-      content: '✓';
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 18px;
-      height: 18px;
-      background: var(--accent);
-      color: var(--bg);
-      border-radius: 50%;
-      text-align: center;
-      line-height: 18px;
-      font-size: 11px;
-      font-weight: 800;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-    .theme-swatches {
-      display: flex;
-      align-items: center;
-    }
-    .swatch {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      border: 1.5px solid var(--bg2);
-      flex-shrink: 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transition: border-color 0.2s;
-    }
-    .swatch + .swatch {
-      margin-left: -6px;
-    }
-    .theme-card:hover .swatch {
-      border-color: var(--bg3);
-    }
-    .theme-card.active .swatch {
-      border-color: var(--accent-bg);
-    }
-    .theme-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text2);
-      line-height: 1;
-    }
-    .theme-card.active .theme-name {
-      color: var(--accent);
-    }
-
-    /* Font Options in Settings */
-    .font-options {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .font-opt {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 14px;
-      border-radius: 10px;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      background: var(--bg2);
-    }
-    .font-opt:hover {
-      background: var(--bg3);
-      transform: translateX(2px);
-    }
-    .font-opt.active {
-      background: var(--accent-bg);
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent) inset;
-    }
-    .font-opt-name {
-      font-size: 13.5px;
-      color: var(--text);
-    }
-    .font-opt.active .font-opt-name {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    .font-opt-preview {
-      font-size: 12px;
-      color: var(--text3);
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-    .font-opt.active .font-opt-preview {
-      color: var(--accent);
-      opacity: 1;
-    }
-
-    /* PAT Input in Settings */
-    #patInput {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid var(--border2);
-      background: var(--bg2);
-      color: var(--text);
-      font-family: var(--font-mono);
-      font-size: 12.5px;
-      outline: none;
-      transition: all 0.2s;
-    }
-    #patInput:focus {
-      border-color: var(--accent);
-      background: var(--bg3);
-      box-shadow: 0 0 0 3px var(--accent-bg);
-    }
-
-    /* ── LAYOUT WORKSPACE ──────────────────────────────────── */
-    .workspace {
-      flex: 1;
-      display: flex;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* ── LEFT SIDEBAR ──────────────────────────────────────── */
-    .sidebar {
-      width: var(--sidebar-w);
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      background: var(--bg2);
-      border-right: 1px solid var(--border);
-      transition: width 260ms cubic-bezier(0.4, 0, 0.2, 1), opacity 260ms ease;
-      overflow: hidden;
-    }
-    .sidebar.collapsed {
-      width: 0;
-      opacity: 0;
-      border-right-color: transparent;
-    }
-    .sidebar-header {
-      height: 44px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0 12px;
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-    .sidebar-header-title {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--text3);
-      flex: 1;
-      white-space: nowrap;
-    }
-    .search-wrap {
-      padding: 8px 10px;
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .search-input {
-      width: 100%;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 6px 10px 6px 28px;
-      font-family: var(--font-ui);
-      font-size: 12.5px;
-      color: var(--text);
-      outline: none;
-      transition: border-color var(--trans), background var(--trans), box-shadow var(--trans);
-    }
-    .search-input:focus {
-      border-color: var(--accent);
-      background: var(--bg4);
-      box-shadow: 0 0 0 3px var(--accent-bg);
-    }
-    .search-icon {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 13px;
-      height: 13px;
-      color: var(--text3);
-      pointer-events: none;
-    }
-    .search-opts {
-      display: flex;
-      gap: 10px;
-      font-size: 11px;
-      color: var(--text3);
-      align-items: center;
-    }
-    .search-opts label {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      cursor: pointer;
-    }
-    .search-opts input[type="radio"] {
-      accent-color: var(--accent);
-      cursor: pointer;
-    }
-    .file-list {
-      flex: 1;
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding: 4px 0;
-    }
-
-    /* Nested Tree UI */
-    .sidebar-folder {
-      margin: 1px 0;
-    }
-    .folder-summary {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 8px;
-      cursor: pointer;
-      font-size: 13.5px;
-      color: var(--text2);
-      user-select: none;
-      border-radius: 6px;
-      transition: background var(--trans);
-      outline: none;
-    }
-    .folder-summary:hover {
-      background: var(--bg3);
-      color: var(--text);
-    }
-    .folder-summary:focus-visible {
-      box-shadow: 0 0 0 2px var(--accent-bg) inset;
-      border-radius: 6px;
-    }
-    details.sidebar-folder > summary::marker, 
-    details.sidebar-folder > summary::-webkit-details-marker {
-      display: none;
-    }
-    .folder-chevron {
-      width: 14px;
-      height: 14px;
-      color: var(--text3);
-      transition: transform 0.2s;
-      flex-shrink: 0;
-    }
-    details[open] > summary > .folder-chevron {
-      transform: rotate(90deg);
-    }
-    .folder-icon {
-      width: 15px;
-      height: 15px;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-    .folder-contents {
-      margin-left: 14px;
-      padding-left: 6px;
-      border-left: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-    }
-    .file-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      cursor: pointer;
-      transition: background var(--trans);
-      font-size: 13px;
-      color: var(--text2);
-      text-decoration: none;
-      border: none;
-      background: none;
-      width: 100%;
-      text-align: left;
-      min-width: 0;
-      position: relative;
-    }
-    .file-item:hover {
-      background: var(--bg3);
-      color: var(--text);
-    }
-    .file-item.active {
-      background: var(--accent-bg);
-      color: var(--accent2);
-    }
-    .file-item.active::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--accent);
-      border-radius: 0 2px 2px 0;
-    }
-    .file-item-icon {
-      flex-shrink: 0;
-      width: 15px;
-      height: 15px;
-    }
-    .file-item-name {
-      flex: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .file-item-ext {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: var(--text3);
-      background: var(--bg4);
-      padding: 1px 5px;
-      border-radius: 3px;
-      flex-shrink: 0;
-      letter-spacing: 0.03em;
-    }
-    .ext-md {
-      color: var(--accent2) !important;
-      background: var(--accent-bg) !important;
-    }
-
-    /* Resize Handle */
-    .resize-handle {
-      width: 4px;
-      background: transparent;
-      cursor: col-resize;
-      flex-shrink: 0;
-      z-index: 10;
-      transition: background var(--trans);
-    }
-    .resize-handle:hover, .resize-handle.dragging {
-      background: var(--accent);
-    }
-
-    /* ── CENTER CONTENT PANEL ──────────────────────────────── */
-    .content-panel {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      min-width: 0;
-    }
-    .viewer-header {
-      height: 44px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 0 16px;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg2);
-      flex-shrink: 0;
-    }
-    .viewer-filename {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--text);
-      flex: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .viewer-filename.placeholder {
-      color: var(--text3);
-      font-weight: 400;
-      font-style: italic;
-    }
-    .viewer-badge {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      background: var(--bg3);
-      color: var(--text3);
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-    .file-viewer {
-      flex: 1;
-      overflow-y: auto;
-      background: var(--bg);
-    }
-    .image-preview {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      height: 100%;
-    }
-    .image-preview img {
-      max-width: 100%;
-      max-height: 100%;
-      border-radius: var(--radius-lg);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    /* ── RIGHT SIDEBAR (TOC, Properties, Backlinks) ────────── */
-    .right-sidebar {
-      width: var(--right-w);
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      background: var(--bg2);
-      border-left: 1px solid var(--border);
-      overflow-y: auto;
-      padding: 16px;
-      transition: width 260ms cubic-bezier(0.4, 0, 0.2, 1), opacity 260ms ease, padding 260ms ease;
-    }
-    .right-sidebar.collapsed {
-      width: 0;
-      opacity: 0;
-      padding: 16px 0;
-      border-left-color: transparent;
-    }
-    .panel-section-title {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text3);
-      margin-bottom: 12px;
-      margin-top: 24px;
-    }
-    .panel-section-title:first-child {
-      margin-top: 0;
-    }
-
-    /* Sidebar Properties */
-    .obsidian-properties {
-      font-family: var(--font-ui);
-      font-size: 12.5px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .property-row {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .property-key {
-      color: var(--text3);
-      font-weight: 600;
-      text-transform: capitalize;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .property-value {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      color: var(--accent2);
-    }
-    .property-pill {
-      background: var(--bg3);
-      padding: 2px 8px;
-      border-radius: 99px;
-      border: 1px solid var(--border2);
-    }
-
-    /* Sidebar TOC */
-    .toc-link {
-      display: block;
-      font-size: 12.5px;
-      color: var(--text2);
-      text-decoration: none;
-      margin-bottom: 2px;
-      padding: 4px 8px;
-      margin-left: -8px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .toc-link:hover {
-      color: var(--accent);
-      background: var(--bg3);
-    }
-    .toc-h1 { padding-left: 8px; font-weight: 600; }
-    .toc-h2 { padding-left: 16px; }
-    .toc-h3 { padding-left: 24px; font-size: 11.5px; }
-
-    /* Sidebar Backlinks */
-    .backlink-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      font-size: 12.5px;
-      color: var(--text2);
-      padding: 8px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s;
-      line-height: 1.4;
-    }
-    .backlink-item:hover {
-      background: var(--bg3);
-      color: var(--text);
-    }
-    .bl-icon {
-      color: var(--accent);
-      width: 14px;
-      height: 14px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    /* ── MARKDOWN RENDER STYLES ────────────────────────────── */
-    .md-content {
-      font-family: var(--font-body);
-      font-size: 15.5px;
-      line-height: 1.78;
-      color: var(--text);
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 36px 40px 72px;
-    }
-    .md-content h1 {
-      font-family: var(--font-ui);
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--accent);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 12px;
-      margin: 0 0 24px;
-    }
-    .md-content h2 {
-      font-family: var(--font-ui);
-      font-size: 21px;
-      font-weight: 600;
-      color: var(--text);
-      margin: 40px 0 14px;
-    }
-    .md-content h3 {
-      font-family: var(--font-ui);
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--accent2);
-      margin: 28px 0 10px;
-    }
-    .md-content h4 {
-      font-family: var(--font-ui);
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--warn);
-      margin: 24px 0 10px;
-    }
-    .md-content h5 {
-      font-family: var(--font-ui);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--success);
-      margin: 20px 0 8px;
-    }
-    .md-content h6 {
-      font-family: var(--font-ui);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text3);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin: 20px 0 8px;
-    }
-    .md-content p {
-      margin: 0 0 16px;
-    }
-    .md-content a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-bg);
-      transition: border-color var(--trans);
-    }
-    .md-content a:hover {
-      border-bottom-color: var(--accent);
-    }
-    .md-content ul, .md-content ol {
-      margin: 0 0 16px 24px;
-    }
-    .md-content li {
-      margin-bottom: 6px;
-    }
-    .md-content li::marker {
-      color: var(--text3);
-      font-weight: bold;
-    }
-    .md-content blockquote {
-      border-left: 3px solid var(--accent);
-      background: var(--accent-bg);
-      margin: 0 0 16px;
-      padding: 12px 16px;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      font-style: italic;
-    }
-    .md-content pre {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 16px 20px;
-      margin: 0 0 20px;
-      overflow-x: auto;
-    }
-    .md-content pre code {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--text);
-      background: none;
-      padding: 0;
-      border: none;
-    }
-    .md-content code {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      color: var(--accent2);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .md-content img {
-      max-width: 100%;
-      border-radius: var(--radius-lg);
-      margin: 8px 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .md-content hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 32px 0;
-    }
-    .md-content table {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0 0 20px;
-      font-size: 14px;
-    }
-    .md-content th {
-      background: var(--bg2);
-      text-align: left;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      font-weight: 600;
-      font-family: var(--font-ui);
-      font-size: 13px;
-    }
-    .md-content td {
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-    }
-    .md-content tr:nth-child(even) td {
-      background: var(--bg2);
-    }
-
-    /* Obsidian Specific Parsing Elements */
-    .wikilink {
-      color: var(--accent);
-      text-decoration: none;
-      cursor: pointer;
-      font-weight: 500;
-      background: var(--accent-bg);
-      padding: 0 4px;
-      border-radius: 4px;
-      transition: background var(--trans);
-    }
-    .wikilink:hover {
-      background: rgba(203, 166, 247, 0.25);
-      text-decoration: underline;
-    }
-    .obsidian-tag {
-      background: var(--bg3);
-      color: var(--accent);
-      padding: 2px 8px;
-      border-radius: 99px;
-      font-size: 12.5px;
-      font-weight: 600;
-      font-family: var(--font-ui);
-      transition: background var(--trans), color var(--trans);
-      cursor: pointer;
-    }
-    .obsidian-tag:hover {
-      background: var(--accent-bg);
-    }
-    .obsidian-highlight {
-      background-color: color-mix(in srgb, var(--warn) 35%, transparent);
-      color: var(--text);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: 500;
-    }
-    .callout {
-      border-left: 4px solid var(--accent);
-      background: var(--bg2);
-      border-radius: 4px;
-      padding: 12px 16px;
-      margin: 16px 0;
-      font-family: var(--font-ui);
-    }
-    .callout-title {
-      font-weight: 700;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-    }
-    .callout-content {
-      font-family: var(--font-body);
-    }
-    .callout-content p:last-child {
-      margin-bottom: 0;
-    }
-    .callout-warning, .callout-caution { border-left-color: var(--warn); }
-    .callout-warning .callout-title, .callout-caution .callout-title { color: var(--warn); }
-    .callout-danger, .callout-error, .callout-bug { border-left-color: var(--danger); }
-    .callout-danger .callout-title, .callout-error .callout-title, .callout-bug .callout-title { color: var(--danger); }
-    .callout-success, .callout-check, .callout-done { border-left-color: var(--success); }
-    .callout-success .callout-title, .callout-check .callout-title, .callout-done .callout-title { color: var(--success); }
-
-    /* Interactive Obsidian Checkboxes */
-    .md-content input[type="checkbox"] {
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      border: 2px solid var(--text3);
-      border-radius: 4px;
-      margin-right: 8px;
-      vertical-align: middle;
-      position: relative;
-      background: var(--bg2);
-      cursor: not-allowed;
-      transform: translateY(-1px);
-    }
-    .md-content input[type="checkbox"]:checked {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-    .md-content input[type="checkbox"]:checked::after {
-      content: '';
-      position: absolute;
-      left: 4px;
-      top: 1px;
-      width: 4px;
-      height: 8px;
-      border: solid var(--bg);
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-
-    /* ── RESPONSIVE DESIGN ─────────────────────────────────── */
-    @media (max-width: 960px) {
-      .right-sidebar { display: none; }
-    }
-    @media (max-width: 640px) {
-      .workspace { --sidebar-w: 260px; }
-      .sidebar { 
-        position: absolute; 
-        height: 100%; 
-        z-index: 150; 
-        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3); 
-      }
-      .breadcrumb { display: none; }
-    }
-
-    /* ── STATES & TOAST ────────────────────────────────────── */
-    .raw-content {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      line-height: 1.65;
-      color: var(--text);
-      padding: 28px 32px 72px;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-    .state-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 64px 32px;
-      text-align: center;
-      gap: 12px;
-      min-height: 300px;
-    }
-    .state-icon { font-size: 36px; line-height: 1; }
-    .state-title { font-size: 16px; font-weight: 600; color: var(--text); }
-    .state-sub { font-size: 13px; color: var(--text3); max-width: 320px; line-height: 1.6; }
-    .state-card.error .state-title { color: var(--danger); }
-    .state-card.warn .state-title { color: var(--warn); }
-    .empty-list { padding: 32px 16px; text-align: center; font-size: 12px; color: var(--text3); }
-
-    .count-badge {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      background: var(--bg3);
-      color: var(--text3);
-      padding: 1px 6px;
-      border-radius: 99px;
-      border: 1px solid var(--border);
-    }
-
-    .skeleton {
-      background: linear-gradient(90deg, var(--bg3) 25%, var(--bg4) 50%, var(--bg3) 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.4s infinite;
-      border-radius: 4px;
-    }
-    @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-    .skeleton-item { height: 32px; margin: 4px 10px; border-radius: var(--radius); }
-
-    #toast {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--bg4);
-      border: 1px solid var(--border2);
-      color: var(--text);
-      font-size: 12.5px;
-      padding: 9px 14px;
-      border-radius: var(--radius-lg);
-      z-index: 9999;
-      transform: translateY(60px);
-      opacity: 0;
-      transition: transform 220ms ease, opacity 220ms ease;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
-    #toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .file-item {
-      animation: fadeUp 130ms ease both;
-    }
+    /* ── STATES ──────────────────────────────────────────────── */
+    .raw-content{font-family:var(--font-mono);font-size:13px;line-height:1.65;color:var(--text);padding:28px 32px 72px;white-space:pre-wrap;word-break:break-word}
+    .state-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 32px;text-align:center;gap:10px;min-height:300px}
+    .state-icon{font-size:34px;line-height:1}
+    .state-title{font-size:16px;font-weight:600;color:var(--text)}
+    .state-sub{font-size:13px;color:var(--text3);max-width:320px;line-height:1.6}
+    .state-card.error .state-title{color:var(--danger)}
+    .empty-list{padding:28px 16px;text-align:center;font-size:12px;color:var(--text3);line-height:1.6}
+    .skeleton{background:linear-gradient(90deg,var(--bg3) 25%,var(--bg4) 50%,var(--bg3) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:4px}
+    .skeleton-item{height:30px;margin:3px 10px}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+    #toast{position:fixed;bottom:20px;right:20px;background:var(--bg4);border:1px solid var(--border2);color:var(--text);font-size:12.5px;padding:9px 14px;border-radius:var(--radius-lg);z-index:9999;transform:translateY(55px);opacity:0;transition:transform .2s ease,opacity .2s ease;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+    #toast.show{transform:translateY(0);opacity:1}
   </style>
 </head>
 <body>
 
-  <!-- ── TOP NAVIGATION BAR ────────────────────────────────────── -->
-  <header class="topbar">
-    <button class="icon-btn" id="leftSidebarBtn" title="Toggle left sidebar (B)" style="margin-right: 4px;">
-      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+<!-- Reading Progress -->
+<div id="readingProgress"></div>
+
+<!-- Image Lightbox -->
+<div class="lightbox" id="imgLightbox"><img id="lightboxImg" src="" alt=""></div>
+
+<!-- Mobile Sidebar Backdrop -->
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+<!-- ── TOPBAR ─────────────────────────────────────────────────── -->
+<header class="topbar">
+  <button class="icon-btn" id="leftSidebarBtn" title="Toggle sidebar (B)">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path stroke-linecap="round" d="M9 3v18"/></svg>
+  </button>
+  <div class="topbar-logo">
+    <div class="logo-gem"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/></svg></div>
+    <span>Obsidian Explorer</span>
+  </div>
+  <div class="topbar-sep"></div>
+  <div class="breadcrumb" id="breadcrumb"></div>
+  <div class="topbar-actions">
+    <div id="indexingStatus">
+      <svg style="width:11px;height:11px;border-radius:50%" class="skeleton" viewBox="0 0 1 1"></svg>
+      <span id="idxText">Indexing…</span>
+    </div>
+    <button class="icon-btn" id="refreshBtn" title="Refresh (R)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
     </button>
-    <div class="topbar-logo">
-      <div class="logo-gem">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/></svg>
-      </div>
-      <span>Obsidian Explorer</span>
-    </div>
-    <div class="topbar-sep"></div>
-    <div class="breadcrumb" id="breadcrumb"><span class="cur">Loading…</span></div>
-    
-    <div class="topbar-actions">
-      <div id="indexingStatus" style="font-size:11px; color:var(--accent); display:none; align-items:center; gap:4px;">
-        <svg class="skeleton" style="width:12px; height:12px; border-radius:50%;" viewBox="0 0 24 24"></svg> Indexing...
-      </div>
-      <button class="icon-btn" id="refreshBtn" title="Refresh Vault (R)">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-      </button>
-      <button class="icon-btn" id="settingsBtn" title="Settings">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-      </button>
-      <button class="icon-btn" id="rightSidebarBtn" title="Toggle right sidebar">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- ── MAIN WORKSPACE ────────────────────────────────────────── -->
-  <div class="workspace" id="workspace">
-    
-    <!-- Left Sidebar: File Tree & Search -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <svg style="width:13px;height:13px;color:var(--text3);flex-shrink:0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
-        <span class="sidebar-header-title">Files</span>
-        <span class="count-badge" id="fileCount">—</span>
-      </div>
-      
-      <div class="search-wrap">
-        <div style="position:relative;">
-          <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
-          <input class="search-input" type="text" id="searchInput" placeholder="Filter files… (F)" autocomplete="off" spellcheck="false">
-        </div>
-        <div class="search-opts" id="searchOpts" style="display:none;">
-          <label><input type="radio" name="smode" value="name" checked> Name</label>
-          <label><input type="radio" name="smode" value="content"> Full Text</label>
-        </div>
-      </div>
-      
-      <div class="file-list" id="fileList"></div>
-    </aside>
-
-    <!-- Center Panel: File Viewer -->
-    <div class="content-panel">
-      <div class="viewer-header">
-        <span class="viewer-filename placeholder" id="viewerTitle">Select a file to view</span>
-        <span class="viewer-badge" id="viewerBadge" style="display:none"></span>
-      </div>
-      
-      <div class="file-viewer" id="fileViewer">
-        <div class="state-card">
-          <div class="state-icon">📄</div>
-          <div class="state-title">Nothing open</div>
-          <div class="state-sub">Choose a file from the sidebar. Markdown renders beautifully with your chosen theme and font.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Sidebar: Properties, TOC, Backlinks -->
-    <aside class="right-sidebar" id="rightSidebar">
-      <div class="panel-section-title">Properties</div>
-      <div id="propertiesContainer" style="margin-bottom: 24px;">
-        <div style="font-size:12px;color:var(--text3)">No properties</div>
-      </div>
-
-      <div class="panel-section-title">Outline</div>
-      <div id="tocContainer" style="margin-bottom: 32px;">
-        <div style="font-size:12px;color:var(--text3)">Open a file to view outline</div>
-      </div>
-      
-      <div class="panel-section-title">Backlinks</div>
-      <div id="backlinksContainer">
-        <div style="font-size:12px;color:var(--text3)">Requires Vault Index</div>
-      </div>
-    </aside>
-
+    <button class="icon-btn" id="helpBtn" title="Keyboard shortcuts (?)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m.08 4h.01"/></svg>
+    </button>
+    <!-- Gear/settings icon (was incorrectly a photo icon in original) -->
+    <button class="icon-btn" id="settingsBtn" title="Settings (S)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+    </button>
+    <!-- Right panel icon (distinct from left) -->
+    <button class="icon-btn" id="rightSidebarBtn" title="Toggle outline (E)">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path stroke-linecap="round" d="M15 3v18"/></svg>
+    </button>
   </div>
+</header>
 
-  <!-- ── SETTINGS MODAL ────────────────────────────────────────── -->
-  <div class="settings-overlay" id="settingsOverlay">
-    <div class="settings-panel" id="settingsPanel">
-      
-      <div class="panel-section" style="padding-top:0;">
-        <div class="panel-label" style="display:flex;justify-content:space-between;align-items:center;">
-          <span style="font-size: 14px;">Settings</span>
-          <button class="icon-btn" id="closeSettingsBtn" style="border:none;background:transparent;box-shadow:none;">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
-        </div>
-        <div style="height:1px; background:var(--border); margin:4px 0 16px;"></div>
-        
-        <div class="panel-label">GitHub Access Token (PAT)</div>
-        <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx">
-        <div style="font-size:11px; color:var(--text3); margin-top:8px; line-height:1.4; padding-left:4px;">
-          Paste token to bypass 60/hr API limit. Saves locally.
-        </div>
+<!-- ── WORKSPACE ──────────────────────────────────────────────── -->
+<div class="workspace" id="workspace">
+
+  <!-- Left Sidebar -->
+  <aside class="sidebar" id="sidebar" aria-label="File browser">
+    <div class="sidebar-header">
+      <svg style="width:13px;height:13px;color:var(--text3);flex-shrink:0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+      <span class="sidebar-header-title">Files</span>
+      <span class="count-badge" id="fileCount">—</span>
+    </div>
+    <div class="search-wrap">
+      <div class="search-rel">
+        <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
+        <input class="search-input" type="text" id="searchInput" placeholder="Filter files… (F)" autocomplete="off" spellcheck="false" aria-label="Search files">
       </div>
-      
-      <div class="panel-section">
-        <div class="panel-label">Theme</div>
-        <div class="theme-slider" id="themeGrid"></div>
+      <div class="search-opts disabled" id="searchOpts">
+        <label><input type="radio" name="smode" value="name" checked> Name</label>
+        <label><input type="radio" name="smode" value="content"> Full Text</label>
       </div>
-      
-      <div class="panel-section">
-        <div class="panel-label">Reading Font</div>
-        <div class="font-options" id="bodyFontOpts"></div>
+      <div class="idx-hint" id="idxHint">
+        <svg style="width:10px;height:10px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 8v4l3 3"/></svg>
+        Indexing vault for full-text search…
       </div>
-      
-      <div class="panel-section">
-        <div class="panel-label">Code Font</div>
-        <div class="font-options" id="monoFontOpts"></div>
+    </div>
+    <div class="file-list" id="fileList" role="tree"></div>
+  </aside>
+
+  <!-- Center: File Viewer -->
+  <div class="content-panel">
+    <div class="viewer-header">
+      <span class="viewer-filename placeholder" id="viewerTitle">Select a file to view</span>
+      <span class="viewer-badge" id="viewerBadge" style="display:none"></span>
+      <span class="viewer-meta" id="viewerMeta"></span>
+    </div>
+    <div class="file-viewer" id="fileViewer">
+      <div class="state-card">
+        <div class="state-icon">📄</div>
+        <div class="state-title">Nothing open</div>
+        <div class="state-sub">Choose a file from the sidebar. Markdown renders beautifully with your chosen theme and font.</div>
       </div>
-      
     </div>
   </div>
 
-  <!-- Toast Notification -->
-  <div id="toast"></div>
+  <!-- Right Sidebar: Properties / TOC / Backlinks -->
+  <aside class="right-sidebar" id="rightSidebar" aria-label="Document outline">
+    <div class="rs-title">Properties</div>
+    <div id="propertiesContainer"><div style="font-size:12px;color:var(--text3)">No properties</div></div>
+    <div class="rs-title">Outline</div>
+    <div id="tocContainer"><div style="font-size:12px;color:var(--text3)">Open a file to see headings</div></div>
+    <div class="rs-title">Backlinks</div>
+    <div id="backlinksContainer"><div style="font-size:12px;color:var(--text3)">Indexing…</div></div>
+  </aside>
+</div>
 
-  <!-- ── APPLICATION LOGIC ─────────────────────────────────────── -->
-  <script>
-    // Configuration
-    const OWNER = 'najmossalahin';
-    const REPO = 'Obsidian_Uni';
+<!-- ── SETTINGS OVERLAY ───────────────────────────────────────── -->
+<div class="overlay" id="settingsOverlay" role="dialog" aria-modal="true" aria-label="Settings">
+  <div class="panel settings-panel">
+    <div class="s-section" style="padding-top:0">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <span style="font-size:14px;font-weight:700;color:var(--text)">Settings</span>
+        <button class="icon-btn" id="closeSettingsBtn" style="border:none;background:transparent" aria-label="Close">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
 
-    // Global State
-    let vaultIndex = [];
-    let treeRoot = {};
-    let activeFile = null;
-    let sidebarOpen = true;
-    let rightSidebarOpen = true;
+      <div class="s-label">Repository</div>
+      <div class="s-row">
+        <input class="s-input" type="text" id="ownerInput" placeholder="owner / org" aria-label="GitHub owner">
+        <span style="color:var(--text3);flex-shrink:0">/</span>
+        <input class="s-input" type="text" id="repoInput" placeholder="repository" aria-label="Repository name">
+        <input class="s-input s-input-narrow" type="text" id="branchInput" placeholder="branch" aria-label="Branch">
+      </div>
+      <button class="s-btn" id="applyRepoBtn" style="width:100%">Apply & Reload</button>
+      <p class="s-note">Changes are saved and the vault reloads immediately.</p>
+    </div>
 
-    // Search Engine State
-    let isIndexBuilt = false;
-    let fileContents = new Map();
-    let backlinkMap = new Map();
-    let lunrIdx = null;
+    <div class="s-section">
+      <div class="s-label">GitHub Access Token (PAT)</div>
+      <input class="s-input" type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width:100%;font-family:var(--font-mono);font-size:12.5px" aria-label="GitHub personal access token">
+      <p class="s-note">Bypasses the 60 req/hr unauthenticated limit. Saved locally. Needs <code style="font-size:10px">Contents: Read</code> scope.</p>
+    </div>
 
-    // DOM Elements
-    const sidebar = document.getElementById('sidebar');
-    const workspace = document.getElementById('workspace');
-    const fileList = document.getElementById('fileList');
-    const searchInput = document.getElementById('searchInput');
-    const fileViewer = document.getElementById('fileViewer');
-    const viewerTitle = document.getElementById('viewerTitle');
-    const viewerBadge = document.getElementById('viewerBadge');
-    const breadcrumb = document.getElementById('breadcrumb');
-    const fileCount = document.getElementById('fileCount');
+    <div class="s-section">
+      <div class="s-label">Theme</div>
+      <div class="theme-slider" id="themeGrid"></div>
+    </div>
 
-    const leftSidebarBtn = document.getElementById('leftSidebarBtn');
-    const rightSidebarBtn = document.getElementById('rightSidebarBtn');
-    const settingsBtn = document.getElementById('settingsBtn');
-    const settingsOverlay = document.getElementById('settingsOverlay');
-    const closeSettingsBtn = document.getElementById('closeSettingsBtn');
+    <div class="s-section">
+      <div class="s-label">Reading Font</div>
+      <div class="font-opts" id="bodyFontOpts"></div>
+    </div>
 
-    const tocContainer = document.getElementById('tocContainer');
-    const backlinksContainer = document.getElementById('backlinksContainer');
-    const propertiesContainer = document.getElementById('propertiesContainer');
-    const patInput = document.getElementById('patInput');
+    <div class="s-section">
+      <div class="s-label">Code Font</div>
+      <div class="font-opts" id="monoFontOpts"></div>
+    </div>
+  </div>
+</div>
 
-    /* ── SETTINGS & PAT TOKEN ────────────────────────────────────── */
-    if (patInput) {
-      patInput.value = localStorage.getItem('oe-pat') || '';
-      patInput.addEventListener('change', (e) => { 
-        localStorage.setItem('oe-pat', e.target.value.trim()); 
-        showToast('Token saved!'); 
-        initVault(); // reload with new limits
-      });
+<!-- ── HELP / SHORTCUTS OVERLAY ──────────────────────────────── -->
+<div class="overlay" id="helpOverlay" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+  <div class="panel help-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <span style="font-size:14px;font-weight:700;color:var(--text)">Keyboard Shortcuts</span>
+      <button class="icon-btn" id="closeHelpBtn" style="border:none;background:transparent" aria-label="Close">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="shortcut-list">
+      <div class="shortcut-row"><span class="shortcut-desc">Focus search</span><span class="shortcut-keys"><span class="kbd">F</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Refresh vault</span><span class="shortcut-keys"><span class="kbd">R</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Toggle left sidebar</span><span class="shortcut-keys"><span class="kbd">B</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Toggle right sidebar</span><span class="shortcut-keys"><span class="kbd">E</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Open settings</span><span class="shortcut-keys"><span class="kbd">S</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Show shortcuts</span><span class="shortcut-keys"><span class="kbd">?</span></span></div>
+      <div class="shortcut-row"><span class="shortcut-desc">Close modals / clear search</span><span class="shortcut-keys"><span class="kbd">Esc</span></span></div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+/* ── CONFIGURATION ────────────────────────────────────────────── */
+let OWNER  = localStorage.getItem('oe-owner')  || 'najmossalahin';
+let REPO   = localStorage.getItem('oe-repo')   || 'Obsidian_Uni';
+let BRANCH = localStorage.getItem('oe-branch') || 'main';
+
+/* ── STATE ────────────────────────────────────────────────────── */
+let vaultIndex   = [];
+let treeRoot     = {};
+let activeFile   = null;
+let activeBranch = BRANCH;   // updated after probing branches
+let sidebarOpen  = true;
+let rightSidebarOpen = true;
+let isIndexBuilt = false;
+let fileContents = new Map();
+let backlinkMap  = new Map();
+let lunrIdx      = null;
+let navDebounce  = null;
+
+/* ── DOM ──────────────────────────────────────────────────────── */
+const sidebar       = document.getElementById('sidebar');
+const workspace     = document.getElementById('workspace');
+const fileList      = document.getElementById('fileList');
+const searchInput   = document.getElementById('searchInput');
+const fileViewer    = document.getElementById('fileViewer');
+const viewerTitle   = document.getElementById('viewerTitle');
+const viewerBadge   = document.getElementById('viewerBadge');
+const viewerMeta    = document.getElementById('viewerMeta');
+const breadcrumb    = document.getElementById('breadcrumb');
+const fileCount     = document.getElementById('fileCount');
+const tocContainer        = document.getElementById('tocContainer');
+const backlinksContainer  = document.getElementById('backlinksContainer');
+const propertiesContainer = document.getElementById('propertiesContainer');
+const progressBar   = document.getElementById('readingProgress');
+const imgLightbox   = document.getElementById('imgLightbox');
+const lightboxImg   = document.getElementById('lightboxImg');
+const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+/* ── UTILITIES ────────────────────────────────────────────────── */
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function slugify(t) {
+  return String(t).toLowerCase().replace(/[^\w\s-]/g,'').replace(/[\s_]+/g,'-').replace(/^-+|-+$/g,'');
+}
+
+let _toastTimer;
+function showToast(msg, ms=2200) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(()=> el.classList.remove('show'), ms);
+}
+
+function rawUrl(path) {
+  return `https://raw.githubusercontent.com/${OWNER}/${REPO}/${activeBranch}/${path.split('/').map(encodeURIComponent).join('/')}`;
+}
+
+function getHeaders() {
+  const pat = localStorage.getItem('oe-pat');
+  return pat ? { Authorization: `token ${pat}` } : {};
+}
+
+/* ── FONT LAZY LOADING ────────────────────────────────────────── */
+const FONT_PARAMS = {
+  'Literata':       'family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400',
+  'Merriweather':   'family=Merriweather:ital,wght@0,300;0,400;1,300',
+  'Lora':           'family=Lora:ital,wght@0,400;0,500;1,400',
+  'Crimson Pro':    'family=Crimson+Pro:ital,wght@0,400;0,500;1,400',
+  'JetBrains Mono': 'family=JetBrains+Mono:wght@400;500',
+  'Fira Code':      'family=Fira+Code:wght@400;500',
+  'Source Code Pro':'family=Source+Code+Pro:wght@400;500',
+  'IBM Plex Mono':  'family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400',
+};
+
+function updateFontLink(body, mono) {
+  const parts = [
+    'family=Syne:wght@400;500;600;700',
+    FONT_PARAMS[body]  || FONT_PARAMS['Literata'],
+    FONT_PARAMS[mono]  || FONT_PARAMS['JetBrains Mono'],
+  ];
+  document.getElementById('googleFontsLink').href =
+    `https://fonts.googleapis.com/css2?${parts.join('&')}&display=swap`;
+}
+
+/* ── THEMES & FONTS ───────────────────────────────────────────── */
+const THEMES = [
+  {id:'catppuccin',name:'Catppuccin',bg:'#1e1e2e',mid:'#313244',acc:'#cba6f7'},
+  {id:'dracula',name:'Dracula',bg:'#282a36',mid:'#343746',acc:'#bd93f9'},
+  {id:'nord',name:'Nord',bg:'#2e3440',mid:'#3b4252',acc:'#88c0d0'},
+  {id:'rosepine',name:'Rosé Pine',bg:'#191724',mid:'#26233a',acc:'#eb6f92'},
+  {id:'github',name:'GitHub',bg:'#ffffff',mid:'#eaeef2',acc:'#0969da'},
+  {id:'solarized',name:'Solarized',bg:'#002b36',mid:'#083f4d',acc:'#2aa198'},
+  {id:'gruvbox',name:'Gruvbox',bg:'#282828',mid:'#504945',acc:'#fe8019'},
+  {id:'everforest',name:'Everforest',bg:'#2b3339',mid:'#3a454a',acc:'#a7c080'},
+  {id:'monokai',name:'Monokai',bg:'#272822',mid:'#3e3d32',acc:'#fd971f'},
+  {id:'tokyonight',name:'Tokyo Night',bg:'#1a1b26',mid:'#292e42',acc:'#7aa2f7'},
+  {id:'onedark',name:'One Dark',bg:'#282c34',mid:'#2c313a',acc:'#61afef'},
+  {id:'ayu',name:'Ayu Dark',bg:'#0f1419',mid:'#151a1e',acc:'#ffb454'},
+  {id:'material',name:'Material',bg:'#263238',mid:'#37474f',acc:'#80cbc4'},
+  {id:'synthwave',name:'Synthwave',bg:'#2b213a',mid:'#34294f',acc:'#36f9f6'},
+  {id:'cyberpunk',name:'Cyberpunk',bg:'#0f0f15',mid:'#1f1f2e',acc:'#fdf500'},
+  {id:'obsidian-light',name:'Light',bg:'#ffffff',mid:'#e3e3e3',acc:'#7a5cfa'},
+  {id:'sepia',name:'Sepia',bg:'#f4ecd8',mid:'#dfd0b2',acc:'#d16e3c'},
+  {id:'oled',name:'OLED Black',bg:'#000000',mid:'#141414',acc:'#ffffff'},
+];
+const BODY_FONTS = [
+  {id:'Literata',    name:'Literata',    preview:'Beautiful serif'},
+  {id:'Merriweather',name:'Merriweather',preview:'Highly readable'},
+  {id:'Lora',        name:'Lora',        preview:'Classic elegance'},
+  {id:'Crimson Pro', name:'Crimson Pro', preview:'Oldstyle warmth'},
+];
+const MONO_FONTS = [
+  {id:'JetBrains Mono', name:'JetBrains Mono', preview:'fn main() {}'},
+  {id:'Fira Code',      name:'Fira Code',       preview:'() => true'},
+  {id:'Source Code Pro',name:'Source Code Pro', preview:'#include <io>'},
+  {id:'IBM Plex Mono',  name:'IBM Plex Mono',   preview:'git commit -m'},
+];
+
+let curTheme    = localStorage.getItem('oe-theme')     || 'catppuccin';
+let curBodyFont = localStorage.getItem('oe-body-font') || 'Literata';
+let curMonoFont = localStorage.getItem('oe-mono-font') || 'JetBrains Mono';
+
+function applyTheme(id) {
+  curTheme = id;
+  document.documentElement.dataset.theme = id;
+  localStorage.setItem('oe-theme', id);
+  document.querySelectorAll('.theme-card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
+}
+function applyBodyFont(id) {
+  curBodyFont = id;
+  document.documentElement.style.setProperty('--font-body', `'${id}',Georgia,serif`);
+  localStorage.setItem('oe-body-font', id);
+  document.querySelectorAll('#bodyFontOpts .font-opt').forEach(o => o.classList.toggle('active', o.dataset.id === id));
+  updateFontLink(id, curMonoFont);
+}
+function applyMonoFont(id) {
+  curMonoFont = id;
+  document.documentElement.style.setProperty('--font-mono', `'${id}',monospace`);
+  localStorage.setItem('oe-mono-font', id);
+  document.querySelectorAll('#monoFontOpts .font-opt').forEach(o => o.classList.toggle('active', o.dataset.id === id));
+  updateFontLink(curBodyFont, id);
+}
+
+/* ── SETTINGS PANEL BUILDER ───────────────────────────────────── */
+(function initSettings() {
+  // Populate repo inputs
+  document.getElementById('ownerInput').value  = OWNER;
+  document.getElementById('repoInput').value   = REPO;
+  document.getElementById('branchInput').value = BRANCH;
+  document.getElementById('patInput').value    = localStorage.getItem('oe-pat') || '';
+
+  // Theme cards (safe: THEMES data is trusted static config)
+  const grid = document.getElementById('themeGrid');
+  THEMES.forEach(t => {
+    const el = document.createElement('div');
+    el.className = 'theme-card' + (t.id === curTheme ? ' active' : '');
+    el.dataset.id = t.id;
+    el.innerHTML = `<div class="theme-swatches">
+      <div class="swatch" style="background:${t.bg}"></div>
+      <div class="swatch" style="background:${t.mid}"></div>
+      <div class="swatch" style="background:${t.acc}"></div>
+    </div>`;
+    const nameEl = document.createElement('div');
+    nameEl.className = 'theme-name';
+    nameEl.textContent = t.name;
+    el.appendChild(nameEl);
+    el.addEventListener('click', () => { applyTheme(t.id); showToast(t.name); });
+    grid.appendChild(el);
+  });
+
+  // Font lists (use DOM methods to avoid XSS from font preview text)
+  function buildFontList(containerId, fonts, cur, applyFn, mono) {
+    const wrap = document.getElementById(containerId);
+    fonts.forEach(f => {
+      const el = document.createElement('div');
+      el.className = 'font-opt' + (f.id === cur ? ' active' : '');
+      el.dataset.id = f.id;
+      const ff = `'${f.id}',${mono ? 'monospace' : 'Georgia,serif'}`;
+      const n = document.createElement('span');
+      n.className = 'font-opt-name'; n.style.fontFamily = ff; n.textContent = f.name;
+      const p = document.createElement('span');
+      p.className = 'font-opt-preview'; p.style.fontFamily = ff;
+      p.style.fontStyle = mono ? 'normal' : 'italic'; p.textContent = f.preview;
+      el.append(n, p);
+      el.addEventListener('click', () => { applyFn(f.id); showToast(f.name); });
+      wrap.appendChild(el);
+    });
+  }
+  buildFontList('bodyFontOpts', BODY_FONTS, curBodyFont, applyBodyFont, false);
+  buildFontList('monoFontOpts', MONO_FONTS, curMonoFont, applyMonoFont, true);
+})();
+
+applyTheme(curTheme);
+applyBodyFont(curBodyFont);
+applyMonoFont(curMonoFont);
+updateFontLink(curBodyFont, curMonoFont);
+
+/* ── SETTINGS EVENTS ──────────────────────────────────────────── */
+document.getElementById('patInput').addEventListener('change', e => {
+  localStorage.setItem('oe-pat', e.target.value.trim());
+  showToast('Token saved — reloading vault…');
+  initVault();
+});
+
+document.getElementById('applyRepoBtn').addEventListener('click', () => {
+  const o = document.getElementById('ownerInput').value.trim();
+  const r = document.getElementById('repoInput').value.trim();
+  const b = document.getElementById('branchInput').value.trim() || 'main';
+  if (!o || !r) { showToast('Enter both owner and repository name'); return; }
+  OWNER = o; REPO = r; BRANCH = b;
+  localStorage.setItem('oe-owner', OWNER);
+  localStorage.setItem('oe-repo', REPO);
+  localStorage.setItem('oe-branch', BRANCH);
+  document.getElementById('settingsOverlay').classList.remove('open');
+  initVault();
+  showToast(`Loading ${OWNER}/${REPO}…`);
+});
+
+/* ── MODAL OPEN/CLOSE ─────────────────────────────────────────── */
+function openOverlay(id)  { document.getElementById(id).classList.add('open'); }
+function closeOverlay(id) { document.getElementById(id).classList.remove('open'); }
+
+document.getElementById('settingsBtn').addEventListener('click', () => openOverlay('settingsOverlay'));
+document.getElementById('closeSettingsBtn').addEventListener('click', () => closeOverlay('settingsOverlay'));
+document.getElementById('settingsOverlay').addEventListener('click', e => { if (e.target.id === 'settingsOverlay') closeOverlay('settingsOverlay'); });
+
+document.getElementById('helpBtn').addEventListener('click', () => openOverlay('helpOverlay'));
+document.getElementById('closeHelpBtn').addEventListener('click', () => closeOverlay('helpOverlay'));
+document.getElementById('helpOverlay').addEventListener('click', e => { if (e.target.id === 'helpOverlay') closeOverlay('helpOverlay'); });
+
+/* ── IMAGE LIGHTBOX ───────────────────────────────────────────── */
+imgLightbox.addEventListener('click', () => imgLightbox.classList.remove('open'));
+document.addEventListener('click', e => {
+  const img = e.target.closest('.md-content img, .image-preview img');
+  if (img) { lightboxImg.src = img.src; imgLightbox.classList.add('open'); }
+});
+
+/* ── READING PROGRESS ─────────────────────────────────────────── */
+fileViewer.addEventListener('scroll', () => {
+  const s = fileViewer;
+  const pct = s.scrollHeight <= s.clientHeight ? 0
+    : (s.scrollTop / (s.scrollHeight - s.clientHeight)) * 100;
+  progressBar.style.width = pct + '%';
+});
+
+/* ── SIDEBAR TOGGLE ───────────────────────────────────────────── */
+function setSidebar(open) {
+  sidebarOpen = open;
+  sidebar.classList.toggle('collapsed', !open);
+  sidebar.setAttribute('aria-hidden', String(!open));
+  sidebarBackdrop.classList.toggle('visible', open && window.innerWidth <= 640);
+}
+function toggleSidebar() {
+  setSidebar(!sidebarOpen);
+  localStorage.setItem('oe-sidebar', sidebarOpen ? '1' : '0');
+}
+document.getElementById('leftSidebarBtn').addEventListener('click', toggleSidebar);
+sidebarBackdrop.addEventListener('click', () => setSidebar(false));
+if (localStorage.getItem('oe-sidebar') === '0') {
+  sidebar.style.transition = 'none';
+  setSidebar(false);
+  requestAnimationFrame(() => sidebar.style.transition = '');
+}
+
+function setRightSidebar(open) {
+  rightSidebarOpen = open;
+  document.getElementById('rightSidebar').classList.toggle('collapsed', !open);
+}
+function toggleRightSidebar() {
+  setRightSidebar(!rightSidebarOpen);
+  localStorage.setItem('oe-right-sidebar', rightSidebarOpen ? '1' : '0');
+}
+document.getElementById('rightSidebarBtn').addEventListener('click', toggleRightSidebar);
+if (localStorage.getItem('oe-right-sidebar') === '0') {
+  const rs = document.getElementById('rightSidebar');
+  rs.style.transition = 'none';
+  setRightSidebar(false);
+  requestAnimationFrame(() => rs.style.transition = '');
+}
+
+/* ── SIDEBAR RESIZE ───────────────────────────────────────────── */
+(function() {
+  let drag=false, startX=0, startW=0;
+  const handle = document.createElement('div');
+  handle.className = 'resize-handle';
+  handle.setAttribute('role','separator');
+  handle.setAttribute('aria-label','Resize sidebar');
+  sidebar.after(handle);
+  handle.addEventListener('mousedown', e => {
+    if (!sidebarOpen) return;
+    drag=true; startX=e.clientX; startW=sidebar.offsetWidth;
+    handle.classList.add('dragging');
+    document.body.style.cssText += 'cursor:col-resize;user-select:none';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!drag) return;
+    const w = Math.max(160, Math.min(520, startW + e.clientX - startX));
+    sidebar.style.width = w + 'px';
+    document.documentElement.style.setProperty('--sidebar-w', w + 'px');
+  });
+  document.addEventListener('mouseup', () => {
+    if (!drag) return;
+    drag=false; handle.classList.remove('dragging');
+    document.body.style.cursor=''; document.body.style.userSelect='';
+  });
+})();
+
+/* ── FILE ICON HELPERS ────────────────────────────────────────── */
+function fileIcon(name, type) {
+  if (type==='tree') return `<svg class="folder-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`;
+  if (/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:#6bceff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path stroke-linecap="round" d="M21 15l-5-5L5 21"/></svg>`;
+  if (/\.pdf$/i.test(name)) return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:#f97316"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414A1 1 0 0018.707 8.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`;
+  if (/\.md$/i.test(name)) return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--accent2)"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`;
+  return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--text3)"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414A1 1 0 0018.707 8.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`;
+}
+function extBadge(name) {
+  const m = name.match(/\.([a-z0-9]+)$/i);
+  if (!m) return '';
+  const ext = m[1].toLowerCase();
+  const badge = document.createElement('span');
+  badge.className = 'file-item-ext' + (ext==='md' ? ' ext-md' : '');
+  badge.textContent = ext;
+  return badge.outerHTML;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VAULT INIT
+═══════════════════════════════════════════════════════════════ */
+async function initVault() {
+  // Reset all state so re-init is clean
+  fileContents.clear();
+  backlinkMap.clear();
+  isIndexBuilt = false;
+  lunrIdx = null;
+  document.getElementById('searchOpts').classList.add('disabled');
+  document.getElementById('idxHint').classList.remove('visible');
+
+  fileList.innerHTML = Array.from({length:7}, (_,i) =>
+    `<div class="skeleton skeleton-item" style="animation-delay:${i*40}ms;width:${75+Math.random()*20|0}%"></div>`
+  ).join('');
+  fileCount.textContent = '—';
+
+  try {
+    // Probe the user-specified branch first, then fall back
+    const candidates = [...new Set([BRANCH, 'main', 'master'])];
+    let res = null;
+    for (const b of candidates) {
+      res = await fetch(
+        `https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${b}?recursive=1`,
+        { headers: getHeaders() }
+      );
+      if (res.ok) { activeBranch = b; break; }
     }
 
-    function getHeaders() {
-      const pat = localStorage.getItem('oe-pat');
-      return pat ? { 'Authorization': `token ${pat}` } : {};
+    if (!res || !res.ok) {
+      const status = res ? res.status : 0;
+      if (status === 404) throw new Error('repo_not_found');
+      if (status === 403 || status === 429) throw new Error('rate_limit');
+      throw new Error(`api_error_${status}`);
     }
 
-    /* ── THEMES & FONTS CONFIGURATION ────────────────────────────── */
-    const THEMES = [
-      { id: 'catppuccin',     name: 'Catppuccin',   bg: '#1e1e2e', mid: '#313244', acc: '#cba6f7' },
-      { id: 'dracula',        name: 'Dracula',      bg: '#282a36', mid: '#343746', acc: '#bd93f9' },
-      { id: 'nord',           name: 'Nord',         bg: '#2e3440', mid: '#3b4252', acc: '#88c0d0' },
-      { id: 'rosepine',       name: 'Rosé Pine',    bg: '#191724', mid: '#26233a', acc: '#eb6f92' },
-      { id: 'github',         name: 'GitHub',       bg: '#ffffff', mid: '#eaeef2', acc: '#0969da' },
-      { id: 'solarized',      name: 'Solarized',    bg: '#002b36', mid: '#083f4d', acc: '#2aa198' },
-      { id: 'gruvbox',        name: 'Gruvbox',      bg: '#282828', mid: '#504945', acc: '#fe8019' },
-      { id: 'everforest',     name: 'Everforest',   bg: '#2b3339', mid: '#3a454a', acc: '#a7c080' },
-      { id: 'monokai',        name: 'Monokai',      bg: '#272822', mid: '#3e3d32', acc: '#fd971f' },
-      { id: 'tokyonight',     name: 'Tokyo Night',  bg: '#1a1b26', mid: '#292e42', acc: '#7aa2f7' },
-      { id: 'onedark',        name: 'One Dark',     bg: '#282c34', mid: '#2c313a', acc: '#61afef' },
-      { id: 'ayu',            name: 'Ayu Dark',     bg: '#0f1419', mid: '#151a1e', acc: '#ffb454' },
-      { id: 'material',       name: 'Material',     bg: '#263238', mid: '#37474f', acc: '#80cbc4' },
-      { id: 'synthwave',      name: 'Synthwave',    bg: '#2b213a', mid: '#34294f', acc: '#36f9f6' },
-      { id: 'cyberpunk',      name: 'Cyberpunk',    bg: '#0f0f15', mid: '#1f1f2e', acc: '#fdf500' },
-      { id: 'obsidian-light', name: 'Light',        bg: '#ffffff', mid: '#e3e3e3', acc: '#7a5cfa' },
-      { id: 'sepia',          name: 'Sepia',        bg: '#f4ecd8', mid: '#dfd0b2', acc: '#d16e3c' },
-      { id: 'oled',           name: 'OLED Black',   bg: '#000000', mid: '#141414', acc: '#ffffff' }
-    ];
+    const data = await res.json();
+    vaultIndex = data.tree;
 
-    const BODY_FONTS = [
-      { id: 'Literata',     name: 'Literata',     preview: 'Beautiful serif' },
-      { id: 'Merriweather', name: 'Merriweather', preview: 'Highly readable' },
-      { id: 'Lora',         name: 'Lora',         preview: 'Classic elegance' },
-      { id: 'Crimson Pro',  name: 'Crimson Pro',  preview: 'Oldstyle warmth' }
-    ];
-
-    const MONO_FONTS = [
-      { id: 'JetBrains Mono',  name: 'JetBrains Mono',  preview: 'fn main() {}' },
-      { id: 'Fira Code',       name: 'Fira Code',       preview: '() => true' },
-      { id: 'Source Code Pro', name: 'Source Code Pro', preview: '#include <io>' },
-      { id: 'IBM Plex Mono',   name: 'IBM Plex Mono',   preview: 'git commit -m' }
-    ];
-
-    let curTheme = localStorage.getItem('oe-theme') || 'catppuccin';
-    let curBodyFont = localStorage.getItem('oe-body-font') || 'Literata';
-    let curMonoFont = localStorage.getItem('oe-mono-font') || 'JetBrains Mono';
-
-    function applyTheme(id) { 
-      curTheme = id;
-      document.documentElement.dataset.theme = id; 
-      localStorage.setItem('oe-theme', id); 
-      document.querySelectorAll('.theme-card').forEach(c => {
-        c.classList.toggle('active', c.dataset.id === id);
-      });
-    }
-
-    function applyBodyFont(id) {
-      curBodyFont = id;
-      document.documentElement.style.setProperty('--font-body', `'${id}',Georgia,serif`);
-      localStorage.setItem('oe-body-font', id);
-      document.querySelectorAll('#bodyFontOpts .font-opt').forEach(o => {
-        o.classList.toggle('active', o.dataset.id === id);
-      });
-    }
-
-    function applyMonoFont(id) {
-      curMonoFont = id;
-      document.documentElement.style.setProperty('--font-mono', `'${id}',monospace`);
-      localStorage.setItem('oe-mono-font', id);
-      document.querySelectorAll('#monoFontOpts .font-opt').forEach(o => {
-        o.classList.toggle('active', o.dataset.id === id);
-      });
-    }
-
-    // Build settings panel content
-    (function initSettings() {
-      const grid = document.getElementById('themeGrid');
-      THEMES.forEach(t => {
-        const el = document.createElement('div');
-        el.className = 'theme-card' + (t.id === curTheme ? ' active' : '');
-        el.dataset.id = t.id;
-        el.innerHTML = `
-          <div class="theme-swatches">
-            <div class="swatch" style="background:${t.bg}"></div>
-            <div class="swatch" style="background:${t.mid}"></div>
-            <div class="swatch" style="background:${t.acc}"></div>
-          </div>
-          <div class="theme-name">${t.name}</div>
-        `;
-        el.addEventListener('click', () => { 
-          applyTheme(t.id); 
-          showToast(t.name); 
-        });
-        grid.appendChild(el);
-      });
-
-      function buildFontList(containerId, fonts, cur, applyFn, isMono) {
-        const wrap = document.getElementById(containerId);
-        fonts.forEach(f => {
-          const el = document.createElement('div');
-          el.className = 'font-opt' + (f.id === cur ? ' active' : '');
-          el.dataset.id = f.id;
-          const ff = `'${f.id}',${isMono ? 'monospace' : 'Georgia,serif'}`;
-          el.innerHTML = `
-            <span class="font-opt-name" style="font-family:${ff}">${f.name}</span>
-            <span class="font-opt-preview" style="font-family:${ff};font-style:${isMono ? 'normal' : 'italic'}">${f.preview}</span>
-          `;
-          el.addEventListener('click', () => { 
-            applyFn(f.id); 
-            showToast(f.name); 
-          });
-          wrap.appendChild(el);
-        });
+    // Build hierarchical tree
+    treeRoot = {};
+    vaultIndex.forEach(item => {
+      const parts = item.path.split('/');
+      let cur = treeRoot;
+      for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+        if (!cur[part]) cur[part] = {
+          _item: i===parts.length-1 ? item : {type:'tree', path:parts.slice(0,i+1).join('/')},
+          _children: {}
+        };
+        if (i < parts.length-1) cur = cur[part]._children;
       }
-      buildFontList('bodyFontOpts', BODY_FONTS, curBodyFont, applyBodyFont, false);
-      buildFontList('monoFontOpts', MONO_FONTS, curMonoFont, applyMonoFont, true);
-    })();
-
-    // Apply defaults
-    applyTheme(curTheme); 
-    applyBodyFont(curBodyFont); 
-    applyMonoFont(curMonoFont);
-
-    /* ── EVENT LISTENERS FOR SETTINGS ────────────────────────────── */
-    settingsBtn.addEventListener('click', () => {
-      settingsOverlay.classList.add('open');
     });
 
-    closeSettingsBtn.addEventListener('click', () => {
-      settingsOverlay.classList.remove('open');
-    });
+    renderSidebar();
 
-    settingsOverlay.addEventListener('click', (e) => { 
-      if (e.target === settingsOverlay) {
-        settingsOverlay.classList.remove('open'); 
-      }
-    });
+    const urlPath = new URLSearchParams(window.location.search).get('path');
+    if (urlPath) openFileFromTree(urlPath, true);
+    else updateBreadcrumbs();
 
-    /* ── UTILITY FUNCTIONS ───────────────────────────────────────── */
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      toast.textContent = msg; 
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2000);
+    // Start background indexer — 5 min interval to avoid hammering API
+    buildVaultIndex();
+    if (!window._indexInterval) {
+      window._indexInterval = setInterval(buildVaultIndex, 300000);
     }
 
-    function fileIcon(name, type) {
-      if (type === 'tree' || type === 'dir') {
-        return `<svg class="folder-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>`;
-      }
-      if (/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) {
-        return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:#6bceff"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path stroke-linecap="round" d="M21 15l-5-5L5 21"/></svg>`;
-      }
-      if (/\.md$/i.test(name)) {
-        return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--accent2)"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`;
-      }
-      return `<svg class="file-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="color:var(--text3)"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`;
-    }
+  } catch(e) {
+    console.error('initVault:', e);
+    let msg = 'An unexpected error occurred loading the vault.';
+    if (e.message === 'repo_not_found')
+      msg = `Repository <strong>${escapeHtml(OWNER)}/${escapeHtml(REPO)}</strong> not found. Check the name in Settings.`;
+    else if (e.message === 'rate_limit')
+      msg = 'GitHub API rate limit reached (60 req/hr). Open Settings and add a PAT token to raise the limit.';
+    const div = document.createElement('div');
+    div.className = 'empty-list';
+    div.innerHTML = `<span style="color:var(--danger)">${msg}</span><br><br>`;
+    const btn = document.createElement('button');
+    btn.className = 'icon-btn'; btn.style.margin = '0 auto';
+    btn.textContent = 'Open Settings';
+    btn.addEventListener('click', () => openOverlay('settingsOverlay'));
+    div.appendChild(btn);
+    fileList.innerHTML = '';
+    fileList.appendChild(div);
+  }
+}
 
-    function extBadge(name) {
-      const match = name.match(/\.([a-z0-9]+)$/i);
-      if (!match) return '';
-      
-      const ext = match[1].toLowerCase();
-      let cls = '';
-      
-      if (ext === 'md') cls = 'ext-md';
-      else if (['js', 'ts', 'jsx', 'tsx'].includes(ext)) cls = 'ext-js';
-      else if (ext === 'json') cls = 'ext-json';
-      else if (['css', 'html', 'htm'].includes(ext)) cls = 'ext-css';
-      else if (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext)) cls = 'ext-img';
-      
-      return `<span class="file-item-ext ${cls}">${ext}</span>`;
-    }
+/* ═══════════════════════════════════════════════════════════════
+   BACKGROUND INDEXER (batched, 5 concurrent)
+═══════════════════════════════════════════════════════════════ */
+async function buildVaultIndex() {
+  const statusEl = document.getElementById('indexingStatus');
+  const idxText  = document.getElementById('idxText');
+  const hint     = document.getElementById('idxHint');
+  statusEl.classList.add('visible');
+  hint.classList.add('visible');
 
-    /* ── SIDEBAR RESIZE & TOGGLE ─────────────────────────────────── */
-    function setSidebar(open) {
-      sidebarOpen = open;
-      sidebar.classList.toggle('collapsed', !open);
-      workspace.classList.toggle('sidebar-collapsed', !open);
-    }
+  const mdFiles = vaultIndex.filter(f => f.path.endsWith('.md'));
+  const docs = [];
+  const BATCH = 5;
 
-    function toggleSidebar() {
-      setSidebar(!sidebarOpen);
-      localStorage.setItem('oe-sidebar', sidebarOpen ? '1' : '0');
-    }
-
-    leftSidebarBtn.addEventListener('click', toggleSidebar);
-
-    // Initial state setup without animation
-    if (localStorage.getItem('oe-sidebar') === '0') { 
-      sidebar.style.transition = 'none'; 
-      setSidebar(false); 
-      requestAnimationFrame(() => sidebar.style.transition = ''); 
-    }
-
-    function setRightSidebar(open) {
-      rightSidebarOpen = open;
-      document.getElementById('rightSidebar').classList.toggle('collapsed', !open);
-      workspace.classList.toggle('right-sidebar-collapsed', !open);
-    }
-
-    function toggleRightSidebar() {
-      setRightSidebar(!rightSidebarOpen);
-      localStorage.setItem('oe-right-sidebar', rightSidebarOpen ? '1' : '0');
-    }
-
-    rightSidebarBtn.addEventListener('click', toggleRightSidebar);
-
-    if (localStorage.getItem('oe-right-sidebar') === '0') { 
-      document.getElementById('rightSidebar').style.transition = 'none'; 
-      setRightSidebar(false); 
-      requestAnimationFrame(() => document.getElementById('rightSidebar').style.transition = ''); 
-    }
-
-    // Sidebar Resizing Logic (IIFE to scope variables)
-    (function initResizeHandle() {
-      let drag = false;
-      let startX = 0;
-      let startWidth = 0;
-      
-      const handle = document.createElement('div'); 
-      handle.className = 'resize-handle'; 
-      sidebar.after(handle);
-      
-      handle.addEventListener('mousedown', (e) => {
-        if (!sidebarOpen) return;
-        drag = true;
-        startX = e.clientX;
-        startWidth = sidebar.offsetWidth;
-        handle.classList.add('dragging');
-        document.body.style.cssText += 'cursor:col-resize;user-select:none';
-      });
-      
-      document.addEventListener('mousemove', (e) => {
-        if (!drag) return; 
-        const newWidth = Math.max(160, Math.min(500, startWidth + e.clientX - startX));
-        sidebar.style.width = newWidth + 'px';
-        workspace.style.setProperty('--sidebar-w', newWidth + 'px');
-      });
-      
-      document.addEventListener('mouseup', () => {
-        if (!drag) return;
-        drag = false;
-        handle.classList.remove('dragging');
-        document.body.style.cursor = '';
-        document.body.style.userSelect = '';
-      });
-    })();
-
-    /* ── INITIALIZE VAULT (GLOBAL TREE) ──────────────────────────── */
-    async function initVault() {
-      fileList.innerHTML = Array.from({length: 6}, (_, i) => 
-        `<div class="skeleton skeleton-item" style="animation-delay:${i * 35}ms"></div>`
-      ).join('');
-      
+  for (let i = 0; i < mdFiles.length; i += BATCH) {
+    const slice = mdFiles.slice(i, i + BATCH);
+    idxText.textContent = `Indexing ${Math.min(i+BATCH, mdFiles.length)}/${mdFiles.length}`;
+    await Promise.all(slice.map(async f => {
       try {
-        let res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/main?recursive=1`, { headers: getHeaders() });
-        if (!res.ok) {
-          res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/master?recursive=1`, { headers: getHeaders() });
-        }
-        if (!res.ok) {
-          throw new Error('Failed to load. Rate limit hit?');
-        }
-
-        const data = await res.json();
-        vaultIndex = data.tree; // Set global flat list
-        
-        // Build Hierarchical Tree
-        treeRoot = {};
-        vaultIndex.forEach(item => {
-          const parts = item.path.split('/');
-          let current = treeRoot;
-          for (let i = 0; i < parts.length; i++) {
-            const part = parts[i];
-            if (!current[part]) {
-              current[part] = { 
-                _item: (i === parts.length - 1) ? item : { type: 'tree', path: parts.slice(0, i + 1).join('/') }, 
-                _children: {} 
-              };
-            }
-            if (i < parts.length - 1) {
-              current = current[part]._children;
-            }
+        const res = await fetch(rawUrl(f.path), { headers: getHeaders() });
+        if (!res.ok) return;
+        const text = await res.text();
+        fileContents.set(f.path, text);
+        docs.push({ id: f.path, title: f.path.split('/').pop(), body: text });
+        // Discover backlinks
+        const re = /\[\[(.*?)\]\]/g; let m;
+        while ((m = re.exec(text)) !== null) {
+          let t = m[1].split('|')[0].split('#')[0].trim();
+          if (!t.endsWith('.md')) t += '.md';
+          const tf = vaultIndex.find(v => v.path.toLowerCase().endsWith(t.toLowerCase()));
+          if (tf) {
+            if (!backlinkMap.has(tf.path)) backlinkMap.set(tf.path, []);
+            if (!backlinkMap.get(tf.path).includes(f.path))
+              backlinkMap.get(tf.path).push(f.path);
           }
-        });
-
-        renderSidebar();
-        
-        // Load URL state
-        const urlPath = new URLSearchParams(window.location.search).get('path');
-        if (urlPath) {
-          openFileFromTree(urlPath);
-        } else {
-          updateBreadcrumbs();
         }
+      } catch {}
+    }));
+  }
 
-        // Start Automated Background Indexer (Runs immediately, then every 60 seconds)
-        buildVaultIndex();
-        if (!window.indexInterval) {
-          window.indexInterval = setInterval(buildVaultIndex, 60000);
-        }
+  lunrIdx = lunr(function() {
+    this.ref('id');
+    this.field('title', { boost: 10 });
+    this.field('body');
+    docs.forEach(d => this.add(d));
+  });
 
-      } catch (e) {
-        console.error(e);
-        fileList.innerHTML = `<div class="empty-list" style="color:var(--danger)">API Limit reached.<br><br>Please open Settings and paste a GitHub Token.</div>`;
-      }
-    }
+  isIndexBuilt = true;
+  statusEl.classList.remove('visible');
+  hint.classList.remove('visible');
+  document.getElementById('searchOpts').classList.remove('disabled');
+  if (activeFile) updateBacklinks(activeFile);
+}
 
-    /* ── BACKGROUND INDEXER (Search) ─────────────────────────────── */
-    async function buildVaultIndex() {
-      const status = document.getElementById('indexingStatus');
-      status.style.display = 'flex';
-      
-      const mdFiles = vaultIndex.filter(f => f.path.endsWith('.md'));
-      let docs = [];
-      
-      for (let i = 0; i < mdFiles.length; i++) {
-        const f = mdFiles[i];
-        status.innerHTML = `<svg class="skeleton" style="width:12px;height:12px;border-radius:50%;" viewBox="0 0 24 24"></svg> Indexing ${i + 1}/${mdFiles.length}`;
-        
-        const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${f.path.split('/').map(encodeURIComponent).join('/')}`;
-        
-        try {
-          const res = await fetch(url);
-          const text = await res.text();
-          fileContents.set(f.path, text);
-          docs.push({ id: f.path, title: f.name, body: text });
+/* ═══════════════════════════════════════════════════════════════
+   SIDEBAR RENDERER
+═══════════════════════════════════════════════════════════════ */
+function renderSidebar(filter='') {
+  const q    = filter.trim().toLowerCase();
+  const mode = document.querySelector('input[name="smode"]:checked')?.value || 'name';
 
-          // Discover backlinks
-          const linkRegex = /\[\[(.*?)\]\]/g;
-          let match;
-          while ((match = linkRegex.exec(text)) !== null) {
-            let target = match[1].split('|')[0].split('#')[0].trim();
-            if (!target.endsWith('.md')) {
-              target += '.md';
-            }
-            
-            let targetFile = vaultIndex.find(vf => vf.path.toLowerCase().endsWith(target.toLowerCase()));
-            if (targetFile) {
-              if (!backlinkMap.has(targetFile.path)) {
-                backlinkMap.set(targetFile.path, []);
-              }
-              if (!backlinkMap.get(targetFile.path).includes(f.path)) {
-                backlinkMap.get(targetFile.path).push(f.path);
-              }
-            }
-          }
-        } catch(e) {
-          console.warn('Indexing error on', f.path, e);
-        }
-      }
+  // Full-text search results
+  if (q && mode === 'content' && isIndexBuilt) {
+    let results = [];
+    try {
+      const wq = q.split(/\s+/).filter(Boolean).map(w=>`*${w}*`).join(' ');
+      results = lunrIdx.search(wq);
+    } catch { results = lunrIdx.search(q); }
 
-      lunrIdx = lunr(function () {
-        this.ref('id'); 
-        this.field('title', { boost: 10 }); 
-        this.field('body');
-        docs.forEach(doc => this.add(doc));
+    fileList.innerHTML = '';
+    if (!results.length) {
+      fileList.innerHTML = '<div class="empty-list">No full-text matches.</div>';
+    } else {
+      results.forEach(r => {
+        const f = vaultIndex.find(v => v.path === r.ref);
+        if (!f) return;
+        const btn = document.createElement('button');
+        btn.className = 'file-item' + (activeFile===f.path?' active':'');
+        btn.innerHTML = fileIcon(f.path.split('/').pop(), 'blob');
+        const n = document.createElement('span');
+        n.className = 'file-item-name';
+        n.textContent = f.path.split('/').pop();
+        btn.appendChild(n);
+        btn.insertAdjacentHTML('beforeend', extBadge(f.path.split('/').pop()));
+        btn.addEventListener('click', () => openFileFromTree(f.path));
+        fileList.appendChild(btn);
       });
-
-      isIndexBuilt = true;
-      status.style.display = 'none';
-      
-      const searchOpts = document.getElementById('searchOpts');
-      if (searchOpts) {
-        searchOpts.style.display = 'flex';
-      }
-      
-      if (activeFile) {
-        updateBacklinks(activeFile);
-      }
+      fileCount.textContent = results.length;
     }
+    return;
+  }
 
-    /* ── NESTED SIDEBAR RENDERER ─────────────────────────────────── */
-    function renderSidebar(filterText = '') {
-      const q = filterText.trim().toLowerCase();
-      const searchModeRadio = document.querySelector('input[name="smode"]:checked');
-      const searchMode = searchModeRadio ? searchModeRadio.value : 'name';
+  // Name-filter + tree render using safe DOM construction
+  function buildNode(node) {
+    const frag = document.createDocumentFragment();
+    const keys = Object.keys(node).sort((a,b) => {
+      const aD = node[a]._item.type==='tree';
+      const bD = node[b]._item.type==='tree';
+      if (aD!==bD) return aD?-1:1;
+      return a.localeCompare(b);
+    });
+    for (const key of keys) {
+      const child = node[key];
+      const item  = child._item;
+      item.name   = key;
 
-      // Full Text Search
-      if (q && searchMode === 'content' && isIndexBuilt) {
-        let results = [];
-        try {
-          const wildcardQuery = q.split(/\s+/).filter(w => w).map(w => `*${w}*`).join(' ');
-          results = lunrIdx.search(wildcardQuery);
-        } catch (e) {
-          results = lunrIdx.search(q);
-        }
-        
-        let html = '';
-        if (results.length === 0) {
-          html = `<div style="padding:10px;color:var(--text3);font-size:12px;">No content matches.</div>`;
-        }
-        
-        results.forEach(res => {
-          const f = vaultIndex.find(vf => vf.path === res.ref);
-          if (!f) return;
-          const isActive = (activeFile === f.path) ? 'active' : '';
-          const safePath = f.path.replace(/'/g, "\\'");
-          html += `
-            <button class="file-item ${isActive}" onclick="openFileFromTree('${safePath}')">
-              ${fileIcon(f.name, 'blob')}
-              <span class="file-item-name">${f.name}</span>
-              ${extBadge(f.name)}
-            </button>`;
-        });
-        
-        fileList.innerHTML = html;
-        return;
-      }
-      
-      // Standard Name Search & Tree rendering
-      function buildHTML(node) {
-        let html = '';
-        const keys = Object.keys(node).sort((a, b) => {
-          const aIsDir = node[a]._item.type === 'tree';
-          const bIsDir = node[b]._item.type === 'tree';
-          if (aIsDir !== bIsDir) return aIsDir ? -1 : 1;
-          return a.localeCompare(b);
-        });
-
-        for (const key of keys) {
-          const child = node[key];
-          const item = child._item;
-          item.name = key;
-
-          if (item.type === 'tree') {
-            const childrenHtml = buildHTML(child._children);
-            // Hide empty folders during search
-            if (q && !childrenHtml) continue; 
-            
-            const isOpen = q ? 'open' : '';
-            html += `
-              <details class="sidebar-folder" ${isOpen}>
-                <summary class="folder-summary">
-                  <svg class="folder-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                  ${fileIcon(item.name, 'tree')}
-                  <span class="file-item-name">${key}</span>
-                </summary>
-                <div class="folder-contents">${childrenHtml}</div>
-              </details>`;
-          } else {
-            // Apply filtering logic
-            if (q && !key.toLowerCase().includes(q)) continue;
-            
-            const isActive = (activeFile === item.path) ? 'active' : '';
-            const safePath = item.path.replace(/'/g, "\\'");
-            
-            html += `
-              <button class="file-item ${isActive}" onclick="openFileFromTree('${safePath}')" title="${key}">
-                ${fileIcon(item.name, 'blob')}
-                <span class="file-item-name">${item.name}</span>
-                ${item.type === 'blob' ? extBadge(item.name) : ''}
-              </button>`;
-          }
-        }
-        return html;
-      }
-
-      fileList.innerHTML = buildHTML(treeRoot);
-      
-      if (q) {
-        fileCount.textContent = fileList.querySelectorAll('.file-item').length;
+      if (item.type === 'tree') {
+        const childFrag = buildNode(child._children);
+        if (q && !childFrag.childNodes.length) continue;
+        const det = document.createElement('details');
+        det.className = 'sidebar-folder';
+        if (q) det.open = true;
+        const sum = document.createElement('summary');
+        sum.className = 'folder-summary';
+        sum.innerHTML = `<svg class="folder-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>`;
+        sum.innerHTML += fileIcon(key,'tree');
+        const nameEl = document.createElement('span');
+        nameEl.className='file-item-name'; nameEl.textContent=key;
+        sum.appendChild(nameEl);
+        const cont = document.createElement('div');
+        cont.className = 'folder-contents';
+        cont.appendChild(childFrag);
+        det.append(sum, cont);
+        frag.appendChild(det);
       } else {
-        fileCount.textContent = vaultIndex.filter(i => i.type === 'blob').length;
+        if (q && !key.toLowerCase().includes(q)) continue;
+        const btn = document.createElement('button');
+        btn.className = 'file-item' + (activeFile===item.path?' active':'');
+        btn.title = key;
+        btn.innerHTML = fileIcon(key,'blob');
+        const n = document.createElement('span');
+        n.className='file-item-name'; n.textContent=key;
+        btn.appendChild(n);
+        btn.insertAdjacentHTML('beforeend', extBadge(key));
+        btn.addEventListener('click', () => openFileFromTree(item.path));
+        frag.appendChild(btn);
       }
     }
+    return frag;
+  }
 
-    searchInput.addEventListener('input', e => renderSidebar(e.target.value));
-    
-    const searchOptsEl = document.getElementById('searchOpts');
-    if (searchOptsEl) {
-      searchOptsEl.addEventListener('change', () => renderSidebar(searchInput.value));
+  fileList.innerHTML = '';
+  fileList.appendChild(buildNode(treeRoot));
+  fileCount.textContent = q
+    ? fileList.querySelectorAll('.file-item').length
+    : vaultIndex.filter(i=>i.type==='blob').length;
+}
+
+searchInput.addEventListener('input', e => renderSidebar(e.target.value));
+document.getElementById('searchOpts').addEventListener('change', () => renderSidebar(searchInput.value));
+
+/* ═══════════════════════════════════════════════════════════════
+   FILE OPENING
+═══════════════════════════════════════════════════════════════ */
+async function openFileFromTree(path, replaceState=false) {
+  activeFile = path;
+
+  // Debounced navigation: replace immediately, push after 600ms pause
+  clearTimeout(navDebounce);
+  history.replaceState({path}, '', `?path=${encodeURIComponent(path)}`);
+  navDebounce = setTimeout(() => {
+    history.pushState({path}, '', `?path=${encodeURIComponent(path)}`);
+  }, 600);
+
+  renderSidebar(searchInput.value);
+  updateBreadcrumbs();
+  // Close mobile sidebar after navigation
+  if (window.innerWidth <= 640) setSidebar(false);
+
+  const name = path.split('/').pop();
+  const ext  = name.includes('.') ? name.split('.').pop().toLowerCase() : '';
+
+  viewerTitle.textContent = name;
+  viewerTitle.title = path;
+  viewerTitle.classList.remove('placeholder');
+  viewerBadge.style.display = '';
+  viewerBadge.textContent = ext ? '.'+ext : '';
+  viewerMeta.style.display = 'none';
+  progressBar.style.width = '0%';
+  fileViewer.scrollTop = 0;
+
+  fileViewer.innerHTML = `<div class="state-card">
+    <div class="skeleton skeleton-item" style="width:220px"></div>
+    <div class="skeleton skeleton-item" style="width:100%;margin-top:8px"></div>
+    <div class="skeleton skeleton-item" style="width:75%;margin-top:8px"></div>
+  </div>`;
+
+  const url = rawUrl(path);
+
+  // Images
+  if (/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) {
+    const d=document.createElement('div'); d.className='image-preview';
+    const img=document.createElement('img'); img.src=url; img.alt=name; img.loading='lazy';
+    d.appendChild(img); fileViewer.innerHTML=''; fileViewer.appendChild(d);
+    tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">N/A for images</div>';
+    propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">N/A for images</div>';
+    updateBacklinks(path); return;
+  }
+
+  // PDFs
+  if (ext==='pdf') {
+    const vUrl=`https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true`;
+    const f=document.createElement('iframe'); f.src=vUrl; f.title=name;
+    f.style.cssText='width:100%;height:100%;border:none';
+    fileViewer.innerHTML=''; fileViewer.appendChild(f);
+    tocContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">N/A for PDFs</div>';
+    propertiesContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">N/A for PDFs</div>';
+    updateBacklinks(path); return;
+  }
+
+  // Word docs
+  if (['doc','docx'].includes(ext)) {
+    const vUrl=`https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+    const f=document.createElement('iframe'); f.src=vUrl; f.title=name;
+    f.style.cssText='width:100%;height:100%;border:none';
+    fileViewer.innerHTML=''; fileViewer.appendChild(f);
+    tocContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">N/A for Word docs</div>';
+    propertiesContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">N/A for Word docs</div>';
+    updateBacklinks(path); return;
+  }
+
+  try {
+    let raw = fileContents.get(path);
+    if (!raw) {
+      const res = await fetch(url, { headers: getHeaders() });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      raw = await res.text();
     }
 
-    /* ── FILE READING & CONTENT RENDERING ────────────────────────── */
-    async function openFileFromTree(path) {
-      activeFile = path;
-      history.pushState({path}, '', `?path=${encodeURIComponent(path)}`);
-      
-      renderSidebar(searchInput.value);
-      updateBreadcrumbs();
+    if (ext === 'md') {
+      const { text: processed, propertiesHtml } = preprocessObsidian(raw);
+      propertiesContainer.innerHTML = propertiesHtml
+        || '<div style="font-size:12px;color:var(--text3)">No properties</div>';
 
-      const item = vaultIndex.find(f => f.path === path);
-      if (!item) return;
+      const div = document.createElement('div');
+      div.className = 'md-content';
+      div.innerHTML = marked.parse(processed, { breaks:true, gfm:true });
+      fileViewer.innerHTML = ''; fileViewer.appendChild(div);
 
-      const name = path.split('/').pop();
-      const ext = name.split('.').pop().toLowerCase();
-      
-      viewerTitle.textContent = name;
-      viewerTitle.title = name;
-      viewerTitle.classList.remove('placeholder');
-      viewerBadge.style.display = ''; 
-      viewerBadge.textContent = '.' + ext;
-
-      fileViewer.innerHTML = `<div class="state-card"><div class="skeleton skeleton-item" style="width:200px"></div><div class="skeleton skeleton-item" style="width:100%"></div></div>`;
-
-      // Resolve the raw download URL bypassing standard GitHub API limits
-      const rawUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${path.split('/').map(encodeURIComponent).join('/')}`;
-
-      if (/\.(jpe?g|png|gif|webp|svg)$/i.test(name)) {
-        fileViewer.innerHTML = `<div class="image-preview"><img src="${rawUrl}" alt="${name}"></div>`;
-        tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-        propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-        updateBacklinks(path);
-        return;
-      }
-
-      if (ext === 'pdf') {
-        const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(rawUrl)}&embedded=true`;
-        fileViewer.innerHTML = `<iframe src="${viewerUrl}" style="width:100%;height:100%;border:none;"></iframe>`;
-        tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-        propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-        updateBacklinks(path);
-        return;
-      }
-
-      if (['doc', 'docx'].includes(ext)) {
-        const viewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(rawUrl)}`;
-        fileViewer.innerHTML = `<iframe src="${viewerUrl}" style="width:100%;height:100%;border:none;"></iframe>`;
-        tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-        propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-        updateBacklinks(path);
-        return;
-      }
-
-      try {
-        let raw = fileContents.get(path);
-        if (!raw) {
-          const res = await fetch(rawUrl);
-          if (!res.ok) throw new Error('File fetch failed');
-          raw = await res.text();
-        }
-
-        if (ext === 'md') {
-          const div = document.createElement('div');
-          div.className = 'md-content';
-          
-          const { text: processedRaw, propertiesHtml } = preprocessObsidian(raw);
-          
-          propertiesContainer.innerHTML = propertiesHtml || '<div style="font-size:12px;color:var(--text3)">No properties</div>';
-          div.innerHTML = marked.parse(processedRaw, { breaks: true, gfm: true });
-          
-          fileViewer.innerHTML = '';
-          fileViewer.appendChild(div);
-
-          // Rewriting relative image paths so they work via raw GitHub url
-          div.querySelectorAll('img').forEach(img => {
-            const src = img.getAttribute('src');
-            if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-              const parts = activeFile.split('/');
-              parts.pop(); 
-              const relativeParts = src.split('/');
-              for (const p of relativeParts) {
-                if (p === '..') parts.pop();
-                else if (p !== '.') parts.push(p);
-              }
-              img.src = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${parts.join('/').split('/').map(encodeURIComponent).join('/')}`;
-            }
+      // Fix relative image paths using active branch
+      div.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+          const parts = activeFile.split('/'); parts.pop();
+          src.split('/').forEach(p => {
+            if (p==='..') parts.pop();
+            else if (p && p!=='.') parts.push(p);
           });
-
-          div.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
-          
-          if (window.MathJax) {
-            MathJax.typesetPromise([div]).catch(e => console.log('MathJax Error:', e));
-          }
-
-          buildTOC(div);
-          updateBacklinks(path);
-
-        } else {
-          // Render plain text nicely
-          fileViewer.innerHTML = `<div class="raw-content">${raw.replace(/</g, '&lt;')}</div>`;
-          tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-          propertiesContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Not applicable</div>';
-          updateBacklinks(path);
+          img.src = rawUrl(parts.join('/'));
         }
-      } catch (e) {
-        fileViewer.innerHTML = `<div class="state-card error"><div class="state-icon">❌</div><div class="state-title">Error loading file</div></div>`;
-      }
-    }
-
-    /* ── ADVANCED FEATURES (TOC, Backlinks) ──────────────────────── */
-    function buildTOC(container) {
-      tocContainer.innerHTML = '';
-      const headers = container.querySelectorAll('h1, h2, h3');
-      
-      if (headers.length === 0) {
-        tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No headings</div>';
-        return;
-      }
-      
-      headers.forEach((h, i) => {
-        if (!h.id) h.id = 'heading-' + i;
-        const link = document.createElement('a');
-        link.className = `toc-link toc-${h.tagName.toLowerCase()}`;
-        link.textContent = h.textContent;
-        link.onclick = () => h.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        tocContainer.appendChild(link);
       });
-    }
 
-    function updateBacklinks(path) {
-      if (!isIndexBuilt) {
-        backlinksContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Build Vault Index to see backlinks.</div>';
-        return;
-      }
-      
-      backlinksContainer.innerHTML = '';
-      const links = backlinkMap.get(path) || [];
-      
-      if (links.length === 0) {
-        backlinksContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No unlinked mentions found.</div>';
-        return;
-      }
-
-      links.forEach(sourcePath => {
-        const name = sourcePath.split('/').pop().replace('.md', '');
-        const btn = document.createElement('div');
-        btn.className = 'backlink-item';
-        btn.innerHTML = `<svg class="bl-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg> ${name}`;
-        btn.onclick = () => openFileFromTree(sourcePath);
-        backlinksContainer.appendChild(btn);
-      });
-    }
-
-    /* ── PRE-PROCESS OBSIDIAN SYNTAX ─────────────────────────────── */
-    function preprocessObsidian(rawText) {
-      let text = rawText;
-      let propertiesHtml = '';
-
-      // Extract Frontmatter
-      const fmRegex = /^---\n([\s\S]*?)\n---(\n|$)/;
-      const fmMatch = text.match(fmRegex);
-      
-      if (fmMatch) {
-        text = text.replace(fmRegex, ''); 
-        const lines = fmMatch[1].split('\n').filter(l => l.trim());
-        let props = '';
-        
-        lines.forEach(l => {
-          const colonIdx = l.indexOf(':');
-          if (colonIdx === -1) return;
-          
-          const key = l.substring(0, colonIdx).trim();
-          let val = l.substring(colonIdx + 1).trim();
-
-          if (val.startsWith('[') && val.endsWith(']')) {
-            const items = val.slice(1, -1).split(',').map(i => i.trim());
-            val = items.map(i => `<span class="property-pill">${i.replace(/['"]/g, '')}</span>`).join('');
-          } else if (val) {
-            if (val.startsWith('"') && val.endsWith('"')) {
-              val = val.slice(1, -1);
-            }
-            val = `<span class="property-pill">${val}</span>`;
-          }
-          
-          props += `<div class="property-row"><div class="property-key">${key}</div><div class="property-value">${val}</div></div>`;
+      // Copy-to-clipboard buttons on code blocks
+      div.querySelectorAll('pre').forEach(pre => {
+        const btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copy';
+        btn.setAttribute('aria-label','Copy code');
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const code = pre.querySelector('code');
+          navigator.clipboard.writeText((code||pre).textContent).then(() => {
+            btn.textContent='Copied!';
+            setTimeout(()=> btn.textContent='Copy', 1800);
+          });
         });
-        
-        if (props) {
-          propertiesHtml = `<div class="obsidian-properties">${props}</div>`;
-        }
-      }
-
-      // Checkboxes
-      text = text.replace(/^(\s*)- \[ \]/gm, '$1- <input type="checkbox" disabled>');
-      text = text.replace(/^(\s*)- \[(x|X)\]/gm, '$1- <input type="checkbox" checked disabled>');
-      
-      // Highlights
-      text = text.replace(/==(.*?)==/g, '<mark class="obsidian-highlight">$1</mark>');
-      
-      // Tags
-      text = text.replace(/(^|\s)#([a-zA-Z0-9_/-]+)/g, '$1<span class="obsidian-tag">#$2</span>');
-
-      // Embeds
-      text = text.replace(/!\[\[(.*?)\]\]/g, (match, inner) => {
-        let [filename, size] = inner.split('|');
-        filename = filename.trim();
-        
-        const found = vaultIndex.find(f => f.path.endsWith(filename));
-        if (found) {
-          const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/${found.path.split('/').map(encodeURIComponent).join('/')}`;
-          if (/\.(jpe?g|png|gif|webp|svg)$/i.test(filename)) {
-            let widthStyle = size ? `width:${size}px;` : 'max-width:100%;';
-            return `<img src="${url}" alt="${filename}" style="${widthStyle} border-radius:var(--radius-lg); margin:8px 0; box-shadow:0 4px 16px rgba(0,0,0,0.1);">`;
-          } else {
-            return `<a class="wikilink" onclick="openWikilink('${found.path.replace(/'/g, "\\'")}')">📎 ${filename}</a>`;
-          }
-        }
-        return `<span style="color:var(--danger)">⚠️ Missing Embed: ${filename}</span>`;
+        pre.appendChild(btn);
+        const codeEl = pre.querySelector('code');
+        if (codeEl) hljs.highlightElement(codeEl);
       });
 
-      // Wikilinks
-      text = text.replace(/\[\[(.*?)\]\]/g, (match, inner) => {
-        let [link, display] = inner.split('|');
-        display = display || link;
-        
-        let [fileTarget, anchor] = link.split('#');
-        fileTarget = fileTarget.trim();
+      if (window.MathJax) MathJax.typesetPromise([div]).catch(()=>{});
 
-        const safeLink = fileTarget.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        const safeAnchor = anchor ? anchor.replace(/'/g, "\\'").replace(/"/g, '&quot;') : '';
+      buildTOC(div);
+      updateBacklinks(path);
 
-        return `<span class="wikilink" title="${link}" onclick="openWikilink('${safeLink}', '${safeAnchor}')">${display}</span>`;
-      });
+      // Word count + reading time
+      const words   = (div.textContent||'').trim().split(/\s+/).filter(Boolean).length;
+      const minutes = Math.max(1, Math.round(words / 200));
+      viewerMeta.textContent = `${words.toLocaleString()} words · ~${minutes} min`;
+      viewerMeta.style.display = '';
 
-      // Callouts
-      text = text.replace(/^> \[!([a-zA-Z]+)\](.*?)\n([\s\S]*?)(?=\n\n|\n> \[!|$)/gm, (match, type, title, content) => {
-        const cleanContent = content.replace(/^>\s?/gm, '');
-        return `<div class="callout callout-${type.toLowerCase()}">
-                  <div class="callout-title">${title.trim() || type.toUpperCase()}</div>
-                  <div class="callout-content">\n\n${cleanContent}\n\n</div>
-                </div>`;
-      });
+      setupScrollSpy(div);
 
-      return { text, propertiesHtml };
+    } else {
+      // Plain text — use textContent to prevent any XSS
+      const pre = document.createElement('div');
+      pre.className = 'raw-content';
+      pre.textContent = raw;
+      fileViewer.innerHTML = ''; fileViewer.appendChild(pre);
+      tocContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">N/A for plain text</div>';
+      propertiesContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">N/A for plain text</div>';
+      updateBacklinks(path);
     }
+  } catch(e) {
+    fileViewer.innerHTML=`<div class="state-card error">
+      <div class="state-icon">❌</div>
+      <div class="state-title">Error loading file</div>
+      <div class="state-sub">${escapeHtml(e.message)}</div>
+    </div>`;
+  }
+}
 
-    /* ── WIKILINKS AND NAVIGATION ────────────────────────────────── */
-    window.openWikilink = async function(target, anchor = '') {
-      let searchName = target.trim().toLowerCase();
-      
-      if (!searchName) {
-        if (anchor) scrollToAnchor(anchor);
-        return;
-      }
+/* ═══════════════════════════════════════════════════════════════
+   TOC + SCROLL SPY
+═══════════════════════════════════════════════════════════════ */
+function buildTOC(container) {
+  tocContainer.innerHTML = '';
+  const headers = container.querySelectorAll('h1,h2,h3');
+  if (!headers.length) {
+    tocContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No headings found</div>';
+    return;
+  }
+  headers.forEach(h => {
+    // Use same slugify as scrollToAnchor so wikilink anchors match
+    if (!h.id) h.id = slugify(h.textContent) || ('h-' + Math.random().toString(36).slice(2,7));
+    const a = document.createElement('a');
+    a.className = `toc-link toc-${h.tagName.toLowerCase()}`;
+    a.textContent = h.textContent;
+    a.dataset.target = h.id;
+    a.onclick = () => h.scrollIntoView({ behavior:'smooth', block:'start' });
+    tocContainer.appendChild(a);
+  });
+}
 
-      showToast(`Opening ${target}...`);
-      if (!searchName.endsWith('.md')) {
-        searchName += '.md';
-      }
-
-      const found = vaultIndex.find(f => f.path.toLowerCase().endsWith(searchName));
-      if (found) {
-        await openFileFromTree(found.path);
-        if (anchor) {
-          setTimeout(() => scrollToAnchor(anchor), 400); 
-        }
-      } else {
-        showToast(`File not found: ${target}`);
-      }
-    };
-
-    function scrollToAnchor(anchor) {
-      const id = anchor.toLowerCase().replace(/[^\w]+/g, '-');
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        el.style.color = 'var(--accent)';
-        setTimeout(() => el.style.color = '', 2000);
-      }
-    }
-
-    function updateBreadcrumbs() {
-      if (!activeFile) {
-        breadcrumb.innerHTML = `<span class="cur" style="color:var(--text3)">${REPO}</span>`;
-        return;
-      }
-      
-      const parts = activeFile.split('/');
-      breadcrumb.innerHTML = `<span class="cur" style="color:var(--text3)">${REPO}</span>`;
-      
-      parts.forEach((part, i) => {
-        const colorStyle = (i === parts.length - 1) ? 'style="color:var(--text)"' : '';
-        breadcrumb.innerHTML += ` <span class="sep">/</span> <span class="cur" ${colorStyle}>${part}</span>`;
-      });
-    }
-
-    /* ── KEYBOARD SHORTCUTS ──────────────────────────────────────── */
-    document.addEventListener('keydown', e => {
-      if (e.target === searchInput) {
-        if (e.key === 'Escape') {
-          searchInput.value = '';
-          renderSidebar();
-          searchInput.blur();
-        }
-        return;
-      }
-      if (e.key === 'f' || e.key === 'F') { 
-        e.preventDefault(); 
-        searchInput.focus(); 
-      }
-      if (e.key === 'r' || e.key === 'R') { 
-        e.preventDefault(); 
-        initVault(); 
-        showToast('Refreshed vault'); 
-      }
+function setupScrollSpy(container) {
+  const headers = Array.from(container.querySelectorAll('h1,h2,h3'));
+  if (!headers.length) return;
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const link = tocContainer.querySelector(`[data-target="${e.target.id}"]`);
+      if (link) link.classList.toggle('active', e.isIntersecting);
     });
-
-    document.getElementById('refreshBtn').onclick = () => { 
-      initVault(); 
-      showToast('Refreshed vault'); 
-    };
-
-    window.addEventListener('popstate', () => {
-      const p = new URLSearchParams(window.location.search).get('path');
-      if (p) openFileFromTree(p);
+  }, { root:fileViewer, rootMargin:'-10% 0px -70% 0px' }).observe;
+  // Use one observer for all headers
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const link = tocContainer.querySelector(`[data-target="${e.target.id}"]`);
+      if (link) link.classList.toggle('active', e.isIntersecting);
     });
+  }, { root:fileViewer, rootMargin:'-8% 0px -68% 0px' });
+  headers.forEach(h => obs.observe(h));
+}
 
-    // Start the Engine!
-    initVault();
+function updateBacklinks(path) {
+  backlinksContainer.innerHTML = '';
+  if (!isIndexBuilt) {
+    backlinksContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">Indexing in progress…</div>';
+    return;
+  }
+  const links = backlinkMap.get(path) || [];
+  if (!links.length) {
+    backlinksContainer.innerHTML='<div style="font-size:12px;color:var(--text3)">No backlinks found.</div>';
+    return;
+  }
+  links.forEach(src => {
+    const btn = document.createElement('button');
+    btn.className = 'backlink-item';
+    btn.innerHTML = `<svg class="bl-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`;
+    const span = document.createElement('span');
+    span.textContent = src.split('/').pop().replace(/\.md$/i,'');
+    btn.appendChild(span);
+    btn.addEventListener('click', () => openFileFromTree(src));
+    backlinksContainer.appendChild(btn);
+  });
+}
 
-  </script>
+/* ═══════════════════════════════════════════════════════════════
+   OBSIDIAN PRE-PROCESSOR
+═══════════════════════════════════════════════════════════════ */
+function calloutIcon(type) {
+  const icons = {
+    note:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+    info:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+    tip:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>',
+    warning:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>',
+    danger:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
+    success:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+    question:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m.08 4h.01"/></svg>',
+  };
+  return icons[type] || icons.note;
+}
+
+function preprocessObsidian(rawText) {
+  let text = rawText;
+  let propertiesHtml = '';
+
+  // 1. Extract frontmatter
+  const fmMatch = text.match(/^---\r?\n([\s\S]*?)\r?\n---(\r?\n|$)/);
+  if (fmMatch) {
+    text = text.slice(fmMatch[0].length);
+    propertiesHtml = parseFrontmatter(fmMatch[1]);
+  }
+
+  // 2. Protect fenced code blocks and inline code from all transforms below
+  const protected_ = [];
+  const protect = s => { protected_.push(s); return `\x00P${protected_.length-1}\x00`; };
+  text = text.replace(/```[\s\S]*?```/g, protect);
+  text = text.replace(/`[^`\n]+`/g, protect);
+
+  // 3. Checkboxes (only in list context, outside code)
+  text = text.replace(/^(\s*)-\s\[ \]/gm, '$1- <input type="checkbox" disabled>');
+  text = text.replace(/^(\s*)-\s\[(x|X)\]/gm, '$1- <input type="checkbox" checked disabled>');
+
+  // 4. Highlights
+  text = text.replace(/==(.*?)==/g, '<mark class="obsidian-highlight">$1</mark>');
+
+  // 5. Tags
+  text = text.replace(/(^|\s)#([a-zA-Z0-9_/-]+)/g, (_, pre, tag) =>
+    `${pre}<span class="obsidian-tag">#${escapeHtml(tag)}</span>`);
+
+  // 6. Embeds  ![[file|optionalSize]]
+  text = text.replace(/!\[\[(.*?)\]\]/g, (_, inner) => {
+    let [fname, size] = inner.split('|');
+    fname = fname.trim();
+    const found = vaultIndex.find(f => f.path.toLowerCase().endsWith(fname.toLowerCase()));
+    if (found) {
+      const u = rawUrl(found.path);
+      if (/\.(jpe?g|png|gif|webp|svg)$/i.test(fname)) {
+        const w = size ? `width:${escapeHtml(size.trim())}px;` : 'max-width:100%;';
+        return `<img src="${escapeHtml(u)}" alt="${escapeHtml(fname)}" style="${w}border-radius:var(--radius-lg);margin:8px 0">`;
+      }
+      return `<span class="wikilink" data-target="${escapeHtml(found.path)}" data-anchor="">📎 ${escapeHtml(fname)}</span>`;
+    }
+    return `<span style="color:var(--danger)">⚠️ Missing: ${escapeHtml(fname)}</span>`;
+  });
+
+  // 7. Wikilinks  [[target|display]]  [[target#anchor]]
+  text = text.replace(/\[\[(.*?)\]\]/g, (_, inner) => {
+    const [linkPart, display] = inner.split('|');
+    const [fileTarget, anchor=''] = linkPart.split('#');
+    const label = display || linkPart;
+    return `<span class="wikilink" data-target="${escapeHtml(fileTarget.trim())}" data-anchor="${escapeHtml(anchor.trim())}">${escapeHtml(label)}</span>`;
+  });
+
+  // 8. Callouts — support foldable +/- syntax and multi-line body
+  text = text.replace(
+    /^> \[!([A-Za-z]+)\]([+-]?)(.*?)(?:\n)((?:> ?.*(?:\n|$))*)/gm,
+    (_, type, fold, titleRaw, body) => {
+      const t   = type.toLowerCase();
+      const cls = `callout callout-${escapeHtml(t)}`;
+      const ttl = titleRaw.trim() || (type.charAt(0).toUpperCase() + type.slice(1).toLowerCase());
+      const con = body.replace(/^> ?/gm, '').trim();
+      const icon = calloutIcon(t);
+      const foldSvg = `<svg class="fold-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;margin-left:auto"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>`;
+      if (fold === '+') {
+        return `<details class="${cls} callout-foldable" open><summary class="callout-title">${icon}${escapeHtml(ttl)}${foldSvg}</summary><div class="callout-content">\n\n${con}\n\n</div></details>`;
+      } else if (fold === '-') {
+        return `<details class="${cls} callout-foldable"><summary class="callout-title">${icon}${escapeHtml(ttl)}${foldSvg}</summary><div class="callout-content">\n\n${con}\n\n</div></details>`;
+      }
+      return `<div class="${cls}"><div class="callout-title">${icon}${escapeHtml(ttl)}</div><div class="callout-content">\n\n${con}\n\n</div></div>`;
+    }
+  );
+
+  // 9. Restore protected code blocks
+  text = text.replace(/\x00P(\d+)\x00/g, (_, i) => protected_[+i]);
+
+  return { text, propertiesHtml };
+}
+
+/* ── FRONTMATTER YAML PARSER ──────────────────────────────────── */
+function parseFrontmatter(yaml) {
+  const lines = yaml.split('\n');
+  let props = '';
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const ci = line.indexOf(':');
+    if (ci < 1) { i++; continue; }
+
+    const key = line.slice(0, ci).trim();
+    let val = line.slice(ci+1).trim();
+
+    // Multi-line YAML array (- item style)
+    if (val === '' && i+1 < lines.length && lines[i+1].trimStart().startsWith('-')) {
+      const items = [];
+      i++;
+      while (i < lines.length && lines[i].trimStart().startsWith('-')) {
+        items.push(lines[i].replace(/^\s*-\s*/, '').replace(/^['"]|['"]$/g,'').trim());
+        i++;
+      }
+      const pills = items.map(it=>`<span class="property-pill">${escapeHtml(it)}</span>`).join('');
+      props += `<div class="property-row"><div class="property-key">${escapeHtml(key)}</div><div class="property-value">${pills}</div></div>`;
+      continue;
+    }
+
+    // Inline array [a, b, c]
+    if (val.startsWith('[') && val.endsWith(']')) {
+      const items = val.slice(1,-1).split(',').map(s=>s.trim().replace(/^['"]|['"]$/g,''));
+      const pills = items.filter(Boolean).map(it=>`<span class="property-pill">${escapeHtml(it)}</span>`).join('');
+      props += `<div class="property-row"><div class="property-key">${escapeHtml(key)}</div><div class="property-value">${pills}</div></div>`;
+      i++; continue;
+    }
+
+    // Scalar value
+    val = val.replace(/^['"]|['"]$/g,'');
+    if (val) {
+      props += `<div class="property-row"><div class="property-key">${escapeHtml(key)}</div><div class="property-value"><span class="property-pill">${escapeHtml(val)}</span></div></div>`;
+    }
+    i++;
+  }
+
+  return props ? `<div class="obsidian-properties">${props}</div>` : '';
+}
+
+/* ── WIKILINK CLICK DELEGATION ────────────────────────────────── */
+document.addEventListener('click', e => {
+  const wl = e.target.closest('.wikilink');
+  if (!wl) return;
+  const target = wl.dataset.target || '';
+  const anchor = wl.dataset.anchor || '';
+  if (!target) { if (anchor) scrollToAnchor(anchor); return; }
+  showToast(`Opening ${target}…`);
+  let s = target.toLowerCase();
+  if (!s.endsWith('.md')) s += '.md';
+  const found = vaultIndex.find(f => f.path.toLowerCase().endsWith(s));
+  if (found) {
+    openFileFromTree(found.path).then(() => { if (anchor) setTimeout(()=>scrollToAnchor(anchor),400); });
+  } else {
+    showToast(`File not found: ${target}`);
+  }
+});
+
+function scrollToAnchor(anchor) {
+  const id = slugify(anchor);
+  const el = document.getElementById(id)
+           || document.getElementById(anchor.toLowerCase().replace(/[^\w]+/g,'-'));
+  if (el) {
+    el.scrollIntoView({ behavior:'smooth', block:'start' });
+    const orig = el.style.color;
+    el.style.color = 'var(--accent)';
+    setTimeout(()=> el.style.color=orig, 2000);
+  }
+}
+
+/* ── BREADCRUMBS ──────────────────────────────────────────────── */
+function updateBreadcrumbs() {
+  breadcrumb.innerHTML = '';
+  const repoSpan = document.createElement('span');
+  repoSpan.className = 'bc-part'; repoSpan.style.color='var(--text3)'; repoSpan.textContent = REPO;
+  breadcrumb.appendChild(repoSpan);
+  if (!activeFile) return;
+  activeFile.split('/').forEach((part, i, arr) => {
+    const sep=document.createElement('span'); sep.className='sep'; sep.textContent='/';
+    const s=document.createElement('span'); s.className='bc-part'; s.textContent=part;
+    if (i===arr.length-1) s.style.color='var(--text)';
+    breadcrumb.append(sep, s);
+  });
+}
+
+/* ── KEYBOARD SHORTCUTS ───────────────────────────────────────── */
+document.addEventListener('keydown', e => {
+  const tag = e.target.tagName.toLowerCase();
+  const inInput = tag==='input' || tag==='textarea' || e.target.isContentEditable;
+
+  if (e.key==='Escape') {
+    if (document.getElementById('helpOverlay').classList.contains('open'))
+      { closeOverlay('helpOverlay'); return; }
+    if (document.getElementById('settingsOverlay').classList.contains('open'))
+      { closeOverlay('settingsOverlay'); return; }
+    if (imgLightbox.classList.contains('open'))
+      { imgLightbox.classList.remove('open'); return; }
+    if (inInput) {
+      e.target.blur();
+      if (e.target===searchInput) { searchInput.value=''; renderSidebar(); }
+    }
+    return;
+  }
+
+  if (inInput) return; // Don't hijack keys while typing in any input
+
+  const k = e.key.toLowerCase();
+  if (k==='f')  { e.preventDefault(); searchInput.focus(); }
+  if (k==='r')  { e.preventDefault(); initVault(); showToast('Refreshing vault…'); }
+  if (k==='b')  { e.preventDefault(); toggleSidebar(); }
+  if (k==='e')  { e.preventDefault(); toggleRightSidebar(); }
+  if (k==='s')  { e.preventDefault(); openOverlay('settingsOverlay'); }
+  if (k==='?')  { e.preventDefault(); openOverlay('helpOverlay'); }
+});
+
+document.getElementById('refreshBtn').addEventListener('click', () => { initVault(); showToast('Refreshing vault…'); });
+
+window.addEventListener('popstate', e => {
+  const path = e.state?.path || new URLSearchParams(window.location.search).get('path');
+  if (path) openFileFromTree(path, true);
+});
+
+// ── START ──────────────────────────────────────────────────────
+initVault();
+</script>
 </body>
 </html>
