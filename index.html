@@ -999,6 +999,7 @@ function renderSidebar(filter='') {
         if (q && !childFrag.childNodes.length) continue;
         const det = document.createElement('details');
         det.className = 'sidebar-folder';
+        det.dataset.path = item.path;
         if (q) det.open = true;
         const sum = document.createElement('summary');
         sum.className = 'folder-summary';
@@ -1029,8 +1030,23 @@ function renderSidebar(filter='') {
     return frag;
   }
 
+  const openPaths = Array.from(fileList.querySelectorAll('details.sidebar-folder[open]'))
+    .map(d => d.dataset.path).filter(Boolean);
   fileList.innerHTML = '';
   fileList.appendChild(buildNode(treeRoot));
+  if (!q) {
+    openPaths.forEach(p => {
+      const el = fileList.querySelector(`details[data-path="${CSS.escape(p)}"]`);
+      if (el) el.open = true;
+    });
+    if (activeFile) {
+      const parts = activeFile.split('/');
+      for (let i = 1; i < parts.length; i++) {
+        const el = fileList.querySelector(`details[data-path="${CSS.escape(parts.slice(0, i).join('/'))}"]`);
+        if (el) el.open = true;
+      }
+    }
+  }
   fileCount.textContent = q
     ? fileList.querySelectorAll('.file-item').length
     : vaultIndex.filter(i=>i.type==='blob').length;
