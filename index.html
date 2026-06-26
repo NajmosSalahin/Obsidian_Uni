@@ -1007,6 +1007,329 @@ if (localStorage.getItem('oe-right-sidebar') === '0') {
   requestAnimationFrame(() => rs.style.transition = '');
 }
 
+/* ── FONT SIZE SLIDER ──────────────────────────────────────────── */
+function applyFontSize(val) {
+  document.documentElement.style.setProperty('--font-body', `${val}px`);
+  localStorage.setItem('oe-font-size', val);
+}
+const savedSize = localStorage.getItem('oe-font-size');
+if (savedSize) applyFontSize(savedSize);
+if (fontSizeSlider) {
+  fontSizeSlider.value = savedSize || 15.5;
+  fontSizeVal.textContent = savedSize || 15.5;
+  fontSizeSlider.addEventListener('input', () => {
+    const v = fontSizeSlider.value;
+    fontSizeVal.textContent = v;
+    applyFontSize(v);
+  });
+}
+
+/* ── SORT FILES ────────────────────────────────────────────────── */
+function applySort(mode) {
+  sortMode = mode; localStorage.setItem('oe-sort', mode);
+  renderSidebar(searchInput.value);
+}
+const savedSort = localStorage.getItem('oe-sort');
+if (savedSort) { sortMode = savedSort; if (sortSelect) sortSelect.value = savedSort; }
+if (sortSelect) sortSelect.addEventListener('change', () => applySort(sortSelect.value));
+
+/* ── FOCUS MODE ────────────────────────────────────────────────── */
+function toggleFocusMode() {
+  focusMode = !focusMode;
+  document.body.classList.toggle('focus-mode', focusMode);
+  localStorage.setItem('oe-focus-mode', focusMode ? '1' : '0');
+  showToast(focusMode ? 'Focus mode on' : 'Focus mode off');
+}
+if (localStorage.getItem('oe-focus-mode') === '1') {
+  focusMode = true; document.body.classList.add('focus-mode');
+}
+
+/* ── STARRED FILES ─────────────────────────────────────────────── */
+function toggleStar(path) {
+  const idx = starredFiles.indexOf(path);
+  if (idx >= 0) starredFiles.splice(idx, 1);
+  else starredFiles.push(path);
+  localStorage.setItem('oe-starred', JSON.stringify(starredFiles));
+  renderStarred(); renderRecent();
+  const btn = document.querySelector('.star-toggle');
+  if (btn) btn.classList.toggle('starred', idx < 0);
+}
+function renderStarred() {
+  if (!starredSection) return;
+  starredList.innerHTML = '';
+  if (!starredFiles.length) { starredSection.style.display = 'none'; return; }
+  starredSection.style.display = '';
+  starredFiles.forEach(p => {
+    const item = document.createElement('button');
+    item.className = 'recent-item';
+    item.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;flex-shrink:0;color:var(--warn)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    const name = p.split('/').pop();
+    item.append(document.createTextNode(name.replace(/\.md$/i,'')));
+    item.title = p;
+    item.addEventListener('click', () => openFileFromTree(p));
+    starredList.appendChild(item);
+  });
+}
+
+/* ── RECENT FILES ──────────────────────────────────────────────── */
+function trackRecent(path) {
+  recentFiles = recentFiles.filter(p => p !== path);
+  recentFiles.unshift(path);
+  if (recentFiles.length > 25) recentFiles = recentFiles.slice(0, 25);
+  localStorage.setItem('oe-recent', JSON.stringify(recentFiles));
+  renderRecent();
+}
+function renderRecent() {
+  if (!recentSection) return;
+  recentList.innerHTML = '';
+  const items = recentFiles.filter(p => p !== activeFile).slice(0, 10);
+  if (!items.length) { recentSection.style.display = 'none'; return; }
+  recentSection.style.display = '';
+  items.forEach(p => {
+    const item = document.createElement('button');
+    item.className = 'recent-item';
+    item.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+    const name = p.split('/').pop();
+    item.append(document.createTextNode(name.replace(/\.md$/i,'')));
+    item.title = p;
+    item.addEventListener('click', () => openFileFromTree(p));
+    recentList.appendChild(item);
+  });
+  const clearBtn = document.createElement('button');
+  clearBtn.className = 'recent-clear'; clearBtn.textContent = 'Clear';
+  clearBtn.addEventListener('click', e => { e.stopPropagation(); recentFiles = []; localStorage.setItem('oe-recent','[]'); renderRecent(); });
+  recentList.appendChild(clearBtn);
+}
+
+/* ── FIND IN FILE ──────────────────────────────────────────────── */
+function showFindBar() {
+  if (!activeFile) return;
+  findBar.classList.add('visible');
+  findInput.value = ''; findCount.textContent = '';
+  findMatches = []; findIdx = -1;
+  setTimeout(() => findInput.focus(), 50);
+}
+function hideFindBar() {
+  findBar.classList.remove('visible');
+  findInput.value = '';
+  document.querySelectorAll('.find-highlight').forEach(el => {
+    el.replaceWith(document.createTextNode(el.textContent));
+  });
+  findMatches = []; findIdx = -1;
+}
+function doFind() {
+  document.querySelectorAll('.find-highlight').forEach(el => {
+    el.replaceWith(document.createTextNode(el.textContent));
+  });
+  findMatches = []; findIdx = -1;
+  const q = findInput.value.trim();
+  if (!q) { findCount.textContent = ''; return; }
+  const contentEl = fileViewer.querySelector('.md-content');
+  if (!contentEl) return;
+  const treeWalker = document.createTreeWalker(contentEl, NodeFilter.SHOW_TEXT);
+  const nodes = []; const lower = q.toLowerCase();
+  while (treeWalker.nextNode()) {
+    const node = treeWalker.currentNode;
+    if (node.textContent.toLowerCase().includes(lower)) nodes.push(node);
+  }
+  nodes.forEach(node => {
+    const text = node.textContent;
+    const idx = text.toLowerCase().indexOf(lower);
+    if (idx < 0) return;
+    const before = document.createTextNode(text.slice(0, idx));
+    const mark = document.createElement('mark');
+    mark.className = 'find-highlight';
+    mark.textContent = text.slice(idx, idx + q.length);
+    const after = document.createTextNode(text.slice(idx + q.length));
+    const parent = node.parentNode;
+    if (parent) parent.replaceChild(mark, node);
+    mark.before(before); mark.after(after);
+    findMatches.push(mark);
+  });
+  findIdx = findMatches.length > 0 ? 0 : -1;
+  updateFindCount();
+  if (findMatches[findIdx]) findMatches[findIdx].classList.add('active');
+  if (findMatches[findIdx]) findMatches[findIdx].scrollIntoView({ block: 'center' });
+}
+function updateFindCount() {
+  findCount.textContent = findMatches.length ? `${findIdx + 1}/${findMatches.length}` : '0/0';
+}
+function findNext() {
+  if (!findMatches.length) return;
+  if (findMatches[findIdx]) findMatches[findIdx].classList.remove('active');
+  findIdx = (findIdx + 1) % findMatches.length;
+  if (findMatches[findIdx]) {
+    findMatches[findIdx].classList.add('active');
+    findMatches[findIdx].scrollIntoView({ block: 'center' });
+  }
+  updateFindCount();
+}
+function findPrev() {
+  if (!findMatches.length) return;
+  if (findMatches[findIdx]) findMatches[findIdx].classList.remove('active');
+  findIdx = (findIdx - 1 + findMatches.length) % findMatches.length;
+  if (findMatches[findIdx]) {
+    findMatches[findIdx].classList.add('active');
+    findMatches[findIdx].scrollIntoView({ block: 'center' });
+  }
+  updateFindCount();
+}
+if (findInput) findInput.addEventListener('input', doFind);
+if (findNextBtn) findNextBtn.addEventListener('click', findNext);
+if (findPrevBtn) findPrevBtn.addEventListener('click', findPrev);
+if (findCloseBtn) findCloseBtn.addEventListener('click', hideFindBar);
+
+/* ── QUICK SWITCHER ────────────────────────────────────────────── */
+function openSwitcher() {
+  if (!vaultIndex.length) return;
+  openOverlay('switcherOverlay');
+  switcherInput.value = '';
+  buildSwitcherResults('');
+  setTimeout(() => switcherInput.focus(), 50);
+}
+function buildSwitcherResults(q) {
+  switcherResults.innerHTML = '';
+  const lower = q.toLowerCase();
+  let items = vaultIndex;
+  if (q) items = items.filter(f => f.path.toLowerCase().includes(lower));
+  if (items.length > 50) items = items.slice(0, 50);
+  if (!items.length) {
+    switcherResults.innerHTML = '<div class="switcher-empty">No matching files</div>';
+    return;
+  }
+  items.forEach((f, i) => {
+    const div = document.createElement('button');
+    div.className = 'switcher-item' + (i === 0 ? ' highlighted' : '');
+    const name = f.path.split('/').pop().replace(/\.md$/i,'');
+    const display = q ? name.replace(new RegExp(lower.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi'), m => `<mark>${m}</mark>`) : name;
+    div.innerHTML = display;
+    const pathSpan = document.createElement('span');
+    pathSpan.className = 'switcher-item-path';
+    pathSpan.textContent = f.path;
+    div.appendChild(pathSpan);
+    div.addEventListener('click', () => { closeOverlay('switcherOverlay'); openFileFromTree(f.path); });
+    switcherResults.appendChild(div);
+  });
+}
+if (switcherInput) {
+  switcherInput.addEventListener('input', () => buildSwitcherResults(switcherInput.value));
+  switcherInput.addEventListener('keydown', e => {
+    const items = switcherResults.querySelectorAll('.switcher-item');
+    let idx = Array.from(items).findIndex(el => el.classList.contains('highlighted'));
+    if (e.key === 'Enter' && idx >= 0) { items[idx].click(); return; }
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (idx >= 0) items[idx].classList.remove('highlighted');
+      idx = Math.min(idx + 1, items.length - 1);
+      if (idx >= 0) { items[idx].classList.add('highlighted'); items[idx].scrollIntoView({ block: 'nearest' }); }
+    }
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (idx >= 0) items[idx].classList.remove('highlighted');
+      idx = Math.max(idx - 1, 0);
+      if (idx >= 0) { items[idx].classList.add('highlighted'); items[idx].scrollIntoView({ block: 'nearest' }); }
+    }
+  });
+}
+if (switcherOverlay) switcherOverlay.addEventListener('click', e => { if (e.target === switcherOverlay) closeOverlay('switcherOverlay'); });
+
+/* ── KEYBOARD TREE NAV ─────────────────────────────────────────── */
+function buildFlattenTree() {
+  flattenTree = [];
+  const allItems = document.querySelectorAll('#fileList .file-item, #fileList .folder-summary');
+  allItems.forEach(el => {
+    const detail = el.closest('details');
+    if (detail && !detail.open && !el.classList.contains('folder-summary')) return;
+    flattenTree.push(el);
+  });
+}
+function navTree(key) {
+  buildFlattenTree();
+  if (!flattenTree.length) return;
+  if (treeFocusIdx >= 0 && flattenTree[treeFocusIdx]) flattenTree[treeFocusIdx].classList.remove('kbd-focus');
+  if (key === 'ArrowDown') {
+    treeFocusIdx = Math.min(treeFocusIdx + 1, flattenTree.length - 1);
+  } else if (key === 'ArrowUp') {
+    treeFocusIdx = Math.max(treeFocusIdx - 1, 0);
+  } else if (key === 'ArrowRight') {
+    if (treeFocusIdx >= 0) {
+      const el = flattenTree[treeFocusIdx];
+      if (el) {
+        const detail = el.closest('details');
+        if (detail && !detail.open) { detail.open = true; setTimeout(buildFlattenTree, 50); }
+      }
+    }
+    return;
+  } else if (key === 'ArrowLeft') {
+    if (treeFocusIdx >= 0) {
+      const el = flattenTree[treeFocusIdx];
+      if (el) {
+        const detail = el.closest('details');
+        if (detail && detail.open) { detail.open = false; setTimeout(buildFlattenTree, 50); }
+        else {
+          const parent = el.closest('details')?.parentElement?.closest('details');
+          if (parent) { parent.open = false; setTimeout(buildFlattenTree, 50); }
+        }
+      }
+    }
+    return;
+  }
+  if (treeFocusIdx >= 0 && flattenTree[treeFocusIdx]) {
+    flattenTree[treeFocusIdx].classList.add('kbd-focus');
+    flattenTree[treeFocusIdx].scrollIntoView({ block: 'nearest' });
+  }
+}
+
+/* ── WIKILINK HOVER PREVIEW ────────────────────────────────────── */
+let previewTimeout = null;
+document.addEventListener('mouseover', e => {
+  const link = e.target.closest('a.wikilink');
+  if (!link) { wikilinkPreview.style.display = 'none'; clearTimeout(previewTimeout); return; }
+  const target = link.dataset.target;
+  if (!target) return;
+  clearTimeout(previewTimeout);
+  previewTimeout = setTimeout(async () => {
+    const path = target.endsWith('.md') ? target : target + '.md';
+    const file = vaultIndex.find(f => f.path === path || f.path.endsWith('/' + path));
+    if (!file) return;
+    let content = fileContents.get(file.path);
+    if (!content) {
+      try {
+        const baseUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${file.path}`;
+        const res = await fetch(baseUrl, { headers: getHeaders() });
+        if (!res.ok) return;
+        const json = await res.json();
+        content = atob(json.content);
+      } catch { return; }
+    }
+    const cleaned = content.replace(/^---[\s\S]*?---\n?/, '');
+    const preview = cleaned.split('\n').slice(0, 20).join('\n');
+    const html = marked.parse(wikilinkPreviewContent(preview));
+    wikilinkPreview.innerHTML = `<div class="md-content">${html}</div>`;
+    wikilinkPreview.style.display = 'block';
+    const rect = link.getBoundingClientRect();
+    let top = rect.bottom + 6;
+    if (top + 320 > window.innerHeight) top = rect.top - 6 - 320;
+    wikilinkPreview.style.left = Math.min(rect.left, window.innerWidth - 420) + 'px';
+    wikilinkPreview.style.top = Math.max(4, top) + 'px';
+  }, 400);
+});
+document.addEventListener('mouseout', e => {
+  if (e.target.closest('#wikilinkPreview')) return;
+  clearTimeout(previewTimeout);
+  setTimeout(() => { if (!wikilinkPreview.matches(':hover')) wikilinkPreview.style.display = 'none'; }, 200);
+});
+document.addEventListener('mouseover', e => {
+  const preview = e.target.closest('#wikilinkPreview');
+  if (preview) { clearTimeout(previewTimeout); wikilinkPreview.style.display = 'block'; return; }
+});
+
+function wikilinkPreviewContent(text) {
+  return text.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '[$1]')
+    .replace(/\[\[([^\]]+)\]\]/g, '<strong>$1</strong>');
+}
+
 /* ── SIDEBAR RESIZE ───────────────────────────────────────────── */
 (function() {
   let drag=false, startX=0, startW=0;
@@ -1233,11 +1556,12 @@ function renderSidebar(filter='') {
   // Name-filter + tree render using safe DOM construction
   function buildNode(node) {
     const frag = document.createDocumentFragment();
+    const sortDir = sortMode === 'name-desc' ? -1 : 1;
     const keys = Object.keys(node).sort((a,b) => {
       const aD = node[a]._item.type==='tree';
       const bD = node[b]._item.type==='tree';
       if (aD!==bD) return aD?-1:1;
-      return a.localeCompare(b);
+      return a.localeCompare(b) * sortDir;
     });
     for (const key of keys) {
       const child = node[key];
@@ -1393,42 +1717,103 @@ async function openFileFromTree(path, replaceState=false) {
       div.innerHTML = marked.parse(processed, { breaks:true, gfm:true });
       fileViewer.innerHTML = ''; fileViewer.appendChild(div);
 
-      // Fix relative image paths using active branch
-      div.querySelectorAll('img').forEach(img => {
-        const src = img.getAttribute('src');
-        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-          const parts = activeFile.split('/'); parts.pop();
-          src.split('/').forEach(p => {
-            if (p==='..') parts.pop();
-            else if (p && p!=='.') parts.push(p);
-          });
-          img.src = rawUrl(parts.join('/'));
-        }
-      });
+      // Star toggle in viewer header
+      const starBtn = document.createElement('button');
+      starBtn.className = 'star-toggle' + (starredFiles.includes(path) ? ' starred' : '');
+      starBtn.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+      starBtn.title = 'Star / unstar';
+      starBtn.addEventListener('click', e => { e.stopPropagation(); toggleStar(path); });
+      viewerBadge.parentNode.insertBefore(starBtn, viewerBadge.nextSibling);
 
-      // Copy-to-clipboard buttons on code blocks
+      // Task progress bar
+      const checkboxes = div.querySelectorAll('input[type="checkbox"]');
+      if (checkboxes.length > 2) {
+        const checked = div.querySelectorAll('input[type="checkbox"]:checked').length;
+        const taskWrap = document.createElement('div');
+        taskWrap.className = 'task-progress';
+        const pct = Math.round(checked / checkboxes.length * 100);
+        taskWrap.innerHTML = `<span>${checked}/${checkboxes.length} tasks</span><div class="task-bar"><div class="task-fill" style="width:${pct}%"></div></div><span>${pct}%</span>`;
+        div.insertBefore(taskWrap, div.firstChild);
+      }
+
+      // Code block language labels + copy buttons
       div.querySelectorAll('pre').forEach(pre => {
+        const codeEl = pre.querySelector('code');
+        if (codeEl) {
+          const lang = codeEl.className.replace(/^lang-|^language-|^hljs\s*/g,'').trim().split(/\s+/)[0];
+          if (lang) {
+            const badge = document.createElement('span');
+            badge.className = 'code-lang-badge';
+            badge.textContent = lang;
+            pre.appendChild(badge);
+            pre.style.position = 'relative';
+          }
+          hljs.highlightElement(codeEl);
+        }
         const btn = document.createElement('button');
         btn.className = 'copy-btn';
         btn.textContent = 'Copy';
         btn.setAttribute('aria-label','Copy code');
         btn.addEventListener('click', e => {
           e.stopPropagation();
-          const code = pre.querySelector('code');
-          navigator.clipboard.writeText((code||pre).textContent).then(() => {
+          navigator.clipboard.writeText((codeEl||pre).textContent).then(() => {
             btn.textContent='Copied!';
             setTimeout(()=> btn.textContent='Copy', 1800);
           });
         });
         pre.appendChild(btn);
-        const codeEl = pre.querySelector('code');
-        if (codeEl) hljs.highlightElement(codeEl);
+      });
+
+      // Collapsible headings: add caret + click handler
+      div.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(h => {
+        const caret = document.createElement('span');
+        caret.className = 'heading-caret';
+        caret.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>';
+        h.insertBefore(caret, h.firstChild);
+      });
+      div.addEventListener('click', e => {
+        const caret = e.target.closest('.heading-caret');
+        if (!caret) return;
+        const heading = caret.closest('h1,h2,h3,h4,h5,h6');
+        if (!heading) return;
+        let sibling = heading.nextElementSibling;
+        const nextHeading = heading.parentElement?.querySelector(
+          `h1, h2, h3, h4, h5, h6`
+        );
+        const isCollapsed = caret.classList.toggle('collapsed');
+        while (sibling && sibling.tagName !== heading.tagName && sibling.tagName !== 'H1' &&
+               sibling.tagName !== 'H2' && sibling.tagName !== 'H3' &&
+               sibling.tagName !== 'H4' && sibling.tagName !== 'H5' && sibling.tagName !== 'H6') {
+          const next = sibling.nextElementSibling;
+          if (isCollapsed) sibling.style.display = 'none';
+          else sibling.style.display = '';
+          sibling = next;
+        }
+      });
+
+      // Footnote rendering support
+      div.querySelectorAll('.footnotes').forEach(fn => {
+        fn.classList.add('footnotes');
+        fn.querySelectorAll('a').forEach(a => {
+          if (a.hash && a.hash.startsWith('#fnref')) {
+            a.classList.add('footnote-backref');
+            a.textContent = '↩';
+          }
+        });
       });
 
       if (window.MathJax) MathJax.typesetPromise([div]).catch(()=>{});
 
       buildTOC(div);
       updateBacklinks(path);
+
+      trackRecent(path);
+      updateOutgoingLinks(path, div);
+      updateTagPane();
+
+      // Auto-reveal active file in tree
+      const activeBtn = fileList.querySelector(`.file-item.active`);
+      if (activeBtn) activeBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 
       // Word count + reading time
       const words   = (div.textContent||'').trim().split(/\s+/).filter(Boolean).length;
@@ -1511,13 +1896,97 @@ function updateBacklinks(path) {
   }
   links.forEach(src => {
     const btn = document.createElement('button');
-    btn.className = 'backlink-item';
-    btn.innerHTML = `<svg class="bl-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`;
+    btn.className = 'bl-header';
+    btn.innerHTML = `<svg style="width:12px;height:12px;flex-shrink:0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`;
     const span = document.createElement('span');
     span.textContent = src.split('/').pop().replace(/\.md$/i,'');
     btn.appendChild(span);
     btn.addEventListener('click', () => openFileFromTree(src));
     backlinksContainer.appendChild(btn);
+
+    // Show context snippet
+    const raw = fileContents.get(src);
+    if (raw) {
+      const cleanRaw = raw.replace(/^---[\s\S]*?---\n?/, '');
+      const idx = cleanRaw.toLowerCase().indexOf(path.split('/').pop().replace(/\.md$/i,'').toLowerCase());
+      if (idx >= 0) {
+        const start = Math.max(0, idx - 60);
+        const end = Math.min(cleanRaw.length, idx + 80);
+        let snippet = cleanRaw.slice(start, end);
+        if (start > 0) snippet = '…' + snippet;
+        if (end < cleanRaw.length) snippet = snippet + '…';
+        const ctx = document.createElement('div');
+        ctx.className = 'bl-context';
+        ctx.textContent = snippet;
+        backlinksContainer.appendChild(ctx);
+      }
+    }
+  });
+}
+
+function updateOutgoingLinks(path, container) {
+  outgoingContainer.innerHTML = '';
+  if (!container) {
+    outgoingContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">Open a file to see outgoing links</div>';
+    return;
+  }
+  const links = container.querySelectorAll('.wikilink');
+  if (!links.length) {
+    outgoingContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No outgoing links</div>';
+    return;
+  }
+  const seen = new Set();
+  links.forEach(wl => {
+    const target = wl.dataset?.target;
+    if (!target || seen.has(target)) return;
+    seen.add(target);
+    const btn = document.createElement('button');
+    btn.className = 'outgoing-item';
+    btn.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>';
+    btn.textContent = target;
+    btn.addEventListener('click', () => {
+      let s = target.toLowerCase();
+      if (!s.endsWith('.md')) s += '.md';
+      const found = vaultIndex.find(f => f.path.toLowerCase().endsWith(s));
+      if (found) openFileFromTree(found.path);
+      else showToast(`Not found: ${target}`);
+    });
+    outgoingContainer.appendChild(btn);
+  });
+}
+
+function updateTagPane() {
+  tagPaneContainer.innerHTML = '';
+  allTags.clear();
+  vaultIndex.forEach(f => {
+    if (f.type !== 'blob' || !f.path.endsWith('.md')) return;
+    const raw = fileContents.get(f.path);
+    if (!raw) return;
+    const clean = raw.replace(/^---[\s\S]*?---\n?/, '').replace(/```[\s\S]*?```/g, '');
+    const tags = clean.match(/(?:^|\s)(#[a-zA-Z0-9_\/-]+)/g);
+    if (tags) tags.forEach(t => {
+      const tag = t.trim();
+      if (!allTags.has(tag)) allTags.set(tag, new Set());
+      allTags.get(tag).add(f.path);
+    });
+  });
+  if (!allTags.size) {
+    tagPaneContainer.innerHTML = '<div style="font-size:12px;color:var(--text3)">No tags found</div>';
+    return;
+  }
+  const sorted = Array.from(allTags.entries()).sort((a,b) => b[1].size - a[1].size);
+  sorted.forEach(([tag, files]) => {
+    const pill = document.createElement('button');
+    pill.className = 'tag-pane-tag';
+    const name = tag.replace('#', '');
+    const count = files.size;
+    pill.innerHTML = `${escapeHtml(name)} <span class="tag-pane-count">${count}</span>`;
+    pill.addEventListener('click', () => {
+      searchInput.value = name;
+      document.querySelector('input[name="smode"][value="name"]').checked = true;
+      renderSidebar(name);
+    });
+    tagPaneContainer.appendChild(pill);
   });
 }
 
@@ -1576,7 +2045,10 @@ function preprocessObsidian(rawText) {
         const w = size ? `width:${escapeHtml(size.trim())}px;` : 'max-width:100%;';
         return `<img src="${escapeHtml(u)}" alt="${escapeHtml(fname)}" style="${w}border-radius:var(--radius-lg);margin:8px 0">`;
       }
-      return `<span class="wikilink" data-target="${escapeHtml(found.path)}" data-anchor="">📎 ${escapeHtml(fname)}</span>`;
+      if (found.path.endsWith('.md')) {
+        return `<span class="embed-placeholder" data-embed-path="${escapeHtml(found.path)}"></span>`;
+      }
+      return `<span class="wikilink" data-target="${escapeHtml(found.path)}">📎 ${escapeHtml(fname)}</span>`;
     }
     return `<span style="color:var(--danger)">⚠️ Missing: ${escapeHtml(fname)}</span>`;
   });
