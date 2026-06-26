@@ -1430,6 +1430,8 @@ async function initVault() {
     });
 
     renderSidebar();
+    renderStarred();
+    renderRecent();
 
     const urlPath = new URLSearchParams(window.location.search).get('path');
     if (urlPath) openFileFromTree(urlPath, true);
@@ -1547,6 +1549,29 @@ function renderSidebar(filter='') {
         btn.insertAdjacentHTML('beforeend', extBadge(f.path.split('/').pop()));
         btn.addEventListener('click', () => openFileFromTree(f.path));
         fileList.appendChild(btn);
+
+        // Search context lines
+        const raw = fileContents.get(f.path);
+        if (raw) {
+          const cleanRaw = raw.replace(/^---[\s\S]*?---\n?/, '');
+          const lines = cleanRaw.split('\n');
+          let found = false;
+          lines.forEach((line, i) => {
+            if (!found && line.toLowerCase().includes(q)) {
+              found = true;
+              const ctx = document.createElement('div');
+              ctx.className = 'search-context';
+              const start = Math.max(0, i - 1);
+              const end = Math.min(lines.length, i + 2);
+              for (let j = start; j < end; j++) {
+                const escaped = escapeHtml(lines[j].trim());
+                const highlighted = escaped.replace(new RegExp(`(${filter.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'), '<mark>$1</mark>');
+                ctx.innerHTML += highlighted + '\n';
+              }
+              fileList.appendChild(ctx);
+            }
+          });
+        }
       });
       fileCount.textContent = results.length;
     }
@@ -1800,6 +1825,28 @@ async function openFileFromTree(path, replaceState=false) {
             a.textContent = '↩';
           }
         });
+      });
+
+      // Embedded markdown files: fetch and render inline
+      div.querySelectorAll('.embed-placeholder').forEach(async el => {
+        const embedPath = el.dataset.embedPath;
+        if (!embedPath) return;
+        let embedRaw = fileContents.get(embedPath);
+        if (!embedRaw) {
+          try {
+            const r = await fetch(rawUrl(embedPath));
+            if (r.ok) embedRaw = await r.text();
+          } catch { return; }
+        }
+        if (!embedRaw) return;
+        const cleaned = embedRaw.replace(/^---[\s\S]*?---\n?/, '');
+        const wrap = document.createElement('div');
+        wrap.className = 'embed-container';
+        const inner = document.createElement('div');
+        inner.className = 'md-content';
+        inner.innerHTML = marked.parse(cleaned, { breaks:true, gfm:true });
+        wrap.appendChild(inner);
+        el.replaceWith(wrap);
       });
 
       if (window.MathJax) MathJax.typesetPromise([div]).catch(()=>{});
