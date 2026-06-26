@@ -325,6 +325,9 @@
     .focus-mode .topbar{height:0!important;padding:0!important;overflow:hidden!important;border:none!important}
     .focus-mode .resize-handle{display:none!important}
     .focus-mode .md-content{max-width:860px}
+.focus-exit-btn{position:fixed;top:12px;right:12px;z-index:9999;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);font-family:var(--font-ui);font-size:11px;padding:6px 14px;border-radius:8px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
+.focus-exit-btn:hover{background:var(--bg4);color:var(--text)}
 
     /* ── RECENT FILES ─────────────────────────────────────────── */
     .recent-title{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3);padding:8px 12px 4px;display:flex;align-items:center;gap:6px}
@@ -646,6 +649,7 @@
 
 <div id="toast" role="status" aria-live="polite"></div>
 <div id="wikilinkPreview"></div>
+<button class="focus-exit-btn" id="focusExitBtn">✕ Exit Focus</button>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <script>
@@ -1007,6 +1011,7 @@ function toggleRightSidebar() {
 }
 document.getElementById('rightSidebarBtn').addEventListener('click', toggleRightSidebar);
 document.getElementById('focusModeBtn').addEventListener('click', toggleFocusMode);
+document.getElementById('focusExitBtn').addEventListener('click', toggleFocusMode);
 if (localStorage.getItem('oe-right-sidebar') === '0') {
   const rs = document.getElementById('rightSidebar');
   rs.style.transition = 'none';
