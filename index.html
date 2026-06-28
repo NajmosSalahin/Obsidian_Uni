@@ -521,6 +521,13 @@ body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
       <span class="viewer-filename placeholder" id="viewerTitle">Select a file to view</span>
       <span class="viewer-badge" id="viewerBadge" style="display:none"></span>
       <span class="viewer-meta" id="viewerMeta"></span>
+      <span id="localLinkWrap" style="display:none;align-items:center;gap:6px;font-size:11px;color:var(--text3);font-family:var(--font-mono);margin-left:auto" aria-label="Local file path">
+        <span id="localLinkPath"></span>
+        <button style="background:none;border:1px solid var(--border2);border-radius:4px;padding:2px 6px;cursor:pointer;color:var(--text2);font-size:10px;font-family:var(--font-ui);transition:all .15s;height:22px;display:flex;align-items:center;gap:3px" id="copyLocalLinkBtn" title="Copy local file path (file:///)" aria-label="Copy local path">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:11px;height:11px"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy
+        </button>
+      </span>
     </div>
     <div id="findBar">
       <input id="findInput" type="text" placeholder="Find in page…" autocomplete="off" spellcheck="false">
@@ -607,6 +614,17 @@ body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
       <div class="s-label">Code Font</div>
       <div class="font-opts" id="monoFontOpts"></div>
     </div>
+
+    <div class="s-section">
+      <div class="s-label">Local Access</div>
+      <div class="s-row" style="font-size:13px;color:var(--text3)">
+        <span style="white-space:nowrap">C:\Users\</span>
+        <input class="s-input" type="text" id="localUserInput" placeholder="your username" aria-label="Windows username" style="max-width:140px;font-family:var(--font-mono)">
+        <span style="white-space:nowrap">\Desktop\Barnackle</span>
+      </div>
+      <button class="s-btn" id="applyLocalPathBtn" style="width:100%">Save</button>
+      <p class="s-note">Enables a copyable <code>file:///C:/Users/&lt;you&gt;/Desktop/Barnackle/...</code> link for each open file.</p>
+    </div>
   </div>
 </div>
 
@@ -657,6 +675,7 @@ body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
 let OWNER  = localStorage.getItem('oe-owner')  || 'NajmosSalahin';
 let REPO   = localStorage.getItem('oe-repo')   || 'Barnackle';
 let BRANCH = localStorage.getItem('oe-branch') || 'main';
+let LOCAL_USER = localStorage.getItem('oe-local-user') || '';
 
 /* ── STATE ────────────────────────────────────────────────────── */
 let vaultIndex   = [];
@@ -689,6 +708,9 @@ const fileViewer    = document.getElementById('fileViewer');
 const viewerTitle   = document.getElementById('viewerTitle');
 const viewerBadge   = document.getElementById('viewerBadge');
 const viewerMeta    = document.getElementById('viewerMeta');
+const localLinkWrap = document.getElementById('localLinkWrap');
+const localLinkPath = document.getElementById('localLinkPath');
+const copyLocalLinkBtn = document.getElementById('copyLocalLinkBtn');
 const breadcrumb    = document.getElementById('breadcrumb');
 const fileCount     = document.getElementById('fileCount');
 const tocContainer        = document.getElementById('tocContainer');
@@ -745,6 +767,21 @@ function showToast(msg, ms=2200) {
 
 function rawUrl(path) {
   return `https://raw.githubusercontent.com/${OWNER}/${REPO}/${activeBranch}/${path.split('/').map(encodeURIComponent).join('/')}`;
+}
+
+function localFileUrl(path) {
+  if (!LOCAL_USER) return '';
+  return 'file:///C:/Users/' + LOCAL_USER + '/Desktop/Barnackle/' + path.split('/').map(s => encodeURIComponent(s)).join('/');
+}
+
+function updateLocalLink() {
+  if (!LOCAL_USER || !activeFile) {
+    localLinkWrap.style.display = 'none';
+    return;
+  }
+  const url = localFileUrl(activeFile);
+  localLinkPath.textContent = url;
+  localLinkWrap.style.display = 'inline-flex';
 }
 
 function getHeaders() {
@@ -839,7 +876,8 @@ function applyMonoFont(id) {
   document.getElementById('repoInput').value   = REPO;
   document.getElementById('branchInput').value = BRANCH;
   document.getElementById('patInput').value    = localStorage.getItem('oe-pat') || '';
-
+  document.getElementById('localUserInput').value = localStorage.getItem('oe-local-user') || '';
+ 
   // Theme cards (safe: THEMES data is trusted static config)
   const grid = document.getElementById('themeGrid');
   THEMES.forEach(t => {
@@ -905,6 +943,15 @@ document.getElementById('applyRepoBtn').addEventListener('click', () => {
   document.getElementById('settingsOverlay').classList.remove('open');
   initVault();
   showToast(`Loading ${OWNER}/${REPO}…`);
+});
+
+document.getElementById('applyLocalPathBtn').addEventListener('click', () => {
+  const u = document.getElementById('localUserInput').value.trim();
+  LOCAL_USER = u;
+  localStorage.setItem('oe-local-user', LOCAL_USER);
+  closeOverlay('settingsOverlay');
+  updateLocalLink();
+  showToast(LOCAL_USER ? `Local user set to ${LOCAL_USER}` : 'Local access cleared');
 });
 
 /* ── MODAL OPEN/CLOSE ─────────────────────────────────────────── */
