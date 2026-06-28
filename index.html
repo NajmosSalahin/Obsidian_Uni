@@ -784,6 +784,18 @@ function updateLocalLink() {
   localLinkWrap.style.display = 'inline-flex';
 }
 
+if (copyLocalLinkBtn) {
+  copyLocalLinkBtn.addEventListener('click', () => {
+    const url = localFileUrl(activeFile);
+    if (!url) return;
+    navigator.clipboard.writeText(url).then(() => {
+      showToast('Local path copied to clipboard');
+    }).catch(() => {
+      showToast('Failed to copy');
+    });
+  });
+}
+
 function getHeaders() {
   const pat = localStorage.getItem('oe-pat');
   return pat ? { Authorization: `token ${pat}` } : {};
@@ -1443,6 +1455,8 @@ async function initVault() {
   backlinkMap.clear();
   isIndexBuilt = false;
   lunrIdx = null;
+  activeFile = null;
+  if (localLinkWrap) localLinkWrap.style.display = 'none';
   document.getElementById('searchOpts').classList.add('disabled');
   document.getElementById('idxHint').classList.remove('visible');
 
@@ -1728,6 +1742,7 @@ document.getElementById('searchOpts').addEventListener('change', () => renderSid
 async function openFileFromTree(path, replaceState=false) {
   hideFindBar();
   activeFile = path;
+  updateLocalLink();
 
   // Debounced navigation: replace immediately, push after 600ms pause
   clearTimeout(navDebounce);
