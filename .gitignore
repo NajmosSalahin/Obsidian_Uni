@@ -15,3 +15,6 @@
 # Ignore Extra Knowledge inside SDS Vault
 /SDS-Vault/Extra Knowledge/
 /SDS-Vault/Extra Knowledge/**
+
+# Ignore large PDF files
+*.pdf
