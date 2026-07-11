@@ -18,3 +18,9 @@
 
 # Ignore large PDF files
 *.pdf
+
+# Except inside SDS-Vault
+!SDS-Vault/**/*.pdf
+
+# But keep this massive file excluded
+/SDS-Vault/**/M.K. Roy*.pdf
