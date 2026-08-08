@@ -11,6 +11,13 @@
 !/SDS-Vault/**
 !/9-resources/
 !/9-resources/**
+!/8-clippings/
+!/8-clippings/**
+!/2-fleeting notes/
+!/2-fleeting notes/**
+!/2-atomic notes/**
+!/2-atomic notes/
+!/2-literature notes/**
 
 # Ignore Extra Knowledge inside SDS Vault
 /SDS-Vault/Extra Knowledge/
