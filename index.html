@@ -219,7 +219,7 @@
     .rs-section[open]>summary::before{transform:rotate(90deg)}
     .rs-title{font-size:10px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--text3);margin:0;flex:1}
     .rs-body{font-size:12.5px;margin-top:10px}
-    .rs-body>div{font-size:12px;color:var(--text3)}
+    .rs-body>.rs-empty{font-size:12px;color:var(--text3)}
     .obsidian-properties{display:flex;flex-direction:column;gap:10px;font-family:var(--font-ui);font-size:12.5px}
     .property-row{display:flex;flex-direction:column;gap:3px}
     .property-key{color:var(--text3);font-weight:600;text-transform:capitalize;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -341,6 +341,17 @@
 .focus-exit-btn{position:fixed;top:12px;right:12px;z-index:9999;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);font-family:var(--font-ui);font-size:11px;padding:6px 14px;border-radius:8px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
 body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
 .focus-exit-btn:hover{background:var(--bg4);color:var(--text)}
+
+    /* ── BACK TO TOP ─────────────────────────────────────────── */
+    #backTopBtn{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;border:1px solid var(--border2);background:var(--bg2);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s,color .15s,border-color .15s;z-index:1500;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+    #backTopBtn.visible{opacity:1;transform:none;pointer-events:auto}
+    #backTopBtn:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-bg)}
+
+    /* ── READING IDLE FADE ────────────────────────────────────── */
+    .topbar{transition:opacity .25s ease}
+    body.reader-idle .sidebar:not(.collapsed),body.reader-idle .right-sidebar:not(.collapsed){opacity:.4}
+    body.reader-idle .topbar{opacity:.4}
+    body.reader-idle .topbar:hover,body.reader-idle .sidebar:not(.collapsed):hover,body.reader-idle .right-sidebar:not(.collapsed):hover{opacity:1}
 
     /* ── RECENT FILES ─────────────────────────────────────────── */
     .recent-title{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3);padding:8px 12px 4px;display:flex;align-items:center;gap:6px}
@@ -561,20 +572,20 @@ body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
 
   <!-- Right Sidebar: Properties / TOC / Backlinks -->
   <aside class="right-sidebar" id="rightSidebar" aria-label="Document outline">
-    <details class="rs-section"><summary class="rs-title">Properties</summary>
-      <div class="rs-body" id="propertiesContainer"><div>No properties</div></div>
+    <details class="rs-section" hidden><summary class="rs-title">Properties</summary>
+      <div class="rs-body" id="propertiesContainer"><div class="rs-empty">No properties</div></div>
     </details>
-    <details class="rs-section"><summary class="rs-title">Outline</summary>
-      <div class="rs-body" id="tocContainer"><div>Open a file to see headings</div></div>
+    <details class="rs-section" hidden><summary class="rs-title">Outline</summary>
+      <div class="rs-body" id="tocContainer"><div class="rs-empty">Open a file to see headings</div></div>
     </details>
     <details class="rs-section" open><summary class="rs-title">Backlinks</summary>
-      <div class="rs-body" id="backlinksContainer"><div>Indexing…</div></div>
+      <div class="rs-body" id="backlinksContainer"><div class="rs-empty">Indexing…</div></div>
     </details>
-    <details class="rs-section"><summary class="rs-title">Outgoing Links</summary>
-      <div class="rs-body" id="outgoingContainer"><div>Open a file to see outgoing links</div></div>
+    <details class="rs-section" hidden><summary class="rs-title">Outgoing Links</summary>
+      <div class="rs-body" id="outgoingContainer"><div class="rs-empty">Open a file to see outgoing links</div></div>
     </details>
     <details class="rs-section" open><summary class="rs-title">Tags</summary>
-      <div class="rs-body" id="tagPaneContainer"><div>Indexing…</div></div>
+      <div class="rs-body" id="tagPaneContainer"><div class="rs-empty">Indexing…</div></div>
     </details>
   </aside>
 </div>
@@ -687,6 +698,9 @@ body.focus-mode .focus-exit-btn{opacity:1;pointer-events:auto}
 <div id="toast" role="status" aria-live="polite"></div>
 <div id="wikilinkPreview"></div>
 <button class="focus-exit-btn" id="focusExitBtn">✕ Exit Focus</button>
+<button id="backTopBtn" title="Back to top" aria-label="Back to top">
+  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7l7-7 7 7"/></svg>
+</button>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <script>
@@ -879,11 +893,18 @@ let curTheme    = localStorage.getItem('oe-theme')     || 'catppuccin';
 let curBodyFont = localStorage.getItem('oe-body-font') || 'Literata';
 let curMonoFont = localStorage.getItem('oe-mono-font') || 'JetBrains Mono';
 
+const LIGHT_THEMES = new Set(['github','obsidian-light','sepia']);
+
 function applyTheme(id) {
   curTheme = id;
   document.documentElement.dataset.theme = id;
   localStorage.setItem('oe-theme', id);
   document.querySelectorAll('.theme-card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
+  const light = LIGHT_THEMES.has(id);
+  const darkLink = document.getElementById('hljsDarkLink');
+  const lightLink = document.getElementById('hljsLightLink');
+  if (darkLink) darkLink.disabled = light;
+  if (lightLink) lightLink.disabled = !light;
 }
 function applyBodyFont(id) {
   curBodyFont = id;
@@ -1127,12 +1148,39 @@ if (sortSelect) sortSelect.addEventListener('change', () => applySort(sortSelect
 function toggleFocusMode() {
   focusMode = !focusMode;
   document.body.classList.toggle('focus-mode', focusMode);
+  document.body.classList.remove('reader-idle');
+  clearTimeout(idleTimer);
   localStorage.setItem('oe-focus-mode', focusMode ? '1' : '0');
   showToast(focusMode ? 'Focus mode on' : 'Focus mode off');
 }
 if (localStorage.getItem('oe-focus-mode') === '1') {
   focusMode = true; document.body.classList.add('focus-mode');
 }
+
+/* ── BACK TO TOP ───────────────────────────────────────────────── */
+const backTopBtn = document.getElementById('backTopBtn');
+if (backTopBtn) {
+  fileViewer.addEventListener('scroll', () => {
+    backTopBtn.classList.toggle('visible', fileViewer.scrollTop > 680);
+  });
+  backTopBtn.addEventListener('click', () => {
+    fileViewer.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ── READING IDLE FADE ─────────────────────────────────────────── */
+let idleTimer = null;
+function armIdle() {
+  document.body.classList.remove('reader-idle');
+  if (document.querySelector('.overlay.open')) return;
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    if (!document.querySelector('.overlay.open')) document.body.classList.add('reader-idle');
+  }, 2600);
+}
+['mousemove','keydown','scroll','pointerdown'].forEach(ev =>
+  document.addEventListener(ev, armIdle, { passive: true }));
+armIdle();
 
 /* ── STARRED FILES ─────────────────────────────────────────────── */
 function toggleStar(path) {
@@ -1800,8 +1848,8 @@ async function openFileFromTree(path, replaceState=false) {
     const d=document.createElement('div'); d.className='image-preview';
     const img=document.createElement('img'); img.src=url; img.alt=name; img.loading='lazy';
     d.appendChild(img); fileViewer.innerHTML=''; fileViewer.appendChild(d);
-    setRsContent('tocContainer', '<div>N/A for images</div>');
-    setRsContent('propertiesContainer', '<div>N/A for images</div>');
+    setRsContent('tocContainer', '<div class="rs-empty">N/A for images</div>');
+    setRsContent('propertiesContainer', '<div class="rs-empty">N/A for images</div>');
     updateBacklinks(path); return;
   }
 
@@ -1811,8 +1859,8 @@ async function openFileFromTree(path, replaceState=false) {
     const f=document.createElement('iframe'); f.src=vUrl; f.title=name;
     f.style.cssText='width:100%;height:100%;border:none';
     fileViewer.innerHTML=''; fileViewer.appendChild(f);
-    setRsContent('tocContainer', '<div>N/A for PDFs</div>');
-    setRsContent('propertiesContainer', '<div>N/A for PDFs</div>');
+    setRsContent('tocContainer', '<div class="rs-empty">N/A for PDFs</div>');
+    setRsContent('propertiesContainer', '<div class="rs-empty">N/A for PDFs</div>');
     updateBacklinks(path); return;
   }
 
@@ -1822,8 +1870,8 @@ async function openFileFromTree(path, replaceState=false) {
     const f=document.createElement('iframe'); f.src=vUrl; f.title=name;
     f.style.cssText='width:100%;height:100%;border:none';
     fileViewer.innerHTML=''; fileViewer.appendChild(f);
-    setRsContent('tocContainer', '<div>N/A for Word docs</div>');
-    setRsContent('propertiesContainer', '<div>N/A for Word docs</div>');
+    setRsContent('tocContainer', '<div class="rs-empty">N/A for Word docs</div>');
+    setRsContent('propertiesContainer', '<div class="rs-empty">N/A for Word docs</div>');
     updateBacklinks(path); return;
   }
 
@@ -1838,7 +1886,7 @@ async function openFileFromTree(path, replaceState=false) {
     if (ext === 'md') {
       const { text: processed, propertiesHtml } = preprocessObsidian(raw);
       setRsContent('propertiesContainer', propertiesHtml
-        || '<div>No properties</div>');
+        || '<div class="rs-empty">No properties</div>');
 
       const div = document.createElement('div');
       div.className = 'md-content';
@@ -1994,8 +2042,8 @@ async function openFileFromTree(path, replaceState=false) {
       pre.className = 'raw-content';
       pre.textContent = raw;
       fileViewer.innerHTML = ''; fileViewer.appendChild(pre);
-      setRsContent('tocContainer', '<div>N/A for plain text</div>');
-      setRsContent('propertiesContainer', '<div>N/A for plain text</div>');
+      setRsContent('tocContainer', '<div class="rs-empty">N/A for plain text</div>');
+      setRsContent('propertiesContainer', '<div class="rs-empty">N/A for plain text</div>');
       updateBacklinks(path);
     }
   } catch(e) {
@@ -2025,7 +2073,7 @@ function setRsContent(id, html) {
 function buildTOC(container) {
   const headers = container.querySelectorAll('h1,h2,h3');
   if (!headers.length) {
-    setRsContent('tocContainer', '<div>No headings found</div>');
+    setRsContent('tocContainer', '<div class="rs-empty">No headings found</div>');
     return;
   }
   headers.forEach(h => {
@@ -2062,12 +2110,12 @@ function setupScrollSpy(container) {
 
 function updateBacklinks(path) {
   if (!isIndexBuilt) {
-    setRsContent('backlinksContainer', '<div>Indexing in progress…</div>');
+    setRsContent('backlinksContainer', '<div class="rs-empty">Indexing in progress…</div>');
     return;
   }
   const links = backlinkMap.get(path) || [];
   if (!links.length) {
-    setRsContent('backlinksContainer', '<div>No backlinks found.</div>');
+    setRsContent('backlinksContainer', '<div class="rs-empty">No backlinks found.</div>');
     return;
   }
   backlinksContainer.innerHTML = '';
@@ -2108,13 +2156,13 @@ function updateBacklinks(path) {
 
 function updateOutgoingLinks(path, container) {
   if (!container) {
-    setRsContent('outgoingContainer', '<div>Open a file to see outgoing links</div>');
+    setRsContent('outgoingContainer', '<div class="rs-empty">Open a file to see outgoing links</div>');
     return;
   }
   outgoingContainer.innerHTML = '';
   const links = container.querySelectorAll('.wikilink');
   if (!links.length) {
-    setRsContent('outgoingContainer', '<div>No outgoing links</div>');
+    setRsContent('outgoingContainer', '<div class="rs-empty">No outgoing links</div>');
     return;
   }
   const seen = new Set();
@@ -2154,7 +2202,7 @@ function updateTagPane() {
     });
   });
   if (!allTags.size) {
-    setRsContent('tagPaneContainer', '<div>No tags found</div>');
+    setRsContent('tagPaneContainer', '<div class="rs-empty">No tags found</div>');
     return;
   }
   const sorted = Array.from(allTags.entries()).sort((a,b) => b[1].size - a[1].size);
