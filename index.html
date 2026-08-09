@@ -2071,6 +2071,7 @@ function setRsContent(id, html) {
 }
 
 function buildTOC(container) {
+  tocContainer.innerHTML = '';
   const headers = container.querySelectorAll('h1,h2,h3');
   if (!headers.length) {
     setRsContent('tocContainer', '<div class="rs-empty">No headings found</div>');
